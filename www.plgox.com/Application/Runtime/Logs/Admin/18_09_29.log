@@ -1,0 +1,110 @@
+[ 2018-09-29T14:41:24+08:00 ] 124.64.238.30 /Admin/Tourist/check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: plgox_user /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 38 行.
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_user` = 'admin' AND `plgox_pwd` = '132f0ea0c9e643429827b5deb9dd7449' AND `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `plgox_member` SET `plgox_loginumer`=plgox_loginumer+1 WHERE `plgox_id` = 1 [ RunTime:0.0186s ]
+
+[ 2018-09-29T14:41:32+08:00 ] 124.64.238.30 /Admin/Share/share_classify_erji
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+
+[ 2018-09-29T14:41:33+08:00 ] 124.64.238.30 /Admin/Share/share_classify_sanji
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 103  [ RunTime:0.0002s ]
+
+[ 2018-09-29T14:41:41+08:00 ] 124.64.238.30 /Admin/Share/getArea.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_city` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_city` WHERE `city_pid` = 10001  [ RunTime:0.0015s ]
+
+[ 2018-09-29T14:42:25+08:00 ] 124.64.238.30 /Admin/Share/getArea.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_city` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_city` WHERE `city_pid` = 131  [ RunTime:0.0016s ]
+
+[ 2018-09-29T14:42:56+08:00 ] 124.64.238.30 /Admin/Share/getArea.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_city` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_city` WHERE `city_pid` = 1552  [ RunTime:0.0019s ]
+
+[ 2018-09-29T14:46:10+08:00 ] 124.64.238.30 /Admin/Share/getArea.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_city` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_city` WHERE `city_pid` = 32  [ RunTime:0.0014s ]
+
+[ 2018-09-29T14:46:46+08:00 ] 124.64.238.30 /Admin/Share/getArea.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_city` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_city` WHERE `city_pid` = 75  [ RunTime:0.0013s ]
+
+[ 2018-09-29T14:47:06+08:00 ] 124.64.238.30 /Admin/Share/getArea.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.com/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_city` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_city` WHERE `city_pid` = 616  [ RunTime:0.0023s ]
+

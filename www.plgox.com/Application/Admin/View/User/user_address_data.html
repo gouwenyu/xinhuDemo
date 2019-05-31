@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">用户名：</td>
+		<td style="border:none">
+			<input type="text" class="form-control address_memberuid"  value="{$address_edit['plgox_user']}" style="width:470px;height: 40px" name="data[memberuid]" readonly="readonly">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">省/市/区：</td>
+		<td style="border:none">
+		    <select class="form-control input-lg" style="width: 150px;height: 35px;float:left;margin-right:5px" name="data[city_sheng]" id="exampleInputSheng" onchange="loadArea(this.value,'sheng')">
+				<option value="0">--省--</option>
+				<volist name="city_" id="sheng">
+					<option value="{$sheng['city_id']}" <eq name="address_edit['address_city_sheng']" value="$sheng['city_id']">selected</eq> >{$sheng['city_name']}</option>
+				</volist>
+			</select>
+			<select class="form-control input-lg" style="width: 150px;height: 35px;float:left;margin-right:5px" name="data[city_shi]"  id="sheng" onchange="loadArea(this.value,'shi')">
+				<option value="0">--市--</option>
+				<volist name="shi" id="shi_">
+					<option value="{$shi_['city_id']}" <eq name="address_edit['address_city_shi']" value="$shi_['city_id']">selected</eq> >{$shi_['city_name']}</option>
+				</volist>
+			</select>
+			<select class="form-control input-lg" style="width: 150px;height: 35px;float:left;margin-right:5px" name="data[city_xian]" id="shi" onchange="loadArea(this.value,'qu')">
+				<option value="0">--县/区/镇--</option>
+				<volist name="xian" id="xian_">
+					<option value="{$xian_['city_id']}" <eq name="address_edit['address_city_xian']" value="$xian_['city_id']" >selected</eq> >{$xian_['city_name']}</option>
+				</volist>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">详细地址：</td>
+		<td style="border:none">
+			<input type="text" class="form-control detailed-address" value="{$address_edit['address_default']}"  style="width:470px;height: 40px" name="data[default_address]">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">设置(默认)地址：</td>
+		<td style="border:none">
+			  <label style="line-height: 40px">
+			    <input type="radio" name="setup_address_default" id="optionsRadios2" value="0" <eq name="address_edit['address_default_type']" value="0">checked</eq> >&nbsp;是&nbsp;&nbsp;
+			  </label>
+			  <label style="line-height: 40px">
+			    <input type="radio" name="setup_address_default" id="optionsRadios2" value="1" <eq name="address_edit['address_default_type']" value="1">checked</eq> >&nbsp;否
+			  </label>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">日期：</td>
+		<td style="border:none">
+			<div class="form-group">
+				<input id="datepicker-example2" type="text" value="{$address_edit['address_createtime']|date='Y-m-d H:i:s',###}" class="form-control address_createtime" style="width:470px;height: 40px" name="address_createtime" >
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<button type="button" class="btn btn-success" value="{$address_edit['address_id']}">确认修改</button>
+			<button type="button" class="btn btn-danger">返回上页</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('User/user_address_list')}";
+	});
+	$(".btn-success").click(function(){
+		var address_id = $(this).val();
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('User/address_edit')}",
+			data: { 'address_id':address_id , 'memberuid':$(".address_memberuid").val() , 'city_sheng':$("#exampleInputSheng").val() , 'city_shi':$("#sheng").val() , 'city_xian':$("#shi").val() , 'default_address':$(".detailed-address").val() , 'address_createtime':$(".address_createtime").val() , 'setup_address_default':$("input[type='radio']:checked").val() },
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('User/user_address_list')}";
+					return false;
+				}else if( data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});
+	// 城市级联
+	function loadArea(cityId,cityType){
+		$.post("{:U('User/getArea')}",{'cityId':cityId},function( data ){
+			if( cityType == 'sheng'){
+				$("#"+cityType).html('<option value="0">--市--</option>');
+				$("#shi").html('<option value="0">--县/区/镇--</option>');
+			}else if( cityType == "shi"){
+				$("#"+cityType).html('<option value="0">--县/区/镇--</option>');
+			}
+			if( cityType != 'null' ){
+				$.each(data,function(index,value){
+					opt = $("<option/>").text(value['city_name']).attr("value",value['city_id']);
+					$("#"+cityType).append(opt);
+				});
+			}
+		},"json");
+	}
+</script>
+</html>

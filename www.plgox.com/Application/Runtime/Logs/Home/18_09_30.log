@@ -1,0 +1,39 @@
+[ 2018-09-30T00:46:21+08:00 ] 220.93.111.201 /console
+ERR: 无法加载控制器:Console
+
+[ 2018-09-30T02:27:18+08:00 ] 79.137.59.57 /console
+ERR: 无法加载控制器:Console
+
+[ 2018-09-30T11:47:06+08:00 ] 123.118.177.247 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+
+[ 2018-09-30T11:50:00+08:00 ] 123.118.177.247 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 102  [ RunTime:0.0001s ]
+
+[ 2018-09-30T12:08:34+08:00 ] 188.40.127.8 /console
+ERR: 无法加载控制器:Console
+
+[ 2018-09-30T12:09:51+08:00 ] 180.163.220.47 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+
+[ 2018-09-30T12:09:54+08:00 ] 180.163.220.96 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+
+[ 2018-09-30T17:49:14+08:00 ] 178.254.57.16 /console
+ERR: 无法加载控制器:Console
+
+[ 2018-09-30T22:19:22+08:00 ] 39.108.87.207 /console
+ERR: 无法加载控制器:Console
+

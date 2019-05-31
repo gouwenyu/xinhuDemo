@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+</head>
+<style type="text/css">
+	#hideShow{opacity: 0.2;background-color:#000;position: fixed;width:100%;height: 100%;z-index: 9999;display: none;}
+	.loading{border:1px solid #AEDEF4;background:#FFFFFF;width:512px;height:367px;border-radius:10px;position:fixed;left:32%;top:200px;z-index: 99999;display: none;}
+	.font-style{position:relative;left:110px;font-size:35px;font-family:楷体;top:100px;font-weight:bold;}
+	.font-styles{position: relative;left:90px;top:200px;font-family:楷体;}
+</style>
+<body>
+<eq name="cooperation['cooperation_id']" value="">
+	<div id="hideShow"></div>
+	<div class="loading">
+	<span class="font-style">正在添加，请稍后......</span>
+	<div class="loader">
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+	</div>
+	<span class="font-styles">注：添加过慢,可能是上传的图片或者文件过大,请稍等几秒!</span>
+	</div>
+<else />
+	<div id="hideShow"></div>
+	<div class="loading">
+	<span class="font-style">正在修改，请稍后......</span>
+	<div class="loader">
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+	</div>
+	<span class="font-styles">注：添加过慢,可能是上传的图片或者文件过大,请稍等几秒!</span>
+	</div>
+</eq>
+<ol class="breadcrumb">
+	<li>当前位置</li>
+	<li>{$setTitle}</li>
+</ol>
+<div class="container-fluid">
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">标题：</td>
+		<td style="border:none">
+			<div class="form-group">
+				<input type="text" class="cooperation_title" style="width:400px;height: 40px" name="cooperation_title" value="{$cooperation['cooperation_title']}">
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">图片：</td>
+		<td style="border:none">
+		   	<div class="form-group">
+		   		<eq name="cooperation['cooperation_id']" value="">
+					<img src="" class="cooperation-img1" title="" style="width: 300px;height: 200px;display: none" />
+					<input type="file" name="cooperation_pic[]" style="display: none;" id="cooperation_file_pic">
+					&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info">选择文件</button>
+				<else />
+					<img src="__ROOT__/Uploads/admin/{$cooperation['cooperation_img']}" class="cooperation-img" title="" style="width: 300px;height: 200px;display: none" />
+					<input type="file" name="cooperation_pic[]" style="display: none;" id="cooperation_file_pic" value="{$banner_sel['banner_pic']}">
+					&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info">选择文件</button>
+				</eq>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">链接地址：</td>
+		<td style="border:none">
+			<div class="form-group">
+				<input type="text" value="{$cooperation['cooperation_link']}" class="cooperation_link" style="width:400px;height: 40px" name="cooperation_link" ><a style="color:red;font-size:12px;text-decoration: none">&nbsp;&nbsp;&nbsp;(注意：请以http://或者https://开头)</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">描述：</td>
+		<td style="border:none">
+			  <div class="form-group">
+			    <textarea class="form-control" rows="6" style="width: 400px;resize: none" placeholder="内容" id="exampleInputContent" name="cooperation_desc">{$cooperation['cooperation_desc']}</textarea>
+			  </div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">关键字：</td>
+		<td>
+			<div class="form-group">
+				<input type="text" name="cooperation_key" class="cooperation_key" style="width:400px;height: 40px" value="{$cooperation['cooperation_key']}">
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">状态：</td>
+		<td>
+			<div class="radio">
+				<label>
+					<input type="radio" name="cooperation_status" class="cooperation_status" value="0" checked <eq name="cooperation['cooperation_status']" value="0">checked</eq>>开启&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="cooperation_status" class="cooperation_status" value="1" <eq name="cooperation['cooperation_status']" value="1">checked</eq>>关闭
+				</label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+				<eq name="cooperation['cooperation_id']" value="">
+					<button type="button" class="btn btn-success">添&nbsp;加</button>
+				<else />
+					<button type="button" class="btn btn-success" value="{$cooperation['cooperation_id']}">修&nbsp;改</button>
+				</eq>
+				<button type="button" class="btn btn-danger">返回上页</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-danger").click(function(){
+		window.location.href = "{:U('System/cooperation')}";
+	});
+	$(document).ready(function(){
+		if( $(".cooperation-img").attr("src") != "" ){
+			$(".cooperation-img").css("display","");
+		}
+	});
+	$(".btn-info").click(function(){
+		$("#cooperation_file_pic").click();
+		$("#cooperation_file_pic").off("change");
+		$("#cooperation_file_pic").on("change",function(){
+			if( $(this)[0].files[0].size > 3145728 ){
+				alert("当前上传的图片超出了最大的上传限制");
+				return false;
+			}else{
+				var ObjUrl = getFileUploads(this.files[0]);
+				if( ObjUrl ){
+					$(".cooperation-img").attr("src",ObjUrl);
+					$(".cooperation-img1").attr("src",ObjUrl);
+				}
+			}
+			if( $("#cooperation_file_pic").val() != "" ){
+				$(".cooperation-img1").css("display","");
+			}
+		});
+	});
+	$(".btn-success").click(function(){
+		if( $(".cooperation_title").val() == "" ){
+			alert("标题不能够为空!");
+			return false;
+		}
+		if( $(".cooperation_link").val() == "" ){
+			alert("链接地址不能为空!");
+			return false;
+		}
+		$("#hideShow").show('slow');
+		$(".loading").show('slow');
+		$.ajaxFileUpload({
+			type: "POST",
+		dataType: "JSON",
+   fileElementId: ["cooperation_file_pic"],
+   			 url: "{:U('System/cooperation_datas')}",
+   			data: { 
+   					cooperation_id:$(this).val(),
+   					cooperation_status:$('.cooperation_status:checked').val(),
+   					cooperation_title:$(".cooperation_title").val(), 
+   					cooperation_link:$(".cooperation_link").val(), 
+   					cooperation_desc:$("#exampleInputContent").val(),
+   					cooperation_key:$(".cooperation_key").val()
+   				  },
+   		 success: function( data  ){
+   		 	// 解决json格式返回带pre的问题
+   		 	var reg = /<pre.+?>(.+)<\/pre>/g;
+			var result = data.match(reg);
+			data = RegExp.$1;
+			var obj = eval('('+data+')');
+			if( obj.status== 2000 ){
+				alert(obj.message);
+				window.location.href="{:U('System/cooperation')}";
+				return false;
+			}else if( obj.status == -2001 ){
+				alert(obj.message);
+				return false;
+			}else if( obj.status == -2002 ){
+				alert(obj.message);
+				return false;
+			}
+   		 },
+   		 error: function( XMLHttpRequest , error , status ){
+   		 	alert("出现错误, 错误位置在："+status);
+   		 }
+		});
+	});
+function getFileUploads(files){
+	url = null;
+	if( window.createObjectURL != undefined ){
+		url = window.createObjectURL(files);
+	}else if( window.URL !== undefined ){
+		url = window.URL.createObjectURL(files);
+	}else if( window.webkitURL != undefined ){
+		url = window.webkitURL.createObjectURL(files);
+	}
+	return url;
+}
+</script>
+</html>

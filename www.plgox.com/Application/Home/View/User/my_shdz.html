@@ -1,0 +1,420 @@
+<include file="User:my_top" />
+<title>{$setTitle}</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_shdz.css">
+<style>
+.error_font{
+	margin-left:86px;
+}
+</style>
+
+<div class="mypj">
+   <div class="mypj1">
+      <div  class="mypj2" style="height:780px;">
+	      <div class="mypj6">
+	                  基本资料
+	      </div>   
+          <div class="myshdz">
+	                 已经创建<span class="cjdz" style="color:#1f61c3;">1</span>个收货地址，最多可创建<span style="color:#d81e06;">10</span>个
+	      </div>
+	      
+	      <div class="myshdz1">
+			<volist name="address" id="address_">
+	      	 <div class="myshdz2" id="kldz0" >
+	      	 	<div class="myshdz21">
+	      	 		<div class="myshdz22" >&nbsp;<span class="shdz_name">{$address_['address_name']}</span>&nbsp;<span class="shdz_tele">{$address_['address_tel']}</span>
+	      	 		</div>
+	      	 		<div class="myshdz23 shdz_66" data-title1="{$address_['address_city_sheng']|get_field_by_id='City','city_name','city_id'}" data-title2="{$address_['address_city_shi']|get_field_by_id='City','city_name','city_id'}" data-title3="{$address_['address_city_xian']|get_field_by_id='City','city_name','city_id'}">{$address_['address_city_sheng']|get_field_by_id="City","city_name","city_id"}{$address_['address_city_xian']|get_field_by_id="City","city_name","city_id"}</div>
+	      	 		<div class="myshdz23 address_shw">{$address_['address_default']}</div>
+	      	 		<div class="myshdz25">
+	      	 			<eq name="address_['address_default_type']" value="1">
+	      	 			<span style="color:#1F61C3;margin-left:-20px;display:inline-block;float:left;">默认地址</span>
+	      	 			</eq>
+	      	 			<span class="address_update" value="{$address_['address_id']}">编辑</span>&nbsp;&nbsp;<span style="color:#BFBFBF;">|</span>&nbsp;&nbsp;
+	      	 		<span class="shdz_sc" value="{$address_['address_id']}">删除</span>
+	      	 		</div>
+	      	 	</div>
+	      	 </div>
+	      	 </volist>
+	      	  <div class="myshdz2_last" >
+	      	 	<div class="myshdz21 shdzy">
+	      	 		<div class="myshdz30">
+	      	 		</div>
+	      	 		<div class="myshdz31">
+	      	 			添加地址
+	      	 		</div>
+	      	 	</div>
+	      	 </div>
+	      </div>
+     </div>
+   </div>
+ </div>
+
+
+ <!--遮罩-->
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr" style="height:420px;display:none;">
+	  <div class="zz_nr1">
+		添加收货地址			
+	  </div>
+	  <div class="zz_nr2" style="margin-top:30px;">
+		<span>
+			*&nbsp;收货人&nbsp;&nbsp;&nbsp;：
+		</span>
+		<input type="text" class="address_name" name="address_name"  style="margin-left:2px;"/>
+		<font class="error_font" ></font>
+	  </div>
+	  <div class="zz_nr2">
+		<span>
+			*&nbsp;选填地址：
+		</span>
+		<select class="shr_xtk" id="exampleInputSheng" onchange="loadArea(this.value,'sheng')">
+			<option value="0">--省--</option>
+			<volist name="city" id="city_">
+				<option value="{$city_['city_id']}">{$city_['city_name']}</option>
+			</volist>
+		</select>
+		<select class="shr_xtk shr_dz" id="sheng" onchange="loadArea(this.value,'shi')">
+			<option value="0">--市--</option>
+		</select>
+		<select class="shr_xtk shr_dz" id="shi" onchange="loadArea(this.value,'qu')">
+			<option value="0">--县/区/镇--</option>
+		</select>
+		<font class="address_level error_font" ></font>
+	  </div>
+	  <div class="zz_nr2">
+		<span>
+			*&nbsp;详细地址：
+		</span>
+		<input type="text" class="address_default" name="address_default" />
+		<font class="error_font" ></font>
+	  </div>
+	   <div class="zz_nr2">
+		<span>
+			*&nbsp;联系电话：
+		</span>
+		<input type="text" class="address_tel"  name="address_tel" />		
+		<font class="error_font" ></font>
+	  </div>
+	  <div class="zz_nr3" style="margin-top:25px;">
+			<a href="#" class="tyjs0">保存收货人信息</a>
+			<a href="#" class="tyjs">取消</a>	
+	  </div>
+	</div>
+	
+	
+
+	<div class="zz_nr_fbcg" style="display:none;">
+	   <div class="zdsc">
+提交成功，商家1-3个工作日内处理
+	  </div>
+	   
+	  <div class="zz_gbtk" >
+			关闭
+	  </div> 
+	</div>
+	
+	
+	<div class="zz_nr_scdz" style="display:none;">
+	  <div class="zz_nr1">
+		<span class="wxts">温馨提示<span>
+		<span class="scqr">×</span>
+	  </div>
+	  <div class="zz_nr2" style="line-height:146px;height:146px;display:block;font-size:18px;"> 确定删除本条地址!</div>
+	 
+	  <div class="zz_nr3" >
+			<a href="#wss" class="qrsc">确认</a>
+			<a href="#wss" class="tyjs">取消</a>	
+	  </div>  
+	</div>	
+	
+	
+</div>
+<script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+<script type="text/javascript">
+	$(".address_update").each(function(index){
+		$(this).click(function(){
+			window.hdgid=$(this).attr("value");
+			$(".zz_nr1").text("修改收获地址");
+			window.xxx=index;
+			//获得收货人的值
+			var sjr_name=$(".shdz_name").eq(index).text();
+			//获得分栏地址的值
+			var shr_address=$(".address_shw").eq(index).text();
+			//获得分栏地址的值市
+			var shr_dz_sheng=$(".shdz_66").eq(index).attr('data-title1');
+			//获得分栏地址的乡
+			window.shr_dz_shi=$(".shdz_66").eq(index).attr('data-title2');
+			//获得分栏地址的值省
+			window.shr_dz_xiang=$(".shdz_66").eq(index).attr('data-title3');
+			//获得电话号
+			var shr_dz_telephone=$(".shdz_tele").eq(index).text();
+			
+			$(".address_name").val(sjr_name);
+            for(var i=0;i<$("#exampleInputSheng option").length;i++){
+            	if($("#exampleInputSheng option").eq(i).text()==shr_dz_sheng){
+            		var sfz=$("#exampleInputSheng option").eq(i).attr("value");
+            		$("#exampleInputSheng option[value='"+sfz+"']").attr("selected", true);
+            		loadAreaa(sfz,"sheng");	
+            	}
+            }
+            
+            
+			$(".address_default").val(shr_address);
+			$(".address_tel").val(shr_dz_telephone);
+				
+			$(".zhezhao").css("display","block");
+			$(".zz_nr").css("display","block");
+			$(".tyjs0").eq(0).attr("value","xgsy");
+			$(".zz_nr_qrsc").css("display","none");
+		})
+	})
+	
+	function loadAreaa( cityId , CityType){
+  	 	$.post("{:U('Cart/AjaxAddress')}",{'city_id':cityId},function( data ){
+  	 	
+  	 		if( CityType == "sheng" ){
+  	 			$("#"+CityType).html('<option value="0">--市--</option>');
+  	 			$("#shi").html('<option value="0">--县/区/镇--</option>');
+  	 			$.each(data,function(index,value){
+					opt = $("<option/>").text(value['city_name']).attr("value",value['city_id']);
+					$("#"+CityType).append(opt);
+				});
+  	 			for(var j=0;j<$("#sheng option").length;j++){
+		            	if($("#sheng option").eq(j).text()==$(".shdz_66").eq(xxx).attr('data-title2')){
+		            		var sfzt=$("#sheng option").eq(j).attr("value");
+		            		$("#sheng option[value='"+sfzt+"']").attr("selected", true);
+                             loadAreaa( sfzt , "shi");
+		            	   
+		            	}
+		       }
+
+  	 		}else if( CityType == 'shi' ){
+				$("#"+CityType).html('<option value="0">--县/区/镇--</option>');
+				$.each(data,function(index,value){
+					opt = $("<option/>").text(value['city_name']).attr("value",value['city_id']);
+					$("#"+CityType).append(opt);
+				});
+				if($("#shi option").length!=1){
+					for(var k=0;k<$("#shi option").length;k++){
+		            	if($("#shi option").eq(k).text()==$(".shdz_66").eq(xxx).attr('data-title3')){
+		            		var sfzt1=$("#shi option").eq(k).attr("value");
+		            		$("#shi option[value='"+sfzt1+"']").attr("selected", true);
+		            	   
+		            	}
+		            }
+				}
+				
+  	 		}
+  	 		
+  	 		 
+  	 		
+		         
+
+  	 		
+  	 	},'json');
+  	}
+	
+	
+	
+	
+	    my_top(4,"150px","");
+	//几个收货地址
+	$(".cjdz").text($(".myshdz2").length);
+	
+	// 城市及联
+	function loadArea(cityId,cityType){
+		$.post("{:U('User/ajaxAddress')}",{'cityId':cityId},function( data ){
+			if( cityType == 'sheng'){
+				$("#"+cityType).html('<option value="0">--市--</option>');
+				$("#shi").html('<option value="0">--县/区/镇--</option>');
+			}else if( cityType == "shi"){
+				$("#"+cityType).html('<option value="0">--县/区/镇--</option>');
+			}
+			if( cityType != 'null' ){
+				$.each(data,function(index,value){
+					opt = $("<option/>").text(value['city_name']).attr("value",value['city_id']);
+					$("#"+cityType).append(opt);
+				});
+			}
+		},"json");
+	}
+
+  
+ $(".shdzy").css("height",'144px');
+
+  
+    $(".wodegb").html("收货地址");
+    $(".my_tbxd").html("收货地址");
+    
+    $(".myshdz30").click(function(){
+    	if(parseInt($(".cjdz").text())<10){
+    		$(".zhezhao").css("display","block");
+		    $(".zz_nr").css("display","block");
+		    $(".tyjs0").eq(0).attr("value","tjdzl");
+    	}
+    	else{
+    		$(".zhezhao").css("display","block");
+		    $(".zz_nr_fbcg").css("display","block");
+		    $(".zdsc").text("最多创建10个收货地址");
+		    
+		    setTimeout(function(){
+             $(".zhezhao").css("display","none");
+			 $(".zz_nr_fbcg").css("display","none");
+		     return false;
+            },3000);
+		    
+    	}
+		
+		
+	})
+	$(".tyjs").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+		$(".zz_nr_scdz").css("display","none");
+	})
+  function tkcx(message){
+  	    $(".zhezhao").css("display","block");
+		$(".zz_nr").css("display","none");
+		$(".zz_nr_fbcg").css("display","block");
+		$(".zdsc").text(message);
+/*		setTimeout(function(){
+             $(".zhezhao").css("display","none");
+			 $(".zz_nr_fbcg").css("display","none");
+			 location.reload();
+		     return false;
+         },3000);*/
+		 zdxdtk();
+  }
+
+	$(".tyjs0").click(function(){
+	   if( $(".address_name").val() == "" ){
+					$(".address_name").css("border","1px solid red");
+					$(".address_name").next().html('收货人姓名是不可以为空的!');
+					return false;
+				}else{
+					$(".address_name").css("border","1px solid green");
+					$(".address_name").next().html('');
+				}
+				if( $("#exampleInputSheng").val() == '0' && $("#sheng").val() == '0' && $("#shi").val() == '0' ){
+					$(".address_level").html('收货地址是必填的!');
+					return false;
+				}else{
+					$(".address_level").html('');
+				}
+				
+				
+				
+				if( $(".address_default").val() == ""  ){
+					$(".address_default").css("border","1px solid red");
+					$(".address_default").next().html('配送的地址是必填的!');
+					return false;
+				}else{
+					$(".address_default").css("border","1px solid green");
+					$(".address_default").next().html('');
+				}
+				 
+				 var tel = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/ ;
+				if( !tel.test($('.address_tel').val()) ){
+					$(".address_tel").css("border","1px solid red");
+					$(".address_tel").next().html('手机号不正确,请输入正确的手机号');
+					return false;
+				}else{
+					$(".address_tel").css("border","1px solid green");
+					$(".address_tel").next().html('');
+				}
+	    if($(this).attr('value')=="tjdzl"){ 			
+			   if( $(".address_name").val()!= "" && $(".address_default").val() != "" &&  $(".address_tel").val() != "" && $("#exampleInputSheng").val() != "0" && $("#sheng").val() != "0" && $("#shi").val() != "0" ){
+			   		$.post("{:U('User/addressAjax')}",
+			   			{
+			   				'address_name':$(".address_name").val(),
+			   				'address_tel':$(".address_tel").val(),
+			   				'address_default':$(".address_default").val(),
+			   				'address_city_sheng':$("#exampleInputSheng").val(),
+			   				'address_city_shi':$("#sheng").val(),
+			   				'address_city_xian':$("#shi").val(),
+			   			},function( data ){
+			   				if( data.status == 2000 ){
+			   				   tkcx(data.message);
+			   					
+			   				}else if( data.status == -2000 ){
+			   					tkcx(data.message);
+			   				}
+			   		},'json');
+			   }
+	      }
+	    else if($(this).attr('value')=="xgsy"){
+       	    $.ajax({
+						type: "post",
+					dataType: "json",
+					   async: true,
+						data: {
+							    'address_id':hdgid,
+								'address_name':$(".address_name").val() , 
+								'address_city_sheng':$("#exampleInputSheng").val() , 
+								'address_city_shi':$("#sheng").val() , 
+								'address_city_xian':$("#shi").val() , 
+								'address_default':$(".address_default").val() , 
+								'address_tel':$('.address_tel').val() 
+							},
+						 url: "{:U('Cart/AjaxAddress_update')}",
+						success: function( data ){
+							if( data.status == 2000 ){
+								$(".zhezhao").css("display","none");
+								$(".zz_nr").css("display","none");
+								location.reload();
+								return false;
+							}else if( data.status == -2000 ){
+								tkcx(data.message);
+								return false;
+							}
+						},
+						error: function( XMLHttpRequest , status ,error ){
+							tkcx("出现问题，问题位置在："+status);
+							return false;
+						}
+					});
+       	   
+       }
+	    
+	    
+	    
+	    
+	});
+	
+	//自动消失(弹框)
+function zdxdtk(){
+  $(".zhezhao").click(function(){
+  	if($(".zdsc").text()!="最多创建10个收货地址"){
+  	  location.reload();
+  	}
+  	  $(".zhezhao").css("display","none");
+  	  $(".zz_nr_fbcg").css("display","none");
+  });
+ } 
+	// 删除  
+	
+	
+	$(".shdz_sc").click(function(){
+		//删除地址弹框
+		 $(".zhezhao").css("display","block");
+  	     $(".zz_nr_scdz").css("display","block");
+  	     
+  	     //确认删除地址
+	 $(".qrsc").click(function(){
+		 $(".zhezhao").css("display","none");
+  	     $(".zz_nr_scdz").css("display","none");
+  	    
+	
+			$.post("{:U('User/Address_del')}",{ "address_id":$(".shdz_sc").attr("value") },function( data ){
+				if( data.status == 2000 ){
+					 tkcx(data.message);
+				}else if( data.status == -2000 ){
+					 tkcx(data.message);
+				}
+			},'json');
+		})
+	});
+</script>
+{:W('Common/footer')}
+</body>
+</html>

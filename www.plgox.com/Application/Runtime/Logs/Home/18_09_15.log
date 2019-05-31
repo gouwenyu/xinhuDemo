@@ -1,0 +1,93 @@
+[ 2018-09-15T00:11:29+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T00:16:18+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T01:55:16+08:00 ] 220.181.125.177 /index/yijian.html
+ERR: 非法操作:yijian
+
+[ 2018-09-15T01:55:16+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T03:01:10+08:00 ] 203.208.60.9 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T06:42:18+08:00 ] 203.208.60.69 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '45'  [ RunTime:0.0004s ]
+
+[ 2018-09-15T06:52:20+08:00 ] 203.208.60.95 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T06:58:46+08:00 ] 157.55.39.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T08:00:46+08:00 ] 157.55.39.90 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T08:57:48+08:00 ] 123.125.67.225 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T09:01:03+08:00 ] 111.206.198.70 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+
+[ 2018-09-15T10:08:12+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T10:44:12+08:00 ] 203.208.60.17 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '20'  [ RunTime:0.0004s ]
+
+[ 2018-09-15T14:12:54+08:00 ] 111.206.221.9 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+
+[ 2018-09-15T14:56:57+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T15:15:36+08:00 ] 203.208.60.85 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T16:12:06+08:00 ] 111.202.101.79 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T18:33:59+08:00 ] 180.76.15.139 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T18:33:59+08:00 ] 180.76.15.154 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T19:00:58+08:00 ] 203.208.60.123 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-15T22:34:20+08:00 ] 120.92.93.174 /data/%236Ik1Qv.asa
+ERR: 无法加载控制器:Data
+
+[ 2018-09-15T22:34:20+08:00 ] 120.92.93.174 /data/%23data.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-09-15T22:34:20+08:00 ] 120.92.93.174 /data/%23aspcms252.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-09-15T22:34:20+08:00 ] 120.92.93.174 /data/%235Dp8Gh.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-09-15T22:34:21+08:00 ] 120.92.93.174 /phpmyadmin/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2018-09-15T22:34:21+08:00 ] 120.92.93.174 /ueditor/net/controller.ashx
+ERR: 无法加载控制器:Ueditor
+
+[ 2018-09-15T22:34:21+08:00 ] 120.92.93.174 /ueditor/controller.ashx
+ERR: 无法加载控制器:Ueditor
+

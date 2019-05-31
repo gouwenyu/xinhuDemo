@@ -1,0 +1,1281 @@
+{:W('Common/header_esxz')}
+{:W('Common/header1_esxz')}
+   <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/esxz_fbmessage.css"> 
+<style>
+ .lcg{
+ 	float:left;margin-top:2px;margin-left:20px;
+ }
+</style>
+<div class="esxz_fbme_box">
+  <div class="esxz_fbme">
+  	
+  	<input type="hidden" id="share_id1" value="{$share_id1}">
+  	<input type="hidden" id="share_id2" value="{$share_id2}">
+  	<input type="hidden" id="share_id3" value="{$share_id3}">
+  	<input type="hidden" id="flz" value="{$flz}">
+  	
+	 <div class="esxz_fbme1">
+	 	发布闲置物品信息
+	 </div>
+	 <div class="esxz_fbme2">
+	 	为了更好的建设一个信息发布平台，您所发布的商品信息我们会严格审核，审核通过后才可展示，如果审核不通过我们会在第一时间告知您。刀类和食物类禁止发布。如果您的信息发布<span class="esxz_fbme21">6</span>个月，未做任何修改和删除，系统将自动删除该信息，请悉知。
+	 </div>
+	 
+	 <div class="esxz_fbme3">
+	 	<div class="esxz_fbme31">
+	 		<span></span>
+	 		<b>发布对象信息</b>
+	 	</div>
+	 	<div class="esxz_fbme32">
+	 		<div class="esxz_fbme321">
+	 			<span>身份：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme322">
+	 			<div class="esxz_fbme3221">
+	 			<input type="radio" name="business" class="" value="2" <?php if($goods_detail['goods_is_business']==2){echo "checked";}?> /> <span>个人发布</span> 
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			  <input type="radio" name="business" class="esxz_qyfb" value="1" <?php if($goods_detail['goods_is_business']==1){echo "checked";}?> /> <span>企业发布（以企业身份发布将更有助于提高买家信任度，快速达成交易。）</span>
+	 			</div>
+	 		</div>
+	 	</div>
+	 	
+	 	<!--
+	 	<div class="esxz_fbme32">
+	 		<div class="esxz_fbme321">
+	 			<span>类型：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme322">
+	 			<div class="esxz_fbme3221">
+	 			<input type="radio" name="goods_type" value="1" class=""/> <span>餐厅二手</span> 
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			  <input type="radio" name="goods_type" value="2" class=""/> <span>酒店二手</span>
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			  <input type="radio" name="goods_type" value="3" class=""/> <span>求购</span>
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			  <input type="radio" name="goods_type" value="3" class=""/> <span>店铺转让</span>
+	 			</div>
+	 		</div>
+	 	</div>
+	 	
+	 	 	<div class="esxz_fbme32">
+	 		<div class="esxz_fbme321">
+	 			<span>数量：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme322">
+	 			<div class="esxz_fbme3221">
+	 			<input type="radio" name="wy" class=""/> <span>单件</span> 
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			  <input type="radio" name="wy" class="esxz_qyfb"/> <span>批量（适合转店或大规模转让）</span>
+	 			</div>
+	 		</div>
+	 	</div>-->
+	 	
+	 	
+	<!-- 	<div class="esxz_fbme33">
+	 			<span>该信息想对何种企业用户展示联系方式</span>
+	 			<b >*</b>
+	 	</div>
+	 	
+	 	<div class="esxz_fbme35">
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>普通企业用户</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>超值企业用户</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>顶级企业用户</span>
+	 		</div>
+	 		
+	 	</div>-->
+	 	
+	 	
+<!--	 	<div class="esxz_fbme33">
+	 			<span>该信息想对何种餐厅类型展示联系方式</span>
+	 			<b >*</b>
+	 	</div>
+	 	
+	 	<div class="esxz_fbme35">
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>个人用户</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>星级以上酒店</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>普通酒店</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>大型餐馆</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>中型餐馆</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>小型餐馆</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>快餐店</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>小吃饮品店</span>
+	 		</div>
+	 		<div class="esxz_fbme351">
+	 			<input type="checkbox" name="dxk" />
+	 			<span>食堂</span>
+	 		</div>
+	 		
+	 	</div>
+	 	<div class="esxz_fbme36">
+	 		您如果不想被无关身份者骚扰，可以有针对性的选择餐厅类型。
+	 	</div>-->
+	 	
+	 	<div class="esxz_fbme3">
+	 	<div class="esxz_fbme31">
+	 		<span></span>
+	 		<b>物品信息</b>
+	 	</div>
+	 	
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>标题：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" class="esxz_input" name="bt" value="{$goods_detail.goods_name}" id="title" placeholder="最多25个字"/>
+	 		</div>
+	 	</div>
+	 	
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>店铺类型：</span>
+	 			<b >*</b>
+	 		</div>
+	 	<div class="esxz_fbme35">
+	 		
+	 		
+	 		<div class="esxz_fbme351_0">
+	 			<input type="radio" name="dxk" value=1  <?php if($goods_detail['goods_zr_shop_type']==1){echo "checked";}?>  />
+	 			<span>中餐厅</span>
+	 		</div>
+	 		<div class="esxz_fbme351_0">
+	 			<input type="radio" name="dxk" value=2  <?php if($goods_detail['goods_zr_shop_type']==2){echo "checked";}?> />
+	 			<span>西餐厅</span>
+	 		</div>
+	 		<div class="esxz_fbme351_0">
+	 			<input type="radio" name="dxk" value=3  <?php if($goods_detail['goods_zr_shop_type']==3){echo "checked";}?> />
+	 			<span>火锅餐厅</span>
+	 		</div>
+	 		<div class="esxz_fbme351_0">
+	 			<input type="radio" name="dxk" value=4  <?php if($goods_detail['goods_zr_shop_type']==4){echo "checked";}?> />
+	 			<span>自助餐厅</span>
+	 		</div>
+	 		<div class="esxz_fbme351_0">
+	 			<input type="radio" name="dxk" value=5  <?php if($goods_detail['goods_zr_shop_type']==5){echo "checked";}?> />
+	 			<span>日韩餐厅</span>
+	 		</div>
+	 		<div class="esxz_fbme351_0_qt">
+	 			<input type="radio" class="djqt" name="dxk" value=6  <?php if($goods_detail['goods_zr_shop_type']==6){echo "checked";}?> />
+	 			<span>其他</span>
+	 		</div>
+	 		<div class="esxz_fbme371 esxz_box" style="float:left;margin-top:-10px;display:none;">
+	 			<input type="text" style="width:100px;" id="other" value="{$goods_detail.goods_zr_shop_type_value}" class="esxz_input" name="bt" placeholder="请输入"/>
+	 		</div>
+	 		
+	 	  </div>
+	 	</div>
+	 	
+	 	
+<script type="text/javascript">
+	$(".esxz_fbme351_0 input").click(function(){
+		$(".esxz_box").css("display","none");
+	})
+	$(".djqt").click(function(){
+		$(".esxz_box").css("display","block");
+	})
+</script>
+
+
+
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>经营状态：</span>
+	 			<b >*</b>
+	 		</div>
+	 	<div class="esxz_fbme35">
+	 		
+	 		
+	 		<div class="esxz_fbme351_0">
+	 			<input type="radio" name="status" value=1  <?php if($goods_detail['goods_zr_status']==1){echo "checked";}?>  />
+	 			<span>经营中</span>
+	 		</div>
+	 		<div class="esxz_fbme351_0">
+	 			<input type="radio" name="status" value=2  <?php if($goods_detail['goods_zr_status']==2){echo "checked";}?>  />
+	 			<span>空置中</span>
+	 		</div>
+	 		
+	 		
+	 		
+	 	  </div>
+	 	</div>
+	 	
+	 	
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>面积：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" value="{$goods_detail.goods_zr_area}" class="esxz_input" id="area" placeholder="面议&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平米"/>
+	 		</div>
+	 	</div>
+	 	
+	 	<div class="esxz_fbme32">
+	 		<div class="esxz_fbme321">
+	 			<span>楼层：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<!--<div class="esxz_fbme322">
+	 			<div>
+		 			<select type="checkbox" class="esxz_input1 floor">
+		 				<option value="1" <?php if($goods_detail['goods_zr_floor']==1){echo "selected";}?> >单层</option>
+		 				<option value="2" <?php if($goods_detail['goods_zr_floor']==2){echo "selected";}?> >多层</option>
+		 			</select>
+		 			<div class="esxz_fbme371 lcg">
+			 			<input type="text" style="width:150px;" class="esxz_input" id="num" name="bt" placeholder="第   层"  value="{$goods_detail.goods_zr_floor_num}" />
+			 		</div>
+		 			<div class="esxz_fbme371 lcg" style="">
+			 			<input type="text" style="width:150px;" class="esxz_input" id="count" name="bt" placeholder="共   层"  value="{$goods_detail.goods_zr_floor_count}" />
+			 		</div>
+		 		</div>
+	 			
+	 		</div>-->
+	 		
+	 		<div class="esxz_fbme322">
+	 			<div>
+		 			<select type="checkbox" class="esxz_input1 floor">
+		 				<option   value="1" <?php if($goods_detail['goods_zr_floor']==1){echo "selected";}?> >单层</option>
+		 				<option value="2" <?php if($goods_detail['goods_zr_floor']==2){echo "selected";}?> >多层</option>
+		 			</select>
+		 		<div class="dancxg" style="display:inline-block;">
+		 			<div class="esxz_fbme371 lcg">
+			 			<input type="text" style="width:150px;" class="esxz_input" id="num" name="bt" placeholder="第   层"  value="{$goods_detail.goods_zr_floor_num}" />
+			 		</div>
+		 			<div class="esxz_fbme371 lcg" style="">
+			 			<input type="text" style="width:150px;" class="esxz_input" id="count" name="bt" placeholder="共   层"  value="{$goods_detail.goods_zr_floor_count}" />
+			 		</div>
+			 	</div>
+			
+			 
+			 	<div class="duocxg" style="display:none;">
+		 			<div class="esxz_fbme371 lcg">
+			 			<input type="text" style="width:150px;" class="esxz_input" id="more_num" name="bt" placeholder="第   层"/>
+			 		</div>
+			 		<span style="display:inline-block;float:left;margin-left:15px;margin-top:2px;">至</span>
+			 		<div class="esxz_fbme371 lcg">
+			 			<input type="text" style="width:150px;" class="esxz_input" id="more_lastnum" name="bt" placeholder="第   层"/>
+			 		</div>
+		 			<div class="esxz_fbme371 lcg" style="">
+			 			<input type="text" style="width:150px;" class="esxz_input" id="more_count" name="bt" placeholder="共   层"/>
+			 		</div>
+			 	</div>
+			 	
+		 	</div>
+	 			
+	 		</div>
+	 		
+	 		
+	 	</div>
+	 	
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>面宽：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" class="esxz_input"  value="{$goods_detail.goods_zr_weight}" id="weight" placeholder="面议&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;米"/>
+	 		</div>
+	 	</div>
+	 	
+	 	
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>层高：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" class="esxz_input" id="height"  value="{$goods_detail.goods_zr_height}"  placeholder="面议&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;米"/>
+	 		</div>
+	 	</div>
+	 	
+	 	
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>进深：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" class="esxz_input" id="depth"  value="{$goods_detail.goods_zr_depth}"  placeholder="面议&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;米"/>
+	 		</div>
+	 	</div>
+	 	
+	 	
+	 <div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>店铺配套：</span>
+	 			<b >*</b>
+	 		</div>	
+	 	<div class="esxz_fbme35 esxz_fbme35_dd">
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" 
+	 			<?php 
+				$str ="中央空调"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?>  
+	 			name="mating" />
+	 			<span class="va" >中央空调</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="停车位"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?>  
+	 			/>
+	 			<span class="va">停车位</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="客梯"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?>  
+	 			/>
+	 			<span class="va">客梯</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="货梯"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?>  
+	 			/>
+	 			<span class="va">货梯</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="天然气"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?>  
+	 			/>
+	 			<span class="va">天然气</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="暖气"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?>  
+	 			/>
+	 			<span class="va">暖气</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="扶梯"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?> 
+	 			/>
+	 			<span class="va">扶梯</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="上水"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?> 
+	 			/>
+	 			<span class="va">上水</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="下水"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?> 
+	 			/>
+	 			<span class="va">下水</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="排烟"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?> 
+	 			/>
+	 			<span class="va">排烟</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="扶梯"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?> 
+	 			/>
+	 			<span class="va">扶梯</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="排污"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?> 
+	 			/>
+	 			<span class="va">排污</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="管煤"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?> 
+	 			/>
+	 			<span class="va">管煤</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="可明火"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?> 
+	 			/>
+	 			<span class="va">可明火</span>
+	 		</div>
+	 		<div class="esxz_fbme351_dd">
+	 			<input type="checkbox" name="mating" 
+	 			<?php 
+				$str ="外摆区"; 
+				$res=strpos("aaaa,".$goods_detail['goods_zr_mating'],$str);
+				//echo $res;
+	 			if($res == true){
+					echo "checked";
+				}
+	 			?> 
+	 			/>
+	 			<span class="va">外摆区</span>
+	 		</div>
+	 		
+	 	</div>
+	 </div>	
+	 	
+	 	
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>区域位置：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme32">
+		 		<div class="esxz_fbme322">
+		 			<div>
+			 			<select type="checkbox" class="esxz_input1 area_a">
+				 			<volist name="province" id="pv">
+				 					<option class="choose_province" id="{$pv.city_id}" <eq name="pv['city_id']" value="$province_id">selected</eq> > {$pv.city_name}</option>
+				 			</volist>
+			 			</select>
+			 			<select type="checkbox" class="esxz_input3 area_b">
+				 			<volist name="city" id="ct">
+				 				<option class="choose_province" id="{$ct.city_id}" <eq name="ct['city_id']" value="$city_id">selected</eq> >{$ct.city_name}</option>
+				 			</volist>
+			 			</select>
+			 			
+			 			
+			 		
+			 			
+			 			
+		 			</div>
+		 			<div class="esxz_fbme32_xm">
+		 			  <input type="text" class="esxz_input2" id="shouhuo_address" value="{$goods_detail.goods_address}" name="bt" placeholder="请输入具体地址"/>
+		 			</div>
+		 		</div>
+	 	    </div>
+	 	</div>
+	 	
+	 	
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>转让价格：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" class="esxz_input" id="sale_price" value="{$goods_detail.goods_deal_price}" placeholder="面议&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元"/>
+	 		</div>
+	 	</div>
+	 	
+	 	
+	 	
+	 	<div class="esxz_fbme38">
+	 		<div class="esxz_fbme321">
+	 			<span>餐厅描述：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme381">
+	 			<textarea id="description" rows="10" class="esxz_wby" cols="30" > {$goods_detail.goods_description}
+               </textarea> 
+               <div class="esxz_fbme382">请您对描述的真实性负责。描述越细致，将越有利于快速达成交易。</div>
+	 		</div>
+	 		
+	 	</div>
+	 	
+	 	<div class="esxz_fbme39">
+	 		<div class="esxz_fbme321 esxz_fbme392">
+	 			<span>上传图片：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme391">
+	 			   <if condition="$img_url[0] eq ''">
+	 			   		<img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image1 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[0]}" alt="" class="image1 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile1" value="" style="display:none" name="pic_img[]">	
+      	           
+      	           
+	 			   <if condition="$img_url[1] eq ''">
+      	           		<img src="__PUBLIC__/Home/image/sctp.jpg" alt=""  class="image2 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[1]}" alt="" class="image2 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile2" value="" style="display:none" name="pic_img[]">
+      	          
+      	          
+	 			   <if condition="$img_url[2] eq ''">
+      	           		<img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image3 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[2]}" alt="" class="image3 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile3" value="" style="display:none" name="pic_img[]">
+      	           
+      	           
+	 			   <if condition="$img_url[3] eq ''">
+      	           		<img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image4 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[3]}" alt="" class="image4 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile4" value="" style="display:none" name="pic_img[]">
+      	           
+      	           
+	 			   <if condition="$img_url[4] eq ''">
+      	           		<img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image5 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[4]}" alt="" class="image5 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile5" value="" style="display:none" name="pic_img[]">
+      	           
+      	           
+	 			   <if condition="$img_url[5] eq ''">
+      	            	<img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image6 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[5]}" alt="" class="image6 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile6" value="" style="display:none" name="pic_img[]">
+      	           
+      	           
+	 			   <if condition="$img_url[6] eq ''">
+      	            	<img src="__PUBLIC__/Home/image/sctp.jpg" alt=""  class="image7 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[6]}" alt="" class="image7 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile7" value="" style="display:none" name="pic_img[]">
+      	           
+      	           
+	 			   <if condition="$img_url[7] eq ''">
+      	           		<img src="__PUBLIC__/Home/image/sctp.jpg" alt=""  class="image8 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[7]}" alt="" class="image8 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile8" value="" style="display:none" name="pic_img[]">
+      	           
+      	           
+	 			   <if condition="$img_url[8] eq ''">
+      	           		<img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image9 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[8]}" alt="" class="image9 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile9" value="" style="display:none" name="pic_img[]">
+      	           
+      	           
+	 			   <if condition="$img_url[9] eq ''">
+      	           		<img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image10 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <else />
+      	           		<img src="__ROOT__/Uploads/admin/{$img_url[9]}" alt="" class="image10 image_tp">&nbsp;&nbsp;&nbsp;
+      	           </if>
+      	           <input type="file" id="exampleInputFile10" value="" style="display:none" name="pic_img[]">
+      	           
+      	           
+	 		</div> 
+	 		<div class="wdzl_tp61">
+	 			支持格式JPG、PNG、BMP，最大支持3M，最多添加10张。有图片可使浏览量增加3倍，并会在推荐位展示。
+	 		</div>	
+	 		
+	 	</div>
+	 	
+	
+	 <br/><br/><br/>
+	    <div class="esxz_fbme31">
+	 		<span></span>
+	 		<b>联系人信息</b>
+	 	</div>
+	 	<!--<div class="esxz_fbme32">
+	 		<div class="esxz_fbme321">
+	 			<span>交易地址：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme322">
+	 			<div>
+		 			<select type="checkbox" class="esxz_input1">
+		 				<option>请选择</option>
+		 				<option>北京</option>
+		 				<option>天津</option>
+		 				<option>上海</option>
+		 			</select>
+		 			<select type="checkbox" class="esxz_input1">
+		 				<option>请选择</option>
+		 				<option>北京</option>
+		 				<option>天津</option>
+		 				<option>上海</option>
+		 			</select>
+		 		</div>
+	 			<div class="esxz_fbme32_xm">
+	 			  <input type="text" class="esxz_input2" name="bt" placeholder="请输入具体地址"/>
+	 			</div>
+	 		</div>
+	 	</div>-->
+	 <br/>
+	 <div class="esxz_fbme32 ">
+	 		<div class="esxz_fbme321">
+	 			<span>联系人：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme322">
+	 			<div class="esxz_fbme3221_fir">
+	 			  <input type="text" class="esxz_input6" value="{$goods_detail.goods_link_name}" id="linkman" placeholder="请输入姓氏或者全名"/>
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			<input type="radio" name="sex" class=""  <?php if($goods_detail['goods_link_sex']==1){echo "checked";}?> value="1"/> <span>先生</span> 
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			  <input type="radio" name="sex" class=""  <?php if($goods_detail['goods_link_sex']==2){echo "checked";}?> value="2"/> <span>女士</span>
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			  <input type="radio" name="sex" class=""  <?php if($goods_detail['goods_link_sex']==3){echo "checked";}?> value="3"/> <span>小姐</span>
+	 			</div>
+	 		</div>
+	 	</div>
+	 	
+	 	<div class="esxz_fbme33" style="width:210px;">
+	 			<span>联系方式（至少选择一种）</span>
+	 			<b >*</b>
+	 	</div>
+	 
+	    <div class="esxz_fbme_lxfs">
+	 		<div >
+	 			<span>电话</span><input type="text" id="phone" value="{$goods_detail.goods_link_phone}" class="esxz_input6" placeholder="请输入11位手机号码"/>
+	 		</div>	
+	 		<div >
+	 			<span>Q&nbsp;Q</span><input type="text" id="qq" value="{$goods_detail.goods_link_qq}" class="esxz_input6" placeholder="请输入qq号"/>
+	 		</div>
+	 		<div >
+	 			<span>微信</span><input type="text" id="wechat" value="{$goods_detail.goods_link_wechat}" class="esxz_input6" placeholder="请输入微信号码"/>
+	 		</div>
+	 	</div>
+	 <div class="esxz_fbme_zdb">发布具有敏感政治倾向、暴力倾向、不健康色彩等的文字或图片，将不能通过审核。</div>
+	 
+	 <div class="show_message"></div>
+	 <div class="esxz_fbme_tj">提交</div>
+	 
+	 </div>
+	 
+	 
+	 
+  </div>
+</div>
+
+
+
+<!--遮罩-->
+<div class="zhezhao" style="display:none;">
+
+<!--企业认证-->	
+	<div class="zz_nr" style="display:none;">
+	  <div class="esxz_de_zz5">
+	  	<!--很抱歉，您还不是企业用户，先通过企业认证后再查看。-->
+	  	查看卖家联系方式需要登录后可见。
+	  </div>
+	  <div class="zz_nr3" style="width:260px;">
+			<span class="ty_esxz">取消</span>
+			<span class="ty_esxz1">马上登录</span>	
+	  </div> 
+   </div>
+
+<!--价值过万-->	
+	<div class="zz_nr" style="display:block;">
+	  <div class="esxz_de_zz5">
+	  因为您的单件价格超过万元，所以必须上传产品发票
+	  </div>
+	  <div class="zz_nr3" style="width:220px;padding-top:10px;">
+			<span class="ty_esxz1" style="width:220px;float:none;margin-top:20px;">我知道了</span>	
+	  </div> 
+   </div>
+
+<!--添加图片-->	
+<div class="container" style="display:none;">
+  <div class="imageBox" >
+	<div class="thumbBox" style="width:230px;height:222px;left:40%;top:40%;"></div>
+	<div class="spinner" style="display: none;">Loading...</div>
+  </div>
+  <div class="action"> 
+	<div class="new-contentarea tc"> 
+	  <a href="javascript:void(0)" class="upload-img">
+			<label for="upload-file">上传图像</label>
+	  </a>
+	  <input type="file" class="file" name="file" id="file" />
+	</div>
+	<input type="button" id="btnCrop"  class="Btnsty_peyton" value="裁切">
+	<input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+"  >
+	<input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" >
+ </div>
+</div>
+</div>
+ <script type="text/javascript">
+	$(".floor").change(function(){
+		var xzzt=$(".floor").find("option:selected").attr("value");
+		if(xzzt==1){
+			$(".duocxg").css("display","none");
+			$(".dancxg").css("display","inline-block");
+			
+		}
+		else{
+			$(".dancxg").css("display","none");
+			$(".duocxg").css("display","inline-block");
+		}
+	})
+</script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/cropbox.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+<script type="text/javascript">
+  //上传图片
+ $(window).load(function() {
+	 number = [0,1,2,3,4,5,6,7,8,9,10,11];
+	 	$.each(number,function( index ){
+	 		if( index != 0 ){
+	 			$(".image"+index).click(function(){
+	 				//alert(index);
+	 				//return false;
+	 				$("#exampleInputFile"+index).click();
+	 				//$("#exampleInputFile"+index).off("change");
+	 				//$("#exampleInputFile"+index).on('change',function(){
+	 				$("#exampleInputFile"+index).change(function(){
+	 					// 判断上传的限制
+	 					if( $(this)[0].files[0].size > 10485760){
+	 						alert("上传文件超出了特定的上传限制!");
+	 						return false;
+	 					}else{
+	 						var objUrl = getUploads(this.files[0]);
+	 						if( objUrl ){
+	 							$(".image"+index).attr("src",objUrl);
+	 							$("#image"+index).val(objUrl);
+	 						}
+	 					}
+	 				})
+	 					
+
+	 			});
+	 		}
+	 	});
+	
+	 $(".area_a").change(function(){
+		   var id = $(":selected",".area_a").attr("id");
+		   $.post("{:U('Esxz/esxz_choose_city')}",{
+				  'id':id 
+				  },
+				  function( data ){
+				  	 console.log(data);
+	           //三级分类
+	           var opt1='';
+					$.each(data,function(index,value){
+		  	           opt1+='<option id='+value.city_id+'>'+value.city_name+'</option>';
+					});
+					$(".area_b").text("");
+	                $(".area_b").append(opt1);
+		     },"json"); 
+	   });
+	 
+	//提交
+		$(".esxz_fbme_tj").click(function(){
+
+			var str="";
+			$.each($('input:checkbox:checked'),function(){
+                str += $(this).next().attr("class","va").text()+",";
+            });
+			//alert(str);
+			
+			
+			var shenfen = $('input:radio[name="business"]:checked').val();//身份
+			if(shenfen==""){
+				$(".show_message").html("身份未选择");
+				return false;
+			}
+			
+			var title = $('#title').val();//标题
+			if(title==""){
+				$(".show_message").html("标题未填写");
+				return false;
+			} 
+			
+			var shop_type = $('input:radio[name="dxk"]:checked').val();//店铺类型
+			//alert(shop_type);
+			if(shop_type==""){
+				$(".show_message").html("身份未选择");
+				return false;
+			}
+			if(shop_type==6){
+				var shop_type_value = $("#other").val();
+				alert(shop_type_value);
+			}
+			
+			var zr_status = $('input:radio[name="status"]:checked').val();//经营状态
+			//alert(zr_status);
+			if(zr_status==""){
+				$(".show_message").html("身份未选择");
+				return false;
+			}
+			
+			var area = $("#area").val();
+			if(area==""){
+				$(".show_message").html("面积未填写");
+				return false;
+			}
+			
+			var floor = $(":selected",".floor").val();//楼层，默认单层
+			var num = $("#num").val();//楼层未填写
+			var count = $("#count").val();//总楼层数
+			if(floor==2){
+				if(num==""){
+					$(".show_message").html("楼层未填写");
+					return false;
+				}
+				if(count==""){
+					$(".show_message").html("总楼层数未填写");
+					return false;
+				}
+			}   
+			var weight = $("#weight").val();
+			if(weight==""){
+				$(".show_message").html("面宽未填写");
+				return false;
+			}
+			var height = $("#height").val();
+			if(height==""){
+				$(".show_message").html("层高未填写");
+				return false;
+			}
+			var depth = $("#depth").val();
+			if(depth==""){
+				$(".show_message").html("进深未填写");
+				return false;
+			}
+			//alert(weight+"-"+height+"-"+depth);
+			
+			
+		    var province = $(":selected",".area_a").attr("id");
+			var city = $(":selected",".area_b").attr("id");
+			//alert(province+"-"+city);
+			if(province==""){
+				//alert(goods_name);
+				$(".show_message").html("交易地址未选择");
+				return false;
+			}
+
+		    var shouhuo_address = $("#shouhuo_address").val();
+		    //alert(shouhuo_address);
+		    if(shouhuo_address==""){
+				$(".show_message").html("详细地址未填写");
+				return false;
+			}
+		   
+			var sale_price = $("#sale_price").val();
+		    //alert(sale_price);
+		    if(sale_price==""){
+				$(".show_message").html("转让价格未填写");
+				return false;
+			}
+
+			var description = $("#description").val();
+		    //alert(shouhuo_address);
+		    if(description==""){
+				$(".show_message").html("描述未填写");
+				return false;
+			}
+		   
+			//联系人
+			var linkman = $("#linkman").val();
+		    //alert(shouhuo_address);
+		    if(linkman==""){
+				$(".show_message").html("联系人未填写");
+				return false;
+			}
+		    //性别
+		    var sex = $('.esxz_fbme3221 input:radio[name="sex"]:checked').val();
+			if(sex==""){
+				$(".show_message").html("性别未选择");
+				return false;
+			}
+		    var phone = $("#phone").val();
+		    var qq = $("#qq").val();
+		    var wechat = $("#wechat").val();
+		    if(phone==""&&qq==""&&wechat==""){
+				$(".show_message").html("QQ,微信,手机号,请至少填写其中一个联系方式");
+				return false;
+			}
+		    var share_id1 = $("#share_id1").val();
+		    var share_id2 = $("#share_id2").val();
+		    var share_id3 = $("#share_id3").val();
+		    var flz = $("#flz").val();
+		    
+			//alert(first+"--"+second+"--"+third);
+			//alert(shenfen+"--"+shenfen+"--"+goods_type+"--"+goods_num+"--"+text);
+			//alert(goods_name+"--"+goods_cost_price+"--"+esxz_zrjg+"--"+goods_produce_address+"--"+goods_brand+"--"+goods_description);
+			$.ajaxFileUpload({
+						dataType: "json",
+						fileElementId:["exampleInputFile1","exampleInputFile2","exampleInputFile3","exampleInputFile4","exampleInputFile5","exampleInputFile6","exampleInputFile7","exampleInputFile8","exampleInputFile9","exampleInputFile10","exampleInputFile11"],
+		                url:"{:U('Esxz/update_content')}",
+		                type:'post',
+		                data:{
+		                	goodsid:{$goods_detail.goods_id},
+		                	shenfen:shenfen,
+		                	goods_name:title,
+		                	shop_type:shop_type,
+		                	shop_type_value:shop_type_value,
+		                	zr_status:zr_status,
+		                	area:area,
+		            		floor:floor,
+		                	goods_description:description,
+		            		num:num,
+		            		count:count,
+		            		weight:weight,
+		            		height:height,
+		            		depth:depth,
+		            		str:str,
+		            		province:province,
+		            		city:city,
+		            		shouhuo_address:shouhuo_address,
+		            		esxz_zrjg:sale_price,
+		            		description:description,
+		            		link_name:linkman,
+		            		sex:sex,
+		            		phone:phone,
+		            		qq:qq,
+		            		wechat:wechat,
+		                	goods_typea:share_id1,
+		                	goods_typeb:share_id2,
+		                	goods_typec:share_id3,
+		                	goods_sell_type:flz
+		                }, 
+		                success:function(data){
+		                	console.log(data);
+		                	//window.location.href="{:U('Esxz/index')}";
+		                }
+		                
+
+		            })
+		});
+	 
+		
+	 	function getUploads(files){
+	 		url = null;
+	 		if( window.createObjectURL !== undefined ){
+	 			url = window.createObjectURL(files);
+	 		}else if( window.URL !== undefined ){
+	 			url = window.URL.createObjectURL(files);
+	 		}else if( window.webkitURL != undefined ){
+	 			url = window.webkitURL.createObjectURL(files);
+	 		}
+	 		return url;
+	 	} 
+	 
+	 
+	 
+	 
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	var oid=0;
+	$(".esxz_fbme39_sc").click(function(){
+		 $(".zhezhao").css("display","block");
+		 $(".container").css("display","block");
+		 esxz(".esxz_fbme39_sc");
+	});
+	$(".esxz_fbme39_fp").click(function(){
+		 $(".zhezhao").css("display","block");
+		 $(".container").css("display","block");
+		 esxz(".esxz_fbme39_fp");
+	});
+	
+	function esxz(leiz){
+		window.leizhi=leiz;
+	}
+	
+	var options =
+	{
+		thumbBox: '.thumbBox',
+		spinner: '.spinner',
+		imgSrc: '__ROOT__/Public/Home/image/index_lb5.jpg'
+	}
+	var cropper = $('.imageBox').cropbox(options);
+	$('#file').change(function(){
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			options.imgSrc = e.target.result;
+			cropper = $('.imageBox').cropbox(options);
+		}
+		reader.readAsDataURL(this.files[0]);
+		
+		
+	})
+	var oid=0;
+	$('#btnCrop').click(function(){
+		var img = cropper.getDataURL();
+		$('.cropped').html('');
+		   $.ajax({
+			type: "POST",
+		dataType: "json",
+   			 url: "{:U('Homeuser/uplads_tp')}",
+   			data: {'data':img},
+   		 success: function(data){
+   		 	if(leizhi=='.esxz_fbme39_sc'){
+   		 	   var tps=$(".esxz_fbme390").length;
+				if(oid==0){
+					$("#esxz_fbme0").css("display","block");
+				}
+				else if(tps==8){
+					alert("最多只能上传八张");
+					$(".zhezhao").css("display","none");
+					return false;
+					
+				}
+				else{
+					var ss=$('.esxz_fbme390:last').clone(true).attr('id','esxz_fbme'+oid); 
+		           $('.esxz_fbme390:last').after(ss);
+				}
+				var tplj="__ROOT__/"+data.message;
+				$("#esxz_fbme"+oid+"  img").attr("src",tplj);
+		        oid++;
+		       }
+   		 	   else{
+	   		 	   	var tplj="__ROOT__/"+data.message;
+		   		 	$(".esxz_fbme39_fp img").css("marginTop","0px");	
+		   		 	$(".esxz_fbme39_fp div").text("");
+		   		 	$(".esxz_fbme39_fp img").css('width','230px').css('height','222px');
+		   		 	$(".esxz_fbme39_fp img").attr("src",tplj);
+   		 	   }
+		        $(".container").css("display","none");
+				$(".zhezhao").css("display","none");
+				
+				
+   		}
+   		 
+   		 });
+	});
+	
+	$('#btnZoomIn').click(function(){
+		cropper.zoomIn();
+	});
+	$('#btnZoomOut').click(function(){
+		cropper.zoomOut();
+	});
+	
+	$(".wdzl_tp60").each(function(index){
+		$(this).click(function(){
+			$(".wdzl_tp").eq(index).css("display","none");
+		});
+	});
+	
+	//删除图片
+	$(".wdzl_tp60").each(function(index){
+		$(".wdzl_tp60").eq(index).click(function(){
+			alert(index);
+		})
+	})
+	
+	
+	
+});
+</script>
+
+<script type="text/javascript">
+//一      
+	//餐厅展示的联系方式
+	//餐厅类型默认全部选中状态。如果没有完善企业认证的问卷调查部分，星级以上酒店、大型餐馆、中型餐馆默认没有选中，点击这几项弹出提示框告知需先完善调查问卷。
+	
+	//1  没有完善企业认证的问卷调查部分，
+/*	var array1=new Array(1,3,4);
+	for(var i=0;i<$(".esxz_fbme351 input").length;i++){
+		if(i==array1[0]||i==array1[1]||i==array1[2]){	
+			$(".esxz_fbme351 input").eq(i).removeAttr("checked"); 
+		}
+		else{
+           $(".esxz_fbme351 input").eq(i).attr("checked","true"); 
+		}
+	}
+	//点击未选中的出现弹框
+	for(var j=0;j<array1.length;j++){
+		$(".esxz_fbme351 input").eq(array1[j]).click(function(){
+			$(this).removeAttr("checked"); 
+			//
+			$(".esxz_de_zz5").eq(0).text('由于您没有完善企业认证中问卷调查部分，所以没有权限选择星级以上酒店、大型餐馆、中型餐馆。是否马上去完善资料？');
+			 $(".zhezhao").css("display","block");
+		     $(".zz_nr").eq(0).css("display","block");
+		});
+	}*/
+	
+	
+	//取消
+$(".ty_esxz").click(function(){
+	$(".zhezhao").css("display","none");
+	$(".zz_nr").css("display","none");
+});
+
+	//马上登陆
+$(".ty_esxz1").click(function(){
+	$(".zhezhao").css("display","none");
+	$(".zz_nr").css("display","none");
+});
+
+
+
+//二       企业用户
+/* $(".esxz_qyfb").click(function(){
+	$(this).removeAttr("checked"); 
+			//
+			$(".esxz_de_zz5").eq(0).text('您现在还不是企业用户，请先进行企业认证后再选择企业发布。是否马上去认证？');
+			 $(".zhezhao").css("display","block");
+		    $(".zz_nr").eq(0).css("display","block");
+}); */
+
+//三  转让价格超过一万
+$("#esxz_zrjg").blur(function(){
+  if($(this).val()>10000){
+
+			 $(".zhezhao").css("display","block");
+		    $(".zz_nr").eq(1).css("display","block");
+  }
+});
+</script>
+{:W('Common/footer_esxz')}

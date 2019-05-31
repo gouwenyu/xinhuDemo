@@ -1,0 +1,116 @@
+﻿body{
+		background:url('../image/htsy__1.jpg') no-repeat left top;
+		background-size:100% 100%;
+		 line-height: normal;
+		 scroll:no;
+		  background-attachment: fixed;
+	}
+	.htsy_1{
+		position:fixed;
+		top:0px;
+			height:70px;	
+			margin-top:25px;
+			width:100%;
+			overflow:hidden;
+	}
+	.htsy_10{
+		margin-left:20px;
+		display:inline-block;
+		float:left;
+	}
+	.htsy_11{
+		display:inline-block;
+		margin-left:110px;
+		font-size:18px;
+		color:white;
+		height:70px;
+		float:left;
+		line-height:70px;
+	}
+		.htsy_12{
+			margin-right:20px;
+		display:inline-block;
+		float:right;
+		font-size:18px;
+		color:white;
+		height:70px;
+		line-height:70px;
+	}
+	.htsy_12 span:nth-child(2){
+		margin-left:15px;
+		background:url('../image/htsy_2.jpg') no-repeat 28px center;
+		 background-color:#223455;
+	}
+		.htsy_12 span{
+		 display:inline-block;
+		 line-height:35px;
+		 width:128px;
+		 border-radius:20px;
+		 background-color:#223455;
+		 text-align:center;
+	}
+	
+	.htsy_2{
+		position:fixed;
+		width:225px;
+		top:107px;
+		display:inline-block;
+	  margin-left:20px;
+	  float:left;
+		height:500px;
+		background-color:rgba(26,26,26,0.15);
+	}
+	.htsy_2 li{
+		height:46px;
+		line-height:46px;
+		width:100%;
+		overflow:hidden;
+		
+	}
+	.htsy_2 li div,.htsy_2 li div a{
+		display:block;
+		width:225px;
+		height:100%;
+		color:white;
+		
+	}
+.htsy_2 li div a{
+	padding-left:58px;
+}
+
+.htsy_top_yd{
+	position:absolute;top:0px;left:0px;height:0px;width:100%;background-color:#8998A1;opacity:0.4;z-index:-1;
+}
+.ht_in1{
+	position:relative;
+	top:107px;
+	overflow-y:auto;
+	margin-left:255px;
+	background-color:#FAFAFA;
+	}
+.ht_in10{
+	line-height:49px;
+	width:100%;
+	font-size:16px;
+	color:black;
+	background:url('../image/htsy_index10.jpg') no-repeat left top;
+	background-color:#F4F4F4;
+	border-bottom: 1px solid #D3D3D3;
+}
+.ht_in10 span{
+	margin-left:73px;
+	font-weight:600;
+}
+input::placeholder{
+    color:#b8b8b8;
+  }
+  input{
+  	color:#666666;
+  }
+  .ht_content{
+  	padding:36px 26px;
+  }
+td{
+   vertical-align: center;
+   text-align:center;
+}

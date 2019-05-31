@@ -1,0 +1,350 @@
+{:W('Common/header')}
+<link  rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/sj_center.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zhezhao.css">
+
+
+
+<style type="text/css">
+	.error_font1{
+     display: block;
+     color: red;
+      margin-left: 100px;
+	}
+</style>
+<div class="sj_banner">
+	<img class="carousel-inner img-responsive img-rounded" src="__PUBLIC__/Home/image/banner.jpg" />	
+</div>
+
+
+
+ 
+
+
+
+<div class="sjsq2">
+	
+	
+	<!--资金密码弹框-->
+  <div class="zjmmk" style="display:block;">
+  	 <div class="zjmmk1">
+商家入驻基本信息
+  	 </div>
+  	 <div class="zjmmk2">
+  	 	
+  	 	
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">申请人姓名：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" placeholder="请输入姓名" class="zjmm_bdk shop_names"/>	
+  	 			
+  	 		</div>
+  	 		<font class="error_font1" ></font>
+  	 	</div>
+  	 	
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">申请人电话：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" placeholder="请输入电话" class="zjmm_bdk shop_telephones"/> 	 			
+  	 		</div>
+  	 		<font class="error_font1" ></font>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">支持发票类型：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<div class="fplxz">
+  	 				<input value="1" type="radio" name="fplxz1" class="shop_fp"/>
+  	 				<span>普通发票</span>
+  	 			</div>
+  	 			<div class="fplxz" style="margin-left:10px;">
+  	 				<input value="2" type="radio" name="fplxz1" class="shop_fp"/>
+  	 				<span>增值税专用发票</span>
+  	 			</div>
+  	 			<div class="fplxz" style="margin-left:10px;">
+  	 				<input value="3" type="radio" name="fplxz1" class="shop_fp"/>
+  	 				<span>暂不支持</span>
+  	 			</div>
+  	 		</div>
+  	 		<font class="error_font1" ></font>
+  	 	</div>
+  	 	<div class="fblxz12">
+  	 		如果您不具备开取租赁发票资格，可自行前往本地工商局增添经营范围，租赁发票税率5%左右。
+  	   </div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">报修电话：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" placeholder="请输入电话" class="zjmm_bdk shop_bxtelephone"/>
+  	 		</div>
+  	 		<font class="error_font1" ></font>
+  	 	</div>
+  	 	
+  	 	<div class="sjsq6">
+		<input type="checkbox" name="tyxy" class="tyxy" value="1"/>
+		<span>我已认证阅读<a class="xynrsy" href="{:U('Shopcenter/sj_xieyi')}" style="color:red;font-weight:500;cursor:pointer;">《租赁商入驻协议》</a>内容，并同意全部协议内容。</span>
+		</div>
+		<div class="sjsq7">
+			确认入驻商家
+		</div>
+ 
+  	 	
+  	 </div>
+   </div>
+	
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	
+	
+<script type="text/javascript">
+
+</script>	
+	
+	
+</div>
+
+
+
+<!--发布成功  3秒后自动消失-->
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr_fbcg" style="display:none;">
+	  <div class="zdsc">
+	  	
+	  </div>
+	   
+	  <div class="zz_gbtk" >
+			关闭
+	  </div> 
+	</div>
+	
+	<div class="zz_nr_scdz" style="display:none;">
+	  <div class="zz_nr1">
+		<span class="wxts">温馨提示<span>
+		<span class="scqr">×</span>
+	  </div>
+	  <div class="zz_nr2" style="line-height:146px;height:146px;display:block;font-size:18px;"> 您是否确认要入驻成为租赁商？</div>
+	 
+	  <div class="zz_nr3" >
+			<a href="#wss" class="qrsc">确认</a>
+			<a href="#wss" class="tyjs">取消</a>	
+	  </div>  
+	</div>	
+	
+	
+	
+</div>
+  	<script type="text/javascript">
+ //点击同意勾选框按钮变色
+ $(".tyxy").click(function(){
+ 	if($(this).is(":checked")){
+ 		$(".sjsq7").css("background","#1f61c2");
+ 	}
+ 	else{
+ 		$(".sjsq7").css("background","#6EA3F3");
+ 	}
+ })
+ // 申请人
+$(".shop_names").change(function(){
+	if( $(this).val() == ""  ){
+  		$(this).css("border","1px solid red");
+		$(".error_font1").eq(0).html('申请人姓名是必填的!');
+  	}else{
+  		$(this).css("border","1px solid green");
+		$(".error_font1").eq(0).html('');
+  	}
+});
+// 申请人电话
+var tel = /^[1][3,4,5,7,8][0-9]{9}$/;
+$(".shop_telephones").change(function(){
+	if( $(this).val() == ""  ){
+  		$(this).css("border","1px solid red");
+		$(".error_font1").eq(1).html('申请人电话是必填的!');
+  	}else if( !tel.test($(this).val()) ){
+		$(this).css("border","1px solid red");
+		$(".error_font1").eq(1).html('电话号格式不正确!');
+  	}else{
+  		$(this).css("border","1px solid green");
+		$(".error_font1").eq(1).html('');
+  	}
+});
+// 报修人电话
+$(".shop_bxtelephone").change(function(){
+	if( $(this).val() == ""  ){
+  		$(this).css("border","1px solid red");
+		$(".error_font1").eq(3).html('报修电话是必填的!');
+  	}else if( !tel.test($(this).val()) ){
+		$(this).css("border","1px solid red");
+		$(".error_font1").eq(3).html('报修电话号格式不正确!');
+  	}else{
+  		$(this).css("border","1px solid green");
+		$(".error_font1").eq(3).html('');
+  	}
+});
+$(".sjsq7").click(function(){
+	if($(".tyxy").is(":checked")){
+		/*$(".zz_nr2").text("您是否确认要入驻成为租赁商？");
+		$(".zhezhao").css("display","block");
+	    $(".zz_nr_scdz").css("display","block");*/
+		$(".zhezhao").css("display","none");
+  		$(".zz_nr_scdz").css("display","none");
+  		if( $(".shop_names").val() == ""  ){
+  			$(".shop_names").css("border","1px solid red");
+			$(".error_font1").eq(0).html('申请人姓名是必填的!');
+  		}else{
+			$(".shop_names").css("border","1px solid green");
+			$(".error_font1").eq(0).html('');
+		}
+  		var tel = /^[1][3,4,5,7,8][0-9]{9}$/;
+  		if( !tel.test($(".shop_telephones").val()) ){
+  			$(".shop_telephones").eq(1).css("border","1px solid red");
+			$(".error_font1").eq(1).html('电话号格式不正确!');
+  		}else{
+			$(".shop_telephones").css("border","1px solid green");
+			$(".error_font1").eq(1).html('');
+		}
+		if( $(".shop_fp:checked").val() == undefined ){
+			$(".error_font1").eq(2).html('必须选择其中一种发票,如不具备请选择暂不支持!');
+		}
+		if($(".shop_bxtelephone").val() == "" ){
+			$(".shop_bxtelephone").css("border","1px solid red");
+			$(".error_font1").eq(3).html('报修电话是必填的!');
+		}else if( !tel.test($('.shop_bxtelephone').val()) ){
+			$(".shop_bxtelephone").css("border","1px solid red");
+			$(".error_font1").eq(3).html('报修电话号格式不正确!');
+		}else{
+			$(".shop_bxtelephone").css("border","1px solid green");
+			$(".error_font1").eq(3).html('');
+		}
+/*	  	
+		
+		if( $(".shop_telephone").eq(1).val() == ""  ){
+			$(".shop_telephone").eq(1).css("border","1px solid red");
+			$(".error_font1").eq(1).html('申请人电话是必填的!');
+			return false;
+		}
+		else if(!tel.test($('.shop_telephone').val())){
+			$(".shop_telephone").css("border","1px solid red");
+			$(".error_font1").eq(1).html('电话号格式不正确!');
+			return false;
+		}
+		else{
+			$(".shop_telephone").css("border","1px solid green");
+			$(".error_font1").eq(1).html('');
+		}
+		if($(".shop_fp").is(":checked")){
+			$(".error_font1").eq(2).html('');
+			window.fplx=$(".shop_fp:checked").attr("value");
+		}
+		else{
+			$(".error_font1").eq(2).html('发票类型是必选的!');
+			return false;
+		}
+		if( $(".shop_bxtelephone").val() == ""  ){
+			$(".shop_bxtelephone").css("border","1px solid red");
+			$(".error_font1").eq(3).html('报修电话是必填的!');
+			return false;
+		}
+		else if(!tel.test($('.shop_bxtelephone').val())){
+			$(".shop_bxtelephone").css("border","1px solid red");
+			$(".error_font1").eq(3).html('电话号格式不正确!');
+			return false;
+		}
+		else{
+			$(".shop_bxtelephone").css("border","1px solid green");
+			$(".error_font1").eq(3).html('');
+		}*/
+		if( $(".shop_names").val() !="" && $(".shop_telephones").val() !="" && $(".shop_bxtelephone").val() !=""){
+		  $(".zz_nr2").text("您是否确认要入驻成为租赁商？");
+	      $(".zhezhao").css("display","block");
+		  $(".zz_nr_scdz").css("display","block");		
+		}
+	}else{
+		$(".zhezhao").css("display","block");
+	   $(".zz_nr_scdz").css("display","block");
+		$(".zz_nr2").text("请勾选商家协议");
+	}
+	
+})
+//弹框上面的×
+	$(".scqr").click(function(){
+  		$(".zhezhao").css("display","none");
+		$(".zz_nr_scdz").css("display","none");	
+  	})
+//弹框取消	
+	$(".tyjs").click(function(){
+  		$(".zhezhao").css("display","none");
+		$(".zz_nr_scdz").css("display","none");	
+  	})
+
+
+	//弹框确认
+  $(".qrsc").click(function(){
+  	if($(".zz_nr2").text()=="您是否确认要入驻成为租赁商？"){
+
+	  	if( $(".shop_names").val() != "" && $(".shop_telephones").val() != "" && $(".shop_bxtelephone").val() != "" && $(".shop_fp:checked").val() != undefined){
+					$.ajax({
+						type: "post",
+					dataType: "json",
+					   async: false,
+						data: {
+							    'shop_name':$(".shop_names").val(),
+								'shop_telephone':$(".shop_telephones").val(), 
+								'shop_fp_type':$(".shop_fp:checked").val(),
+								'shop_bx_telephone':$(".shop_bxtelephone").val(),
+								'shop_is_xieyi':$(".tyxy:checked").val()
+							},
+						 url: "{:U('Shopcenter/sj_shengqing_add')}",
+						success: function( data ){
+							if( data.status == 2000 ){
+								tkcx(data.message);
+							}else if( data.status == -2001 ){
+								tkcx(data.message);
+							}else if( data.status == -2002 ){
+								tkcx(data.message);
+							}
+						},
+						error: function( XMLHttpRequest , status ,error ){
+							tkcx("出现问题，问题位置在："+status);
+							return false;
+						}
+					});
+				}
+
+  	}
+  	else{
+  		$(".zhezhao").css("display","none");
+  		$(".zz_nr_scdz").css("display","none");
+  	}
+  	 
+  })
+
+
+
+
+ function tkcx(message){
+ 	$(".zhezhao").css("display","block");
+ 	$(".zz_nr_scdz").css("display","none");
+  	$(".zz_nr_fbcg").css("display","block");
+  	$(".zdsc").text(message); 
+	    zdxstk();
+ }
+//自动消失(弹框)
+function zdxstk(){
+  $(".zz_gbtk").click(function(){
+  	 $(".zhezhao").css("display","none");
+
+  	 window.location.href="{:U('Index/index')}";
+	 return false;
+  });	
+}	
+	
+
+
+		
+		
+		
+		
+
+	
+	
+	
+	</script>
+
+
+

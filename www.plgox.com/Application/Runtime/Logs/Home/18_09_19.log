@@ -1,0 +1,404 @@
+[ 2018-09-19T00:54:32+08:00 ] 123.125.71.32 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T01:03:20+08:00 ] 111.206.221.96 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+
+[ 2018-09-19T03:18:58+08:00 ] 193.112.158.155 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-19T03:26:06+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T05:24:19+08:00 ] 203.208.60.55 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T06:20:04+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T06:20:04+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T08:59:24+08:00 ] 111.206.198.26 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+
+[ 2018-09-19T09:30:51+08:00 ] 123.126.113.164 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T10:04:59+08:00 ] 119.57.161.6 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+
+[ 2018-09-19T10:09:21+08:00 ] 103.233.195.212 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-19T10:24:34+08:00 ] 119.57.161.6 /Tourist/send_code.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+
+[ 2018-09-19T10:24:45+08:00 ] 119.57.161.6 /Tourist/send_code.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'whatareyou' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15981855440' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2018-09-19T10:24:58+08:00 ] 119.57.161.6 /Tourist/dologin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE (  `plgox_user` = '15981855440' OR `plgox_tel` = '15981855440' ) AND `plgox_pwd` = 'e10adc3949ba59abbe56e057f20f883e' AND `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `plgox_member` SET `plgox_logintime`='1537323898' WHERE `plgox_id` = 144 [ RunTime:0.0503s ]
+SQL: UPDATE `plgox_member` SET `plgox_loginumer`=plgox_loginumer+1 WHERE `plgox_id` = 144 [ RunTime:0.0272s ]
+
+[ 2018-09-19T10:25:11+08:00 ] 119.57.161.6 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0004s ]
+
+[ 2018-09-19T10:25:11+08:00 ] 119.57.161.6 /Cart/renzheng_check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = '144' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-19T10:25:16+08:00 ] 119.57.161.6 /User/my_qyrz_sy.html
+ERR: Class 'Redis' not found
+
+[ 2018-09-19T10:25:24+08:00 ] 119.57.161.6 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0003s ]
+
+[ 2018-09-19T10:25:25+08:00 ] 119.57.161.6 /Cart/renzheng_check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = '144' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-19T10:25:38+08:00 ] 119.57.161.6 /User/my_qyrz_sy.html
+ERR: Class 'Redis' not found
+
+[ 2018-09-19T10:25:53+08:00 ] 119.57.161.6 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 102  [ RunTime:0.0002s ]
+
+[ 2018-09-19T10:25:53+08:00 ] 119.57.161.6 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 91  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 91  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 92  [ RunTime:0.0002s ]
+
+[ 2018-09-19T10:25:53+08:00 ] 119.57.161.6 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 82  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 82  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 117  [ RunTime:0.0001s ]
+
+[ 2018-09-19T10:46:02+08:00 ] 157.55.39.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T12:59:36+08:00 ] 47.94.207.53 /user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax
+ERR: 非法操作:register
+
+[ 2018-09-19T13:49:23+08:00 ] 47.94.222.21 /user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax
+ERR: 非法操作:register
+
+[ 2018-09-19T14:05:15+08:00 ] 123.126.114.194 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+
+[ 2018-09-19T14:05:27+08:00 ] 123.126.114.194 /Tourist/dologin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE (  `plgox_user` = 'yanzheng' OR `plgox_tel` = 'yanzheng' ) AND `plgox_pwd` = '21232f297a57a5a743894a0e4a801fc3' AND `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `plgox_member` SET `plgox_logintime`='1537337127' WHERE `plgox_id` = 123 [ RunTime:0.0196s ]
+SQL: UPDATE `plgox_member` SET `plgox_loginumer`=plgox_loginumer+1 WHERE `plgox_id` = 123 [ RunTime:0.0156s ]
+
+[ 2018-09-19T14:06:08+08:00 ] 119.57.161.6 /Tourist/loginout.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+
+[ 2018-09-19T14:06:21+08:00 ] 119.57.161.6 /Tourist/dologin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE (  `plgox_user` = 'yanzheng' OR `plgox_tel` = 'yanzheng' ) AND `plgox_pwd` = '21232f297a57a5a743894a0e4a801fc3' AND `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `plgox_member` SET `plgox_logintime`='1537337181' WHERE `plgox_id` = 123 [ RunTime:0.0140s ]
+SQL: UPDATE `plgox_member` SET `plgox_loginumer`=plgox_loginumer+1 WHERE `plgox_id` = 123 [ RunTime:0.0163s ]
+
+[ 2018-09-19T14:06:28+08:00 ] 119.57.161.6 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0004s ]
+
+[ 2018-09-19T14:06:29+08:00 ] 119.57.161.6 /Cart/renzheng_check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = '123' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-09-19T14:06:29+08:00 ] 119.57.161.6 /Cart/ajaxCart.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `plgox_share` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_share` WHERE `share_id` = '207' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_product_id` = '18' AND `cart_share_id` = '207' AND `cart_memberuid` = '123' AND `cart_status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_specifications` WHERE `specifications_id` = '18' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_xyj` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_xyj` LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `plgox_cart` (`cart_product_id`,`cart_number`,`cart_day_number_id`,`cart_memberuid`,`cart_status`,`cart_shangjia_id`,`cart_rent`,`cart_deposit`,`cart_prices`,`cart_radio_status`,`cart_share_id`,`cart_type`,`cart_xyj_prices`,`cart_createtime`) VALUES ('18','1','41','123','1','1','200.00','200.00','2.00','1','207','1','20','1537337189') [ RunTime:0.0513s ]
+
+[ 2018-09-19T14:06:31+08:00 ] 119.57.161.6 /Cart/ajaxData.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-19T14:06:31+08:00 ] 119.57.161.6 /Cart/AjaxCount.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-19T14:06:43+08:00 ] 119.57.161.6 /Cart/Ajaxdodingdan.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_cart as cart left join plgox_specifications as sp on sp.specifications_id = cart.cart_product_id left join plgox_share as share on share.share_id = cart.cart_share_id  WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `plgox_order_detil` [ RunTime:0.0006s ]
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_xyj_status`,`order_detil_number1`,`order_detill_xyj`,`order_rent`,`order_deposit`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140643949655','820','126','123','1','1','20180919217668','20.00','200','200','1537337203944667','1537337203','1','1','此处可以填写您对于订单的其他说明要求','','1')
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_xyj_status`,`order_detil_number1`,`order_detill_xyj`,`order_rent`,`order_deposit`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140643949655','820','126','123','1','1','20180919217668','20.00','200','200','1537337203944667','1537337203','1','1','此处可以填写您对于订单的其他说明要求','','1')
+
+[ 2018-09-19T14:06:46+08:00 ] 119.57.161.6 /Cart/Ajaxdodingdan.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_cart as cart left join plgox_specifications as sp on sp.specifications_id = cart.cart_product_id left join plgox_share as share on share.share_id = cart.cart_share_id  WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `plgox_order_detil` [ RunTime:0.0005s ]
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_xyj_status`,`order_detil_number1`,`order_detill_xyj`,`order_rent`,`order_deposit`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140646562968','820','126','123','1','1','20180919371663','20.00','200','200','1537337206246448','1537337206','1','1','此处可以填写您对于订单的其他说明要求','','1')
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_xyj_status`,`order_detil_number1`,`order_detill_xyj`,`order_rent`,`order_deposit`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140646562968','820','126','123','1','1','20180919371663','20.00','200','200','1537337206246448','1537337206','1','1','此处可以填写您对于订单的其他说明要求','','1')
+
+[ 2018-09-19T14:06:57+08:00 ] 119.57.161.6 /Cart/Ajaxdodingdan.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0004s ]
+SQL: SELECT * FROM plgox_cart as cart left join plgox_specifications as sp on sp.specifications_id = cart.cart_product_id left join plgox_share as share on share.share_id = cart.cart_share_id  WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `plgox_order_detil` [ RunTime:0.0005s ]
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_xyj_status`,`order_detil_number1`,`order_detill_xyj`,`order_rent`,`order_deposit`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140657972309','820','126','123','1','1','20180919271771','20.00','200','200','1537337217352485','1537337217','1','1','此处可以填写您对于订单的其他说明要求','','1')
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_xyj_status`,`order_detil_number1`,`order_detill_xyj`,`order_rent`,`order_deposit`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140657972309','820','126','123','1','1','20180919271771','20.00','200','200','1537337217352485','1537337217','1','1','此处可以填写您对于订单的其他说明要求','','1')
+
+[ 2018-09-19T14:07:07+08:00 ] 119.57.161.6 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0003s ]
+
+[ 2018-09-19T14:07:08+08:00 ] 119.57.161.6 /Cart/renzheng_check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = '123' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-19T14:07:08+08:00 ] 119.57.161.6 /Cart/ajaxCart_.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `plgox_share` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_share` WHERE `share_id` = '207' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_product_id` = '18' AND `cart_share_id` = '207' AND `cart_memberuid` = '123' AND `cart_status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_specifications` WHERE `specifications_id` = '18' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_xyj` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_xyj` LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `plgox_cart` SET `cart_product_id`='18',`cart_number`='2',`cart_day_number_id`='41',`cart_shangjia_id`='1',`cart_rent`='400',`cart_deposit`='200.00',`cart_prices`='4',`cart_radio_status`='2',`cart_share_id`='207',`cart_memberuid`='123',`cart_type`='1',`cart_xyj_prices`='40',`cart_createtime`='1537337228' WHERE `cart_id` = 820 [ RunTime:0.0154s ]
+
+[ 2018-09-19T14:07:11+08:00 ] 119.57.161.6 /Cart/ajaxData.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-19T14:07:19+08:00 ] 119.57.161.6 /Cart/Ajaxdodingdan.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_cart as cart left join plgox_specifications as sp on sp.specifications_id = cart.cart_product_id left join plgox_share as share on share.share_id = cart.cart_share_id  WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `plgox_order_detil` [ RunTime:0.0005s ]
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_mm_prices`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140719204940','820','126','123','2','4.00','1537337239844688','1537337239','1','1','此处可以填写您对于订单的其他说明要求','','1')
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_mm_prices`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140719204940','820','126','123','2','4.00','1537337239844688','1537337239','1','1','此处可以填写您对于订单的其他说明要求','','1')
+
+[ 2018-09-19T14:07:42+08:00 ] 119.57.161.6 /Cart/ajaxData.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-19T14:07:52+08:00 ] 119.57.161.6 /Cart/Ajaxdodingdan.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0007s ]
+SQL: SELECT * FROM plgox_cart as cart left join plgox_specifications as sp on sp.specifications_id = cart.cart_product_id left join plgox_share as share on share.share_id = cart.cart_share_id  WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `plgox_order_detil` [ RunTime:0.0006s ]
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_mm_prices`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140752974370','820','126','123','2','4.00','1537337272645398','1537337272','1','1','此处可以填写您对于订单的其他说明要求','','1')
+ERR: 1364:Field 'order_status' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_order_detil` (`pay_number`,`order_cart_id`,`order_addressid`,`order_memberuid`,`order_detil_status`,`order_mm_prices`,`order_number`,`order_createtime`,`order_shangjia_id`,`order_pay_status`,`order_detil_liuyan`,`order_fapiao_id`,`order_type`) VALUES ('20180919140752974370','820','126','123','2','4.00','1537337272645398','1537337272','1','1','此处可以填写您对于订单的其他说明要求','','1')
+
+[ 2018-09-19T14:08:00+08:00 ] 119.57.161.6 /Cart/ajaxData.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '820' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-19T14:08:02+08:00 ] 119.57.161.6 /Cart/cart_del.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0004s ]
+SQL: DELETE FROM `plgox_cart` WHERE `cart_id` = 820 [ RunTime:0.0201s ]
+
+[ 2018-09-19T16:01:14+08:00 ] 212.40.176.79 /user/password?name[%23post_render][0]=printf&name[%23markup]=ABCZ%0A
+ERR: 非法操作:password
+
+[ 2018-09-19T16:01:14+08:00 ] 212.40.176.79 /user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax
+ERR: 非法操作:register
+
+[ 2018-09-19T16:16:14+08:00 ] 106.38.241.154 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T16:18:31+08:00 ] 207.244.157.10 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T16:18:42+08:00 ] 207.244.157.10 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-09-19T16:18:50+08:00 ] 207.244.157.10 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T16:19:11+08:00 ] 207.244.157.10 /Index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-19T16:19:18+08:00 ] 207.244.157.10 /Xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-19T16:19:31+08:00 ] 207.244.157.10 /index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-19T16:19:42+08:00 ] 207.244.157.10 /poli/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Poli
+
+[ 2018-09-19T16:19:50+08:00 ] 207.244.157.10 /share/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Share
+
+[ 2018-09-19T16:20:00+08:00 ] 207.244.157.10 /xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-19T16:20:13+08:00 ] 207.244.157.10 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-09-19T19:09:53+08:00 ] 203.208.60.68 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T19:16:54+08:00 ] 203.208.60.116 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-19T20:02:42+08:00 ] 223.104.3.38 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0004s ]
+
+[ 2018-09-19T20:02:46+08:00 ] 223.104.3.38 /Cart/renzheng_check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = '123' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-09-19T20:02:46+08:00 ] 223.104.3.38 /Cart/ajaxCart.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `plgox_share` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_share` WHERE `share_id` = '207' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_product_id` = '18' AND `cart_share_id` = '207' AND `cart_memberuid` = '123' AND `cart_status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_specifications` WHERE `specifications_id` = '18' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_xyj` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_xyj` LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `plgox_cart` (`cart_product_id`,`cart_number`,`cart_day_number_id`,`cart_memberuid`,`cart_status`,`cart_shangjia_id`,`cart_rent`,`cart_deposit`,`cart_prices`,`cart_radio_status`,`cart_share_id`,`cart_type`,`cart_xyj_prices`,`cart_createtime`) VALUES ('18','1','41','123','1','1','200.00','200.00','2.00','1','207','1','20','1537358566') [ RunTime:0.0147s ]
+
+[ 2018-09-19T20:02:49+08:00 ] 223.104.3.38 /Cart/ajaxData.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '821' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-09-19T20:02:49+08:00 ] 223.104.3.38 /Cart/AjaxCount.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '821' LIMIT 1   [ RunTime:0.0002s ]
+

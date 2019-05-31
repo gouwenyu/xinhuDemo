@@ -1,0 +1,436 @@
+[ 2018-09-11T00:23:44+08:00 ] 123.125.67.225 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T00:33:24+08:00 ] 157.55.39.123 /Cart/shop_detil/id/156.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-09-11T01:01:20+08:00 ] 111.206.221.39 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+
+[ 2018-09-11T04:40:49+08:00 ] 101.199.120.145 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+
+[ 2018-09-11T06:16:31+08:00 ] 116.253.183.212 /wwwroot.rar
+ERR: 无法加载控制器:Wwwroot.rar
+
+[ 2018-09-11T06:16:31+08:00 ] 116.253.183.212 /wwwroot.zip
+ERR: 无法加载控制器:Wwwroot.zip
+
+[ 2018-09-11T06:16:31+08:00 ] 116.253.183.212 /�½��ļ���.rar
+ERR: 无法加载控制器:�½��ļ���.rar
+
+[ 2018-09-11T06:16:31+08:00 ] 116.253.183.212 /�½��ļ���.zip
+ERR: 无法加载控制器:�½��ļ���.zip
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /www.rar
+ERR: 无法加载控制器:Www.rar
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /www.zip
+ERR: 无法加载控制器:Www.zip
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /web.rar
+ERR: 无法加载控制器:Web.rar
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /web.zip
+ERR: 无法加载控制器:Web.zip
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgox.com.rar
+ERR: 无法加载控制器:Plgox.com.rar
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgox.com.zip
+ERR: 无法加载控制器:Plgox.com.zip
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgox_com.rar
+ERR: 无法加载控制器:Plgox_com.rar
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgox_com.zip
+ERR: 无法加载控制器:Plgox_com.zip
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgoxcom.rar
+ERR: 无法加载控制器:Plgoxcom.rar
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgoxcom.zip
+ERR: 无法加载控制器:Plgoxcom.zip
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgox.com.rar
+ERR: 无法加载控制器:Plgox.com.rar
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgox.com.zip
+ERR: 无法加载控制器:Plgox.com.zip
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgox.rar
+ERR: 无法加载控制器:Plgox.rar
+
+[ 2018-09-11T06:16:32+08:00 ] 116.253.183.212 /plgox.zip
+ERR: 无法加载控制器:Plgox.zip
+
+[ 2018-09-11T06:43:47+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T06:44:39+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T08:56:39+08:00 ] 111.206.198.107 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+
+[ 2018-09-11T09:13:38+08:00 ] 218.30.103.81 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T09:47:02+08:00 ] 118.24.232.198 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-11T10:49:26+08:00 ] 117.184.250.101 /skins/vector/csshover.htc
+ERR: 无法加载控制器:Skins
+
+[ 2018-09-11T10:49:29+08:00 ] 117.184.250.101 /rockmongo/
+ERR: 无法加载控制器:Rockmongo
+
+[ 2018-09-11T10:49:29+08:00 ] 117.184.250.101 /server-status
+ERR: 无法加载控制器:Server-status
+
+[ 2018-09-11T10:49:29+08:00 ] 117.184.250.101 /wikilib.d/PmWiki.ChangeLog
+ERR: 无法加载控制器:Wikilib.d
+
+[ 2018-09-11T10:49:29+08:00 ] 117.184.250.101 /jenkins/
+ERR: 无法加载控制器:Jenkins
+
+[ 2018-09-11T10:49:30+08:00 ] 117.184.250.101 /console/login/LoginForm.jsp
+ERR: 无法加载控制器:Console
+
+[ 2018-09-11T10:49:30+08:00 ] 117.184.250.101 /solr/
+ERR: 无法加载控制器:Solr
+
+[ 2018-09-11T11:15:50+08:00 ] 43.224.45.128 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2018-09-11T11:17:06+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 105  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 105  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 106  [ RunTime:0.0002s ]
+
+[ 2018-09-11T11:17:31+08:00 ] 43.224.45.128 /Tourist/send_code.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-11T11:17:53+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635873','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635873','前台用户','3','100')
+
+[ 2018-09-11T11:18:00+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635880','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635880','前台用户','3','100')
+
+[ 2018-09-11T11:18:03+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635883','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635883','前台用户','3','100')
+
+[ 2018-09-11T11:18:03+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635883','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635883','前台用户','3','100')
+
+[ 2018-09-11T11:18:03+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635883','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635883','前台用户','3','100')
+
+[ 2018-09-11T11:18:03+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635883','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635883','前台用户','3','100')
+
+[ 2018-09-11T11:18:04+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635884','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635884','前台用户','3','100')
+
+[ 2018-09-11T11:18:05+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635885','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635885','前台用户','3','100')
+
+[ 2018-09-11T11:18:05+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0003s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635885','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635885','前台用户','3','100')
+
+[ 2018-09-11T11:18:08+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635888','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635888','前台用户','3','100')
+
+[ 2018-09-11T11:18:09+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635889','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635889','前台用户','3','100')
+
+[ 2018-09-11T11:18:10+08:00 ] 43.224.45.128 /Tourist/doregister.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_user` = 'niceale' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_tel` = '15810592621' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635890','前台用户','3','100')
+ERR: 1364:Field 'plgox_nickname' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `plgox_member` (`plgox_user`,`plgox_pwd`,`plgox_tel`,`plgox_ip`,`plgox_createtime`,`plgox_name`,`plgox_usertype`,`plgox_credit`) VALUES ('niceale','b996baf4c6d67c3ac885a51381d49cfe','15810592621','43.224.45.128','1536635890','前台用户','3','100')
+
+[ 2018-09-11T11:18:14+08:00 ] 43.224.45.128 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+
+[ 2018-09-11T11:18:37+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 107  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 107  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 108  [ RunTime:0.0002s ]
+
+[ 2018-09-11T11:18:37+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 107  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 107  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 108  [ RunTime:0.0002s ]
+
+[ 2018-09-11T11:18:37+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 109  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 109  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 110  [ RunTime:0.0001s ]
+
+[ 2018-09-11T11:18:37+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 164  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 164  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /home/application/www.plgox.com/Application/Home/Controller/HomeuserController.class.php 第 739 行.
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = null  [ RunTime:0.0001s ]
+
+[ 2018-09-11T11:18:37+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 112  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 112  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 135  [ RunTime:0.0001s ]
+
+[ 2018-09-11T11:18:37+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 165  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 165  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 0 /home/application/www.plgox.com/Application/Home/Controller/HomeuserController.class.php 第 739 行.
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = null  [ RunTime:0.0002s ]
+
+[ 2018-09-11T11:18:39+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 165  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 165  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /home/application/www.plgox.com/Application/Home/Controller/HomeuserController.class.php 第 739 行.
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = null  [ RunTime:0.0002s ]
+
+[ 2018-09-11T11:18:39+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 164  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 164  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /home/application/www.plgox.com/Application/Home/Controller/HomeuserController.class.php 第 739 行.
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = null  [ RunTime:0.0002s ]
+
+[ 2018-09-11T11:18:40+08:00 ] 43.224.45.128 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 107  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 107  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 108  [ RunTime:0.0002s ]
+
+[ 2018-09-11T11:59:45+08:00 ] 203.208.60.115 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T12:15:22+08:00 ] 54.36.150.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T14:18:16+08:00 ] 185.100.87.248 /nmaplowercheck1536646695
+ERR: 无法加载控制器:Nmaplowercheck1536646695
+
+[ 2018-09-11T14:18:16+08:00 ] 185.100.87.248 /sdk
+ERR: 无法加载控制器:Sdk
+
+[ 2018-09-11T14:18:17+08:00 ] 185.100.87.248 /evox/about
+ERR: 无法加载控制器:Evox
+
+[ 2018-09-11T14:18:18+08:00 ] 185.100.87.248 /HNAP1
+ERR: 无法加载控制器:HNAP1
+
+[ 2018-09-11T16:14:13+08:00 ] 111.202.101.121 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T16:14:43+08:00 ] 114.249.142.16 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+
+[ 2018-09-11T16:22:38+08:00 ] 222.27.96.163 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-11T18:09:32+08:00 ] 203.208.60.96 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T18:23:40+08:00 ] 220.181.125.177 /xianzhi/index.html
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-11T18:23:40+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T18:23:50+08:00 ] 220.181.125.177 /index/fuwenben/id/9.html
+ERR: 非法操作:fuwenben
+
+[ 2018-09-11T23:29:47+08:00 ] 94.102.49.190 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-11T23:29:50+08:00 ] 94.102.49.190 /sitemap.xml
+ERR: 无法加载控制器:Sitemap.xml
+

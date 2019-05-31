@@ -1,0 +1,536 @@
+<include file="User:my_top" />
+<title>{$setTitle}</title>
+ <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_ckmx_zd.css">  
+<style type="text/css">
+   .my_zd6_dj{
+	color:#6ea3f2;
+	border-bottom:1px solid #6ea3f2;
+}
+</style>
+
+<div class="mypj">
+   <div class="mypj1">
+      <div  class="mypj2">
+	      <div class="mypj6">
+	                   我的账单
+	      </div>
+	     
+	     <div class="my_zd1">
+	     	<span>温馨提示：新订单在用户收到货时第二天开始计算租金，以后每月租金在次月1号生成账单，次月5号前还款</span>
+	     </div>
+	     
+	     <div class="my_zd2">
+	     	<div>当前需要支付租金：¥<span class="current_zujin_time">234.00</span>元</div>
+	     	<p>
+	     	 最后付租日：<span class="last_times">2017-10-05</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="__PUBLIC__/Home/image/my_zd.jpg">&nbsp;&nbsp;<span>已延期<span class="yuqi_days">2</span>天</span>	
+	     	</p>
+	     </div>	
+	  <div class="my_zd3">
+	     	<div class="my_zd31">
+	     		<div class="my_zd310">待出账单</div>
+	     		<div class="my_zd311">¥<span class='total_money'></span></div>
+	     		<div class="my_zd313">还款开始日：<span class="first_time">2017-11-01</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;还款结束日：<span class="last_time">2017-11-05</span></div>
+	     		<div class="my_zd312"><a href="{:U('User/my_ck_mingxi')}">查看明晰</a></div>
+	     	</div>
+	     </div>
+	    <div class="my_zd6_box">
+	      <div class="my_zd6_big">
+           <div  class="my_zd_jt">
+            <img src="__PUBLIC__/Home/image/zhangdan_jt1.png" />
+          </div>
+		<div class="my_zd6">
+       <ul class="my_zd666">
+          <for start="1" end="13" name="i">
+           <li class="my_zd6_a">
+              <a  class="my_zd6_a_a" href="javascript:void(0);" attr-data-id="{$i}">{$i}月账单</a>
+           </li>
+          </for>
+      </ul>
+	</div>
+          <div  class="my_zd_jt">
+            <img src="__PUBLIC__/Home/image/zhangdan_jt.png" />
+          </div>
+		   </div>
+	     <div class="my_zd6_a_last">
+	     	 	<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多-->
+          <select id="selYear" class="selYear_value" name="selyear_value" >
+           
+          </select>
+	     </div>
+	   </div>  
+     <script type="text/javascript">
+       $(".selYear_value").change(function(){
+        
+       });
+     </script>
+ <div style="display:none;">  
+  <select id="selMonth">
+       
+  </select> 
+  <select id="selDay">
+       
+  </select>
+</div>
+	  <script type="text/javascript" src="__PUBLIC__/Home/js/year_month_day.js"></script>     
+	<script type="text/javascript">
+var date = new Date();
+var dqnf=date .getFullYear(); //获取完整的年份(4位)
+var dqyf=date .getMonth(); //获取当前月份(0-11,0代表1月)
+var dqrf=date .getDate(); //获取当前日(1-31)
+
+var selYear = window.document.getElementById("selYear"); 
+var selMonth = window.document.getElementById("selMonth"); 
+var selDay = window.document.getElementById("selDay"); 
+// 新建一个DateSelector类的实例，将三个select对象传进去 
+new DateSelector(selYear, selMonth, selDay, dqnf, dqyf, dqrf); 
+
+
+
+// 也可以试试下边的代码 
+// var dt = new Date(2004, 1, 29); 
+// new DateSelector(selYear, selMonth ,selDay, dt); 
+
+
+
+     //账单左右箭头轮播 
+     var dbox=$(".my_zd666");
+     var zdys=$(".my_zd6_a").length;
+     dbox.css("width",zdys*150);
+     function ydgs(ydms){
+
+         var newLeft = parseInt(dbox.css('marginLeft')) + ydms; 
+
+            //点击后的图片偏移量
+          dbox.animate({'marginLeft':newLeft + 'px'},500);
+     }
+     //右边点击
+     $(".my_zd_jt").eq(1).click(function(){
+         if(dbox.is(':animated')){
+                return;
+          }
+        var yqbj=-zdys*150-parseInt(dbox.css("marginLeft"));
+
+        if(yqbj<-600){
+          ydgs(-150);
+        }
+        
+     })
+
+     //左边点击
+     $(".my_zd_jt").eq(0).click(function(){
+         if(dbox.is(':animated')){
+                return;
+          }
+        var yqbj=-zdys*150-parseInt(dbox.css("marginLeft"));
+      
+        if(yqbj>-zdys*150){
+          ydgs(+150);
+        }
+
+     })
+  </script>      
+	      
+	    <div class="my_ckmx0" style="margin-top:20px;">
+          	<div class="my_ckmx2">
+          	  <div>
+          	  	<span >账单总额: </span>
+          	  	  <span class="total_prices">¥128.00</span>
+          	  </div>	
+          	  <div style="padding-left:225px;">
+          	  	<span>出账日期: </span>
+          	  	<span class="start_date"></span>
+          	  </div>	
+          	  <div style="padding-left:40px;">
+          	  	<span>最后还款日: </span>
+          	  	<span class="last_date"></span>
+          	  </div>
+              <div class="my_ckmx21"><span>马上支付</span></div>
+          	</div>
+          <ul class="my_ckmx" >
+            <li class="my_ckmx5" >
+
+            	  <div class="dyls" style="text-align:center">订单号</div>
+            	  <div class="dels" style="text-align:center">记租日期</div>
+            	  <div class="dsls" style="text-align:center">每日租金</div>
+            	  <div class="dsls rent_days" style="text-align:center"></div>
+            	  <div class="dsls" style="text-align:center">小结</div>
+
+          	</li>
+            	<li class="my_ckmx99"></li>
+              <li class="my_ckmx7">
+                <div colspan="5">
+                  <div>共   计：¥<span class="total_price">00.00</span></div>  
+                </div>
+              </li>
+          </ul>
+       </div>   
+          <script type="text/javascript">
+            date = new Date();
+            $(document).ready(function(){
+              // 待出账单金额
+              var date = new Date();
+              var date_getFullYear = date.getFullYear();//年
+              var date_getMonth = date.getMonth()+2;//月
+              $(".start_time").text(date_getFullYear+"-"+date_getMonth+"-1");
+              $(".last_time").text(date_getFullYear+"-"+date_getMonth+"-5");
+              $.post("{:U('AjaxDateLook')}",{ "bill_lookta_status":4  , 'date_year':date_getFullYear , 'date_month':date_getMonth },function( data ){
+                if( data.status == 2000 ){
+                    var arr1 = new Array();
+                    $.each(data.message,function( index , value ){
+                        // 实时租赁天数
+                        var RealTime_time_year = date.getFullYear()+"-"+parseInt(date.getMonth()+1)+"-"+date.getDate();
+                        var total_realtime = RealTime_time_year.split("-")[2];
+                        // 数据库时间
+                        var total_time = getLocalTime(value.zujin_charging_time);
+                        var time_days = total_time.split("-")[2];
+                        // 时间天数求总
+                        var count_time = parseInt(total_realtime)-parseInt(time_days)+parseInt(1);
+                        // 小结金额总计
+                        var count_prices = parseInt(count_time)*value.zujin_prices;
+                        arr1.push(count_prices);
+                    });
+                      // 共计金额  账单总额
+                      var jgz=parseFloat(0);
+                      for(var i=0;i<arr1.length;i++){
+                        jgz+=parseFloat(arr1[i]);
+                      }
+                      jgz=jgz.toFixed(2);
+                      $(".total_money").text(jgz);
+                }else if( data.status == -2000 ){
+                     $(".total_money").text("00.00");
+                }
+              },"json");
+              // ajxa查询日期 2018-1
+              var date_year = $(".selYear_value").val(); // 年
+              var date_month = $(".my_zd6_dj").attr("attr-data-id"); //月
+              // var date_day = date.getDate(); //日
+              // 网站实时展示
+              $.post("{:U('AjaxDateLook')}",{ "bill_lookta_status":1 , "date_year":date_year , "date_month":date_month },function( data ){
+                if( data.status == 2000 ){
+                    $(".start_date").text(date_year+"-"+date_month+"-1");
+                    $(".last_date").text(date_year+"-"+date_month+"-5");
+                    $.each(data.message,function( index , val ){
+                      // 支付完成判断 2 4  等于 支付完成状态
+                      if( val.zujin_pay_status == 2 || val.zujin_pay_status == 4 ){
+                        $(".my_ckmx21").css("display","none");
+                      }else{
+                        $(".my_ckmx21").css("display","block");
+                      }
+                      // 判断是否退租
+                      if( val.zujin_rent_status == 1 ){ //未退租
+                        // 租赁天数 实际换算
+                        //  当前时间的时间戳
+                        var current_time = days(date.getFullYear(),date.getMonth());
+                        // 数据库计租时间
+                        var jizu_time = getLocalTime(val.zujin_charging_time);
+                        var jz_ = jizu_time.split("-")[2];
+                        // 时间总计
+                        var time_counts = parseInt(current_time)-parseInt(jz_)+parseInt(1);
+                        // 计算租赁物品的实际租赁天数+金额
+                        var xiaojie_prices = (parseInt(time_counts)*val.zujin_prices).toFixed(2);
+                        // 所有数据展示
+                        $(".my_ckmx99").append("<div class='dyls' style='text-align:center'>"+val['order_number']+"</div><div class='dels' style='text-align:center'>"+getLocalTime(val['zujin_charging_time'])+"</div><div class='dsls' style='text-align:center'>¥"+val['zujin_prices']+"</div><div class='dsls' style='text-align:center'>¥<span class='total_feiyong'>"+xiaojie_prices+"</span></div>");
+                        // 逾期时间统计
+                        // 当前时间
+                        var yuqi_time = date.getFullYear()+"-"+parseInt(date.getMonth()+1)+"-"+date.getDate();
+                        var yuqi_ = yuqi_time.split("-")[2];
+                        //还款时间 每月5号
+                        var huankuan_time = date.getFullYear()+"-"+parseInt(date.getMonth()+1)+"-"+parseInt(5);
+                        var hk_time = huankuan_time.split("-")[2];
+                        // 当前时间-还款时间 =  逾期时间
+                        var times_count = parseInt(yuqi_)-parseInt(hk_time);
+                        $(".yuqi_days").text(times_count);
+                        $(".last_times").text(date_year+"-"+date_month+"-5");
+                      }else if(  val.zujin_rent_status == 2  ){ //已退租
+                        // 所有数据展示
+                       $(".my_ckmx99").append("<div class='dyls'>"+val['order_number']+"</div><div class='dels'>"+getLocalTime(val['zujin_charging_time'])+"</div><div class='dsls'>¥"+val['zujin_prices']+"</div><div class='dsls'>"+val['zulin_day_number']+val['zulin_name']+"</div><div class='dsls'>¥"+val['zujin_prices']+"</div>");
+                      }
+                    });
+                    // 共计资金统计
+                    var jgd=parseFloat(0);
+                    $(".total_feiyong").each(function( index , v ){
+                        jgd+=parseFloat($(this).text());
+                    });
+                    jgd=jgd.toFixed(2);
+                    $(".total_prices").text("¥"+jgd);//本月账单
+                    $(".total_price").text(jgd);//共计金额
+                    $(".current_zujin_time").text(jgd);//当前需要支付的租金
+                }else if( data.status == -2000 ){
+                     $(".current_zujin_time").text("00.00");
+                     $(".last_times").text("----");
+                     $(".yuqi_days").text("0");
+                     $(".my_ckmx21").css("display","none");
+                     $(".total_prices").text("¥00.00");
+                     $(".start_date").text(date_year+"-"+date_month+"-1");
+                     $(".last_date").text(date_year+"-"+date_month+"-5");
+                     $(".my_ckmx99").append("<div class='dyls' style='width:100%;text-align:center;color:red'>"+data.message+"</div>");
+                }else if( data.status == -2001 ){
+                     $(".current_zujin_time").text("00.00");
+                     $(".last_times").text("----");
+                     $(".yuqi_days").text("0");
+                     $(".my_ckmx21").css("display","none");
+                     $(".total_prices").text("¥00.00");
+                     $(".start_date").text(date_year+"-"+date_month+"-1");
+                     $(".last_date").text(date_year+"-"+date_month+"-5");
+                     $(".my_ckmx99").append("<div class='dyls' style='width:100%;text-align:center;color:red'>"+data.message+"</div>");
+                }
+              },"json");
+              // 下月账单预浏览
+              $.post("{:U('AjaxDateLook')}",{ "bill_lookta_status":3 , "date_year":date_year , "date_month":date_month },function( data ){
+                if( data.status ==  2000 ){
+                   $.each(data.message,function( index , val ){
+                      $(".first_time").text(date_year+"-"+parseInt(date.getMonth()+2)+"-"+1);
+                      $(".last_time").text(date_year+"-"+parseInt(date.getMonth()+2)+"-"+5);
+                   });     
+                }
+              },"json");
+            });
+            $(".my_zd6_a_a").each(function(index){
+              // 根据年月定位
+              var today = $(".my_zd6_a_a").eq(index).attr("attr-data-id");
+              if( date.getMonth()+1 == today ){
+                var cdz=$(".my_zd6 li").length;
+                for(var i=0;i<cdz;i++){
+                  if(index==i){
+                    $(".my_zd6_a_a").eq(index).addClass("my_zd6_dj");
+                  }
+                  else{
+                     $(".my_zd6_a_a").eq(i).removeClass("my_zd6_dj");
+                  }
+                }
+              }
+              if( index == 0 ){
+                $(".my_zd6_a_a").eq(index).addClass("my_zd6_dj");
+              }
+              $(this).click(function(){
+                $(this).addClass("my_zd6_dj");
+                 var cdz=$(".my_zd6 li").length;
+                for(var i=0;i<cdz;i++){
+                  if(index==i){
+                    $(".my_zd6_a_a").eq(index).addClass("my_zd6_dj");
+                  }
+                  else{
+                     $(".my_zd6_a_a").eq(i).removeClass("my_zd6_dj");
+                  }
+                }
+                // ajxa查询日期 2018-1
+                var date_year = $(".selYear_value").val(); // 年
+                var date_month = $(this).attr("attr-data-id"); //月
+                // 每点击一次 就晴空一次 append
+                $(".my_ckmx99").empty();
+                $.post("{:U('AjaxDateLook')}",{ "bill_lookta_status":2 , "date_year":date_year , "date_month":date_month },function( data ){
+                  // console.log(data);
+                  if( data.status == 2000 ){
+                    $(".my_ckmx21").css("display","block");
+                    $(".start_date").text(date_year+"-"+date_month+"-1");
+                    $(".last_date").text(date_year+"-"+date_month+"-5");
+                    $.each(data.message,function( index , val ){
+                      // 支付完成判断 2 4  等于 支付完成状态
+                      if( val.zujin_pay_status == 2 || val.zujin_pay_status == 4 ){
+                        $(".my_ckmx21").css("display","none");
+                      }else{
+                        $(".my_ckmx21").css("display","block");
+                      }
+                      if( val.zujin_rent_status == 1 ){ // 未退租
+                        $(".rent_days").text("");
+                        //  当前时间的时间戳
+                        if( date_month == 1 ){ // 如果等于一月份 就展示去年的账单
+                           var current_time = days(date_year-1,date_month-1);
+                        }else{ // 如果不等于一月份 就展示今的账单
+                           var current_time = days(date_year,date_month-1);
+                        }
+                        // 数据库计租时间
+                        var jz_time = getLocalTime(val.zujin_charging_time);
+                        var jz_ = jz_time.split("-")[2];
+                        // 时间总计
+                        var sj_zj = parseInt(current_time)-parseInt(jz_)+parseInt(1);
+                        // 计算租赁物品的实际租赁天数+金额
+                        var total_prices = (parseInt(sj_zj)*val.zujin_prices).toFixed(2);
+                        $(".my_ckmx99").append("<div class='dyls' style='text-align:center'>"+val['order_number']+"</div><div class='dels' style='text-align:center'>"+getLocalTime(val['zujin_charging_time'])+"</div><div class='dsls' style='text-align:center'>¥"+val['zujin_prices']+"</div><div class='dsls' style='text-align:center'>¥<span class='xiaojie_rent'>"+total_prices+"</span></div>");
+                      }else if( val.zujin_rent_status == 2 ){ //已退租
+                        $(".rent_days").text("实际租赁天数");
+                         // 数据库起租的时间
+                         var qizu_time = getLocalTime(val.zujin_charging_time);
+                         var qz_ = qizu_time.split("-")[2];
+                         // 数据库退租的时间
+                         var out_rent_time = getLocalTime(val.order_tuizu_time);
+                         var rent_time = out_rent_time.split("-")[2];
+                         // 时间求总
+                         var count_shijian_sum = parseInt(rent_time)-parseInt(qz_)+parseInt(1);
+                         // 时间+租赁金额
+                         var money_time_sum = parseInt(count_shijian_sum)*val.zujin_prices;
+                        $(".my_ckmx99").append("<div class='dyls' style='text-align:center'>"+val['order_number']+"</div><div class='dels' style='text-align:center'>"+getLocalTime(val['zujin_charging_time'])+"</div><div class='dsls' style='text-align:center'>¥"+val['zujin_prices']+"</div><div class='dsls' style='text-align:center'>"+count_shijian_sum+"天</div><div class='dsls' style='text-align:center'>¥<span class='xiaojie_rent'>"+money_time_sum+"</span></div>");
+                      }
+                    });
+                    // 共计资金统计
+                    var jgd=parseFloat(0);
+                  	$(".xiaojie_rent").each(function( index , v ){
+                        jgd+=parseFloat($(this).text());
+                    });
+                    jgd=jgd.toFixed(2);
+                    $(".total_prices").text("¥"+jgd);//本月账单
+			              $(".total_price").text(jgd);//共计金额
+                  }else if( data.status == 2001 ){
+                    $(".my_ckmx21").css("display","block");
+                    $(".start_date").text(date_year+"-"+date_month+"-1");
+                    $(".last_date").text(date_year+"-"+date_month+"-5");
+                    $.each(data.message,function( index , val ){
+                      if( val.zujin_rent_status == 1 ){ //未退租
+                        $(".rent_days").text("");
+                        //  当前时间的时间戳
+                        if( date_month == 1 ){ // 如果等于一月份 就展示去年的账单
+                           var current_time = days(date_year-1,date_month-1);
+                        }else{ // 如果不等于一月份 就展示今的账单
+                           var current_time = days(date_year,date_month-1);
+                        }
+                        // 计算租赁物品的实际租赁天数+金额
+                        var total_prices = (parseInt(current_time)*val.zujin_prices).toFixed(2);
+                        $(".total_prices").text("¥"+total_prices);//本月账单
+                        $(".total_price").text(total_prices);//共计金额
+                        $(".my_ckmx99").append("<div class='dyls' style='text-align:center'>"+val['order_number']+"</div><div class='dels' style='text-align:center'>"+getLocalTime(val['zujin_charging_time'])+"</div><div class='dsls' style='text-align:center'>¥"+val['zujin_prices']+"</div><div class='dsls' style='text-align:center'>¥"+total_prices+"</div>");
+                      }else if(  val.zujin_rent_status == 2 ){ //已退租
+                        $(".rent_days").text("实际租赁天数");
+                         // 数据库退租的时间
+                         var out_rent_time = getLocalTime(val.order_tuizu_time);
+                         var out_timestamp = out_rent_time.substring(out_rent_time.indexOf("-")*2);
+                         //进行计算
+                         var count_prices = (parseInt(out_timestamp)*val.zujin_prices).toFixed(2);
+
+                        $(".total_prices").text("¥"+count_prices);//本月账单
+                        $(".total_price").text(count_prices);//共计金额
+                        $(".my_ckmx99").append("<div class='dyls' style='text-align:center'>"+val['order_number']+"</div><div class='dels' style='text-align:center'>"+getLocalTime(val['zujin_charging_time'])+"</div><div class='dsls' style='text-align:center'>¥"+val['zujin_prices']+"</div><div class='dsls' style='text-align:center'>"+out_timestamp+"天</div><div class='dsls' style='text-align:center'>¥"+total_prices+"</div>");
+                      }
+                    });
+                  }else if( data.status == -2001 ){
+                     $(".my_ckmx21").css("display","none");
+                     $(".total_prices").text("¥00.00");
+                     $(".start_date").text(date_year+"-"+date_month+"-1");
+                     $(".last_date").text(date_year+"-"+date_month+"-5");
+                     $(".total_price").text("00.00");//共计金额
+                     $(".rent_days").text("");
+                     $(".my_ckmx99").append("<div class='dyls' style='width:100%;text-align:center;color:red'>"+data.message+"</div>");
+                  }else if( data.status == -2000 ){
+                     $(".my_ckmx21").css("display","none");
+                     $(".total_prices").text("¥00.00");
+                     $(".total_price").text("00.00");//共计金额
+                     $(".start_date").text(date_year+"-"+date_month+"-1");
+                     $(".last_date").text(date_year+"-"+date_month+"-5");
+                     $(".rent_days").text("");
+                     $(".my_ckmx99").append("<div class='dyls' style='width:100%;text-align:center;color:red'>"+data.message+"</div>");
+                  }
+
+
+                },"json");
+              });
+            });
+            // 时间格式化
+            function getLocalTime(nS){
+              var da = nS;
+              times = new Date(da*1000);
+              var year = times.getFullYear();
+              var month = times.getMonth()+1;
+              var date = times.getDate();
+              return [year,month,date].join('-');
+            }
+          // 获取指定月份的天数
+         function days(year,month){
+             var dayCount;
+             now = new Date(year,month, 0);
+             dayCount = now.getDate();
+             return dayCount;
+         }
+          </script>
+     </div>
+   </div>
+ </div>
+ 
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr" style="height:420px;display:none;">
+	  <div class="zz_nr1">
+		请选择支付方式		
+	  </div>
+	  <div class="zz_nr2" style="margin-top:40px;">
+		<div class="zz_nr_zffs" >支付宝</div>
+	  </div>
+	  <div class="zz_nr2">
+		 <div class="zz_nr_zffs" >微支付</div>
+	  </div>
+	  <div class="zz_nr2">
+		 <div class="zz_nr_zffs" >银联</div>
+	  </div>
+	  <div class="zz_nr3" style="margin-top:25px;">
+			<a href="#" class="tyjs0">确认</a>
+			<a href="#" class="tyjs">取消</a>	
+	  </div>
+	</div>
+</div>
+ 
+ <script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+<script type="text/javascript">	
+ my_top(2,"50px","我的账单"); 
+ $(".wodegb").html("我的账单");  
+   //左边浮动滑块距离头部
+$(".hdmk").css("top",'50px'); 
+  
+  var percent=0;  
+   // var loading=setInterval(function(){  
+        if(percent>100){  
+            percent=0;  
+            $('.circle').removeClass('clip-auto');  
+            $('.right').addClass('wth0');  
+        }else if(percent>50){  
+            $('.circle').addClass('clip-auto');  
+            $('.right').removeClass('wth0');  
+        }  
+        $('.left').css("-webkit-transform","rotate("+(18/5)*80+"deg)");  
+        $('.num>span').text(80);  
+        percent++;  
+  // },200);    
+   
+/*    $(".my_zd6_a_a").each(function(index){
+    	$(this).click(function(){
+    		$(this).addClass("my_zd6_dj");
+         var cdz=$(".my_zd6 li").length;
+        for(var i=0;i<cdz;i++){
+          if(index==i){
+            $(".my_zd6_a_a").eq(index).addClass("my_zd6_dj");
+          }
+          else{
+             $(".my_zd6_a_a").eq(i).removeClass("my_zd6_dj");
+          }
+        }
+
+    	});
+    });*/
+
+    
+    //马上支付
+    $(".my_ckmx21").click(function(){
+    	$(".zhezhao").css("display","block");
+    	$(".zz_nr").css("display","block");
+    });
+    $(".tyjs0").click(function(){
+    	$(".zhezhao").css("display","none");
+    	$(".zz_nr").css("display","none");
+    })
+    $(".tyjs").click(function(){
+    	$(".zhezhao").css("display","none");
+    	$(".zz_nr").css("display","none");
+    })
+    
+    
+    
+ $(".header_bottom1_middle li").eq(6).addClass("header_dj");
+ $(".header_bottom1_middle li").eq(6).siblings().removeClass("header_dj");
+
+
+
+
+
+
+
+
+</script>
+{:W('Common/footer')}
+</body>
+</html>

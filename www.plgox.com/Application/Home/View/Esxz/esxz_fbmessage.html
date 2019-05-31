@@ -1,0 +1,682 @@
+﻿{:W('Common/header_esxz')}
+{:W('Common/header1_esxz')}
+   <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/esxz_fbmessage.css"> 
+
+<style>
+ .error_font1{
+     display: block;
+     color: red;
+     overflow:hidden;
+     height:15px;
+     width:600px;
+     margin-top:-15px;
+     margin-left:143px;
+	}
+</style>
+<div class="esxz_fbme_box">
+  <div class="esxz_fbme">
+  	
+  	<input type="hidden" id="share_id1" value="{$share_id1}">
+  	<input type="hidden" id="share_id2" value="{$share_id2}">
+  	<input type="hidden" id="share_id3" value="{$share_id3}">
+  	<input type="hidden" id="flz" value="{$flz}">
+	 <div class="esxz_fbme1">
+	 	发布闲置物品信息
+	 </div>
+	 <div class="esxz_fbme2">
+	 	为了更好的建设一个信息发布平台，您所发布的商品信息我们会严格审核，审核通过后才可展示，如果审核不通过我们会在第一时间告知您。刀类和食物类禁止发布。如果您的信息发布<span class="esxz_fbme21">6</span>个月，未做任何修改和删除，系统将自动删除该信息，请悉知。
+	 </div>
+	 
+	 <div class="esxz_fbme3">
+	 	<div class="esxz_fbme31">
+	 		<span></span>
+	 		<b>发布对象信息</b>
+	 	</div>
+	 	<div class="esxz_fbme32">
+	 		<div class="esxz_fbme321">
+	 			<span>身份：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme322">
+	 			<div class="esxz_fbme3221">
+	 			<input type="radio" name="wy" value="2"  class="gr_qy rz_guanli" <eq name="goods_['goods_is_business']" value="2">checked</eq> /> <span>个人发布</span> 
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			  <input type="radio" name="wy" checked  <eq name="goods_['goods_is_business']" value="1">checked</eq>   value="1" class="gr_qy rz_guanli esxz_qyfb" /> <span>企业发布（以企业身份发布将更有助于提高买家信任度，快速达成交易。）</span>
+	 			</div>
+	 		</div>
+	 		
+	 	</div>
+	 	<font class="error_font1" ></font>
+	 	
+	 	
+	 	<div class="esxz_fbme3">
+	 	<div class="esxz_fbme31">
+	 		<span></span>
+	 		<b>物品信息</b>
+	 	</div>
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>商品名称：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<if condition="($goods_['goods_name'] neq null )">
+	 				<input type="text" class="esxz_input" name="bt" value="{$goods_['goods_name']}" id="goods_name" placeholder="{$goods_['goods_name']}"/>
+	 			<else />
+	 				<input type="text" class="esxz_input" name="bt" value="{$class_ify['juezhi_brand_name']}" id="goods_name" placeholder="{$class_ify['juezhi_brand_name']}"/>
+	 			</if>
+	 		</div>
+	 	</div>
+	 	<font class="error_font1" ></font>
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>品牌：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" class="esxz_input" name="bt" value="{$goods_['goods_brand']}" id="goods_brand" placeholder="最多25个字"/>
+	 		</div>
+	 	</div>
+	 	<font class="error_font1" ></font>
+	 	
+	 	
+		<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>产地：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" class="esxz_input" name="bt" value="{$goods_['goods_produce_address']}" id="goods_produce_address" placeholder="请输入产地"/>
+	 		</div>
+	 	</div>
+	 	<font class="error_font1" ></font>
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>转卖价格：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" class="esxz_input" id="esxz_zrjg" value="{$goods_['goods_deal_price']}" placeholder="面议&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元"/>
+	 		</div>
+	 	</div>
+	 	<font class="error_font1" ></font>
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>市场价格：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<input type="text" class="esxz_input" name="bt" value="{$goods_['goods_cost_price']}" id="goods_cost_price" placeholder="请输入"/>
+	 		</div>
+	 	</div>
+	 	<font class="error_font1" ></font>
+	 	
+	 	
+	 	<div class="esxz_fbme38">
+	 		<div class="esxz_fbme321">
+	 			<span>物品描述：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme381">
+	 			<if condition=" ( $goods_['goods_description'] neq null ) " >
+	 				<textarea id="goods_description" rows="10" class="esxz_wby" cols="30" onfocus="this.value=''; this.onfocus=null;">{$goods_['goods_description']}</textarea>
+	 			<else />
+	 				<textarea id="goods_description" rows="10" class="esxz_wby" cols="30" onfocus="this.value=''; this.onfocus=null;">最多300个字，因为批量产品涉及物品种类繁多，所以请仔细描述下主要物品的品牌、产 地、出场日期、来源、可否面议、如何交易、产品亮点、瑕疵等方面。</textarea> 
+	 			</if>
+	 			
+               <div class="esxz_fbme382">请您对描述的真实性负责。描述越细致，将越有利于快速达成交易。</div>
+	 		</div>
+	 		
+	 	</div>
+	 	<font class="error_font1" ></font>
+	 	<br/><br/>
+	 	<div class="esxz_fbme37">
+	 		<div class="esxz_fbme321">
+	 			<span>扫码传图：</span>
+	 		</div>
+	 		<div class="esxz_fbme371">
+	 			<span id="qrcode"></span>
+	 		</div>
+	 		<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/qrcode.js"></script>
+	 		<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/qrcode.min.js"></script>
+	 		<script type="text/javascript">
+	 			// 二维码生成代码
+			    var url = "http://www.plgox.com/Uploadfiles?token={$token}&status_keys=3";
+			    var qrcode = new QRCode("qrcode",{
+			      width: 150,
+			      height: 150,
+			    correctLevel : QRCode.CorrectLevel.H
+			    });
+			      qrcode.clear();
+			      qrcode.makeCode(url);
+			    $("#qrcode").removeAttr("title");
+	 		</script>
+	 	</div><br />
+	 	<div class="esxz_fbme39">
+	 		<div class="esxz_fbme321 esxz_fbme392">
+	 			<span>上传图片：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme391">
+	 			   <img  <if condition="($goods_pic['0'] neq null )">src="__ROOT__/Uploads/admin/{$goods_pic['0']}" <else />src="__PUBLIC__/Home/image/sctp.jpg" </if> attr_="" alt="" class="image1 image_tp images">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile1" value="" style="display:none" name="pic_img[]">	
+      	           <img  <if condition="($goods_pic['1'] neq null )">src="__ROOT__/Uploads/admin/{$goods_pic['1']}" <else />src="__PUBLIC__/Home/image/sctp.jpg" </if> attr_="" alt="" class="image2 image_tp images">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile2" value="" style="display:none" name="pic_img[]">
+      	           <img  <if condition="($goods_pic['2'] neq null )">src="__ROOT__/Uploads/admin/{$goods_pic['2']}" <else />src="__PUBLIC__/Home/image/sctp.jpg" </if> attr_="" alt="" class="image3 image_tp images">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile3" value="" style="display:none" name="pic_img[]">
+      	           <img  <if condition="($goods_pic['3'] neq null )">src="__ROOT__/Uploads/admin/{$goods_pic['3']}" <else />src="__PUBLIC__/Home/image/sctp.jpg" </if> attr_="" alt="" class="image4 image_tp images">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile4" value="" style="display:none" name="pic_img[]">
+      	           <img  <if condition="($goods_pic['4'] neq null )">src="__ROOT__/Uploads/admin/{$goods_pic['4']}" <else />src="__PUBLIC__/Home/image/sctp.jpg" </if> attr_="" alt="" class="image5 image_tp images">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile5" value="" style="display:none" name="pic_img[]">
+      	           <img <if condition="($goods_pic['5'] neq null )"> src="__ROOT__/Uploads/admin/{$goods_pic['5']}"<else /> src="__PUBLIC__/Home/image/sctp.jpg"</if> attr_="" alt="" class="image6 image_tp images">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile6" value="" style="display:none" name="pic_img[]">
+	 		</div> 
+	 		<div class="wdzl_tp61">
+	 			支持格式JPG、PNG、BMP，最大支持3M，最多添加6张。有图片可使浏览量增加3倍，并会在推荐位展示，并支持扫码上传。
+	 		</div>	
+	 		<script type="text/javascript">
+	 			// ajax读取多图
+	 			function filesLook(){
+	 				$.post("{:U('ajaxUploadFiles')}",{ status_:1 },function( data ){
+	 					if( data.status == 2000 ){
+	 						$.each(data.message,function( index , val ){
+	 							$(".images").eq(index).attr("src","__ROOT__/Uploads/admin/"+val['1']);
+	 							$(".images").eq(index).attr("attr_","imagess");
+	 						});
+	 					}
+	 				},"json");
+	 			}
+	 			setInterval("filesLook()",1000);
+	 			// 刷新页面清空
+	 			$(document).ready(function(){
+	 				$.post("{:U('ajaxUploadFiles')}",{ status_:2 },function( datas ){
+	 					if( datas.status == 2000 ){
+	 						console.log(datas.message);
+	 					}
+	 				},"json");
+	 			});
+	 		</script>
+	 	</div>
+	 	<font class="error_font1" style="margin-top:5px;"></font>
+	 	<br/>
+	 <div class="esxz_fbme39 esxz_scfp">
+	 		<div class="esxz_fbme321 esxz_fbme392">
+	 			<span>上传发票：</span>
+	 			<!-- <b >*</b> -->
+	 		</div>
+	 		<div class="esxz_fbme391">
+	 			<img <if condition="( $goods_['goods_bill_pic'] neq null )">src="__ROOT__/Uploads/admin/{$goods_['goods_bill_pic']}"<else />src="__PUBLIC__/Home/image/sctp.jpg"</if> alt="" class="image11 image_tp">&nbsp;&nbsp;&nbsp;
+      	        <input type="file" id="exampleInputFile11" value="" style="display:none" name="pic_img[]">
+	 		</div>
+	 		<div class="wdzl_tp61">
+	 			支持格式JPG、PNG、BMP，最大支持3M。特别注意：凡商品转让价格超过1万元，必须上传发票。
+	 		</div>	
+	 		
+	 	</div>
+	 	<font class="error_font1" style="margin-top:5px;"></font>
+	 	<br/>
+	 <br/><br/><br/>
+	    <div class="esxz_fbme31">
+	 		<span></span>
+	 		<b>联系人信息</b>
+	 	</div>
+	 	<div class="esxz_fbme32">
+	 		<div class="esxz_fbme321">
+	 			<span>交易地址：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme322">
+	 			<div>
+		 			<select type="checkbox" class="esxz_input1">
+		 			<volist name="province" id="pv">
+		 				<option class="choose_province" id="{$pv.city_id}">{$pv.city_name}</option>
+		 			</volist>
+		 			</select>
+		 			<select type="checkbox" class="esxz_input3">
+		 			<volist name="city" id="ct">
+		 				<option class="choose_province" id="{$ct.city_id}">{$ct.city_name}</option>
+		 			</volist>
+		 			</select>
+		 		</div>
+	 			<div class="esxz_fbme32_xm">
+	 			  <input type="text" class="esxz_input2" id="shouhuo_address" value="{$goods_['goods_address']}" name="bt" placeholder="请输入具体地址"/>
+	 			</div>
+	 		</div>
+	 	</div>
+	 	<font class="error_font1" style="margin-top:0px;"></font>
+
+	 <br/>
+	 <div class="esxz_fbme32 ">
+	 		<div class="esxz_fbme321">
+	 			<span>联系人：</span>
+	 			<b >*</b>
+	 		</div>
+	 		<div class="esxz_fbme322">
+	 			<div class="esxz_fbme3221_fir">
+	 			  <input type="text" id="link_name" class="esxz_input6" value="{$goods_['goods_link_name']}" placeholder="请输入姓氏或者全名"/>
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			<input type="radio" name="sex" value="1" class="xtsex" <eq name="goods_['goods_link_sex']" value="1">checked</eq> /> <span>先生</span> 
+	 			</div>
+	 			<div class="esxz_fbme3221">
+	 			  <input type="radio" name="sex" value="2" class="xtsex" <eq name="goods_['goods_link_sex']" value="2">checked</eq> /> <span>女士</span>
+	 			</div>
+
+	 		</div>
+	 	</div>
+	 	<font class="error_font1" style="margin-top:-5px;"></font>
+	 	<div class="esxz_fbme33" style="width:210px;">
+	 			<span>联系方式（至少选择一种）</span>
+	 			<b >*</b>
+	 	</div>
+	 
+	    <div class="esxz_fbme_lxfs">
+	 		<div >
+	 			<span>电话</span><input type="text" id="phone" class="esxz_input6" value="{$goods_['goods_link_phone']}" placeholder="请输入11位手机号码"/>
+	 		</div>	
+	 		<div >
+	 			<span>Q&nbsp;Q</span><input type="text" id="qq" class="esxz_input6" value="{$goods_['goods_link_qq']}" placeholder="请输入qq号"/>
+	 		</div>
+	 		<div >
+	 			<span>微信</span><input type="text" id="wechat" class="esxz_input6" value="{$goods_['goods_link_wechat']}" placeholder="请输入微信号码"/>
+	 		</div>
+	 	</div>
+	 	<font class="error_font1" style="margin-top:0px;margin-left:160px;"></font>
+	 <div class="esxz_fbme_zdb">发布具有敏感政治倾向、暴力倾向、不健康色彩等的文字或图片，将不能通过审核。</div>
+	 
+	<if condition="($loguser['plgox_id'] eq '' )">	 
+	 	<div class="esxz_fbme_tj1" onclick="javascript:window.location.href='{:U('Tourist/login')}'">提交</div>
+	 <elseif condition="($sjrz_renzheng['plgox_usertype'] eq 4 ) and ( $goods_['goods_id'] eq null ) " />
+	 	<div class="esxz_fbme_tj">提交</div>
+	<else/>
+	  	<div class="sjzx_rz esxz_fbme_tj" value="{$goods_['goods_id']}" >提交</div>
+	</if>
+</div>
+  </div>
+</div>
+
+
+
+<!--遮罩-->
+<div class="zhezhao" style="display:none;">
+
+<!--企业认证-->	
+	<div class="zz_nr" style="display:none;">
+	  <div class="esxz_de_zz5">
+	  	<!--很抱歉，您还不是企业用户，先通过企业认证后再查看。-->
+	  	查看卖家联系方式需要登录后可见。
+	  </div>
+	  <div class="zz_nr3" style="width:260px;">
+			<span class="ty_esxz">取消</span>
+			<span class="ty_esxz1">马上登录</span>	
+	  </div> 
+   </div>
+
+<!--价值过万-->	
+	<div class="zz_nr" style="display:block;">
+	  <div class="esxz_de_zz5">
+	  因为您的单件价格超过万元，所以必须上传产品发票
+	  </div>
+	  <div class="zz_nr3" style="width:220px;padding-top:10px;">
+			<span class="ty_esxz1" style="width:220px;float:none;margin-top:20px;">我知道了</span>	
+	  </div> 
+   </div>
+  
+
+
+
+
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/Home/js/esqyrzz.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/cropbox.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/alert.js"></script>
+<script type="text/javascript">
+
+
+  
+
+
+$(window).load(function() {
+	//上传图片	
+	 number = [0,1,2,3,4,5,6,7,8,9,10,11];
+	 	$.each(number,function( index ){
+	 		if( index != 0 ){
+	 			$(".image"+index).click(function(){
+	 				//return false;
+	 				$("#exampleInputFile"+index).click();
+	 				//$("#exampleInputFile"+index).off("change");
+	 				$("#exampleInputFile"+index).on('change',function(){
+	 					// 判断上传的限制
+	 					if( $(this)[0].files[0].size > 10485760){
+	 						//alert("上传文件超出了特定的上传限制!");
+	 						$("error_font1").eq(7).html('上传文件超出了特定的上传限制!');
+	 						return false;
+	 					}else{
+	 						var objUrl = getUploads(this.files[0]);
+	 						if( objUrl ){
+	 							$(".image"+index).attr("src",objUrl);
+	 							$("#image"+index).val(objUrl);
+	 						}
+	 					}
+	 				});
+	 			});
+	 		}
+	 	});
+	var oid=0;
+	$(".esxz_fbme39_sc").click(function(){
+		 $(".zhezhao").css("display","block");
+		 $(".container").css("display","block");
+		 esxz(".esxz_fbme39_sc");
+	});
+	$(".esxz_fbme39_fp").click(function(){
+		 $(".zhezhao").css("display","block");
+		 $(".container").css("display","block");
+		 esxz(".esxz_fbme39_fp");
+	});
+   $(".esxz_input1").change(function(){
+	   var id = $(":selected",".esxz_input1").attr("id");
+	   $.post("{:U('Esxz/esxz_choose_city')}",{
+			  'id':id 
+			  },
+			  function( data ){
+			  	 //console.log(data);
+           //三级分类
+           var opt1='';
+				$.each(data,function(index,value){
+	  	           opt1+='<option id='+value.city_id+'>'+value.city_name+'</option>';
+				});
+				$(".esxz_input3").text(null);
+           $(".esxz_input3").append(opt1);
+	     },"json"); 
+   });
+	
+	
+	
+	
+	function esxz(leiz){
+		window.leizhi=leiz;
+	}
+
+	
+	
+	$(".wdzl_tp60").each(function(index){
+		$(this).click(function(){
+			$(".wdzl_tp").eq(index).css("display","none");
+		});
+	});
+	
+	//删除图片
+	$(".wdzl_tp60").each(function(index){
+		$(".wdzl_tp60").eq(index).click(function(){
+			alert("index");
+		})
+	})
+	
+	
+	
+});
+</script>
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+function getUploads(files){
+	url = null;
+	if( window.createObjectURL !== undefined ){
+		url = window.createObjectURL(files);
+	}else if( window.URL !== undefined ){
+		url = window.URL.createObjectURL(files);
+	}else if( window.webkitURL != undefined ){
+		url = window.webkitURL.createObjectURL(files);
+	}
+	return url;
+}
+	
+$(".esxz_fbme_tj").click(function(){
+  var szz="{$is_sjrz}";
+ if(!$(".rz_guanli").eq(0).is(":checked") && szz==1 ){
+    esqyrz("{$is_sjrz}");
+
+     return false;
+    
+  }
+
+
+
+	
+	var checked = "";
+	$(".rz_guanli").each(function( index ){
+		if( $(this).is(":checked") ){
+			checked+=$(this).val();
+		}
+	});
+
+
+	var shenfen = $('input:radio[name="wy"]:checked').val();//身份
+	if(!$(".gr_qy").is(":checked")){
+			alert("请选择以什么身份发布");
+		    return false;
+	}
+	else{
+		$(".error_font1").eq(0).html("");
+	}
+	var city = $(":selected",".esxz_input3").attr("id");
+	var province = $(":selected",".esxz_input1").attr("id");
+
+	if(province==""){
+       alert("交易地址未填写");
+		return false;
+	}
+	else{
+		$(".error_font1").eq(7).html("");
+	}
+	var goods_name = $("#goods_name").val();//商品名称 
+	if(goods_name==""){
+		alert("商品名称未填写");
+		return false;
+	}
+	else{
+		$(".error_font1").eq(1).html("");
+	}
+	var goods_brand =  $("#goods_brand").val();//品牌
+	/*if(goods_brand==""){
+		alert("品牌未填写");
+		return false;
+	}
+	else{
+		$(".error_font1").eq(2).html("");
+	}*/
+var goods_produce_address =  $("#goods_produce_address").val();//产地 
+/*		if(goods_produce_address==""){
+		alert("产地未填写");
+		return false;
+	}
+	else{
+		$(".error_font1").eq(3).html("");
+	}
+	*/
+	var esxz_zrjg =  $("#esxz_zrjg").val();//售让价格
+	if(esxz_zrjg==""){
+		alert("转卖价格未填写");
+		return false;
+	}
+	else{
+		$(".error_font1").eq(4).html("");
+	}
+	
+	//var goods_type = $('input:radio[name="goods_type"]:checked').val();//商品类型
+	/*if(goods_type==""){
+		alert("商品价格未填写");
+		return false;
+	}*/
+	
+	var goods_num = $('input:radio[name="goods_num"]:checked').val();//商品数量
+	if(goods_num==""){
+
+		alert("商品数量未填写");
+		return false;
+	}
+	
+	var goods_cost_price =  $("#goods_cost_price").val();//市场价格 
+	/*if(goods_cost_price==""){
+		alert("市场价格未填写");
+		return false;
+	}
+	else{
+		$(".error_font1").eq(5).html("");
+	}*/
+	
+	
+	
+	
+    var goods_description = $("#goods_description").val();//商品描述
+    if(goods_description==""||goods_description=="最多300个字，因为批量产品涉及物品种类繁多，所以请仔细描述下主要物品的品牌、产 地、出场日期、来源、可否面议、如何交易、产品亮点、瑕疵等方面。"){
+		alert("商品描述未填写");
+		return false;
+	}
+    else{
+		$(".error_font1").eq(6).html("");
+	}
+    
+     var shouhuo_address = $("#shouhuo_address").val();
+    if(shouhuo_address==""){
+		alert("交易地址未填写");
+		return false;
+	}
+    else{
+		$(".error_font1").eq(9).html("");
+	}
+    var link_name = $("#link_name").val();
+    if(link_name==""){
+		alert("联系人未填写");
+		return false;
+	}
+    else{
+		$(".error_font1").eq(10).html("");
+	}
+    
+    var sex = $('.esxz_fbme322 input:radio[name="sex"]:checked').val();
+	if($('.xtsex').is(":checked")){
+		$(".error_font1").eq(10).html("");
+	}
+	else{
+		alert("性别未填写");
+		return false;
+	}
+    var phone = $("#phone").val();
+    var qq = $("#qq").val();
+    var wechat = $("#wechat").val();
+    if(phone==""&&qq==""&&wechat==""){
+		alert("QQ,微信,手机号,请填写其中一个联系方式");
+		return false;
+	}
+    else{
+		$(".error_font1").eq(11).html("");
+	}
+   
+	var src_path_ = "";
+	$(".images").each(function( index ){
+		if( $(this).attr("attr_") == "imagess" ){
+			src_path = $(this).attr("src");
+			src_path_1 = src_path.split("/")['3'];
+			src_path_2 = src_path.split("/")['4'];
+			src_path_+= ","+src_path_1+"/"+src_path_2;
+		}
+	});
+	src_path_ = src_path_.substring(1);
+    var share_id1 = $("#share_id1").val();
+    var share_id2 = $("#share_id2").val();
+    var share_id3 = $("#share_id3").val();
+    var flz = $("#flz").val();
+    var goods_id = $(this).attr("value");
+	//alert(first+"--"+second+"--"+third);
+	//alert(shenfen+"--"+shenfen+"--"+goods_type+"--"+goods_num+"--"+text);
+	//alert(goods_name+"--"+goods_cost_price+"--"+esxz_zrjg+"--"+goods_produce_address+"--"+goods_brand+"--"+goods_description);
+	$.ajaxFileUpload({
+				dataType: "json",
+				fileElementId:["exampleInputFile1","exampleInputFile2","exampleInputFile3","exampleInputFile4","exampleInputFile5","exampleInputFile6","exampleInputFile11"],
+                url:"{:U('Esxz/publish_content')}",
+                type:'post',
+                data:{
+                	goods_id:goods_id,
+                	province:province,
+                	city:city,
+                	shenfen:shenfen,
+                	src_path_:src_path_,
+                	goods_num:goods_num,
+                	//text:text,
+                	goods_name:goods_name,
+                	goods_cost_price:goods_cost_price,
+                	esxz_zrjg:esxz_zrjg,
+                	goods_produce_address:goods_produce_address,
+                	goods_brand:goods_brand,
+                	goods_description:goods_description,
+                	link_name:link_name,
+                	shouhuo_address:shouhuo_address,
+                	phone:phone,
+                	qq:qq,
+                	sex:sex,
+                	wechat:wechat,
+                	goods_typea:share_id1,
+                	goods_typeb:share_id2,
+                	goods_typec:share_id3,
+                	goods_sell_type:flz
+                }, 
+                success:function(data){
+                	window.location.href="{:U('Esxz/index')}";
+                }
+                
+
+            })
+
+});
+$(".ty_esxz").click(function(){
+	$(".zhezhao").css("display","none");
+	$(".zz_nr").css("display","none");
+});
+
+	//马上登陆
+$(".ty_esxz1").click(function(){
+	$(".zhezhao").css("display","none");
+	$(".zz_nr").css("display","none");
+});
+
+
+
+//二       企业用户
+/* $(".esxz_qyfb").click(function(){
+	$(this).removeAttr("checked"); 
+			//
+			$(".esxz_de_zz5").eq(0).text('您现在还不是企业用户，请先进行企业认证后再选择企业发布。是否马上去认证？');
+			 $(".zhezhao").css("display","block");
+		    $(".zz_nr").eq(0).css("display","block");
+});
+ */
+//三  转让价格超过一万
+$("#esxz_zrjg").blur(function(){
+  if($(this).val()>10000){
+
+			 $(".zhezhao").css("display","block");
+		    $(".zz_nr").eq(1).css("display","block");
+  }
+});
+
+
+
+
+
+
+</script>
+{:W('Common/footer_esxz')}

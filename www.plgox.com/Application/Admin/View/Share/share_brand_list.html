@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+</head>
+<style type="text/css">
+	.page{text-align: center;height:40px;}
+	.page :hover{text-decoration: none}
+	.num{border:1px solid #C0D9D9;border-radius: 10px;line-height: 40px;padding:5px 10px 5px 10px;margin: 0px 4px 0px 0px;}
+	.current{border: 1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin: 0px 4px 0px 0px;background: #007FFF;color:#FFFFFF;}
+	.next{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;}
+	.prev{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-right:4px;}
+	.first{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-right:4px;}
+	.end{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-left:4px;}
+	.page_style{color:#007FFF;font-size:15px;}
+</style>
+<body>
+<ol class="breadcrumb">
+	<li>当前位置</li>
+	<li>{$setTitle}</li>
+</ol>
+<div class="container-fluid">
+<form class="bs-example bs-example-form" role="form" action="{:U('Share/share_brand_search')}" method="get">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="input-group" style="width:400px;">
+				<select class="form-control brand_name" style="width: 120px" name="brand_name">
+					<option value="0">--选择品牌--</option>
+					<volist name="brand_" id="brand_">
+					  	<option value="{$brand_['brand_name']}" <eq name="brand_['brand_name']" value="$name">selected</eq>>{$brand_['brand_name']}</option>
+					</volist>
+				</select>
+			</div><!-- /input-group -->
+			<br>
+		</div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+</form>
+</div>
+<div class="table-responsive">
+	<table style="border: 1px solid #DDDDDD;" class="table">
+		<tr>
+			<td>
+				<button type="button" class="btn btn-success">添加品牌</button>
+				<button type="button" class="btn btn-info">全选</button>
+				<button type="button" class="btn btn-danger">一键删除</button>
+			</td>
+		</tr>
+	</table>
+	<table class="table table-striped">
+		<tr></tr>
+		<tr style="background:#F5F5F5;">
+			<th style="text-align: center;">全选</th>
+			<th style="text-align: center;">编号</th>
+			<th style="text-align: center;">品牌名称</th>
+			<th style="text-align: center;">品牌状态</th>
+			<th style="text-align: center;">创建时间</th>
+			<th style="text-align: center;">操作</th>
+		</tr>
+	<volist name="brand" id="brand_">
+		<tr class="table_tr_{$brand_['brand_id']}">
+			<td style="text-align: center;line-height:50px;"><input type="checkbox" name="" value="{$brand_['brand_id']}" class="check"></td>
+			<td style="text-align: center;line-height:50px;">{$brand_['brand_id']}</td>
+			<td style="text-align: center;line-height:50px;">{$brand_['brand_name']}</td>
+			<td style="text-align: center;line-height:50px;"><eq name="brand_['brand_status']" value="0">开启<else />关闭</eq></td>
+			<td style="text-align: center;line-height:50px;">{$brand_['brand_createtime']|date="Y-m-d H:i:s",###}</td>
+			<td style="text-align: center;line-height:50px;">
+				<a href="{:U('Share/share_brand_data')}&share_brand_id=<?php echo base64_encode($brand_['brand_id'])?>" title="编辑板块" class=""><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;
+				<a href="javascript:void(0);" title="删除" class="del" value="{$brand_['brand_id']}"><span class="glyphicon glyphicon-trash"></span></a>&nbsp;&nbsp;
+			</td>
+		</tr>
+	</volist>
+	</table>
+</div>
+<div class="container-fluid">
+	  <div class="col-xs-12 col-md-8 page" style="width: 100%">{$page}</div>
+</div>
+</body>
+<script type="text/javascript">
+	// 添加新板块
+	$(".btn-success").click(function(){
+		window.location.href="{:U('Share/share_brand_data')}";
+	});
+	// 单个删除
+	$(".del").click(function(){
+		brand_id = $(this).attr("value");
+		if( confirm( "确定要删除该用户吗？" ) ){
+			$.ajax({
+				type: "POST",
+			dataType: "JSON",
+				 url: "{:U('Share/share_brand_del')}",
+				data: { 'brand_id':brand_id },
+				success: function( data ){
+					if( data.status == 2000 ){
+						alert(data.message);
+						$(".table_tr_"+brand_id).remove();
+						return false;
+					}else{
+						alert("删除失败");
+    					return false;
+					}
+				},
+				error: function( XMLHttpRequest , error , status ){
+					alert("网络错误，请稍后再尝试" + status );
+					return false;
+				}
+			});
+		}
+	});
+	// 全选删除
+    $(".btn-danger").click(function(){
+    	var ids = "";
+    	$("input[type='checkbox']").each(function(){
+    		if( $(this).is(":checked") ){
+    			ids+=','+$(this).val();
+    		}
+    	});
+    	brand_ids = ids.substring(1);
+    	if( ids.length == 0 ){
+    		alert("请选择要删除的数据");
+    	}else if( confirm("确定要全部删除所有数据") ){
+    		$.ajax({
+    			type: "POST",
+    		dataType: "JSON",
+    			 url: "{:U('Share/share_brand_del')}",
+    			data: { 'brand_ids':brand_ids },
+    			success: function( data ){
+    				if( data.status == 2002 ){
+    					alert(data.message);
+    					location.reload();
+    					return false;
+    				}else{
+    					alert("删除失败");
+    					return false;
+    				}
+    			},
+    			error: function( XMLHttpRequest , error , status ){
+    				alert("网络出现错误，请稍后再尝试!" + status );
+    			}
+    		});
+    	}
+    });
+	// 全选
+	$(".btn-info").click(function(){
+		if( $("input[type='checkbox']").is(":checked") ){
+			$("input[type='checkbox']").prop("checked",false);
+		}else{
+			$("input[type='checkbox']").prop("checked",true);
+		}
+	});
+	// 点击tr选中checkbox
+   $("table").find("tr").each(function(){
+       $(this).click(function(){
+			if( $(this).find('input').is(":checked") ){
+				$(this).find("input").prop("checked",false);
+			}else{
+				$(this).find("input").prop("checked",true);
+			}
+       	});            
+     });
+   $(".brand_name").change(function(){
+   		$("form").submit();
+   });
+</script>
+</html>

@@ -1,0 +1,189 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+</head>
+<style type="text/css">
+	.page{text-align: center;height:40px;}
+	.page :hover{text-decoration: none}
+	.num{border:1px solid #C0D9D9;border-radius: 10px;line-height: 40px;padding:5px 10px 5px 10px;margin: 0px 4px 0px 0px;}
+	.current{border: 1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin: 0px 4px 0px 0px;background: #007FFF;color:#FFFFFF;}
+	.next{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;}
+	.prev{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-right:4px;}
+	.first{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-right:4px;}
+	.end{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-left:4px;}
+	.page_style{color:#007FFF;font-size:15px;}
+</style>
+<body>
+<ol class="breadcrumb">
+	<li>当前位置</li>
+	<li>{$setTitle}</li>
+</ol>
+<div class="container-fluid">
+<form class="bs-example bs-example-form" role="form" action="{:U('Qiye/parameter_shaixuan')}" method="get">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="input-group" style="width:400px;">
+				<select class="form-control parameter_shaixuan_1" style="width: 120px;margin-left: 10px" name="parameter_shaixuan_1">
+					  <option value="0">--类别筛选--</option>
+					  <option value="1" <eq name="parameter_shaixuan_1" value="1">selected</eq> >公司经营项目类别</option>
+					  <option value="2" <eq name="parameter_shaixuan_1" value="2">selected</eq> >公司性质类别</option>
+					  <option value="3" <eq name="parameter_shaixuan_1" value="3">selected</eq> >联系人身份类别</option>
+					  <option value="4" <eq name="parameter_shaixuan_1" value="4">selected</eq> >紧急联系人身份类别</option>
+				</select>
+				<input type="text" class="parameter_search" style="height:35px;width: 150px;margin-left: 10px ;outline: none;" name="parameter_search" value="{$parameter_search}" placeholder="请输入查询的信息">
+				<input type="submit" class="btn btn-default" value='🔍' style="margin-left: 10px;" >
+			</div><!-- /input-group -->
+			<br>
+		</div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+	<script type="text/javascript">
+		$(".btn-default").click(function(){
+			if( $(".parameter_shaixuan_1").val() == '0' ){
+				alert("筛选条件是必选的!");
+				return false;
+			}
+		});
+	</script>
+</form>
+</div>
+<div class="table-responsive">
+	<table style="border: 1px solid #DDDDDD;" class="table">
+		<tr>
+			<td>
+				<button type="button" class="btn btn-success">添加信息参数</button>
+				<button type="button" class="btn btn-info">全选</button>
+				<button type="button" class="btn btn-danger">一键删除</button>
+				<button type="button" class="btn btn-primary">刷新</button>
+			</td>
+		</tr>
+	</table>
+	<table class="table table-striped">
+		<tr></tr>
+		<tr style="background:#F5F5F5;">
+			<th style="text-align: center;font-size:14px;">全选</th>
+			<th style="text-align: center;font-size:14px;">编号</th>
+			<th style="text-align: center;font-size:14px;">参数名称</th>
+			<th style="text-align: center;font-size:14px;">属性值</th>
+			<th style="text-align: center;font-size:14px;">执行人</th>
+			<th style="text-align: center;font-size:14px;">参数添加时间</th>
+			<th style="text-align: center;font-size:14px;">操作</th>
+		</tr>
+	<volist name="renzheng_parameter" id="renzheng_parameter_">
+		<tr class="table_tr_{$renzheng_parameter_['renzheng_info_id']}">
+			<td style="text-align: center;line-height:50px;font-size:14px;"><input type="checkbox" name="" value="{$renzheng_parameter_['renzheng_info_id']}" class="check"></td>
+			<td style="text-align: center;line-height:50px;font-size:14px;">{$renzheng_parameter_['renzheng_info_id']}</td>
+			<td style="text-align: center;line-height:50px;font-size:14px;">{$renzheng_parameter_['renzheng_info_name']}</td>
+			<td style="text-align: center;line-height:50px;font-size:14px;">{$renzheng_parameter_['renzheng_info_attr']}</td>
+			<td style="text-align: center;line-height:50px;font-size:14px;">{$renzheng_parameter_['plgox_user']}</td>
+			<td style="text-align: center;line-height:50px;font-size:14px;">{$renzheng_parameter_['renzheng_info_createtime']|date="Y-m-d H:i:s",###}</td>
+			<td style="text-align: center;line-height:50px;font-size:14px;">
+				<a href="{:U('Qiye/qiye_rensheng_data')}&qiye_rensheng_id=<?php echo base64_encode($renzheng_parameter_['renzheng_info_id'])?>" title="编辑板块" class="">查看</a>&nbsp;&nbsp;
+				<a href="javascript:void(0);" title="删除" class="del" value="{$renzheng_parameter_['renzheng_info_id']}">删除</a>&nbsp;&nbsp;
+			</td>
+		</tr>
+	</volist>
+	</table>
+</div>
+<div class="container-fluid">
+	  <div class="col-xs-12 col-md-8 page" style="width: 100%">{$page}</div>
+</div>
+</body>
+<script type="text/javascript">
+	// 添加新板块
+	$(".btn-success").click(function(){
+		window.location.href="{:U('Qiye/qiye_info')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	// 单个删除
+	$(".del").click(function(){
+		renzheng_info_id = $(this).attr("value");
+		if( confirm( "确定要删除本条数据吗？" ) ){
+			$.ajax({
+				type: "POST",
+			dataType: "JSON",
+				 url: "{:U('Qiye/renzheng_info_del')}",
+				data: { 'renzheng_info_id':renzheng_info_id },
+				success: function( data ){
+					if( data.status == 2000 ){
+						alert(data.message);
+						$(".table_tr_"+renzheng_info_id).remove();
+						return false;
+					}else if( data.status == -2001 ){
+						alert(data.message);
+    					return false;
+					}
+				},
+				error: function( XMLHttpRequest , error , status ){
+					alert("网络错误，请稍后再尝试" + status );
+					return false;
+				}
+			});
+		}
+	});
+	// 全选删除
+    $(".btn-danger").click(function(){
+    	var ids = "";
+    	$("input[type='checkbox']").each(function(){
+    		if( $(this).is(":checked") ){
+    			ids+=','+$(this).val();
+    		}
+    	});
+    	renzheng_info_ids = ids.substring(1);
+    	if( renzheng_info_ids.length == 0 ){
+    		alert("请选择要删除的数据");
+    	}else if( confirm("确定要全部删除所有数据") ){
+    		$.ajax({
+    			type: "POST",
+    		dataType: "JSON",
+    			 url: "{:U('Qiye/renzheng_info_del')}",
+    			data: { 'renzheng_info_ids':renzheng_info_ids },
+    			success: function( data ){
+					console.log(data);
+    				if( data.status == 2000 ){
+    					alert(data.message);
+    					location.reload();
+    					return false;
+    				}else if( data.status == -2001 ){
+    					alert(data.message);
+    					return false;
+    				}
+    			},
+    			error: function( XMLHttpRequest , error , status ){
+    				alert("网络出现错误，请稍后再尝试!" + status );
+    			}
+    		});
+    	}
+    });
+	// 全选
+	$(".btn-info").click(function(){
+		if( $("input[type='checkbox']").is(":checked") ){
+			$("input[type='checkbox']").prop("checked",false);
+		}else{
+			$("input[type='checkbox']").prop("checked",true);
+		}
+	});
+	// 点击tr选中checkbox
+   $("table").find("tr").each(function(){
+       $(this).click(function(){
+			if( $(this).find('input').is(":checked") ){
+				$(this).find("input").prop("checked",false);
+			}else{
+				$(this).find("input").prop("checked",true);
+			}
+       	});            
+     });
+</script>
+</html>

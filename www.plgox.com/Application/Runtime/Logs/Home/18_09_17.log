@@ -1,0 +1,91 @@
+[ 2018-09-17T00:29:44+08:00 ] 123.125.67.222 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T05:30:10+08:00 ] 59.124.94.150 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-17T06:27:06+08:00 ] 203.208.60.63 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T07:14:36+08:00 ] 140.143.152.119 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-17T10:33:11+08:00 ] 119.57.161.6 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+
+[ 2018-09-17T10:33:20+08:00 ] 39.155.185.46 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '45'  [ RunTime:0.0004s ]
+
+[ 2018-09-17T10:33:22+08:00 ] 119.57.161.6 /Cart/renzheng_check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = null LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-17T11:09:56+08:00 ] 157.55.39.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T11:10:57+08:00 ] 203.208.60.45 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T11:12:41+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T11:29:37+08:00 ] 117.184.250.101 /skins/vector/csshover.htc
+ERR: 无法加载控制器:Skins
+
+[ 2018-09-17T11:29:39+08:00 ] 117.184.250.101 /rockmongo/
+ERR: 无法加载控制器:Rockmongo
+
+[ 2018-09-17T11:29:39+08:00 ] 117.184.250.101 /server-status
+ERR: 无法加载控制器:Server-status
+
+[ 2018-09-17T11:29:39+08:00 ] 117.184.250.101 /wikilib.d/PmWiki.ChangeLog
+ERR: 无法加载控制器:Wikilib.d
+
+[ 2018-09-17T11:29:40+08:00 ] 117.184.250.101 /jenkins/
+ERR: 无法加载控制器:Jenkins
+
+[ 2018-09-17T11:29:40+08:00 ] 117.184.250.101 /console/login/LoginForm.jsp
+ERR: 无法加载控制器:Console
+
+[ 2018-09-17T11:29:40+08:00 ] 117.184.250.101 /solr/
+ERR: 无法加载控制器:Solr
+
+[ 2018-09-17T13:44:21+08:00 ] 125.212.217.215 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T13:44:23+08:00 ] 125.212.217.215 /sitemap.xml
+ERR: 无法加载控制器:Sitemap.xml
+
+[ 2018-09-17T14:58:41+08:00 ] 47.88.168.99 /lotteryNav
+ERR: 无法加载控制器:LotteryNav
+
+[ 2018-09-17T14:58:42+08:00 ] 47.88.168.99 /lotteryNav
+ERR: 无法加载控制器:LotteryNav
+
+[ 2018-09-17T16:11:00+08:00 ] 218.30.103.123 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T21:29:42+08:00 ] 118.24.23.164 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-17T22:01:00+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T22:24:46+08:00 ] 203.208.60.23 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T23:20:14+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-17T23:20:15+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

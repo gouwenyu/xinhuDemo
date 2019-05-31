@@ -1,0 +1,121 @@
+.myxy{
+	height:290px;
+	width:910px;
+	background: #F2F2F2;
+	padding-top:40px;
+	margin-top:20px;
+}
+.myxy1{
+	width:124px;
+	height:124px;
+	border:15px solid #1F61C3;
+	border-radius: 50%;
+	margin-left:96px;
+	text-align:center;
+	line-height:90px;
+	font-size:21.61px;	
+		border-right:15px solid transparent;
+    
+	color:black;
+}
+.myxy2{
+	font-size:18px;
+	margin-left:56px;
+	margin-top:30px;
+	color:black;
+}
+.myxy3{
+	width:910px;
+	margin-top:30px;
+	border:1px solid #D6D6D6;
+	border-top:0px;
+}
+.myxy31{
+	width:100%;
+	height:42px;
+   background: #F8F8F8;
+   line-height:42px;
+   color:black;
+   font-size:16px;
+   border:1px solid #D6D6D6;
+   border-left:0px;
+   border-right:0px;
+}
+.myxy31 li{
+	width:120px;
+	float:left;
+	height:42px;
+	cursor:pointer;
+	text-align:center;
+}
+.myxy31 li:hover{
+	background-color:rgb(258,258,258);
+}
+.dj_myxy{
+	border-top:2px solid #1F61C3;
+	background-color:white;
+	height:44px;
+	color:#1F61C3;
+}
+.myxy32{
+	width:900px;
+	margin:0 auto;
+	line-height:40px;
+}
+td{
+	text-align:center;
+}
+.myxy32 tr:first-child td{
+	border-bottom:1px solid #D6D6D6;
+}
+
+
+	  .wrap,.circle,.percent{  
+        position: absolute;  
+        width: 122px;  
+        height: 122px;  
+        border-radius: 50%;  
+    }  
+    .wrap{  
+        margin-left:100px;  
+        background-color: #1F61C3;  
+    }  
+    .circle{  
+        box-sizing: border-box;  
+        border:15px solid #1F61C3;  
+        clip:rect(0,122px,122px,61px);  
+    }  
+    .clip-auto{  
+        clip:rect(auto, auto, auto, auto);  
+    }  
+    .percent{  
+        box-sizing: border-box;  
+        top:-15px;  
+        left:-15px;  
+    }  
+    .left{  
+        transition:transform ease;  
+        border:15px solid #F2F2F2;  
+        clip: rect(0,61px,122px,0);  
+    }  
+    .right{  
+        border:20px solid #F2F2F2;  
+        clip: rect(0,122px,122px,61px);  
+    }  
+    .wth0{  
+        width:0;  
+    }  
+    .num{  
+        position: absolute;  
+        box-sizing: border-box;  
+        width: 92px;  
+        height: 92px;  
+        line-height: 92px;  
+        text-align: center;  
+        font-size: 25px;  
+        left: 15px;  
+        top: 15px;  
+        border-radius: 50%;  
+        background-color:#F2F2F2;  
+        z-index: 1;  
+    }

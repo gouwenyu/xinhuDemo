@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/base_64.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+<!-- <form action="{:U('Share/share_specifications_add')}" method="post"> -->
+  <table class="table table-bordered">
+  	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">套餐名称：</td>
+		<td>
+			<input type="text" class="form-control specifications_keys" style="width:470px;" name="specifications_keys" value="{$specifications['specifications_keys']}">
+		</td>
+	</tr>
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品界面图<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td style="border:none">
+			<neq name="specifications['specifications_img']" value="">
+				<img src="__ROOT__/Uploads/admin/{$specifications['specifications_img']}" alt="" style="width:150px;height:150px;cursor:pointer;" class="image1">&nbsp;&nbsp;&nbsp;
+			<else />
+				<img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" alt="" style="width:150px;height:150px;cursor:pointer" class="image1">&nbsp;&nbsp;&nbsp;
+			</neq>
+			<input type="file" id="exampleInputFile1" value="" style="display:none" name="pic_img[]">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">规格分类：</td>
+		<td>
+			<select class="form-control specifications_classify_id" style="width:470px" name="specifications_classify_id">
+				<option value="0">--请选择所属分类--</option>
+				{$classify}
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">规格名称：</td>
+		<td>
+			<input type="text" class="form-control specifications_name" style="width:470px;" name="specifications_name" value="{$specifications['specifications_name']}">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">租金价格：</td>
+		<td>
+			<input type="text" class="form-control specifications_rent" style="width:470px;" name="specifications_rent" value="{$specifications['specifications_rent']}">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">市场价格：</td>
+		<td>
+			<input type="text" class="form-control specifications_market" style="width:470px;" name="specifications_market" value="{$specifications['specifications_market']}">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">出售价格：</td>
+		<td>
+			<input type="text" class="form-control specifications_prices" style="width:470px;" name="specifications_prices" value="{$specifications['specifications_prices']}">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">起租天数：</td>
+		<td>
+			<div class="radio">
+				<volist name="zulin_day" id="zulin_">
+					<label>
+						<input type="radio" name="specifications_day_number_id" id="specifications_day_number_id" value="{$zulin_['zulin_id']}" <eq name="zulin_['zulin_id']" value="$specifications['specifications_day_number_id']">checked</eq> >{$zulin_['zulin_day_number']}天&nbsp;&nbsp;
+					</label>
+				</volist>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">押金价格：</td>
+		<td>
+			<input type="text" class="form-control specifications_deposit" style="width:470px;" name="specifications_deposit" value="{$specifications['specifications_deposit']}">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">商品库存：</td>
+		<td>
+			<input type="text" class="form-control specifications_stock" style="width:470px;" name="specifications_stock" value="{$specifications['specifications_stock']}">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">租满特权：</td>
+		<td>
+		<div class="checkbox">
+			    <label>
+			      <input type="checkbox" value="租满即送" name="specifications_give" class="specifications_give" <eq name="specifications['specifications_give']" value="租满即送">checked</eq> >租满即送
+			    </label>&nbsp;&nbsp;
+			    <input type="number" value="{$specifications['specifications_day_number']}" style="width:40px;outline:none;text-align:center;" name="specifications_day_number" class="specifications_day_number">
+			    <select style="width:90px;height:26px;float: right;position:relative;right:79.3%;outline:none" name="specifications_day_type" class="form-control specifications_day_type">
+			    		<option value="">--请选择--</option>
+			    		<option value="月" <eq name="specifications['specifications_day_type']" value="月">selected</eq> >月</option>
+			    		<option value="天" <eq name="specifications['specifications_day_type']" value="天">selected</eq> >天</option>
+			    		<option value="年" <eq name="specifications['specifications_day_type']" value="年">selected</eq> >年</option>
+			    </select>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">满意度：</td>
+		<td>
+			<input type="number" class="form-control specifications_satisfaction" style="width:470px;" name="specifications_satisfaction" value="{$specifications['specifications_satisfaction']}">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">出租率：</td>
+		<td>
+			<input type="number" class="form-control specifications_chuzu" style="width:470px;" name="specifications_chuzu" value="{$specifications['specifications_chuzu']}">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品状态：</td>
+		<td style="border:none;line-height: 40px">
+			  <label>
+			    <input type="radio" name="specifications_status" id="optionsRadios2" value="0" checked <eq name="specifications['specifications_status']" value="0">checked</eq>>&nbsp;开启
+			  </label>
+			  <label>
+			    <input type="radio" name="specifications_status" id="optionsRadios2" value="1" <eq name="specifications['specifications_status']" value="1">checked</eq>>&nbsp;关闭
+			  </label>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<eq name="specifications['specifications_id']" value="">
+				<button type="button" class="btn btn-success">确认新增</button>
+			<else />
+				<button type="button" class="btn btn-success" value="{$specifications['specifications_id']}">确认修改</button>
+			</eq>
+			<button type="button" class="btn btn-danger">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+<!-- <input type="submit" value="提交"> -->
+<!-- </form> -->
+</div>
+</body>
+<script type="text/javascript">
+	$(".image1").click(function(){
+		$("#exampleInputFile1").click();
+		$("#exampleInputFile1").off("change");
+		$("#exampleInputFile1").on('change',function(){
+			// 判断上传的限制
+			if( $(this)[0].files[0].size > 10485760){
+				alert("上传文件超出了特定的上传限制!");
+				return false;
+			}else{
+				var objUrl = getUploads(this.files[0]);
+				if( objUrl ){
+					$(".image1").attr("src",objUrl);
+				}
+			}
+		});
+	});
+	function getUploads(files){
+	url = null;
+	if( window.createObjectURL !== undefined ){
+		url = window.createObjectURL(files);
+	}else if( window.URL !== undefined ){
+		url = window.URL.createObjectURL(files);
+	}else if( window.webkitURL != undefined ){
+		url = window.webkitURL.createObjectURL(files);
+	}
+	return url;
+	}
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Share/share_specifications_list')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	$(".btn-success").click(function(){
+		/**
+		 * 判断金额是否出错
+		 */
+		// 判断分类是否选择
+		if( $(".specifications_classify_id").val() == 0 ){
+			alert("请选择套餐规格分类!");
+			return false;
+		}
+		// 判断市场价格  
+		var prices = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+		if( !prices.test( $(".specifications_market").val()  ) ){
+			alert("您输入的市场金额字符有问题!");
+			return false;
+		}
+		// 租金
+		if( !prices.test($(".specifications_rent").val()) ){
+			alert("您输入的租金金额字符有问题!");
+			return false;
+		}
+		// 押金
+		if( !prices.test( $(".specifications_deposit").val() ) ){
+			alert("您输入的押金金额字符有问题!");
+			return false;
+		}
+		// 出售价
+		if( !prices.test( $(".specifications_prices").val() ) ){
+			alert("您输入的出售金额字符有问题!");
+			return false;
+		}
+		// 租赁天数
+		if( $("#specifications_day_number_id:checked").val() == "undefined"  ){
+			alert("请选择租赁的天数!");
+			return false;
+		}
+		// 判断库存
+		var stock = /^[0-9]\d*$/;
+		if( !stock.test( $(".specifications_stock").val() ) ){
+			alert("您输入的库存字符有问题!");
+			return false;
+		}
+		if( $('.specifications_name').val() == "" ){
+			alert("产品名称是不能够为空的");
+			return false;
+		}
+		if( $('.specifications_keys').val() == "" ){
+			alert("产品名称是不能够为空的");
+			return false;
+		}
+		specifications_id = $(this).val();
+		$.ajaxFileUpload({
+			type: "POST",
+	  dataType: "JSON",
+	  fileElementId:["exampleInputFile1"],
+	  		  url: "{:U('Share/share_specifications_add')}",
+	  		data: {
+	  				'specifications_id':specifications_id ,  
+	  				'specifications_keys':$(".specifications_keys").val(),
+	  				'specifications_classify_id':$(".specifications_classify_id").val(),
+	  				'specifications_satisfaction':$(".specifications_satisfaction").val(),
+	  				'specifications_chuzu':$(".specifications_chuzu").val(),
+					'specifications_name':$(".specifications_name").val(),
+					'specifications_prices':$(".specifications_prices").val(),
+					'specifications_day_number':$(".specifications_day_number").val(),
+					'specifications_day_type':$(".specifications_day_type").val(),
+					'specifications_day_number_id':$("#specifications_day_number_id:checked").val(),
+					'specifications_rent':$('.specifications_rent').val(),
+					'specifications_give':$(".specifications_give:checked").val(),
+					'specifications_market':$(".specifications_market").val() ,  
+					'specifications_deposit':$(".specifications_deposit").val() ,
+					'specifications_stock':$(".specifications_stock").val() ,
+					'specifications_status':$("#optionsRadios2:checked").val()
+	  			 },
+	  		success: function( data ){
+				var reg = /<pre.+?>(.+)<\/pre>/g;
+				var result = data.match(reg);
+				data = RegExp.$1;
+				var obj  = eval('('+data+')');
+				if( obj.status == 2000){
+					alert(obj.message);
+					window.location.href="{:U('Share/share_specifications_list')}";
+					return false;
+				}else if( obj.status == -2000 ){
+					alert(obj.message);
+					return false;
+				}else if( obj.status == -2002 ){
+					alert(obj.message);
+					return false;
+				}
+	  		},
+	  		error: function( XMLHttpRequest , error , status ){
+	  			alert("出现错误，错误位置在：" + status );
+	  			return false;
+	  		}
+		});
+
+/*		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('Share/share_specifications_add')}",
+			data: { 
+						'specifications_id':specifications_id ,  
+						'specifications_name':$(".specifications_name").val(),
+						'specifications_rent':$('.specifications_rent').val(),
+						'specifications_give':$(".specifications_give:checked").val(),
+						'specifications_market':$(".specifications_market").val() ,  
+						'specifications_deposit':$(".specifications_deposit").val() ,
+						'specifications_stock':$(".specifications_stock").val() ,
+						'specifications_status':$("input[type='radio']:checked").val() 
+					},
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Share/share_specifications_list')}";
+					return false;
+				}else if( data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});*/
+		return false;
+	});
+</script>
+</html>

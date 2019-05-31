@@ -1,0 +1,90 @@
+[ 2018-08-06T00:27:32+08:00 ] 220.181.108.90 /Application/Common/Common/duanxin
+ERR: 无法加载控制器:Application
+
+[ 2018-08-06T00:43:22+08:00 ] 123.125.67.222 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T01:10:54+08:00 ] 123.125.67.219 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T06:13:36+08:00 ] 203.208.60.0 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T06:45:53+08:00 ] 220.181.125.177 /index/fuwenben/id/5.html
+ERR: 非法操作:fuwenben
+
+[ 2018-08-06T06:45:54+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T06:46:04+08:00 ] 220.181.125.177 /Cart/shop_detil/id/222.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-08-06T08:25:33+08:00 ] 54.36.148.253 /Cart/shop_detil/id/217.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-08-06T08:26:02+08:00 ] 180.76.15.10 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T08:26:02+08:00 ] 180.76.15.10 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T08:33:57+08:00 ] 207.241.229.148 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T08:51:31+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T08:52:21+08:00 ] 111.206.198.29 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+
+[ 2018-08-06T10:26:37+08:00 ] 95.216.38.186 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T12:14:23+08:00 ] 114.116.76.195 /data/%23aspcms252.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-08-06T12:14:23+08:00 ] 114.116.76.195 /data/%235Dp8Gh.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-08-06T12:14:23+08:00 ] 114.116.76.195 /install/index.php.bak?step=11&insLockfile=a&s_lang=a&install_demo_name=../data/admin/config_update.php
+ERR: 无法加载控制器:Install
+
+[ 2018-08-06T13:18:26+08:00 ] 157.55.39.60 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T13:18:26+08:00 ] 157.55.39.60 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T14:55:49+08:00 ] 144.76.14.153 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T14:57:03+08:00 ] 144.76.14.153 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T15:06:33+08:00 ] 157.55.39.25 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T15:07:03+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T16:19:06+08:00 ] 123.126.113.106 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T17:00:02+08:00 ] 111.206.221.16 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+
+[ 2018-08-06T19:39:17+08:00 ] 148.64.56.64 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T23:03:52+08:00 ] 203.208.60.30 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-06T23:19:40+08:00 ] 54.36.150.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

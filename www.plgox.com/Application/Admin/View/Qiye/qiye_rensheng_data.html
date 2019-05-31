@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">用户昵称：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_memberuid" style="width:470px;height: 40px" name="renzheng_memberuid" readonly="readonly" value="{$renzheng['plgox_user']}">	
+		</td>
+	</tr>
+ 	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">公司名称：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_commpany" style="width:470px;height: 40px" name="renzheng_commpany" readonly="readonly" value="{$renzheng['renzheng_commpany']}">	
+		</td>
+	</tr>
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">公司性质：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_commpany_nature" style="width:470px;height: 40px" name="renzheng_commpany_nature" readonly="readonly" value="{$renzheng['renzheng_commpany_nature']|get_renzheng_data='Renzheng_info','renzheng_info_name','renzheng_info_id'}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">执照注册号：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_zhucehao" style="width:470px;height: 40px" name="renzheng_zhucehao" readonly="readonly" value="{$renzheng['renzheng_zhucehao']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">营业执照：</td>
+		<td style="border:none">
+			<img src="__ROOT__/Uploads/home_renzheng_img/{$renzheng['renzheng_zhizhao_img']}" class="renzheng_zhizhao_img" style="width:200px;height: 200px;">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">公司经营项目：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_jy_pg" style="width:470px;height: 40px" name="renzheng_jy_pg" readonly="readonly" value="{$renzheng['renzheng_jy_pg']|get_renzheng_data='Renzheng_info','renzheng_info_name','renzheng_info_id'}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">实际经营地址：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_address" style="width:470px;height: 40px" name="renzheng_address" readonly="readonly" value="{$renzheng['renzheng_address']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">联系人身份：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_info" style="width:470px;height: 40px" name="renzheng_info" readonly="readonly" value="{$renzheng['renzheng_info']|get_renzheng_data='Renzheng_info','renzheng_info_name','renzheng_info_id'}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">联系人姓名：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_name" style="width:470px;height: 40px" name="renzheng_name" readonly="readonly" value="{$renzheng['renzheng_name']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">联系人电话：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_tel" style="width:470px;height: 40px" name="renzheng_tel" readonly="readonly" value="{$renzheng['renzheng_tel']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">紧急联系人身份：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_shenfen" style="width:470px;height: 40px" name="renzheng_shenfen" readonly="readonly" value="{$renzheng['renzheng_shenfen']|get_renzheng_data='Renzheng_info','renzheng_info_name','renzheng_info_id'}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">紧急联系人姓名：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_jl_name" style="width:470px;height: 40px" name="renzheng_jl_name" readonly="readonly" value="{$renzheng['renzheng_jl_name']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">紧急联系人电话：</td>
+		<td style="border:none">
+			<input type="text" class="form-control rensheng_jl_tel" style="width:470px;height: 40px" name="rensheng_jl_tel" readonly="readonly" value="{$renzheng['rensheng_jl_tel']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">认证编号：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_bianhao" style="width:470px;height: 40px" name="renzheng_bianhao" readonly="readonly" value="{$renzheng['renzheng_bianhao']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">审核状态：</td>
+		<td style="border:none">
+			<div class="radio">
+			  <label>
+			  	<if condition="($renzheng['renzheng_status'] eq 2) OR ($renzheng['renzheng_status'] eq 3 ) OR ($renzheng['renzheng_status'] eq 4)">
+			  		<input type="radio" name="renzheng_status" id="renzheng_status" disabled="disabled" value="1" <eq name="renzheng['renzheng_status']" value="1">checked</eq> >提交审核&nbsp;
+			  	<else />
+			    	<input type="radio" name="renzheng_status" id="renzheng_status" value="1" <eq name="renzheng['renzheng_status']" value="1">checked</eq> >提交审核&nbsp;
+			    </if>
+			  </label>
+			  <label>
+			  	<if condition="($renzheng['renzheng_status'] eq 3 ) OR ($renzheng['renzheng_status'] eq 4)">
+			  		<input type="radio" name="renzheng_status" id="renzheng_status" disabled="disabled" value="2" <eq name="renzheng['renzheng_status']" value="2">checked</eq> >审核中&nbsp;
+			  	<else />
+			    	<input type="radio" name="renzheng_status" id="renzheng_status" value="2" <eq name="renzheng['renzheng_status']" value="2">checked</eq> >审核中&nbsp;
+			  	</if>
+			  </label>
+			  <label>
+			  	<if condition="($renzheng['renzheng_status'] eq 4)">
+			  		<input type="radio" name="renzheng_status" id="renzheng_status" disabled="disabled" value="3" <eq name="renzheng['renzheng_status']" value="3">checked</eq> >审核通过&nbsp;
+			  	<else />
+			    	<input type="radio" name="renzheng_status" id="renzheng_status" value="3" <eq name="renzheng['renzheng_status']" value="3">checked</eq> >审核通过&nbsp;
+			    </if>
+			  </label>
+			  <label>
+			  	<if condition="($renzheng['renzheng_status'] eq 3)">
+			  		<input type="radio" name="renzheng_status" id="renzheng_status" disabled="disabled" value="4" <eq name="renzheng['renzheng_status']" value="4">checked</eq> >审核未通过&nbsp;
+			  	<else />
+			    	<input type="radio" name="renzheng_status" id="renzheng_status" value="4" <eq name="renzheng['renzheng_status']" value="4">checked</eq> >审核未通过&nbsp;
+			    </if>
+			  </label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<neq name="renzheng['renzheng_id']" value="2">
+				<button type="button" class="btn btn-success" value="{$renzheng['renzheng_id']}">确认修改</button>
+			</neq>
+			<button type="button" class="btn btn-info">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-info").click(function(){
+		window.location.href="{:U('Qiye/qiye_index')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	$(".btn-success").click(function(){
+		renzheng_id = $(this).val();
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('Qiye/AjaxQiye_renzheng')}",
+			data: { 'renzheng_id':renzheng_id , 'renzheng_status':$("#renzheng_status:checked").val() },
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Qiye/qiye_index')}";
+					return false;
+				}else if( data.status == -2001 ){
+					alert(data.message);
+					return false;
+				}else if( data.status == -2002 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});
+</script>
+</html>

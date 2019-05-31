@@ -1,0 +1,90 @@
+.my_jubao{
+ 	width:1192px;
+ 	margin:0 auto;
+ 	padding:40px 22px;
+ }  
+ .mypj6{
+ 	font-weight:bold;
+ 	font-size:20px;
+ 	height:50px;
+ 	line-height:0px;
+ 	border-bottom:1px solid #eeeeee;
+ }
+ .mypj61{
+ 	width:1070px;
+ 	margin:0 auto;
+ 	margin-top:30px;
+ 	height:20px;
+ }	
+ .mypj62{
+ 	margin-top:10px;
+ }
+ .esxz_box{
+	width:950px;
+	overflow:hidden;
+}
+ .esxz_jb,.esxz_jb1{
+   position:relative;
+   margin-left:25px;
+   float:left;
+   width:210px;
+   margin-top:15px;
+   height:190px;
+ }
+ .esxz_jb1{
+ 	cursor:pointer;
+ }
+ .esxz_jb_tp1{
+ 	background:url("../image/esxz_detil9.jpg") no-repeat center 33px;
+ 	margin-top:0px;
+ 	text-align:center;
+ 	font-size: 14px;
+ 	color:#429990;
+ 	padding-top:115px;
+ 	height:175px;
+ 	background-color:#FFFFFF;
+ 	border:1px solid #DCDCDC;
+ 	
+ } 
+ .esxz_jb_sc{
+	position:absolute;
+	display:block;
+	width:20px;
+	height:20px;
+	float:left;
+	border:1px solid #939393;
+	background-color:#f2f2f2;
+	color:#939393;
+	text-align:center;
+	line-height:16px;
+	font-size:20px;
+	cursor:pointer;
+     left:180px;
+     top:-10px;
+     z-index:5;
+	border-radius:50%;
+}
+.esxz_jb_tp{
+	position:absolute;
+	width:195px;
+	background-color:green;
+	height:175px;
+	border:1px solid #DCDCDC;
+}
+.esxz_jb_tp img{
+	margin:0px;
+}
+#esxz_tptj0{
+	display:none;
+}
+.mypj68{
+	background-color:#e40050;
+	color:white;
+	width:320px;
+}
+.mypj68:hover{
+	background-color:#c90047;
+}
+.esxz_jb6{
+	margin-left:22px;
+}

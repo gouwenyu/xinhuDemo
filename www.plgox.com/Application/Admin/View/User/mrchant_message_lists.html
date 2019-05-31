@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>消息通知添加</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+	<li>当前位置</li>
+	<li>消息通知添加</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">用户名：</td>
+		<td style="border:none">
+		   	<div class="form-group">
+				<select class="form-control input-sm" style="width:400px;height: 40px" name="data[message_uid]">
+					<volist name="member" id="u">
+						<option value="{$u.plgox_id}" <eq name="message_selected['plgox_id']" value="$u.plgox_id">selected='selected'</eq> >{$u.plgox_user}</option>
+					</volist>
+				</select>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">标题：</td>
+		<td style="border:none">
+			<input type="text" name="data[message_title]" value="{$message_sel['message_title']}" class="form-control" id="exampleInputPassword1" placeholder="标题" style="width:400px;height: 40px">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">内容：</td>
+		<td style="border:none">
+			  <div class="form-group">
+			    <label for="name">文本框</label>
+			    <textarea class="form-control" rows="6" style="width: 400px;resize: none" placeholder="内容" id="exampleInputContent" name="data[message_content]">{$message_sel['message_content']}</textarea>
+			  </div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">发送时间：</td>
+		<td style="border:none">
+			<eq name="message_sel['message_id']" value="">
+				<div class="form-group">
+					<input id="datepicker-example2" type="text" value="{$datetime|date='Y-m-d',###}" class="createtime" style="width:400px;height: 40px" name="data[message_createtime]" >
+				</div>
+			<else />
+				<div class="form-group">
+					<input id="datepicker-example2" type="text" value="{$message_sel['message_createtime']|date='Y-m-d',###}" class="createtime" style="width:400px;height: 40px" name="data[message_createtime]">
+				</div>
+			</eq>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<eq name="message_sel['message_id']" value="">
+				<button type="button" class="btn btn-success">发送消息</button>
+				<button type="button" class="btn btn-danger">返回上页</button>
+				<button type="button" class="btn btn-info" value="{$memberid}">消息列表</button>
+			<else />
+				<button type="button" class="btn btn-danger">返回上页</button>
+			</eq>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-info").click(function(){
+		window.location.href = "{:U('User/mrchant_message_list_home')}&user_home_message_id="+$(this).val();
+	});
+	$(".btn-danger").click(function(){
+		window.location.href = "javascript:history.back(-1);";
+	});
+	$(".btn-success").click(function(){
+		if( $("#exampleInputPassword1").val() == "" ){
+			alert("所发送消息的标题是不能为空的!");
+			return false;
+		}
+		if( $('#exampleInputContent').val() == "" ){
+			alert("所发送消息的内容是不能为空的!");
+			return false;
+		}
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('User/user_message_add')}",
+			data: { 'message_uid':$(".input-sm").val() , 'message_title':$("#exampleInputPassword1").val() , 'message_content':$("#exampleInputContent").val() , 'message_createtime':$(".createtime").val() },
+			success: function( data ){
+				if( data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('User/home_member_list')}";
+					return false;
+				}else if(data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function( XMLHttpRequest , error ,status ){
+				alert("出现错误，错误详情：" + status);
+				return false;
+			}
+		});
+	});
+</script>
+</html>

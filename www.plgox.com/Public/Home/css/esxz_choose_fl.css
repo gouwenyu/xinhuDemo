@@ -1,0 +1,135 @@
+.esxz_big_box{
+		position: relative;
+    top: 107px;
+    overflow-y: auto;
+    margin-left: 255px;
+    background-color: #FAFAFA;
+	}
+	.esxz_small_box{
+		width:1192px;
+		margin:0 auto;
+		padding:20px 25px 200px 25px;
+		background-color:white;
+	}
+	.esxz_cho_fl{
+		color: #c90047;
+		font-size:18px;
+	}
+	.esxz_cho_fl1{
+		width:1050px;
+		margin-top:26px;
+		overflow:hidden;
+	}
+	.fbzl1_fir,.fbzl1_sec,.fbzl1_thi{
+		float:left;
+		width:245px;
+		 height:500px; 
+	background-color:#FFF4F7;
+	}
+	.fbzl1_a,.fbzl1_b,.fbzl1_c{
+		display:block;
+		height:50px;
+		line-height:50px;
+		font-size:18px;
+        color:#333;
+		text-align: center;
+	}
+	/*.fbzl1_a:hover,.fbzl1_b:hover,.fbzl1_c:hover{
+		color:#e40050;
+		background-color:#FFF4F7;
+	}*/
+	.fbzl1_dj{
+		color:white;
+		background-color:#6FA7E4;
+	}
+	.fbzl1_dj1{
+
+	}
+	.fbzl2{
+		float:left;
+		width:85px;
+		text-align:center;
+		line-height:455px;
+		cursor:pointer;
+	}
+	.xyibu{
+		background:#6EA3F2;margin:0 auto;color:white;margin-top:200px;line-height:40px;width:130px;text-align:center;height:40px;cursor:pointer;
+
+	}
+	.xyibu:hover{
+       box-shadow: 0 3px 10px #ccc;
+	}
+
+.fbzl_dbox{
+	display: inline-block;
+    width: 100%;
+    padding-bottom: 60px;
+    position: relative;
+    background-color: white;
+}
+	.fbzl{
+		margin: 0 auto;
+    height: 62px;
+    background-color: #F2F2F2;
+    overflow: hidden;
+	}
+	.fbzl_first{
+		
+		width:80%;
+		display:block;
+		margin-top:30px;
+		padding:0px 124px;
+		padding-bottom:50px;
+		background-color:white;
+	}
+	.fl_dj{
+		color:#666;
+		background-color:white;	
+	}
+	.fbzl li,.fbzl_first li,.fbzl_second li{	
+		height: 62px;
+    line-height: 62px;
+    float: left;
+    display: block;
+    color: #333;
+    background-color: #F2F2F2;
+	}
+	a{
+		color:#333;
+	}
+	.fbzl_second{
+	  position:absolute;
+	  width:100%;
+	  display:block;
+	  padding:30px 30px;
+
+	  color:#666;
+	      box-shadow: 0 3px 10px #EBEAEA;
+	  width:400px;
+
+	  margin-top:-10px;
+	  background-color:white;
+	}
+	.yijifenlei{
+		    display: inline-block;
+    padding: 0px 70px;
+    height: 62px;
+    line-height: 62px;
+}
+	.fbzl_first li a,.fbzl_second li a{
+		display:inline-block;
+		color:#666;
+		height:62px;
+		padding:0px 30px;
+		overflow:hidden;
+		text-align:left;
+		line-height:62px;
+		background-color:white;
+	}
+	.fbzl_first li a:hover,.fbzl_second li a:hover{
+		color: #5F93E0;
+	}
+	/*.fbzl li a:hover{
+		color:#666;
+		background-color:white;	
+	}*/

@@ -1,0 +1,108 @@
+[ 2018-08-08T00:48:21+08:00 ] 42.236.10.106 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+
+[ 2018-08-08T00:48:37+08:00 ] 180.163.220.45 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+
+[ 2018-08-08T00:48:40+08:00 ] 180.163.220.45 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+
+[ 2018-08-08T00:56:01+08:00 ] 111.206.221.76 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+
+[ 2018-08-08T01:06:20+08:00 ] 123.125.71.79 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T02:25:38+08:00 ] 123.126.113.164 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T02:46:24+08:00 ] 111.230.50.76 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-08-08T03:06:43+08:00 ] 203.208.60.70 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T03:18:41+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T03:22:08+08:00 ] 203.208.60.107 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '45'  [ RunTime:0.0005s ]
+
+[ 2018-08-08T03:37:24+08:00 ] 203.208.60.35 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0008s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '27'  [ RunTime:0.0004s ]
+
+[ 2018-08-08T08:19:46+08:00 ] 157.55.39.60 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T08:19:46+08:00 ] 157.55.39.60 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T08:19:47+08:00 ] 157.55.39.60 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T08:54:19+08:00 ] 111.206.221.113 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+
+[ 2018-08-08T09:16:33+08:00 ] 47.96.23.71 /wls-wsat/CoordinatorPortType
+ERR: 无法加载控制器:Wls-wsat
+
+[ 2018-08-08T10:22:03+08:00 ] 101.199.110.115 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+
+[ 2018-08-08T12:29:14+08:00 ] 203.208.60.97 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T12:35:01+08:00 ] 203.208.60.34 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0005s ]
+
+[ 2018-08-08T12:36:54+08:00 ] 203.208.60.31 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '28'  [ RunTime:0.0004s ]
+
+[ 2018-08-08T16:27:51+08:00 ] 106.120.173.133 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T16:49:29+08:00 ] 221.216.142.134 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+
+[ 2018-08-08T17:09:06+08:00 ] 203.208.60.60 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-08T21:33:52+08:00 ] 82.80.156.100 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+
+[ 2018-08-08T21:33:53+08:00 ] 82.80.156.100 /hudson/script
+ERR: 无法加载控制器:Hudson
+
+[ 2018-08-08T21:33:53+08:00 ] 82.80.156.100 /script
+ERR: 无法加载控制器:Script
+

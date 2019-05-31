@@ -1,0 +1,50 @@
+.shfw{
+	font-size: 14px;
+	color: #333333;
+	margin-top:20px;
+	font-weight:550;
+}
+.shfw1{
+	font-size: 14px;
+	color: #333333;
+}
+.shfw2{
+	margin-top:20px;
+}
+.shfw3{
+	margin-top:30px;
+	line-height:25px;
+}
+.zjlc_box{
+	margin-top:15px;
+}
+.zjlc{
+	font-size: 14px;
+	line-height:24px;
+}
+.zjlc span:first-child{
+	color:#333333;
+}
+.zjlc span:last-child{
+	color:#555555;
+}
+.zjzf{
+	margin-top:10px;
+	line-height:24px;
+	overflow:hidden;
+}
+.zjzf div{
+	color:#333333;
+	display:inline-block;
+	float:left;
+}
+.zjzf div:last-child{
+	width:870px;
+}
+.thsm{
+	padding-top:5px;
+}
+.wycl{
+	line-height:25px;
+}
+

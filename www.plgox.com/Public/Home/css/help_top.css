@@ -1,0 +1,139 @@
+.mypj{
+    position:relative;
+     z-index:0;
+     width:100%;
+        overflow:hidden;
+        padding-bottom:30px;
+   background-color:#FAFAFA;
+   margin-top:-20px;
+}
+
+.mypj1{
+	position:relative;
+  width:1192px;
+  margin:0 auto;
+  height:100%;
+  background:url('../image/my_top.png') no-repeat left top ;
+  overflow:hidden;
+
+}
+.mypj1_box{
+	position:relative;
+  width:1192px;
+  margin:0 auto;
+  overflow:hidden;
+  margin-top:20px;
+
+background-color:white;
+}
+.juezhi{
+	margin-top:0px;
+}
+ .mypj2{
+ float:left;
+  width:986px;
+  margin-left:-14px;
+  overflow:hidden;
+  padding:40px;
+  padding-bottom:0px;
+  color:#666666;
+
+}
+.jzfb{
+	padding:20px 20px 150px 20px;
+}
+.mypj2_box{
+	width:986px;
+	height:100%;
+	  background:white;
+	margin-top:20px;
+	  padding:30px 30px;
+}
+.my_topzd{
+/*      border-top:1px solid #1F61C3;*/
+  background-color:#FAFAFA;
+
+  height:100px;
+}
+.my_top_box{
+  position:relative;
+	width:1192px;
+  z-index:0;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.my_t1{
+      	font-size:14px;
+      	color:#333333;
+      	margin-left:32px;
+      	margin-top:32px;
+      }        
+.my_t1 span{      
+   color:#1f61c3;    
+   } 
+    
+.my_t2{
+	  height:100%;
+width:220px ;
+	 float:left;
+  margin-top:0px;
+} 
+.my_t3 {
+  font-size:20px;
+  color:white;
+  width:202px;
+  height:38px;
+  background-color:#1F61C3;
+  line-height:18px;
+  text-align:center;
+
+}
+.help_topjt{
+	background:url('../image/help_center2.png') no-repeat 125px 18px;
+	opacity:0.99;
+}
+.my_t5{
+	position:relative;
+  width:203px;
+  height:100%;
+  z-index:1;
+ margin:0px;
+  background-color:#F2F2F2;
+}
+.my_t5 li{
+  line-height:50px;
+  height:50px;
+  width:203px;
+text-align:left;
+
+}
+.help_topjt_dj{
+		background:url('../image/help_center1.png') no-repeat 125px 18px;
+		opacity:1;
+	}
+.my_t5 li a{
+  display:block;
+   width:203px;
+  height:50px;
+  overflow:hidden;
+  line-height:50px;
+  color:black;
+  padding-left:40px;
+  text-align:left;
+}
+
+.hdmk{
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:1;
+	background-color:#d9d9d9;
+  z-index:-1;
+}
+
+.mypj6{
+  font-size:16px;
+  color:#1f61c3;
+  font-weight:520;
+}

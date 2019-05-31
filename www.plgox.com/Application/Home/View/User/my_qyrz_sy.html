@@ -1,0 +1,627 @@
+<include file="User:my_top" />
+<title>{$setTitle}</title>
+ <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_qyrz_sy.css">
+<style>
+ .error_font1{
+ 	 position:absolute;
+     display: inline-block;
+     color: red;
+     overflow:hidden;
+     margin-left:20px;
+     margin-top:10px;
+     width:600px;
+}
+</style>
+<div class="mypj">
+   <div class="mypj1">
+      <div  class="mypj2">
+	    <div class="my_qy_sy">
+	    	<img src="__PUBLIC__/Home/image/my_zd7.jpg" />
+	    </div> 
+	    
+	    <div class="my_zd1">
+	     	<span>以下信息为普通企业用户最基础的企业信息认证，所有项目均为必填项。</span>
+	     </div>
+	    
+	    
+	    <div class="my_qy_sy0">
+	    	<span>公司资质信息</span>
+	    	<span>（公司信息填写后不可修改，请认真填写真实信息）</span>
+	    </div>
+        
+        <table class="my_qy_sy1">
+        	<tr>
+        		<td class="biaozhi_name">公司名称：</td>
+        		<td>
+        			<input type="text" class="my_qy_sy2 gsmc" name="gsmc" placeholder="请输入正确的公司名称" value="{$Renzheng['renzheng_commpany']}" />
+        		<font class="error_font1" ></font>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td class="xingzhi_name">公司性质：</td>
+        		<td>
+                <volist name="renzheng_nature" id="renzheng_nature_">
+        		  <div class="my_qy_sy612">
+        				<input type="radio" name="cgg" value="{$renzheng_nature_['renzheng_info_id']}" attr_nam="{$renzheng_nature_['renzheng_info_attr']}" class="class_radio_name" <eq name="Renzheng['renzheng_commpany_nature']" value="$renzheng_nature_['renzheng_info_id']">checked</eq> />
+        				<span style="font-size:12px;">{$renzheng_nature_['renzheng_info_id']|get_renzheng_data='Renzheng_info','renzheng_info_name','renzheng_info_id'}</span>
+        			</div>
+                </volist>
+        			<!-- <div class="my_qy_sy612">
+        				<input type="radio" name="cgg" />
+        				<span style="font-size:12px;">高档酒店（三星以上）</span>
+        			</div> -->
+        		<font class="error_font1" style="margin-top:2px;"></font>	
+        		</td>
+        	</tr>
+        	<tr>
+        		<td class="font_select_name">公司经营项目：</td>
+        		<td>
+        			<select class="my_qy_sy51 gsjyxm" >
+                    <option value="0">请选择</option>
+                    <volist name="renzheng_programmer" id="renzheng_programmer_">
+				      <option value="{$renzheng_programmer_['renzheng_info_id']}" <eq name="Renzheng['renzheng_jy_pg']" value="$renzheng_programmer_['renzheng_info_id']">selected</eq> >{$renzheng_programmer_['renzheng_info_name']}</option>
+				      <!-- <option>西餐</option>
+				      <option>日韩料理</option>
+				      <option>火锅</option>
+				      <option>咖啡甜品</option>
+				      <option>泰式料理</option>
+				      <option>外卖</option> -->
+                    </volist>
+				    </select>
+				    <font class="error_font1" ></font>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td class="biaozhi_name">统一社会信用代码：</td>
+        		<td>
+        			<input type="text" class="my_qy_sy2 zzzch" name="gsmc" placeholder="您所填的注册号将连入国家工商认证体系进行认证识别，请核实后正确输入" value="{$Renzheng['renzheng_zhucehao']}" /><span style="color:red;margin-left:6px;">(执照注册号)</span>
+        			<font class="error_font1" ></font>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td>营业执照(可扫码)：</td>
+        		<td>
+                &nbsp;&nbsp;<!-- <img src="__PUBLIC__/Common/bootstrap/img/uploads_img.png" style="width:150px;height: 150px;float:left;"> --><!-- <span style="color:red;font-weight:bold;float:right">扫码上传图片后,请刷新F5一下页面!</span> -->
+                <span id="qrcode" style="float:left;">
+                </span>
+                <if condition="($cache['2'] neq null) and ( $token eq $cache['0'])">
+                    <img src="__ROOT__/Uploads/home_renzheng_img/{$cache['2']}" style="width: 194px;height: 150px;cursor:pointer;" id="yyzz" class="yyzz_image" />
+                <elseif condition="($Renzheng['renzheng_zhizhao_img'] eq null)" />
+                  <img src="__PUBLIC__/Home/image/sctp1.jpg" style="width: 194px;height: 150px;cursor:pointer;" id="yyzz" class="yyzz_image" />
+                <elseif condition="($Renzheng['renzheng_zhizhao_img'] neq null)" />
+                  <img src="__ROOT__/Uploads/home_renzheng_img/{$Renzheng['renzheng_zhizhao_img']}" style="width: 194px;height: 150px" id="yyzz" class="yyzz_image" />
+                </if>
+                <!-- <@eq name="Renzheng['renzheng_zhizhao_img']" value="" >
+                    <img src="__PUBLIC__/Home/image/sctp1.jpg" style="width: 194px;height: 150px;cursor:pointer;" id="yyzz" class="yyzz_image" />
+                <@else />
+        		  	<img src="__ROOT__/Uploads/home_renzheng_img/{$Renzheng['renzheng_zhizhao_img']}" style="width: 194px;height: 150px" id="yyzz" class="yyzz_image" />
+                <@/eq> -->
+                    <input type="file" name="yyzz_img[]" id="DoumentInputFile" style="display: none" />
+                    <font class="error_font1" style="margin-top:50px;"></font>
+        		  <div style="clear:both;"></div>
+        		  <div class="my_qy_sy50">
+        		  	<span>！</span>
+        		  	<span>请上传真实营业执照，要求清晰、无遮挡、无水印。支持格式JPG、PNG、BMP，最大支持5M。</span>
+        		  </div>
+        		  
+        		</td>
+        	</tr>
+        	<tr>
+        		<td>芝麻信用分：</td>
+        		<td>
+        		  <div class="zmxyf">
+        		  	<div class="zmxyf1">尚未授权</div>
+        		  	<div class="zmxyf2">同意授权</div>
+        		  	<font class="error_font1" style="margin-top:0px;"></font>
+        		  </div>
+
+        		  <div class="my_qy_sy50">
+        		  	<span>！</span>
+        		  	<span>您在平台的恶意不还款等行为将直接影响到您的信用分数，请诚信买卖，遵守平台规则。</span>
+        		  	
+        		  </div>
+        		  
+        		</td>
+        	</tr>
+        	
+        	<tr>
+        		<td class="biaozhi_name">实际经营地址：</td>
+        		<td>
+        			<input type="text" class="my_qy_sy2 sjjydz" name="gsmc" placeholder="请输入公司详细地址" value="{$Renzheng['renzheng_address']}" />
+        			<font class="error_font1" ></font>
+        		</td>
+        	</tr>
+        	<!--<tr>
+        		<td>公司电话：</td>
+        		<td>
+        			<input type="text" class="my_qy_sy2" name="gsmc" placeholder="请输入公司座机电话"/>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td>报修电话：</td>
+        		<td>
+        			<input type="text" class="my_qy_sy2" name="gsmc" placeholder="请输入用于用户报修的电话"/>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td>支持发票类型：</td>
+        		<td>
+        		  <div class="my_qy_sy_zd">
+        			<div class="my_qy_sy3">
+        				<input type="checkbox" />
+        				<span>普通发票</span>
+        			</div>
+        			<div class="my_qy_sy3">
+        				<input type="checkbox" />
+        				<span>增值税专用发票</span>
+        			</div>
+        		</div>
+        			<div style="clear:both;"></div>
+        		 <div class="my_qy_sy50">
+        		  	<span>！</span>
+        		  	<span>如果您不具备开取租赁发票资格，可自行前往本地工商局增添经营范围，租赁发票税率5%左右。</span>
+        		  </div>
+        		</td>
+        	</tr>
+        	-->
+        	
+        </table>
+         
+         <div class="my_qy_sy0">
+	    	<span>公司负责人</span>
+	    </div>
+        
+        <table class="my_qy_sy1">
+        	<tr>
+        		<td class="font_select_name">联系人身份：</td>
+        		<td>
+        			<select class="my_qy_sy51 lxrsf">
+                    <option value="0">请选择</option>
+                    <volist name="renzheng_lxr_sf" id="renzheng_lxr_sf_">
+				      <option value="{$renzheng_lxr_sf_['renzheng_info_id']}" <eq name="Renzheng['renzheng_info']" value="$renzheng_lxr_sf_['renzheng_info_id']">selected</eq>>{$renzheng_lxr_sf_['renzheng_info_name']}</option>
+                    </volist>
+				    </select>
+				    <font class="error_font1" ></font>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td class="biaozhi_name">联系人姓名：</td>
+        		<td>
+        			<input type="text" class="my_qy_sy2 lxrxm" value="{$Renzheng['renzheng_name']}" />
+        			<font class="error_font1" ></font>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td class="biaozhi_name">联系人电话：</td>
+        		<td>
+        			<input type="number" class="my_qy_sy2 lxrdh" value="{$Renzheng['renzheng_tel']}"  />
+        			<font class="error_font1" ></font>
+        		</td>
+        	</tr>
+        	
+        	<tr >
+        		<td colspan="2" style="height:0px;padding:10px 0px;">
+        		</td>
+        	</tr>
+        	<tr>
+        		<td class="font_select_name">紧急联系人身份：</td>
+        		<td>
+        			<select class="my_qy_sy51 jjlxrsg">
+                    <option value="0">请选择</option>
+                    <volist name="renzheng_jjlxr_sf" id="renzheng_jjlxr_sf_">
+				      <option value="{$renzheng_jjlxr_sf_['renzheng_info_id']}" <eq name="Renzheng['renzheng_shenfen']" value="$renzheng_jjlxr_sf_['renzheng_info_id']">selected</eq> >{$renzheng_jjlxr_sf_['renzheng_info_name']}</option>
+				    </volist> 
+				    </select>
+				    <font class="error_font1" ></font>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td class="biaozhi_name">紧急联系人姓名：</td>
+        		<td>
+        			<input type="text" class="my_qy_sy2 jjlxrxm" value="{$Renzheng['renzheng_jl_name']}" />
+        			<font class="error_font1" ></font>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td class="biaozhi_name">紧急联系人电话：</td>
+        		<td>
+        			<input type="number" class="my_qy_sy2 jjlxrdh" value="{$Renzheng['rensheng_jl_tel']}" />
+        			<font class="error_font1" ></font>
+        		</td>
+        	</tr>
+       <!-- 	<tr>
+        		<td>执照注册号：</td>
+        		<td>
+        		  <div class="my_qy_sy5 ">
+        		  	<img src="__PUBLIC__/Home/image/my_zd8.png" id="zzzm"/>
+        		  	<div>正面</div>
+        		  </div>
+        		  <div class="my_qy_sy5">
+        		  	<img src="__PUBLIC__/Home/image/my_zd8.png" id="zzfm"/>
+        		  	<div>反面</div>
+        		  </div>
+        		  <div class="my_qy_sy5">
+        		  	<img src="__PUBLIC__/Home/image/my_zd8.png" id="sfzzm"/>
+        		  	<div>手持身份证正面</div>
+        		  </div>
+        		  <div style="clear:both;"></div>
+        		  <div class="my_qy_sy50">
+        		  	<span>！</span>
+        		  	<span>请上传真实身份证，支持格式JPG、PNG、BMP，最大支持5M。</span>
+        		  </div>
+        		</td>
+        	</tr>-->
+        </table>
+         
+        
+         <!--  onclick="javascrtpt:window.location.href='{:U('User/my_qyrz')}'" -->
+       <if condition="($Renzheng['renzheng_status'] eq 3)">
+            <div class="my_qy_sy7 submit_sq" attr_name="{$Renzheng['renzheng_id']}">确定修改</div>
+      <elseif  condition="($Renzheng['renzheng_status'] eq 4)" />
+            <div class="my_qy_sy7 submit_sq" attr_names="{$Renzheng['renzheng_id']}">重新提交申请</div>
+       <else />
+           <div class="my_qy_sy7 submit_sq">提交申请</div>  
+           <div style="text-align:center;margin-top:20px;font-size:11px;">提交申请后将在1个工作日内完成审核。</div>
+       </if>
+     </div>
+   </div>
+ </div>
+
+<!--遮罩-->
+<div class="zhezhao"  style="display:none;">
+
+  <div class="zz_nr_fbcg" style="display:none;">
+      <div class="zdsc">
+        删除成功
+      </div>
+       
+      <div class="zz_gbtk" >
+            关闭
+      </div> 
+    </div>
+
+
+</div>
+ <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/qrcode.min.js"></script>
+ <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/qrcode.js"></script>
+ <script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+ <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+<!-- <script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script> -->
+<script type="text/javascript">
+  // ajax刷新图片
+    function UploadsLook(){
+      $.post("{:U('User/ajax_rz_upload')}",{status_:1},function( data ){
+        if( data.status == 2000 ){
+            if( data.message['0'] == "{$token}" ){
+               $(".yyzz_image").attr("src","__ROOT__/Uploads/home_renzheng_img/"+data.message['2']);
+               return false;
+            }else{
+               $(".yyzz_image").attr("src","__PUBLIC__/Home/image/sctp1.jpg");
+               return false;
+            }
+          }
+      },"json");
+    }
+    setInterval("UploadsLook()",1000);
+    // ajax清空redis图片
+    $(document).ready(function(){
+      $.post("{:U('User/ajax_rz_upload')}",{status_:1},function( data ){
+          if( data.status == 2000 ){
+            if( data.message['1'] < "{$times}" ){
+              $.post("{:U('User/ajax_rz_upload')}",{status_:2},function( data ){ // 进行清空
+                 if( data.status == -2000 ){
+                  console.log(data.message);
+                 }
+              },'json');
+            }
+          }
+      },'json');
+    });
+</script>
+<script type="text/javascript">
+  // 二维码生成代码
+  var url = "http://www.plgox.com/Uploadfiles?token={$token}&status_keys={$status_keys}";
+  var qrcode = new QRCode("qrcode",{
+    width: 150,
+    height: 150,
+  correctLevel : QRCode.CorrectLevel.H
+  });
+    qrcode.clear();
+    qrcode.makeCode(url);
+  $("#qrcode").removeAttr("title");
+  my_top(2,"100px","企业认证");
+  //上传图片
+  $(".yyzz_image").click(function(){
+    $("#DoumentInputFile").click();
+    $("#DoumentInputFile").off("change");
+    $("#DoumentInputFile").on("change",function(){
+        // 判断后缀
+        var image_suffix = /(\.*.jpg$)|(\.*.png$)|(\.*.jpeg$)|(\.*.gif$)|(\.*.bmp$)/;
+        if( !image_suffix.test($(this).val()) ){
+            alert("请上传后缀为:jpg|png|gif|bmp|jpeg的图片文件");
+            return false;
+        }else if( $(this)[0].files[0].size > 3145728 ){
+            alert("error:your upload file size too large!");
+            return false;
+        }else{
+            var ObjUrl = getUploads(this.files[0]);
+            if( ObjUrl ){
+                $(".yyzz_image").attr("src",ObjUrl);
+            }
+        }
+    });
+  });
+  function getUploads( files ){
+    url = null;
+    url = window.URL.createObjectURL(files);
+    return url;
+  }
+ //营业执照
+//点击芝麻分数
+$(".zmxyf2").click(function(){
+	$(".zmxyf1").html("123456");
+})
+// 触发样式
+$(".my_qy_sy2").each(function( index ){
+    $(this).change(function(){
+        if( $(this).val() == "" ){
+            $(this).css("border","1px solid red");
+        }else{
+            $(this).css("border","1px solid green");
+        }        
+    });
+});
+// 判断联系电话输入的是否正确
+$('.my_qy_sy2').eq(4).change(function(){
+    var tel = /^[1][3,4,5,7,8][0-9]{9}$/;
+    if( !tel.test($(this).val()) ){
+        $(this).css("border","1px solid red");
+        alert("手机号有误或者过长,请重新输入!");
+        return false;
+    }
+    else{
+    	
+    }
+});
+$('.my_qy_sy2').eq(6).change(function(){
+    var tel = /^[1][3,4,5,7,8][0-9]{9}$/;
+    if( !tel.test($(this).val()) ){
+        $(this).css("border","1px solid red");
+        alert("手机号有误或者过长,请重新输入!");
+        return false;
+    }
+});
+// 执行数据
+$(".submit_sq").click(function(){
+  if($(".gsmc").val()==""){
+   	  $(".gsmc").css("border","1px solid red");
+   	  //$(".error_font1").eq(0).text("公司名称不能为空");
+      alert("公司名称不能为空");
+   	  return false;
+   }
+   else{
+   	   $(".error_font1").eq(0).text("");
+   }
+   
+   if(!$(".class_radio_name").is(":checked")){
+   	  //$(".error_font1").eq(1).text("公司性质请选填");
+      alert("公司性质请选填");
+   	  return false;
+   }
+   else{
+   	  $(".error_font1").eq(1).text("");
+   }
+ 
+   if($(".gsjyxm option").eq(0).is(":checked")){
+   	  //$(".error_font1").eq(2).text("请选择公司经营项目");
+      alert("请选择公司经营项目");
+   	  return false;
+   }
+   else{
+   	  $(".error_font1").eq(2).text("");
+   }
+   
+   
+   if($(".zzzch").val()==""){
+   	  $(".zzzch").css("border","1px solid red");
+   	 // $(".error_font1").eq(3).text("执照注册号不能为空");
+      alert("执照注册号不能为空");
+
+   	  return false;
+   }
+   else if($(".zzzch").val().length!=18){
+         alert("执照注册号必须为18位");
+
+      return false;
+   }
+   else{
+   	   $(".error_font1").eq(3).text("");
+   }
+   
+   if($(".sjjydz").val()==""){
+   	  $(".sjjydz").css("border","1px solid red");
+   	  //$(".error_font1").eq(6).text("实际经营地址不能为空");
+       alert("实际经营地址不能为空");
+   	  return false;
+   }
+   else{
+   	   $(".error_font1").eq(6).text("");
+   }
+   
+    if($(".lxrsf option").eq(0).is(":checked")){
+   	  //$(".error_font1").eq(7).text("请选择联系人身份");
+      alert("请选择联系人身份");
+   	  return false;
+   }
+   else{
+   	  $(".error_font1").eq(7).text("");
+   }
+   
+   if($(".lxrxm").val()==""){
+   	  $(".lxrxm").css("border","1px solid red");
+   	  //$(".error_font1").eq(8).text("联系人姓名不能为空");
+      alert("联系人姓名不能为空");
+   	  return false;
+   }
+   else{
+   	   $(".error_font1").eq(8).text("");
+   	   $(".lxrxm").css("border","1px solid green");
+   }
+   
+   if($(".lxrdh").val()==""){
+   	  $(".lxrdh").css("border","1px solid red");
+   	  //$(".error_font1").eq(9).text("联系人电话不能为空");
+      alert("联系人电话不能为空");
+
+   	  return false;
+   }
+   else{
+   	   $(".error_font1").eq(9).text("");
+   }
+   
+   if($(".jjlxrsg option").eq(0).is(":checked")){
+   	  //$(".error_font1").eq(10).text("请选择紧急联系人身份");
+       alert("请选择紧急联系人身份");
+   	  return false;
+   }
+   else{
+   	  $(".error_font1").eq(10).text("");
+   }
+   
+   if($(".jjlxrxm").val()==""){
+   	  $(".lxrxm").css("border","1px solid red");
+   	  $(".error_font1").eq(11).text("紧急联系人姓名不能为空");
+      alert("紧急联系人姓名不能为空");
+   	  return false;
+   }
+   else{
+   	   $(".error_font1").eq(11).text("");
+   }
+   
+   if($(".jjlxrdh").val()==""){
+   	  $(".jjlxrdh").css("border","1px solid red");
+   	  //$(".error_font1").eq(12).text("紧急联系人电话不能为空");
+      alert("紧急联系人电话不能为空");
+   	  return false;
+   }
+   else{
+   	   $(".error_font1").eq(12).text("");
+   }
+  /*
+   $(".my_qy_sy2").each(function( index ){
+    if( $(this).val() == "" ){
+        var texts = $(".biaozhi_name").eq(index).text().replace("：","");
+        console.log(index);
+        alert(texts+"不能为空!");
+        $(this).css("border","1px solid red");
+        return false;
+    }
+   });
+   $(".my_qy_sy51").each(function( index ){
+     if( $(this).val() == "0" ){
+        var texts = $(".font_select_name").eq(index).text().replace("：","");
+        alert("请选择"+texts+"类别");
+        return false;
+     }
+   });
+   if( $(".xingzhi_name:checked").val() == "undefined" ){
+        alert("请选您的公司性质!");
+        return false;
+   }*/
+   // 扫码上传图片路径
+  var arr1 = new Array();
+  if( $(".yyzz_image").attr("src") != "/Public/Home/image/sctp1.jpg" ){
+    var url_path = $(".yyzz_image").attr("src");
+    var url_path_ = url_path.split("/");
+    var path_url = url_path_[3]+"/"+url_path_[4];
+    arr1.push(path_url);
+  }
+   if( $(".my_qy_sy2").eq(0).val() != "" && $(".my_qy_sy2").eq(1).val() != "" && $(".my_qy_sy2").eq(2).val() != "" && $(".my_qy_sy2").eq(3).val() != "" && $(".my_qy_sy2").eq(4).val() != "" && $(".my_qy_sy2").eq(5).val() != "" && $(".my_qy_sy2").eq(6).val() != "" && $(".xingzhi_name:checked").val() != "undefined" && $(".my_qy_sy51").eq(0).val() != "0" && $(".my_qy_sy51").eq(1).val() != "0" && $(".my_qy_sy51").eq(2).val() != "0" ){
+        $.ajaxFileUpload({
+            type: "POST",
+        dataType: "JSON",
+             url: "{:U('AjaxRenzheng')}",
+        fileElementId:['DoumentInputFile'],
+        secureuri: false,
+            async: false,
+            data: {
+                'renzheng_id':$(this).attr("attr_name"),//修改的id
+                'renzheng_ids':$(this).attr("attr_names"),// 重新提交认证的id
+                'renzheng_zhizhao_img':arr1,//扫码上传图片路径
+                'renzheng_commpany':$(".my_qy_sy2").eq(0).val(),//公司名称
+                'renzheng_zhucehao':$(".my_qy_sy2").eq(1).val(),//执照注册号
+                'renzheng_address':$(".my_qy_sy2").eq(2).val(),//实际经营地址
+                'renzheng_name':$(".my_qy_sy2").eq(3).val(),//联系人姓名
+                'renzheng_tel':$(".my_qy_sy2").eq(4).val(),//联系人电话
+                'renzheng_jl_name':$(".my_qy_sy2").eq(5).val(),//紧急联系人姓名
+                'rensheng_jl_tel':$(".my_qy_sy2").eq(6).val(),//紧急联系人电话
+                'renzheng_commpany_nature':$(".class_radio_name:checked").val(),//公司性质
+                'renzheng_jy_pg':$(".my_qy_sy51").eq(0).val(),//公司经营项目
+                'renzheng_info':$(".my_qy_sy51").eq(1).val(),//联系人身份
+                'renzheng_shenfen':$(".my_qy_sy51").eq(2).val()//紧急联系人身份
+            },
+        success: function( data ){
+            console.log(data);
+            var obj = /<pre.+?>(.+)<\/pre>/g;
+            var result = data.match(obj);
+            data = RegExp.$1;
+            data = eval('('+data+')');
+            if( data.status == 2000 ){
+                tkcx("成功");
+            }else  if( data.status == -2001 ){
+                tkcx(data.message);
+  
+
+            }else if( data.status == -2002 ){
+
+                tkcx(data.message);
+
+            }else if( data.status == -2003 ){
+
+                tkcx(data.message);
+
+            }
+        },
+        error: function( XMLHttpRequest , error , status ){
+             tkcx("出现错误，错误位置在："+status);
+        }
+     });
+   }
+});
+
+
+//自动消失(弹框)
+ function qkgwc(){
+	  $(".zhezhao").click(function(){
+
+	  	 	if($(".zdsc").eq(1).text()=="提交认证成功,请等待认证审核!"){
+	  	 	   $(".zhezhao").css("display","none");
+	  	       $(".zz_nr_fbcg").css("display","none");
+				 window.location.href="{:U('User/my_qyrz')}";
+			 }
+             else if($(".zdsc").eq(1).text()=="成功"){
+                $(".zhezhao").css("display","none");
+               $(".zz_nr_fbcg").css("display","none");
+
+                 window.location.href="{:U('User/my_qyrz')}";
+             }
+		  	 else{	  
+		  	 	 $(".zhezhao").css("display","none");
+		  	     $(".zz_nr_fbcg").css("display","none"); 
+		  	 } 
+	  });
+} 
+
+ function tkcx(message){
+  	    $(".zhezhao").css("display","block");  
+		$(".zz_nr_fbcg").css("display","block");
+		$(".zdsc").eq(1).text(message);
+     
+        qkgwc();
+		
+  }
+</script>
+
+{:W('Common/footer')}
+</body>
+</html>

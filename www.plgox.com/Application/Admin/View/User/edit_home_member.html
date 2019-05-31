@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>商户信息修改</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>商户信息修改</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">用户名：</td>
+		<td style="border:none">
+		    <input type="text" name="data[plgox_user]" class="form-control" id="exampleInputName2" placeholder="Jane Doe" value="{$user_value['plgox_user']}" disabled="disabled" style="width:160px;height: 40px">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">新密码：</td>
+		<td style="border:none">
+			<input type="password" name="data[plgox_pwd]" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width:400px;height: 40px">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">确认新密码：</td>
+		<td style="border:none">
+			<input type="password"  class="form-control" id="exampleInputPassword2" placeholder="Password" style="width:400px;height: 40px">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">联系方式：</td>
+		<td style="border:none">
+			<input type="number" name="data[plgox_tel]" class="number" style="width:200px;height: 40px" min="0"  value="{$user_value['plgox_tel']}" >
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">邮箱帐号：</td>
+		<td style="border:none">
+			<input type="email" name="data[plgox_email]" class="form-control" id="exampleInputEmail1" placeholder="Email" value="{$user_value['plgox_email']}" style="width:400px;height: 40px">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">用户分组：</td>
+		<td style="border:none">
+			<if condition="($user_value[plgox_usertype] eq '4')">
+				<div class="checkbox">
+					<input type="checkbox" name="data[plgox_usertype]" checked="checked" disabled="disabled">{$user_value['plgox_name']}
+				</div>
+			<elseif condition="($user_value[plgox_usertype] eq '3')" />
+				<div class="checkbox">
+					<input type="checkbox" name="data[plgox_usertype]" checked="checked" disabled="disabled">{$user_value['plgox_name']}
+				</div>
+			</if>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">激活状态：</td>
+		<td style="border:none">
+			<div class="radio">
+				<label class="radio-inline">
+					<input type="radio" style="position:relative;left:-20px" name="data[plgox_activation]" id="optionsRadios3" value="1" <if condition="($user_value['plgox_activation'] eq 1)">checked</if> > <a style="color:#333333;text-decoration: none;position:relative;left:-20px">屏蔽</a>
+				</label>
+				<label class="radio-inline">
+					<input type="radio" style="position:relative;left:-20px" name="data[plgox_activation]" id="optionsRadios4"  value="0" <if condition="($user_value['plgox_activation'] eq 0)">checked</if> > <a style="color:#333333;text-decoration: none;position:relative;left:-20px">激活</a>
+				</label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">用户性别：</td>
+		<td style="border:none">
+			<div class="form-group">
+				<select class="form-control input-lg" style="width: 100px;height: 45px" name="data[plgox_sex]" id="exampleInputSex">
+					<option value="0" <if condition="($user_value['plgox_sex'] eq 0)">selected</if> >男</option>
+					<option value="1" <if condition="($user_value['plgox_sex'] eq 1)">selected</if> >女</option>
+				</select>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">联系地址：</td>
+		<td style="border:none">
+			<select class="form-control input-lg" style="width: 100px;height: 45px;float:left;margin-right:5px" name="data[plgox_sheng]" id="exampleInputSheng">
+				<option>--省--</option>
+			</select>
+			<select class="form-control input-lg" style="width: 100px;height: 45px;float:left;margin-right:5px" name="data[plgox_shi]" id="exampleInputShi">
+				<option>--市--</option>
+			</select>
+			<select class="form-control input-lg" style="width: 100px;height: 45px;float:left;margin-right:5px" name="data[plgox_xian]" id="exampleInputXian">
+				<option>--县--</option>
+			</select>
+			<input type="text" name="data[plgox_address]" style="width:400px;height: 45px">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">注册协议：</td>
+		<td style="border:none">
+			
+			<if condition="($user_value['plgox_agreement'] eq ''  )">
+				<div class="checkbox">
+					<input type="checkbox" name="" checked="checked" disabled="disabled">未签约
+				</div>
+			<else />
+				<div class="checkbox">
+					<input type="checkbox" name="" checked="checked" disabled="disabled">已签约
+				</div>
+			</if>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<button type="button" class="btn btn-success">确认修改</button>
+			<button type="button" class="btn btn-danger">返回上页</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('User/home_member_list')}";
+	});
+	$(".btn-success").click(function(){
+		var plgox_id = {$user_value['plgox_id']};
+		var number = /^\d{11}$/;
+		if( $(".number").val() == "" ){
+			alert("手机号是必填的，以便以后即使接受消息");
+			return false;
+		}else if( !number.test( $(".number").val() ) ){
+			alert("请输入正确的手机号");
+			return false;
+		}
+		if( $("#exampleInputPassword1").val() != $("#exampleInputPassword2").val()){
+			alert("密码和确认密码不一致，请重新输入!");
+			return false;
+		}
+		// 判断手机号是否存在
+		$.post("{:U('User/select_tel')}",{ 'plgox_id':plgox_id , 'plgox_tel':$(".number").val() },function( data ){
+			if( data.status == 2000 ){
+				// 手机号不存在时实行修改
+				$.ajax({
+					type: "POST",
+				dataType: "JSON",
+					 url: "{:U('User/member_home_update')}",
+					data: { 'plgox_id':plgox_id , 'plgox_pwd':$("#exampleInputPassword1").val() , 'plgox_tel':$('.number').val() , 'plgox_email':$('#exampleInputEmail1').val() , 'plgox_activation':$("input[type='radio']:checked").val() , 'plgox_sex':$("#exampleInputSex").val()  },
+					success: function( data ){
+						if(data.status == 2000 ){
+							alert(data.message);
+							window.location.href="{:U('User/home_member_list')}";
+							return false;
+						}else if( data.status == -2000 ){
+							alert(data.message);
+							return false;
+						}
+					},
+					error: function(XMLHttpRequest , error , status ){
+						alert("网络错误，请稍后再尝试" + status );
+						return false;
+					}
+				});
+				return false;
+			}else if( data.status == -2000 ){
+				alert(data.message);
+				return false;
+			}
+		},'JSON');
+	});
+</script>
+</html>

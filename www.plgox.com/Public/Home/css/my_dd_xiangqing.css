@@ -1,0 +1,93 @@
+	.mypj{
+  margin-top:-666px;
+    position:relative;
+     z-index:0;
+     width:100%;
+   background-color:#FAFAFA;
+}
+.mypj1{
+  width:1192px;
+  margin:0 auto;
+  overflow:hidden;
+}
+ .mypj2{
+   position:relative;
+   width:986px;
+   background:white;
+   padding:30px 40px;
+float:right;
+ z-index:30;
+color:#666666;
+ }
+.mypj6{
+  font-size:16px;
+}
+ .my_dind_box{
+  width:802px;
+  margin-top:10px;
+  height:216px;
+}
+.my_dingd12{
+  height:52px;
+  background-color:#FAFAFA;
+}
+.my_dind11{
+  border:1px solid #EBEBEB;
+  height:128px;
+  font-weight:100;
+}
+.my_dind16{
+	border:1px solid #EBEBEB;
+  height:38px;
+}
+.my_dind11 td{
+  border-left:1px solid #EBEBEB;
+padding:10px 50px;
+}
+.my_dingd15{
+   cursor:pointer;
+}
+.my_dingd15 img{
+  display:inline-block;
+ 
+}
+.my_dingdan16{
+  display:inline-block;
+  width:228px;
+  margin-left:5px;
+  vertical-align: middle;
+}
+th{
+	text-align:center;
+}
+
+.my_ddxq{
+	width:910px;
+	margin-top:22px;
+	height:275px;
+	margin-bottom:50px;
+	overflow:hidden;
+	border:1px solid #EBEBEB;
+	border-top:5px solid #D3E3FB;
+	padding:20px;
+	padding-bottom:0px;
+}
+.my_ddxq1{
+	float:left;
+}
+.my_ddxq1:not(:first-child){
+	margin-left:40px;
+}
+
+.my_ddxq1 ul li:not(:first-child){
+	line-height:33px;
+	font-size:12px;
+}
+.my_ddxq2{
+	font-size:16px;
+	color:black;
+	margin-bottom:15px;
+}
+.my_xzcc{
+	width:220px;overflow:hidden;line-height:18px;
+}

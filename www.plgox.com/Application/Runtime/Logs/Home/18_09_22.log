@@ -1,0 +1,234 @@
+[ 2018-09-22T01:03:36+08:00 ] 123.125.67.218 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T02:53:40+08:00 ] 207.46.13.247 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T02:53:40+08:00 ] 207.46.13.247 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T02:53:40+08:00 ] 207.46.13.247 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T02:53:40+08:00 ] 207.46.13.247 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T02:53:41+08:00 ] 207.46.13.247 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T06:01:48+08:00 ] 58.215.75.210 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2018-09-22T09:18:19+08:00 ] 180.76.15.146 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T10:37:30+08:00 ] 54.36.150.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T10:37:33+08:00 ] 54.36.148.35 /index/fuwenben/id/4.html
+ERR: 非法操作:fuwenben
+
+[ 2018-09-22T13:30:37+08:00 ] 47.99.147.108 /explicit_not_exist_path
+ERR: 无法加载控制器:Explicit_not_exist_path
+
+[ 2018-09-22T13:30:39+08:00 ] 47.99.147.108 /index.jsp
+ERR: 无法加载控制器:Index.jsp
+
+[ 2018-09-22T13:30:40+08:00 ] 47.99.147.108 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T13:30:40+08:00 ] 47.99.147.108 /js/kindeditor/Makefile
+ERR: 无法加载控制器:Js
+
+[ 2018-09-22T13:30:40+08:00 ] 47.99.147.108 /theme/zui/fonts/zenicon.eot
+ERR: 无法加载控制器:Theme
+
+[ 2018-09-22T13:30:40+08:00 ] 47.99.147.108 /README
+ERR: 无法加载控制器:README
+
+[ 2018-09-22T13:30:41+08:00 ] 47.99.147.108 /solr/
+ERR: 无法加载控制器:Solr
+
+[ 2018-09-22T13:30:41+08:00 ] 47.99.147.108 /wcm/
+ERR: 无法加载控制器:Wcm
+
+[ 2018-09-22T13:30:41+08:00 ] 47.99.147.108 /phpMyAdmin/
+ERR: 无法加载控制器:PhpMyAdmin
+
+[ 2018-09-22T13:30:41+08:00 ] 47.99.147.108 /phpmyadmin/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2018-09-22T13:30:41+08:00 ] 47.99.147.108 /pma/
+ERR: 无法加载控制器:Pma
+
+[ 2018-09-22T13:32:24+08:00 ] 47.99.148.166 /explicit_not_exist_path
+ERR: 无法加载控制器:Explicit_not_exist_path
+
+[ 2018-09-22T13:32:27+08:00 ] 47.99.148.166 /index.jsp
+ERR: 无法加载控制器:Index.jsp
+
+[ 2018-09-22T13:32:28+08:00 ] 47.99.148.166 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T13:32:28+08:00 ] 47.99.148.166 /js/kindeditor/Makefile
+ERR: 无法加载控制器:Js
+
+[ 2018-09-22T13:32:29+08:00 ] 47.99.148.166 /theme/zui/fonts/zenicon.eot
+ERR: 无法加载控制器:Theme
+
+[ 2018-09-22T13:32:29+08:00 ] 47.99.148.166 /README
+ERR: 无法加载控制器:README
+
+[ 2018-09-22T13:32:29+08:00 ] 47.99.148.166 /solr/
+ERR: 无法加载控制器:Solr
+
+[ 2018-09-22T13:32:29+08:00 ] 47.99.148.166 /wcm/
+ERR: 无法加载控制器:Wcm
+
+[ 2018-09-22T13:32:29+08:00 ] 47.99.148.166 /phpMyAdmin/
+ERR: 无法加载控制器:PhpMyAdmin
+
+[ 2018-09-22T13:32:29+08:00 ] 47.99.148.166 /phpmyadmin/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2018-09-22T13:32:29+08:00 ] 47.99.148.166 /pma/
+ERR: 无法加载控制器:Pma
+
+[ 2018-09-22T13:34:45+08:00 ] 203.208.60.62 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T13:43:23+08:00 ] 203.208.60.24 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T15:24:36+08:00 ] 125.34.222.245 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+
+[ 2018-09-22T15:26:01+08:00 ] 125.34.222.245 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+
+[ 2018-09-22T15:30:02+08:00 ] 125.34.222.245 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+
+[ 2018-09-22T15:34:20+08:00 ] 125.34.222.245 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+
+[ 2018-09-22T15:57:00+08:00 ] 125.34.222.245 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-09-22T15:57:06+08:00 ] 125.34.222.245 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-09-22T15:57:14+08:00 ] 125.34.222.245 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-09-22T15:57:19+08:00 ] 125.34.222.245 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-09-22T15:57:21+08:00 ] 125.34.222.245 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-09-22T15:57:25+08:00 ] 125.34.222.245 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-09-22T15:57:27+08:00 ] 125.34.222.245 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-09-22T16:00:40+08:00 ] 125.34.222.245 /Tourist/dologin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE (  `plgox_user` = 'wenyu1995' OR `plgox_tel` = 'wenyu1995' ) AND `plgox_pwd` = '21232f297a57a5a743894a0e4a801fc3' AND `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `plgox_member` SET `plgox_logintime`='1537603239' WHERE `plgox_id` = 150 [ RunTime:0.0177s ]
+SQL: UPDATE `plgox_member` SET `plgox_loginumer`=plgox_loginumer+1 WHERE `plgox_id` = 150 [ RunTime:0.0169s ]
+
+[ 2018-09-22T16:00:43+08:00 ] 125.34.222.245 /Cart/ajaxData.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '818' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-22T16:00:45+08:00 ] 125.34.222.245 /Cart/cart_del.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0006s ]
+SQL: DELETE FROM `plgox_cart` WHERE `cart_id` = 818 [ RunTime:0.0176s ]
+
+[ 2018-09-22T16:00:48+08:00 ] 125.34.222.245 /Cart/ajaxData.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '819' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-09-22T16:00:48+08:00 ] 125.34.222.245 /Cart/AjaxCount.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '819' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-22T16:00:50+08:00 ] 125.34.222.245 /Cart/cart_del.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0006s ]
+SQL: DELETE FROM `plgox_cart` WHERE `cart_id` = 819 [ RunTime:0.0197s ]
+
+[ 2018-09-22T16:00:51+08:00 ] 125.34.222.245 /Cart/AjaxCount.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2018-09-22T16:25:48+08:00 ] 106.38.241.181 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T17:36:45+08:00 ] 180.76.15.158 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T17:36:45+08:00 ] 180.76.15.31 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T19:15:31+08:00 ] 144.76.3.79 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T19:15:33+08:00 ] 144.76.3.79 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-09-22T19:15:35+08:00 ] 144.76.3.79 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-22T19:15:36+08:00 ] 144.76.3.79 /Index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-22T19:15:38+08:00 ] 144.76.3.79 /Xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-22T19:15:40+08:00 ] 144.76.3.79 /index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-22T19:15:42+08:00 ] 144.76.3.79 /poli/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Poli
+
+[ 2018-09-22T19:15:44+08:00 ] 144.76.3.79 /share/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Share
+
+[ 2018-09-22T19:15:46+08:00 ] 144.76.3.79 /xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-22T19:15:48+08:00 ] 144.76.3.79 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+

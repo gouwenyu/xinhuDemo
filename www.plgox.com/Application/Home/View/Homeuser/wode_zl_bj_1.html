@@ -1,0 +1,661 @@
+<include file="Homeuser:htsy_top" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_zl_bj.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zhezhao.css" />
+<style type="text/css">
+	.wdzl_bj_ts{
+		width:100px;
+	}
+</style>
+<!-- <form action="{:U('Homeuser/AjaxHomeuserProduct')}" method="post"> -->
+<div class="ht_in1"  >
+	<div class="ht_in10">
+		<span >
+			我的租赁 / 编辑租赁
+		</span>
+	</div>
+   <div class="ht_content">
+
+      <div class="wdzl_bj1">
+      	<p>
+      		<span class="nlh">*</span>&nbsp;产品名称 ： 
+      	</p>
+      	<p>
+      	  <input type="text" placeholder="产品名称" name="share_name" class="share_name" />	
+      	</p>
+      </div>
+
+      <div class="wdzl_bj1">
+      	<p>
+      		副标题 ： 
+      	</p>
+      	<p>
+      	  <input type="text" placeholder="产品宣传语" name="share_key" class="share_key"/>	
+      	</p>
+      </div>
+      <div class="wdzl_bj1">
+      	<p>
+      		品牌型号 ： 
+      	</p>
+      	<p>
+      	  <input type="text" placeholder="输入产品品牌" name="brand_name" class="brand_name" />
+      	  <input type="text" placeholder="HF-输入产品型号" class="brand_model" name="brand_model" style="margin-left:20px;" />	
+      	  <span style="color:#999999;">&nbsp;&nbsp;&nbsp;（为了今后更加精准筛选，请正确填写，此项不在前端展示。）</span>
+      	</p>
+      </div>
+      
+       <div class="wdzl_bj1">
+      	<p>
+      		产地 ： 
+      	</p>
+      	<p>
+      	  <select class="wdzl_thdz chandi" name="chandi" >
+      	  	<option>请选择</option>
+      	  	<volist name="city" id="city_">
+      	  		<option value="{$city_['city_id']}">{$city_['city_name']}</option>
+      	  	</volist>
+      	  </select>
+      	</p>
+      </div>
+      
+      
+      <div class="wdzl_bj2">
+      	
+      	<div class="wdzl_bj_bigbox" id="wdzl_b0">
+      	  <div class="wdzl_bj21" >
+      	  	<span class="wdzl_bjtc">套餐1</span> 
+      	  	<!--<span class="wdzl_bj210" id='0' onClick="bdsj(this.id);">×</span>-->
+      	  </div>
+      	  <div class="wdzl_bj22">
+      	  	<div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;套餐名称 ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		 <input type="text" placeholder="傲笛电磁炉" name="specifications_name" class="specifications_name class_gg" />	
+	      	  	</div>
+	      	 </div>
+	      	 
+	      	 <div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;押金 ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		<input type="text" style="width:80px;" placeholder="请输入" name="specifications_deposit" class="specifications_deposit class_gg" />&nbsp;&nbsp;元			
+	      	  	</div>
+	      	 </div>
+	      	 
+	      	  <div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;市场参考价 ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		<input type="text" style="width:80px;" placeholder="请输入" name="specifications_market" class="specifications_market class_gg" />&nbsp;&nbsp;元		
+	      	  	</div>
+	      	 </div>
+	      	 
+	      	 <div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;库存量 ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		<input type="text" style="width:80px;" placeholder="库数量" name="specifications_stock" class="specifications_stock class_gg"/>	
+	      	  	</div>
+	      	 </div>
+	      	 
+	      	 
+	      	 <div class="wdzl_bj220" style="height:230px;overflow:hidden;">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;最低起租期 ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222 zqts">
+	      	  	   <table class="wdzl_bj_bg">
+	      	  	   	<volist name="zulin" id="zulin_">
+	      	  	   	 <tr class="wdzl_bj_tr">
+	      	  	   	 	<td>
+	      	  	   	 	  <input type="checkbox" class="zbdq class_gg zulin_day_number" name="zulin_day_number" value="{$zulin_['zulin_day_number']}" />	
+	      	  	   	 	  <span  class="ybdq" >{$zulin_['zulin_day_number']}{$zulin_['zulin_name']}</span>
+	      	  	   	 	</td>
+	      	  	   	 	<td>
+	      	  	   	 		<input type="text" placeholder="日租金" name="specifications_rent"  class="wdzl_bj_ts specifications_rent class_gg"  style="width:80px;" />
+	      	  	   	 		<span>元/日</span>
+	      	  	   	 	</td>
+	      	  	   	 </tr>
+	      	  	   	</volist>
+	      	  	   </table>
+	      	  	   <div>日租金包含运费、人工费和税票费，请根据自己情况定价。</div>
+	      	  	</div>
+	      	 </div>
+	      	 
+	      	<div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		租满即送 ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		<div id="checkbox">
+	      	  			<label>
+	      	  				<input type="checkbox" value="租满即送" name="specifications_give" class="specifications_give class_gg" >&nbsp;送
+	      	  			</label>
+	      	  		</div>
+	      	  		<input type="text" class="zmjs_ts specifications_day_number class_gg" name="specifications_day_number" placeholder="150/天" style="width:88px;"  />&nbsp;&nbsp;天
+	      	  	</div>
+	      	 </div> 
+	      </div>
+	   </div>
+	      <div class="wdzl_bj25">
+	      	<span class="wdzl_bj_tjtc_jh">＋</span>
+	      	<span class="wdzl_bj_tjtc">添加新套餐</span>
+	      </div>
+ </div>
+    <div class="wdzl_bj1" style="margin-top:70px;position:relative;">
+      	<p style="margin-top:10px;">
+      		<span class="nlh">*</span>&nbsp;图片 ： 
+      	</p>
+      
+      	<p style="padding-top:0px;">
+      	   <img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="margin-top:40px;margin-left:10px;width: 150px;height: 150px" class="image1" />
+      	   <input type="file" name="my_images[]" id="exampleInputFile1" style="display: none;">
+      	   <img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="margin-top:40px;margin-left:10px;width: 150px;height: 150px" class="image2"/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile2" style="display: none;">
+      	   <img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="margin-top:40px;margin-left:10px;width: 150px;height: 150px" class="image3"/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile3" style="display: none;">
+      	   <img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="margin-top:40px;margin-left:10px;width: 150px;height: 150px" class="image4"/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile4" style="display: none;">
+      	   <img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="margin-top:40px;margin-left:10px;width: 150px;height: 150px" class="image5"/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile5" style="display: none;">
+      	   <img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="margin-top:40px;margin-left:10px;width: 150px;height: 150px" class="image6"/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile6" style="display: none;">
+      	   <img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="margin-top:40px;margin-left:10px;width: 150px;height: 150px" class="image7"/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile7" style="display: none;">
+      	   <img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="margin-top:40px;margin-left:10px;width: 150px;height: 150px" class="image8"/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile8" style="display: none;">
+      	</p>
+      	<div class="wdzl_tp61" style="">支持格式JPG、PNG、BMP，最大支持5M。最多添加8张</div>	
+     </div>
+      <script type="text/javascript">
+      	// 多图上传
+		number = [0,1,2,3,4,5,6,7,8];
+		$.each(number,function( index ){
+			if( index != 0 ){
+				$(".image"+index).click(function(){
+					$("#exampleInputFile"+index).click();
+					$("#exampleInputFile"+index).off("change");
+					$("#exampleInputFile"+index).on('change',function(){
+						// 判断上传的限制
+						if( $(this)[0].files[0].size > 10485760){
+							alert("上传文件超出了特定的上传限制!");
+							return false;
+						}else{
+							var objUrl = getUploads(this.files[0]);
+							if( objUrl ){
+								$(".image"+index).attr("src",objUrl);
+							}
+						}
+					});
+				});
+			}
+		});
+		function getUploads(files){
+			url = null;
+			if( window.createObjectURL !== undefined ){
+				url = window.createObjectURL(files);
+			}else if( window.URL !== undefined ){
+				url = window.URL.createObjectURL(files);
+			}else if( window.webkitURL != undefined ){
+				url = window.webkitURL.createObjectURL(files);
+			}
+			return url;
+		}
+    </script>
+     
+     
+     <div class="wdzl_bj1">
+      	<p>
+      		<span class="nlh">*</span>&nbsp;产品描述 ： 
+      	</p>
+      	
+      	
+		<div id="sample" style="width:900px;margin-left:95px;">
+			<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Common/bootstrap/UEditor/ueditor.config.js"></script>
+		    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Common/bootstrap/UEditor/ueditor.all.min.js"> </script>
+		    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Common/bootstrap/UEditor/lang/zh-cn/zh-cn.js"></script>
+		    <script id="editor" type="text/plain" style="width:1000px;height:500px;" name="share_descriptions" class="share_descriptions"></script>
+			<script type="text/javascript">
+		    	//实例化编辑器
+		    	//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+		    	var ue = UE.getEditor('editor');
+			</script>
+	   </div>
+			
+			
+     </div>
+     
+     
+     
+     
+      <div class="wdzl_bj1">
+      	<p>
+      		展示城市 ： 
+      	</p>
+      	<p>
+      	  <span class="city_tk">
+      	  	未选择
+      	  </span>
+      	  <span style="color:#555555;">&nbsp;&nbsp;&nbsp;（说明：选择租赁方案展示的城市，点击选框选择城市）</span>
+      	</p>
+      </div>
+      
+       <div class="wdzl_bj1">
+      	<p>
+      		服务地址 ： 
+      	</p>
+      	<p>
+      	  <select class="wdzl_thdz" style="width:266px;">
+      	  	<option>
+      	  	  北京市大兴区宏达北路130号
+      	  	</option>
+      	  	<option>
+      	  	  北京
+      	  	</option>
+      	  	<option>
+      	  	  北京
+      	  	</option>
+      	  	<option>
+      	  	  北京
+      	  	</option>
+      	  </select>
+      	  <div class="dd_js220" style="clear:both;float:left;margin-left:95px;">
+	      	<span style="display:block;float:left;margin-left:12px;font-size:24px;font-weight:700;">＋</span>
+	      	<span style="display:block;float:left;">添加新地址</span>
+	      </div>
+      	</p>
+      </div>
+     
+     <div class="wdzl_tj" id="wss">
+     	<a style="color:white;">提交订单</a></div>
+   </div>
+</div>
+<!-- href="{:U('Homeuser/wode_zuling')}"
+-->
+<!--遮罩-->
+<div class="zhezhao"  style="display:none;">
+  <!--添加地址-->
+	<div class="zz_nr" style="display:none;">
+	  <div class="zz_nr1">
+		添加收货地址			
+	  </div>
+	  <div class="zz_nr2" style="margin-top:10px;" id="city_5">
+            <select class="prov" ></select>
+            <select class="city" style="margin-left:50px;"></select>
+	  </div>
+	  <div class="zz_nr2">
+		<input type="text" name="shr" placeholder="请输入详细地址"/>	
+	  </div>
+	   
+	  <div class="zz_nr3" >
+			<a href="#wss" class="tyjs0">保存收货人信息</a>
+			<a href="#wss" class="tyjs">取消</a>	
+	  </div> 
+	</div>	
+	
+	<!--发布成功  3秒后自动消失-->
+	<div class="zz_nr_fbcg" style="display:none;width:350px;height:260px;">
+	  <div class="zdsc">
+		发布成功	
+	  </div>
+	   
+	  <div class="zz_nr3" >
+			<div href="#wss" class="zdxs" >
+				<img src="__PUBLIC__/Home/image/duihao.png" />
+			</div>	
+	  </div> 
+	</div>	
+
+	<!--选择城市-->
+	<div class="zz_nr_cy" style="display:none;">
+	  <div class="zz_nr1">
+		热门城市			
+	  </div>
+	  <div class="zz_nr2" style="margin:0px 24px;height:206px;">
+		<ul class="zz_nr_ct">
+			<li>热门城市</li>
+			<li>
+				<span>A</span><span>B</span><span>C</span><span>D</span><span>E</span>
+			</li>
+			<li>
+				<span>F</span><span>G</span><span>H</span><span>L</span>
+			</li>
+			<li>
+				<span>K</span><span>L</span><span>M</span><span>N</span><span>P</span>
+			</li>
+			<li>
+				<span>Q</span><span>R</span><span>S</span><span>T</span><span>Y</span>
+			</li>
+			<li>
+				<span>X</span><span>Y</span><span>Z</span>
+			</li>
+		</ul>	
+		<div class="zz_nr_ct1">
+			<p>
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+			<p >
+				<input type="checkbox" name="city" id="city" />&nbsp;<span>北京市</span>
+			</p>
+		</div>
+	  </div>
+	  <div class="zz_nr3" style="margin-top:0px;">
+			<a href="#wss" class="tyjs_city1">确认</a>
+			<a href="#wss" class="tyjs_city2">取消</a>	
+	  </div> 
+	</div>	
+
+
+</div>
+<!-- <input type="submit" value="提交">
+</form> -->
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/cropbox.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/city.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/base_64.js"></script>
+
+<script type="text/javascript">
+// 分类
+/*  	function loadClassify( ClassifyId , ClassifyType ){
+  		$.post("{:U('Homeuser/AjaxData')}",{classify_id:ClassifyId},function( data ){
+  			if( ClassifyType == "pid" ){
+  				$("#"+ClassifyType).html("<option>请选择</option>");
+  				$(data).each(function( key , val ){
+  					$("#"+ClassifyType).append("<option value="+val.classify_id+">"+val.classify_title+"</option>")
+  				})
+  			}
+  		},"json");
+  	}*/
+	$(".wdzl_tj").click(function(){
+/*		var day_number_id = "";
+		$(".zbdq").each(function( index ){
+			if( $(this).is(":checked") ){
+				day_number_id+=","+$(this).val();
+			}
+		});
+		day_number_ids = day_number_id.substring(1);
+		if( day_number_ids.length == 0 ){
+			alert("您尚未选中起租天数");
+			return false;
+		}else{
+			day_number_status = day_number_ids.split(",");
+			$(day_number_status).each(function( index ){
+				if( $(".specifications_rent").eq(index).val() == "" ){
+					alert("不能够只单单选中租赁天数,也要完善租赁金额额!");
+					return false;
+				}else{
+					specifications_rent = $(".specifications_rent").eq(index).val();
+				}
+			});
+			day_number_ids = day_number_ids;
+		}*/
+/*		if( $(".share_name").val() == "" ){
+			alert("请输入填写商品名称!");
+			return false;
+		}
+		if( $(".specifications_name").val() == "" ){
+			alert("请输入套餐名称!");
+			return false;
+		}
+		if( $('#cid').val() == "0" ){
+			alert("分类必须要选择的!");
+			return false;
+		}
+		if( $(".specifications_deposit").val() == "" ){
+			alert("请输入押金!");
+			return false;
+		}
+		if( $(".specifications_market").val() == "" ){
+			alert("请输入市场参考价!");
+			return false;
+		}
+		if( $(".specifications_stock").val() == "" ){
+			alert("请输入库存量!");
+			return false;
+		}
+		*/
+	// 规格里面的数据
+	var taocan_name=new Array();
+	$(".specifications_name").each(function(index){
+		taocan_name.push($(this).val());
+	});
+	// 规格里面的押金数据
+	var yajin = new Array();
+	$(".specifications_deposit").each(function(index){
+		yajin.push($(this).val());
+	});
+	// 规格里面的市场价数据
+	var shichangjia = new Array();
+	$(".specifications_market").each(function(index){
+		shichangjia.push($(this).val());
+	});
+	// 规格里面的库存量数据
+	var kucun = new Array();
+	$(".specifications_stock").each(function(index){
+		kucun.push($(this).val());
+	});
+	// 规格里面的最低起租数据
+	// 规格里面的租满即送
+/*	taocan_names = taocan_name.substring(1);
+	taocan_namess = taocan_names.split(",");*/
+	// 获取编辑器内容
+	var html = ue.getContent();
+	// base64加密
+	var base64 = new Base64();
+	var str_content = base64.encode(html);
+	$.ajaxFileUpload({
+        type: "POST",
+    dataType: "JSON",
+         url: "{:U('Homeuser/AjaxHomeuserProduct')}",
+         async: true,
+         fileElementId:['exampleInputFile1','exampleInputFile2','exampleInputFile3','exampleInputFile4','exampleInputFile5','exampleInputFile6','exampleInputFile7','exampleInputFile8'],
+         secureuri: false,
+        data: {
+        	'share_name':$('.share_name').val(),//产品名称
+        	'share_key':$('.share_key').val(),//副标题
+        	'classify_id':"{$classify_id}",//分类
+        	'brand_name':$('.brand_name').val(),//品牌
+        	'brand_model':$('.brand_model').val(),//型号
+        	'chandi':$(".chandi").val(),//产地
+        	'share_descriptions':str_content,//编辑器内容
+        	
+        	'specifications_name':taocan_name,//套餐名称
+        	'specifications_deposit':yajin,//押金
+        	'specifications_market':shichangjia,//市场价
+        	'specifications_stock':kucun//库存
+        },
+      traditional:true,
+      success: function( data ){
+      	/*var res = /<pre.+?>(.+)<\/pre>/g;
+      	var result = data.match(res)
+      	data = RegExp.$1;
+      	obj = eval( '('+data+')' );*/
+        console.log(data);
+      },
+      error: function( XMLHttpRequest , status , error ){
+        tkcx("出现错误,错误位置在：" + status);
+      }
+    });
+		return false;
+		 $(".zhezhao").css("display","block");
+   	     $(".zz_nr_fbcg").css("display","block");
+   	      setTimeout(function(){
+   	      	 $(".zhezhao").css("display","none");
+   	         $(".zz_nr_fbcg").css("display","none");
+   	         window.location="{:U('Homeuser/wode_zuling')}";
+   	      },3000);
+	})
+	  //自动消失(弹框)
+  $(".zdxs").click(function(){
+  	 $(".zhezhao").css("display","none");
+   	 $(".zz_nr_fbcg").css("display","none");
+   	 window.location="{:U('Homeuser/wode_zuling')}";
+  })
+
+	function bdsj(idz){
+    	$(".wdzl_bj_bigbox").eq(idz).css("display","none");
+    }
+	function cmsj(iddz){
+		$(".wdzl_bj26").eq(iddz).css("display","block");
+	}
+	function yksj(iddz){
+		$(".wdzl_bj26").eq(iddz).css("display","none");
+	}
+  //上传图片
+ $(window).load(function() {
+  
+
+	
+	
+	//添加新套餐
+	var oid=1;
+	$(".wdzl_bj25").click(function(){
+             
+				if(oid>9){
+					alert("套餐最多为10个");
+				}else{
+					var ss=$('.wdzl_bj_bigbox:last').clone(true).attr('id','wdzl_b'+oid); 
+		            $('.wdzl_bj_bigbox:last').after(ss);
+		            $(".wdzl_bj210").eq(oid).css("opacity","1");
+		            var oidx=oid+1;
+		            $(".wdzl_bj210").eq(oid).attr('id',oid);
+		            //给框子
+		            $(".wdzl_bj26").eq(oid).attr('id',oid);
+		            
+		            $(".wdzl_bjtc").eq(oid).text("套餐"+oidx);
+			        oid++;
+				}
+				
+               
+	})
+	 
+    
+	
+	//失去焦点
+	$(".wdzl_thdz").bind('click',function(){
+        $(".zqts").css("height",'162px');
+     })
+	$(".wdzl_thdz").bind('mouseout',function(){
+        $(".zqts").css("height",'32px');
+     })
+	
+	
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+   $(".htsy_top_yd").css("top","46px");
+
+
+
+	$(".htsy_2 li").eq(1).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(1).siblings().css("background","none");
+	$(".htsy_2 li div").eq(1).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(1).siblings().css("background","none");
+ 		
+	
+	
+	
+	/*添加城市*/
+	$(".dd_js220").click(function(){
+		$(".zhezhao").css("display","block");
+		$(".zz_nr").css("display","block");
+		$(".zz_nr_cy").css("display","none");
+		 $(".container").css("display","none");
+		
+	});
+	
+	$(".tyjs").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+		
+	});
+	$(".tyjs0").click(function(){
+		var jg="<option>北京dssdsd</option>";
+		$(".wdzl_thdz:last").append(jg);
+		$(".zhezhao").css("display","none");
+	    $(".zz_nr").css("display","none");
+	});
+	
+	/*选择城市*/
+	$(".city_tk").click(function(){
+		$(".zhezhao").css("display","block");
+		$(".zz_nr_cy").css("display","block");
+		 $(".container").css("display","none");
+		  $(".zz_nr").css("display","none");
+		
+	});
+	$(".tyjs_city1").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr_cy").css("display","none");
+		
+	});
+	$(".tyjs_city2").click(function(){
+		$(".zhezhao").css("display","none");
+	    $(".zz_nr_cy").css("display","none");
+	});
+	
+</script>
+</body>
+</html>

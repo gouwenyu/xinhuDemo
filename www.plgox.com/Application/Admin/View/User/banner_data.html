@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+</head>
+<body>
+<ol class="breadcrumb">
+	<li>当前位置</li>
+	<li>{$setTitle}</li>
+</ol>
+<div class="container-fluid">
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">所属板块：</td>
+		<td style="border:none">
+			<div class="form-group">
+				<select class="form-control selected" style="width: 400px" name="banner_type">
+				  <option value="0">选择banner所属板块</option>
+				  <option value="1" <eq name="banner_sel['banner_type']" value="1">selected</eq>>网站首页</option>
+				  <option value="2" <eq name="banner_sel['banner_type']" value="2">selected</eq>>网站列表页</option>
+				  <option value="3" <eq name="banner_sel['banner_type']" value="3">selected</eq>>网站详情页</option>
+				</select>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">图片：</td>
+		<td style="border:none">
+		   	<div class="form-group">
+		   		<eq name="banner_sel['banner_id']" value="">
+					<img src="" class="banner-img1" title="" style="width: 300px;height: 200px;display: none" />
+					<input type="file" name="banner_pic[]" style="display: none;" id="banner_file_pic">
+					&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info">选择文件</button>
+				<else />
+					<img src="__ROOT__/Uploads/admin/{$banner_sel['banner_pic']}" class="banner-img" title="" style="width: 300px;height: 200px;display: none" />
+					<input type="file" name="banner_pic[]" style="display: none;" id="banner_file_pic" value="{$banner_sel['banner_pic']}">
+					&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info">选择文件</button>
+				</eq>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">banner标题：</td>
+		<td style="border:none">
+			<div class="form-group">
+				<input type="text" value="{$banner_sel['banner_title']}" class="banner_title" style="width:400px;height: 40px" name="banner_title">
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">链接地址：</td>
+		<td style="border:none">
+			<div class="form-group">
+				<input type="text" value="{$banner_sel['banner_link']}" class="banner_link" style="width:400px;height: 40px" name="banner_link" ><a style="color:red;font-size:12px;text-decoration: none">&nbsp;&nbsp;&nbsp;(注意：请以http://或者https://开头)</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">banner描述：</td>
+		<td style="border:none">
+			  <div class="form-group">
+			    <textarea class="form-control" rows="6" style="width: 400px;resize: none" placeholder="内容" id="exampleInputContent" name="banner_content">{$banner_sel['banner_content']}</textarea>
+			  </div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">排序：</td>
+		<td style="border:none">
+			<div class="form-group">
+				<input type="text" value="{$banner_sel['banner_px']}" class="banner_px" style="width:400px;height: 40px" name="banner_px" >
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+				<eq name="banner_sel['banner_id']" value="">
+					<button type="button" class="btn btn-success">添加banner</button>
+				<else />
+					<button type="button" class="btn btn-success" value="{$banner_sel['banner_id']}">修改banner</button>
+				</eq>
+				<button type="button" class="btn btn-danger" onclick="javascript:history.back(-1);">返回上页</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		if( $(".banner-img").attr("src") != "" ){
+			$(".banner-img").css("display","");
+		}
+	});
+	$(".btn-info").click(function(){
+		$("#banner_file_pic").click();
+		$("#banner_file_pic").change(function(){
+			if( $(this)[0].files[0].size > 3145728 ){
+				alert("当前上传的图片超出了最大的上传限制");
+				return false;
+			}else{
+				var ObjUrl = getFileUploads(this.files[0]);
+				if( ObjUrl ){
+					$(".banner-img").attr("src",ObjUrl);
+					$(".banner-img1").attr("src",ObjUrl);
+				}
+			}
+			if( $("#banner_file_pic").val() != "" ){
+				$(".banner-img1").css("display","");
+			}
+		});
+	});
+	$(".btn-success").click(function(){
+		if( $(".selected").val() == "0" ){
+			alert("图片所属的板块是必须要添加的");
+			return false;
+		}
+		if( $(this).val() == "" ){
+			if( $("#banner_file_pic").val() == "" ){
+				alert("banner图片是不能为空的");
+				return false;
+			}
+		}
+		var number = /^\d+$/;
+		if( !number.test( $(".banner_px").val() ) ){
+			alert("请输入正确的数字");
+			return false;
+		}
+		$.ajaxFileUpload({
+			type: "POST",
+		dataType: "JSON",
+   fileElementId: ["banner_file_pic"],
+   			 url: "{:U('User/banner_list_pic_data')}",
+   			data: { 
+   					banner_id:$(this).val(),
+   					banner_type:$(".selected").val(), 
+   					banner_title:$(".banner_title").val(), 
+   					banner_link:$(".banner_link").val(),
+   					banner_content:$("#exampleInputContent").val(), 
+   					banner_px:$(".banner_px").val() 
+   				  },
+   		 success: function( data  ){
+   		 	// 解决json格式返回带pre的问题
+   		 	var reg = /<pre.+?>(.+)<\/pre>/g;
+			var result = data.match(reg);
+			data = RegExp.$1;
+			var obj = eval('('+data+')');
+			if( obj.status== 2000 ){
+				alert(obj.message);
+				window.location.href="{:U('User/banner_list')}";
+				return false;
+			}else if( obj.status == -2001 ){
+				alert(obj.message);
+				return false;
+			}else if( obj.status == -2002 ){
+				alert(obj.message);
+				return false;
+			}
+   		 },
+   		 error: function( XMLHttpRequest , error , status ){
+   		 	alert("出现错误, 错误位置在："+status);
+   		 }
+		});
+	});
+function getFileUploads(files){
+	url = null;
+	if( window.createObjectURL != undefined ){
+		url = window.createObjectURL(files);
+	}else if( window.URL !== undefined ){
+		url = window.URL.createObjectURL(files);
+	}else if( window.webkitURL != undefined ){
+		url = window.webkitURL.createObjectURL(files);
+	}
+	return url;
+}
+</script>
+</html>

@@ -1,0 +1,70 @@
+[ 2018-08-18T00:59:26+08:00 ] 123.125.71.98 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T01:31:14+08:00 ] 220.181.108.118 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T02:13:47+08:00 ] 157.55.39.144 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T03:33:38+08:00 ] 121.42.144.51 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-08-18T04:56:35+08:00 ] 203.208.60.38 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T07:49:54+08:00 ] 42.236.10.110 /index/fuwenben/id/2.html
+ERR: 非法操作:fuwenben
+
+[ 2018-08-18T08:55:43+08:00 ] 111.206.221.85 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+
+[ 2018-08-18T09:24:58+08:00 ] 157.55.39.144 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T10:22:48+08:00 ] 71.6.146.185 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T10:22:49+08:00 ] 71.6.146.185 /sitemap.xml
+ERR: 无法加载控制器:Sitemap.xml
+
+[ 2018-08-18T11:17:33+08:00 ] 203.208.60.32 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '34'  [ RunTime:0.0004s ]
+
+[ 2018-08-18T11:30:59+08:00 ] 123.206.84.40 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-08-18T14:20:00+08:00 ] 157.55.39.144 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T16:31:38+08:00 ] 58.250.125.116 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T17:29:09+08:00 ] 54.36.148.186 /Cart/shop_detil/id/162.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-08-18T17:34:48+08:00 ] 37.49.231.149 /cfg/aastra.cfg
+ERR: 无法加载控制器:Cfg
+
+[ 2018-08-18T17:47:57+08:00 ] 203.208.60.99 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T18:09:57+08:00 ] 144.76.82.216 /user/register/
+ERR: 非法操作:register
+
+[ 2018-08-18T19:21:26+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T19:29:41+08:00 ] 207.46.13.182 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-18T19:29:41+08:00 ] 207.46.13.182 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

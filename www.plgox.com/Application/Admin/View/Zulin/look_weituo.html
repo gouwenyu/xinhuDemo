@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">委托用户：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_memberuid" style="width:470px;height: 40px" name="renzheng_memberuid" readonly="readonly" value="{$look_weituo['plgox_user']}">	
+		</td>
+	</tr>
+ 	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">委托人电话：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_commpany" style="width:470px;height: 40px" name="renzheng_commpany" readonly="readonly" value="{$look_weituo['weituo_tel']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">审核状态：</td>
+		<td style="border:none">
+			<div class="radio">
+			  <label>
+			    	<input type="radio" name="weituo_status" id="weituo_status" value="0" <eq name="look_weituo['weituo_status']" value="0">checked</eq> >未处理&nbsp;
+			  </label>
+			  <label>
+			    	<input type="radio" name="weituo_status" id="weituo_status" value="1" <eq name="look_weituo['weituo_status']" value="1">checked</eq> >已处理&nbsp;
+			  </label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<button type="button" class="btn btn-success" value="{$look_weituo['weituo_id']}">确认修改</button>
+			<button type="button" class="btn btn-info">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-info").click(function(){
+		window.location.href="{:U('Zulin/zulin')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+		$(".btn-success").click(function(){
+		wt_id = $(this).val();
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('Zulin/weituo_save')}",
+			data: { 'wt_id':wt_id , 'weituo_status':$("#weituo_status:checked").val() },
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Zulin/zulin')}";
+					return false;
+				}else if( data.status == -2001 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});
+</script>
+</html>

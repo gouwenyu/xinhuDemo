@@ -1,0 +1,135 @@
+{:W('Common/header')}
+ <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/qiehuan_city.css"> 
+<style type="text/css">
+
+</style>
+<br/><br/>
+<div class="q_city_box">
+  <div class="q_city">
+        
+      <div class="q_city1">
+        所在位置：    首页  > <span>切换城市</span>
+       </div>
+       
+       <div class="q_city2">
+         <div >热门城市</div>
+         <span>北京</span>
+         <span>上海</span>
+         <span>广州</span>
+         <span>深圳</span>
+         <span>成都</span>
+         <span>杭州</span>
+         <span>南京</span>
+         <span>天津</span>
+         <span>武汉</span>
+         <span>重庆</span>
+
+       </div>
+        
+        <div class="q_city3">
+         <div >城市选择</div>
+        <div id="city_5">
+                    <select class="prov"></select>
+                    <select class="city" ></select>
+        </div>
+       </div>
+
+       <div class="q_city4">
+         <div>按省份首字母选择</div>
+         <volist name="city" id="city_">
+         <!-- <div class="city_show"> -->
+           <p>
+            <a href="#" >A</a>
+            <span class='city_1' style="font-size: 15px;color:black;">{$city_['city_name']}</span>
+            <volist name="city_arr" id="city_arr_">
+              <volist name="city_arr_" id="city_arr_data">
+                <eq name="city_['city_id']" value="$city_arr_data['city_pid']">
+                  <span style="color:black;">   {$city_arr_data['city_name']} </span>
+                </eq>
+              </volist>
+            </volist>
+  <!--            <span>合肥</span>
+             
+             <span>  阜阳 </span>
+             <span>  淮南</span>
+             <span>   安庆 </span> 
+             <span>  宿州</span>
+             <span>   六安</span>
+             <span>   滁州</span> 
+             <span>   马鞍山</span>
+             <span>   铜陵</span>
+             <span>   合肥</span>
+             <span>   芜湖 </span>
+             <span>   阜阳   </span>
+             <span>    淮南 </span>
+             <span>      安庆 </span>
+             <span>    宿州 </span>    
+             <span>    六安  </span>
+             <span>     马鞍山     </span>
+             <span>     滁州     </span>
+              <span>    铜陵     </span> -->
+                 
+           </p>           
+        <!-- </div> -->
+       </volist>
+         <!-- <p>
+          <a href="#" >P</a>
+             <span>福建</span>
+           <span>   芜湖 </span>
+           <span>   阜阳   </span>
+           <span>    淮南 </span>
+           <span>      安庆 </span>
+           <span>    宿州 </span>    
+           <span>    六安  </span>
+           <span>     马鞍山     </span>
+           <span>     滁州     </span>
+            <span>    铜陵     </span>
+               
+         </p> -->
+         <script type="text/javascript">
+/*           $(document).ready(function(){
+              $.ajax({
+                  type: "post",
+              dataType: "json",
+                   url: "{:U('city_level_1')}",
+              success: function( data ){
+                $(data).each(function( key , value ){
+                    $(".city_show").append("<p><a href='#'>A</a><span class='city_1' attr_id="+value['city_id']+">"+value['city_name']+"</span></p>");
+                });
+              },
+              error: function( XMLHttpRequest , status , error ){
+                alert("出现错误,错误的位置在："+status);
+                return false;
+              }
+              })
+           });*/
+           // $.ajax({
+           //        type: "post",
+           //    dataType: "json",
+           //         url: "{:U('city_level_2')}",
+           //        data: { 'city_id':$(".city_1").attr("attr_id") },
+           //    success: function( data ){
+           //      console.log(data);
+           //      /*$(data).each(function( key , value ){
+           //      });*/
+           //    },
+           //    error: function( XMLHttpRequest , status , error ){
+           //      alert("出现错误,错误的位置在："+status);
+           //      return false;
+           //    }
+           //  });
+         </script>
+       </div>
+
+
+  </div>
+</div>
+  {:W('Common/header1_search')} 
+<br/><br/>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/city.min.js"></script>
+   <script type="text/javascript">
+    
+  </script>
+

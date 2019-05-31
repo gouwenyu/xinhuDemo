@@ -1,0 +1,157 @@
+[ 2018-08-25T00:29:20+08:00 ] 203.208.60.53 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T00:37:42+08:00 ] 123.125.67.220 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T01:04:22+08:00 ] 220.181.108.141 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T01:51:32+08:00 ] 203.208.60.77 /Cart/ajaxCart.html
+ERR: 1048:Column 'cart_day_number_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `plgox_cart` (`cart_product_id`,`cart_number`,`cart_day_number_id`,`cart_memberuid`,`cart_status`,`cart_shangjia_id`,`cart_rent`,`cart_deposit`,`cart_prices`,`cart_radio_status`,`cart_share_id`,`cart_type`,`cart_xyj_prices`,`cart_createtime`) VALUES ('0','0',NULL,NULL,'1',NULL,NULL,NULL,NULL,'1','0','0','0','1535133092')
+
+[ 2018-08-25T01:53:05+08:00 ] 203.208.60.74 /Cart/ajaxCart_.html
+ERR: 1048:Column 'cart_day_number_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `plgox_cart` (`cart_product_id`,`cart_number`,`cart_day_number_id`,`cart_memberuid`,`cart_status`,`cart_shangjia_id`,`cart_rent`,`cart_deposit`,`cart_prices`,`cart_radio_status`,`cart_share_id`,`cart_type`,`cart_xyj_prices`,`cart_createtime`) VALUES ('0','0',NULL,NULL,'1',NULL,NULL,NULL,NULL,'2','0','0','0','1535133185')
+
+[ 2018-08-25T02:32:59+08:00 ] 109.75.255.228 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+
+[ 2018-08-25T04:32:28+08:00 ] 66.249.88.82 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '52'  [ RunTime:0.0004s ]
+
+[ 2018-08-25T04:56:55+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T04:56:55+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T06:31:11+08:00 ] 203.208.60.92 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '30'  [ RunTime:0.0003s ]
+
+[ 2018-08-25T10:10:19+08:00 ] 203.208.60.123 /Zulin/share_list?order2=2
+ERR: 非法操作:share_list
+
+[ 2018-08-25T10:39:49+08:00 ] 203.208.60.53 /Zulin/share_list?order1=1
+ERR: 非法操作:share_list
+
+[ 2018-08-25T11:22:54+08:00 ] 114.249.140.255 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+
+[ 2018-08-25T11:23:00+08:00 ] 114.249.140.255 /Tourist/dologin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE (  `plgox_user` = 'wenyu1995' OR `plgox_tel` = 'wenyu1995' ) AND `plgox_pwd` = '21232f297a57a5a743894a0e4a801fc3' AND `plgox_usertype` IN ('3','4') LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `plgox_member` SET `plgox_logintime`='1535167380' WHERE `plgox_id` = 150 [ RunTime:0.0663s ]
+SQL: UPDATE `plgox_member` SET `plgox_loginumer`=plgox_loginumer+1 WHERE `plgox_id` = 150 [ RunTime:0.0125s ]
+
+[ 2018-08-25T11:23:03+08:00 ] 114.249.140.255 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '52'  [ RunTime:0.0005s ]
+
+[ 2018-08-25T11:23:05+08:00 ] 114.249.140.255 /Cart/renzheng_check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = '150' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-08-25T11:23:05+08:00 ] 114.249.140.255 /Cart/ajaxCart_.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `plgox_share` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_share` WHERE `share_id` = '192' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_product_id` = '52' AND `cart_share_id` = '192' AND `cart_memberuid` = '150' AND `cart_status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_specifications` WHERE `specifications_id` = '52' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `plgox_xyj` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_xyj` LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `plgox_cart` (`cart_product_id`,`cart_number`,`cart_day_number_id`,`cart_memberuid`,`cart_status`,`cart_shangjia_id`,`cart_rent`,`cart_deposit`,`cart_prices`,`cart_radio_status`,`cart_share_id`,`cart_type`,`cart_xyj_prices`,`cart_createtime`) VALUES ('52','1','41','150','1','1','5.00','9500.00','0.00','2','192','1','950','1535167385') [ RunTime:0.0652s ]
+
+[ 2018-08-25T11:23:08+08:00 ] 114.249.140.255 /Cart/ajaxData.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `plgox_cart` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_cart` WHERE `cart_id` = '818' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-08-25T12:10:21+08:00 ] 203.208.60.32 /index/fuwenben/id/5.html
+ERR: 非法操作:fuwenben
+
+[ 2018-08-25T13:06:17+08:00 ] 203.208.60.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T14:31:06+08:00 ] 203.208.60.12 /share/share_detail/id/1.html
+ERR: 无法加载控制器:Share
+
+[ 2018-08-25T15:39:33+08:00 ] 221.219.158.172 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+
+[ 2018-08-25T16:11:20+08:00 ] 203.208.60.109 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T16:11:21+08:00 ] 203.208.60.21 /index/falv.html
+ERR: 非法操作:falv
+
+[ 2018-08-25T16:12:54+08:00 ] 221.219.158.172 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+
+[ 2018-08-25T16:16:31+08:00 ] 106.38.241.158 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T17:11:23+08:00 ] 203.208.60.98 /share/share_detail/id/41.html
+ERR: 无法加载控制器:Share
+
+[ 2018-08-25T17:48:50+08:00 ] 157.55.39.150 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T17:49:00+08:00 ] 157.55.39.49 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T17:49:01+08:00 ] 157.55.39.49 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T17:49:05+08:00 ] 157.55.39.49 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-25T17:50:51+08:00 ] 203.208.60.69 /Esxz/ajaxUploadFiles.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = null LIMIT 1   [ RunTime:0.0002s ]
+ERR: Class 'Redis' not found
+
+[ 2018-08-25T17:50:52+08:00 ] 203.208.60.77 /Esxz/ajaxUploadFiles.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = null LIMIT 1   [ RunTime:0.0002s ]
+ERR: Class 'Redis' not found
+
+[ 2018-08-25T23:00:58+08:00 ] 54.36.150.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

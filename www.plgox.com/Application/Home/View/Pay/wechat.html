@@ -1,0 +1,97 @@
+{:W('Common/header')}
+
+<title>{$setTitle}</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/pay.css" />
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/qrcode.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/qrcode.min.js"></script>
+<style type="text/css">
+
+</style>
+<div class="dd_js">
+	<div class="dd_js_box">
+        
+          <div class="gouw_1">
+            所在位置：    首页  > <span>支付页面</span>  > <span>{$setTitle}</span>
+           </div>
+
+      <div class="wechat">
+      	 <div class="wechat1">
+      	 	<img src="__PUBLIC__/Home/image/luse.png" class="wechat3" />
+      	 	<span class="wechat2">微信支付{$prices}</span>
+      	 	<div class="wechat5">
+            <span id="qrcode">
+            </span>
+      	 	  <img src="__PUBLIC__/Home/image/smwz.png" class="wechat9"/>
+      	 	   
+      	 	</div>
+      	 </div>
+      </div>
+	</div> 
+</div>
+  {:W('Common/header1_search')} 
+<br/><br/>
+<script type="text/javascript" src="__PUBLIC__/Home/js/fen_ye.js"></script>
+<script type="text/javascript">
+  function checkWeixinOrderQuery() {
+    // 订单号
+    var out_trade_no = "{$out_trade_no}";
+    // 金额
+    var prices = "{$rmd}";
+    // id
+    var id = "{$id}";
+    // 用户
+    var userid = "{$userid}";
+    // 支付类型 属性
+    var pay_statue = "{$pay_statue}";
+    $.ajax({
+        type: "POST",
+    dataType: "JSON",
+         url: "{:U('Pay/orderQuery')}",
+        data: { 'out_trade_no':out_trade_no , 'prices':prices , 'id':id , 'userid':userid , 'pay_statue':pay_statue },
+     success: function( data ){
+      console.log(data);
+        if( data.status == 2000 ){
+          alert(data.message);
+          window.location.href="{:U('User/my_dingdan')}";
+          return false;
+        }else if( data.status == -2008 ){
+          alert(data.message);
+          return false;
+        }else if( data.status == -2009 ){
+          alert(data.message);
+          return false;
+        }else if(data.status == 2003){
+          alert(data.message);
+          return false;
+        }else if( data.status == 2001 ){
+          alert(data.message);
+          window.location.href="{:U('User/my_mm_dingdan')}";
+          return false;
+        }else if( data.status == 2004 ){
+          alert(data.message);
+          window.location.href="{:U('User/my_mm_dingdan')}";
+          return false;
+        }
+     },
+     error: function( XMLHttpRequest , status , error ){
+        alert("出现错误，错误位置在：" + status);
+        return false;
+     }
+    });    
+  }
+  window.setInterval("checkWeixinOrderQuery()",3000);
+</script>
+<script type="text/javascript">
+  if( "{$code_url}" ){
+     var url = "{$code_url}";
+     var qrcode = new QRCode("qrcode",{
+      width: 195,
+      height: 195,
+      correctLevel : QRCode.CorrectLevel.H
+     });
+     qrcode.clear();
+     qrcode.makeCode(url);
+     $("#qrcode").removeAttr("title");
+  }
+</script>
+{:W('Common/footer')} 

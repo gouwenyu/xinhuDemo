@@ -1,0 +1,69 @@
+  <div class="header_box1" style="background-color:#FAFAFA;top:0px;">
+		<div class="header_middle">
+			<!-- <div class="header_middle_left">
+				<a href="{:U('Index/index')}"><img src="__PUBLIC__/Home/image/header_top1.jpg"></a>
+			</div> -->
+			<!-- 模糊搜索 -->
+<!--		 <form action="{:U('Index/share_product_search')}" method="get" >--> 
+				<div class="header_middle_center">
+					<input type="text" name="share_product_search" class="header_middle_center_bd" placeholder=" 请输入关键字" value="{$share_product_search}"/>
+					<div class="header_middle_center_cz" onclick="ImgSubmit();">
+						<img src="__PUBLIC__/Home/image/header_top2.png"/>
+					</div>
+				</div>
+<!--		</form>-->	
+		</div>
+	</div>
+<!-- 
+	<div class="header_bottom_box">
+		<div class="header_bottom1">
+		<div class="header_bottom1_left">
+					<span>商家中心</span>
+			</div>
+			<ul class="header_bottom1_middle">
+				<neq name="loguser.plgox_id" value="">
+					<li style="margin-left:25px;"><a href="javascript:void(0);" class="sjzx_rz">商家中心</a></li>
+				<else />
+					<li style="margin-left:25px;"><a href="{:U('Tourist/login')}">商家中心</a></li>
+				</neq>
+				<li><a href="{:U('Index/index')}">首页</a></li>
+				<li><a href="{:U('Zulin/zulin')}">共享租赁</a></li>
+				<eq name="loguser.plgox_id" value="">
+					<li><a href="{:U('User/my_zhangdan')}" target="_blank" >我的账单</a></li>
+				<else />
+					<li><a href="{:U('User/my_zhangdan')}">我的账单</a></li>
+				</eq>
+				<li><a href="{:U('Esxz/index')}">掘值闲置</a></li>
+				<li><a href="{:U('Help/GongSiGaiKuang')}">关于我们</a></li>
+			</ul>
+			<div class="header_bottom1_right">
+			 <eq name="loguser.plgox_id" value="">
+					<a href="{:U('User/my_zhangdan')}" target="_blank" >我的账单</a>
+				<else />
+					<a href="{:U('User/my_zhangdan')}">我的账单</a>
+				</eq>
+			</div>
+		</div>
+	</div> -->
+
+	
+	
+	<script type="text/javascript">
+		$(".header_bottom1_left").mouseover(function(){
+			$(".header_cb10").stop(true).animate({"height":"460px"},350);
+		});
+		$(".header_bottom1_left").mouseout(function(){
+			$(".header_cb10").stop(true).animate({"height":"0px"},350);
+		});
+		$(".header_cb10").mouseout(function(){
+			$(".header_cb10").stop(true).animate({"height":"0px"},350);
+		});
+		$(".header_cb10").mouseover(function(){
+			$(".header_cb10").stop(true).animate({"height":"460px"},350);
+		});
+	/*	function ImgSubmit(){
+			$("form").submit();
+		}*/
+		// 判断是否认证
+
+	</script>	

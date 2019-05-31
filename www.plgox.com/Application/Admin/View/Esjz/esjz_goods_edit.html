@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  		<if condition="($juezhi['juezhi_brand_aid'] eq 0 )">
+  			<tr>
+  				<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">顶级分类：</td>
+  				<td style="border:none">
+  					<div class="form-group">
+				      <select class="form-control classify_pid first" style="line-height: 40px;width: 470px" name="classify_pid">
+				        <option value="0">一级分类</option>
+				        <!-- <@volist name="juezhi_" id="juezhi_i">
+				        	<option value="{$juezhi_i['juezhi_brand_id']}">{$juezhi_i['juezhi_brand_name']}</option>
+				        <@/volist> -->
+				      </select>
+				    </div>
+  				</td>
+  			</tr>
+  			<tr>
+				<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">一级分类名称：</td>
+				<td style="border:none">
+					<input type="text" class="form-control classify_title" style="width:470px;height: 40px" name="classify_title" value="{$juezhi['juezhi_brand_name']}">	
+				</td>
+				<span class="classify_id" attr-classify-id="1" style="display: none"></span>
+			</tr>
+		<elseif condition="($juezhi['juezhi_brand_aid'] neq 0 ) and ($juezhi['juezhi_brand_bid'] eq 0 )" />
+			<tr>
+				<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">一级分类：</td>
+				<td style="border:none">
+					<div class="form-group">
+				      <select class="form-control classify_pid first" style="line-height: 40px;width: 470px" name="classify_pid">
+				        <volist name="juezhi_" id="b_l">
+				        	<option value="{$b_l['juezhi_brand_id']}" <eq name="b_l['juezhi_brand_id']" value="$juezhi['juezhi_brand_aid']">selected</eq> >{$b_l.juezhi_brand_name}</option>
+				        </volist>
+				      </select>
+				    </div>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">二级分类名称：</td>
+				<td style="border:none">
+					<input type="text" class="form-control classify_title" style="width:470px;height: 40px" name="classify_title" value="{$juezhi['juezhi_brand_name']}">	
+				</td>
+				<span class="classify_id" attr-classify-id="2" style="display: none"></span>
+			</tr>
+		<elseif condition="($juezhi['juezhi_brand_aid'] neq 0 ) and ($juezhi['juezhi_brand_bid'] neq 0 )" />
+			<tr>
+				<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">一级分类：</td>
+				<td style="border:none">
+					<div class="form-group">
+				      <select class="form-control classify_pid first" style="line-height: 40px;width: 470px" name="classify_pid">
+				        <!-- <option value="0">一级分类</option> -->
+				        <volist name="juezhi_" id="b_l">
+				        	<option value="{$b_l['juezhi_brand_id']}" <eq name="b_l['juezhi_brand_id']" value="$juezhi['juezhi_brand_aid']">selected</eq> >{$b_l.juezhi_brand_name}</option>
+				        	}
+				        </volist>
+				      </select>
+				    </div>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">二级分类：</td>
+				<td style="border:none">
+					<div class="form-group">
+				      <select class="form-control classify_pid second" style="line-height: 40px;width: 470px" name="classify_pid">
+				        <!-- <option value="0">二级分类</option> -->
+				        <volist name="juezhi_er" id="b_l">
+				        	<option value="{$b_l['juezhi_brand_id']}" <eq name="b_l['juezhi_brand_id']" value="$juezhi['juezhi_brand_bid']">selected</eq> >{$b_l.juezhi_brand_name}</option>
+				        	}
+				        </volist>
+				      </select>
+				    </div>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">三级分类名称：</td>
+				<td style="border:none">
+					<input type="text" class="form-control classify_title" style="width:470px;height: 40px" name="classify_title" value="{$juezhi['juezhi_brand_name']}">	
+				</td>
+			</tr>
+  		</if>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<neq name="juezhi['juezhi_brand_id']" value="">
+				<button type="button" class="btn btn-success" value="{$juezhi['juezhi_brand_id']}">确认修改</button>
+			<else />
+				<button type="button" class="btn btn-success">确认新增</button>
+			</neq>
+			<button type="button" class="btn btn-danger">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".first").change(function(){
+		   var id = $(":selected",".first").val();
+		   //alert(id);
+		   if(id==0){
+		       var opt1='<option value="0">二级分类</option>';
+				$(".second").text("");
+	           $(".second").append(opt1);
+		   }else{
+			   $.post("{:U('Esjz/get_second_brand')}",{
+					  'id':id,
+					  'type':1
+					  },
+					  function( data ){
+					  	 console.log(data);
+		        //二级分类
+		        var opt1='<option value="0">二级分类</option>';
+						$.each(data,function(index,value){
+			  	           opt1+='<option value='+value.juezhi_brand_id+'>'+value.juezhi_brand_name+'</option>';
+						});
+						$(".second").text("");
+		             $(".second").append(opt1);
+			     },"json");
+		   }
+	});
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Esjz/esjz_brand_list')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	$(".btn-success").click(function(){
+		var name = $('.classify_title').val();
+		var id_a = $(":selected",".first").val();
+		var id_b = $(":selected",".second").val();
+		var brand_id = $(this).val();
+		var attr_classify_id = $(".classify_id").attr("attr-classify-id");
+		if( name == "" ){
+			alert("分类的名称是不能够为空的");
+			return false;
+		}
+		$.ajax({
+			type: "POST",
+			 url: "{:U('Esjz/esjz_edit_save')}",
+			data: { 
+					classify_id:attr_classify_id,
+					brand_id:brand_id,
+					id_a: id_a, 
+					id_b: id_b,
+					name: name
+				   },
+			success: function( data ){
+				if( data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Esjz/esjz_brand_list')}";
+					return false;
+				}else if( data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(da){
+				console.log(da);
+				//alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+	});
+</script>
+</html>

@@ -1,0 +1,96 @@
+[ 2018-09-18T01:03:11+08:00 ] 123.125.67.165 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T02:04:45+08:00 ] 203.208.60.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T02:22:53+08:00 ] 212.40.176.79 /user/password?name[%23post_render][0]=printf&name[%23markup]=ABCZ%0A
+ERR: 非法操作:password
+
+[ 2018-09-18T02:22:53+08:00 ] 212.40.176.79 /user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax
+ERR: 非法操作:register
+
+[ 2018-09-18T05:17:48+08:00 ] 222.186.190.141 /preview/null
+ERR: 无法加载控制器:Preview
+
+[ 2018-09-18T06:12:28+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T08:59:57+08:00 ] 111.206.221.82 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+
+[ 2018-09-18T11:10:40+08:00 ] 119.57.161.6 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+
+[ 2018-09-18T11:11:30+08:00 ] 39.155.185.46 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0005s ]
+
+[ 2018-09-18T11:11:33+08:00 ] 39.155.185.46 /Cart/renzheng_check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = null LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-18T11:34:59+08:00 ] 180.163.220.42 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+
+[ 2018-09-18T13:17:20+08:00 ] 216.145.11.94 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T14:52:37+08:00 ] 101.199.120.145 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+
+[ 2018-09-18T15:05:31+08:00 ] 192.99.44.141 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T15:05:31+08:00 ] 192.99.44.141 /sitemap.xml
+ERR: 无法加载控制器:Sitemap.xml
+
+[ 2018-09-18T15:06:08+08:00 ] 192.99.44.141 /ads.txt
+ERR: 无法加载控制器:Ads.txt
+
+[ 2018-09-18T15:28:58+08:00 ] 203.208.60.36 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T16:13:45+08:00 ] 218.30.103.92 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T16:52:20+08:00 ] 207.46.13.75 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T16:52:20+08:00 ] 207.46.13.75 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T16:52:20+08:00 ] 207.46.13.75 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T16:52:21+08:00 ] 207.46.13.75 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T16:52:21+08:00 ] 207.46.13.75 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T19:31:20+08:00 ] 203.208.60.38 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-18T22:28:45+08:00 ] 125.34.222.245 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'188.131.132.69' (using password: YES)
+
+[ 2018-09-18T22:29:03+08:00 ] 125.34.222.245 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+

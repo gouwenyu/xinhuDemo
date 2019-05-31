@@ -1,0 +1,45 @@
+.message{
+   	height:235px;padding:100px 0px;
+   	text-align:center;
+    overflow:hidden;
+    margin:0 auto;
+    font-size:12px;
+   }
+	.page{text-align: center;height:40px;}
+	.page :hover{text-decoration: none}
+	.num{border:1px solid #D6D6D6;line-height: 35px;padding:8px 12px 8px 12px;color:rgb(85,85,85);text-decoration:none;}
+	.num:hover,.next:hover,.prev:hover{
+		background-color:#F2F2F2;color:rgb(85,85,85);
+	}
+	.current{border:1px solid #1b53a6;background: #1b53a6;color:#FFFFFF;padding:8px 12px 8px 12px;}
+	.next{text-decoration:none;border:1px solid #D6D6D6;padding:8px 12px 8px 12px;color:rgb(85,85,85);}
+	.prev{text-decoration:none;border:1px solid #D6D6D6;padding:8px 12px 8px 12px;color:rgb(85,85,85);}
+	.first{text-decoration:none;border:1px solid #D6D6D6;padding:8px 12px 8px 12px;color:rgb(85,85,85);}
+	.end{text-decoration:none;border:1px solid #D6D6D6;padding:8px 12px 8px 12px;color:rgb(85,85,85);}
+	.page_style{display:inline-block;font-size:12px;color:rgb(85,85,85);}
+	.page_djy{display:inline-block;font-size:12px;color:rgb(85,85,85);}
+	.bdz{
+		display:inline-block;
+		height:25px;
+		line-height:25px;
+		width:30px;
+		margin-left:10px;
+		margin-right:10px;
+		text-align:center;
+		background-color:transparent;
+		border:1px solid #D6D6D6;
+		color:rgb(85,85,85);
+		
+	}
+	.xdbh{
+		display:inline-block;
+		float:left;
+	}
+.qdtz{
+	display:inline-block;
+	cursor:pointer;
+		border:1px solid #D6D6D6;padding:5px 8px 5px 8px;
+		margin-left:15px;
+		font-size:12px;
+		color:rgb(85,85,85);
+}

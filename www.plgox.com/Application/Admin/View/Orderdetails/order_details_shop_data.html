@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">订单号：</td>
+		<td style="border:none">
+			<input type="text" class="form-control order_number"  value="{$orders['order_number']}" style="width:470px;height: 40px" name="order_number" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">购买方：</td>
+		<td style="border:none">
+			<input type="text" class="form-control plgox_user"  value="{$orders['plgox_user']}" style="width:470px;height: 40px" name="plgox_user" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">出售方：</td>
+		<td style="border:none">
+			<input type="text" class="form-control cart_shangjia_id"  value="{$orders['cart_shangjia_id']|get_shanjia_by_id='Member','plgox_user','plgox_id'}" style="width:470px;height: 40px" name="cart_shangjia_id" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">下单商品：</td>
+		<td style="border:none">
+			<input type="text" class="form-control share_name"  value="{$orders['share_name']}" style="width:470px;height: 40px" name="share_name" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">商品规格：</td>
+		<td style="border:none">
+			<input type="text" class="form-control specifications_name"  value="{$orders['specifications_name']}" style="width:470px;height: 40px" name="specifications_name" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">租赁天数：</td>
+		<td style="border:none">
+			<input type="text" class="form-control zulin_day_number"  value="{$orders['zulin_day_number']}{$orders['zulin_name']}" style="width:470px;height: 40px" name="zulin_day_number" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">收货地址：</td>
+		<td style="border:none">
+			<input type="text" class="form-control order_addressid"  value="{$orders['address_city_sheng']|get_field_by_id='City','city_name','city_id'}-{$orders['address_city_shi']|get_field_by_id='City','city_name','city_id'}-{$orders['address_city_xian']|get_field_by_id='City','city_name','city_id'}-{$orders['address_default']}" style="width:470px;height: 40px" name="order_addressid" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">价格区间：</td>
+		<td style="border:none">
+			<input type="text" class="form-control filter_content"  value="{$orders['filter_content']}" style="width:470px;height: 40px" name="filter_content" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">所付金额：</td>
+		<td style="border:none">
+			<input type="text" class="form-control order_mm_prices"  value="{$orders['order_mm_prices']}" style="width:470px;height: 40px" name="order_mm_prices" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">订单状态：</td>
+		<td style="border:none">
+			<div class="radio">
+				
+				<label>
+					<input type="radio" name="order_status" class="order_status" disabled="disabled" value="0" <eq name="orders['order_status']" value="0">checked</eq> >等待买家付款&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" disabled="disabled" value="1" <eq name="orders['order_status']" value="1">checked</eq> >待发货&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" value="2" <eq name="orders['order_status']" value="2">checked</eq> ><font style="color:red">配送发货</font>&nbsp;&nbsp;
+				</label>
+				<!-- <label>
+					<input type="radio" name="order_status" class="order_status" disabled="disabled" value="7" <eq name="orders['order_status']" value="7">checked</eq> >买家确认收货&nbsp;&nbsp;
+				</label> -->
+				<label>
+					<input type="radio" name="order_status" class="order_status order_pay_colse" value="11" <eq name="orders['order_status']" value="11">checked</eq> ><font style="color: red">取消订单</font>&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" disabled="disabled" value="4" <eq name="orders['order_status']" value="4">checked</eq> >交易关闭&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status order_pay_success" disabled="disabled" value="5" <eq name="orders['order_status']" value="5">checked</eq> >交易成功&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status order_pay_success" disabled="disabled" value="9" <eq name="orders['order_status']" value="9">checked</eq> >已评价&nbsp;&nbsp;
+				</label>
+				<!-- <label>
+					<input type="radio" name="order_status" class="order_status" value="1" <eq name="orders['order_status']" value="1">checked</eq> >待发货&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" value="2" <eq name="orders['order_status']" value="2">checked</eq> >配送发货&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" value="3" <eq name="orders['order_status']" value="3">checked</eq>>确认送达&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status"  disabled="disabled" <eq name="orders['order_status']" value="5">checked</eq>>租赁中&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" value="6" <eq name="orders['order_status']" value="6">checked</eq>>待取货&nbsp;&nbsp;
+				</label><br /><br />
+				<label>
+					<input type="radio" name="order_status" class="order_status" value="10" <eq name="orders['order_status']" value="10">checked</eq>>已取货&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" disabled="disabled" <eq name="orders['order_status']" value="7">checked</eq>>待返押金&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" value="8" <eq name="orders['order_status']" value="8">checked</eq>>退租完成&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" value="4" <eq name="orders['order_status']" value="4">checked</eq>>已取消&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_status" class="order_status" disabled="disabled" <eq name="orders['order_status']" value="9">checked</eq>>已评价&nbsp;&nbsp;
+				</label> -->
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">用户留言：</td>
+		<td style="border:none">
+			<textarea class="form-control" rows="5" style="width: 470px;resize: none" name="order_detil_liuyan" readonly="readonly">{$orders['order_detil_liuyan']}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<button type="button" class="btn btn-success" value="{$orders['order_id']}">确认修改</button>
+			<button type="button" class="btn btn-danger">返回上页</button>
+			<button type="button" class="btn btn-info">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-info").click(function(){
+		location.reload();
+	});
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Orderdetails/order_details_shop')}";
+	});
+	$(".btn-success").click(function(){
+		if( $(".order_pay_colse").is(":checked") ){
+			if( confirm("确定取消买家的订单，一旦操作将无法撤回！") ){
+				get_data($(this).val());
+			}
+		}else{
+			get_data($(this).val());
+		}
+	});
+	function get_data($val){
+		// 订单状态
+		$.post("{:U('Orderdetails/order_shop_status')}",{'order_1':$val,'order_status':$(".order_status:checked").val()},function( data ){
+			if( data.status == 2000 ){
+				alert("修改订单状态成功");
+				window.location.href="{:U('Orderdetails/order_details_shop')}";
+				return false;
+			}else if( data.status == -2000 ){
+				alert("修改订单状态失败或者已经修改!");
+				return false;
+			}else if( data.status == -2001 ){
+				alert(data.message);
+				return false;
+			}
+		},"json");	
+	}
+</script>
+</html>

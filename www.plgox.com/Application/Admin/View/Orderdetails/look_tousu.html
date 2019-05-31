@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">投诉方：</td>
+		<td style="border:none">
+			<input type="text" class="form-control plgox_user" style="width:470px;height: 40px" name="plgox_user" readonly="readonly" value="{$toushu['plgox_user']}">	
+		</td>
+	</tr>
+ 	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">被投方：</td>
+		<td style="border:none">
+			<input type="text" class="form-control tousu_shangjiauserid" style="width:470px;height: 40px" name="tousu_shangjiauserid" readonly="readonly" value="{$toushu['tousu_shangjiauserid']|get_shanjia_by_id='Member','plgox_user','plgox_id'}">	
+		</td>
+	</tr>
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">投诉凭证：</td>
+		<td style="border:none">
+			<img src="__ROOT__/Uploads/home_tousu/{$toushu['tousu_home_img']}" style="width:200px;height: 200px;">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">投诉原因：</td>
+		<td style="border:none">
+			<input type="text" class="form-control select_name" style="width:470px;height: 40px" name="select_name" readonly="readonly" value="{$toushu['select_name']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">投诉说明：</td>
+		<td style="border:none">
+		<textarea class="form-control" rows="6" style="width:470px;resize: none" readonly="readonly">{$toushu['tousu_shuoming']}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">报修时间：</td>
+		<td style="border:none">
+			<input type="text" class="form-control tousu_createtime" style="width:470px;height: 40px" name="tousu_createtime" readonly="readonly" value="{$toushu['tousu_createtime']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">处理进度：</td>
+		<td style="border:none">
+			<div class="radio">
+			  <label>
+				<if condition="($toushu['tousu_huifu'] eq 1) or ($toushu['tousu_huifu'] eq 2)">
+					<input type="radio" name="tousu_huifu" id="tousu_huifu" value="0" disabled="disabled" <eq name="toushu['tousu_huifu']" value="0">checked</eq> >未处理&nbsp;
+				<else />
+			    	<input type="radio" name="tousu_huifu" id="tousu_huifu" value="0" <eq name="toushu['tousu_huifu']" value="0">checked</eq> >未处理&nbsp;
+				</if>
+			  </label>
+			  <label>
+			  	<if condition="($toushu['tousu_huifu'] eq 2)">
+			  		<input type="radio" name="tousu_huifu" id="tousu_huifu" value="1" disabled="disabled" <eq name="toushu['tousu_huifu']" value="1">checked</eq> >处理中&nbsp;
+			  	<else />
+			    	<input type="radio" name="tousu_huifu" id="tousu_huifu" value="1" <eq name="toushu['tousu_huifu']" value="1">checked</eq> >处理中&nbsp;
+			    </if>
+			  </label>
+			  <label>
+			    	<input type="radio" name="tousu_huifu" id="tousu_huifu" value="2" <eq name="toushu['tousu_huifu']" value="2">checked</eq> >已处理&nbsp;
+			  </label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<neq name="toushu['tousu_huifu']" value="2">
+				<button type="button" class="btn btn-success" value="{$toushu['tousu_id']}">确认修改</button>
+			</neq>
+			<button type="button" class="btn btn-info">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-info").click(function(){
+		window.location.href="{:U('Orderdetails/order_tousu')}";
+	});
+	// 报修列表
+	$(".btn-warning").click(function(){
+		window.location.href="{:U('Orderdetails/order_tousu')}";
+	});
+
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	$(".btn-success").click(function(){
+		tousu_id = $(this).val();
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('Orderdetails/AjaxTousu_')}",
+			data: { 'tousu_id':tousu_id , 'tousu_huifu':$("#tousu_huifu:checked").val() },
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Orderdetails/order_tousu')}";
+					return false;
+				}else if( data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});
+</script>
+</html>

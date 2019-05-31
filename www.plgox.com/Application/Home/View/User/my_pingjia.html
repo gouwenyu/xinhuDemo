@@ -1,0 +1,376 @@
+<include file="User:my_top" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_bx_ts_pj.css">   
+<style type="text/css">
+.pjtp{
+	display:none;
+	float:left;
+}
+.pjtp1{
+	display:inline-block;
+	float:left;
+}
+</style>
+
+<div class="mypj">
+   <div class="mypj1">
+        <div  class="mypj2">
+          <div class="mypj6">
+             评价
+          </div>
+
+          <div class="mypj61">
+            <div class="mypj62">
+              <span><span class="hszt">*</span>&nbsp;评价内容：</span>
+            </div>
+            <div class="mypj63">
+             <textarea rows="10" cols="30" onfocus="this.value=''; this.onfocus=null;" class="textarea_content" placeholder="请描述评价性文字(200字以内)">
+               </textarea>
+            </div>
+          </div>
+  
+<div style="clear:both;"></div>
+
+          <div class="mypj61">
+            <div class="mypj62">
+              <span>晒照片：&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </div>
+            <div class="mypj63 span_img">
+              <div id="span_img"></div>
+               <img class="pjtp_sc_1" src="__PUBLIC__/Home/image/my_top2.jpg" style="margin-top:10px;width:80px;height:80px;"/>
+               <input type="file" name="file_img[]" id="DoumentInputFile1" style="display: none" value="">
+               <img class="pjtp_sc_2" src="__PUBLIC__/Home/image/my_top2.jpg" style="margin-top:10px;width:80px;height:80px;"/>
+               <input type="file" name="file_img[]" id="DoumentInputFile2" style="display: none" value="">
+               <img class="pjtp_sc_3" src="__PUBLIC__/Home/image/my_top2.jpg" style="margin-top:10px;width:80px;height:80px;"/>
+               <input type="file" name="file_img[]" id="DoumentInputFile3" style="display: none" value="">
+               <img class="pjtp_sc_4" src="__PUBLIC__/Home/image/my_top2.jpg" style="margin-top:10px;width:80px;height:80px;"/>
+               <input type="file" name="file_img[]" id="DoumentInputFile4" style="display: none" value="">
+               <img class="pjtp_sc_5" src="__PUBLIC__/Home/image/my_top2.jpg" style="margin-top:10px;width:80px;height:80px;"/>
+               <input type="file" name="file_img[]" id="DoumentInputFile5" style="display: none" value="">
+            </div>
+          </div>
+
+<div style="clear:both;"></div>
+
+<div class="mypj66">
+            <div class="mypj62">
+              <span><span class="hszt">*</span>&nbsp;描述相符：</span>
+            </div>
+            <div class="mypj65">
+               <img class="msxf" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="msxf" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="msxf" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="msxf" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="msxf" src="__PUBLIC__/Home/image/my_top5.jpg" />
+            </div>
+          
+   </div>
+
+   <div class="mypj66">
+            <div class="mypj62">
+              <span><span class="hszt">*</span>&nbsp;卖家服务：</span>
+            </div>
+            <div class="mypj65">
+               <img class="mjfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="mjfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="mjfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="mjfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="mjfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+            </div>
+   </div>
+
+
+<div class="mypj66">
+            <div class="mypj62">
+              <span><span class="hszt">*</span>&nbsp;运送服务：</span>
+            </div>
+            <div class="mypj65">
+               <img class="ysfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="ysfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="ysfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="ysfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+               <img class="ysfw" src="__PUBLIC__/Home/image/my_top5.jpg" />
+            </div>
+          
+   </div>
+   <div class="mypj68">提交评价</div>
+
+     </div>
+   </div>
+ </div>
+
+<!--遮罩-->
+<div class="zhezhao"  style="display:none;">
+	
+
+
+<div class="zz_nr_fbcg" style="display:none;">
+    <div class="zdsc"></div>     
+    <div class="zz_gbtk" >
+      关闭
+    </div> 
+  </div>
+</div>
+
+ <script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/cropbox.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+<script type="text/javascript">
+ $(window).load(function() {
+    //上传图片
+ /* $(".pjtp_sc").on("click",function(){
+  	if($(".image").length>4){
+  		tkcx("最多只能上传5张");
+  		return false;
+  	}
+    $("#DoumentInputFile").click();
+    $("#DoumentInputFile").off("change");
+    $("#DoumentInputFile").on("change",function(){
+      var pattern = /(\.*.jpg$)|(\.*.png$)|(\.*.jpeg$)|(\.*.gif$)|(\.*.bmp$)/;      
+      if(!pattern.test($(this).val())) { 
+        tkcx("系统仅支持jpg/jpeg/png/gif/bmp格式的照片！");
+        $(this).focus(); 
+      }else{
+         //定义图片路径 
+        var path;
+        path = URL.createObjectURL(this.files[0]);
+        $("#span_img").append("<img src='"+path+"' width='100' height='100' class='image'>");
+      }
+    });
+  });*/
+  $arr = [1,2,3,4,5,6];
+  $.each($arr,function( index ){
+     if( index != 0 ){
+       $(".pjtp_sc_"+index).click(function(){
+          $("#DoumentInputFile"+index).click();
+          $("#DoumentInputFile"+index).off();
+          $("#DoumentInputFile"+index).change(function(){
+            var pattern = /(\.*.jpg$)|(\.*.png$)|(\.*.jpeg$)|(\.*.gif$)|(\.*.bmp$)/;      
+            if( !pattern.test($(this).val()) ){
+              tkcx("系统仅支持jpg/jpeg/png/gif/bmp格式的照片！");
+              $(this).focus();
+            }else{
+               objURL = getUploadsFile(this.files[0]);
+               if( objURL ){
+                 $(".pjtp_sc_"+index).attr("src",objURL);
+               }              
+            }
+          });
+       });
+     }
+  });
+  function getUploadsFile( files ){
+     var url = null;
+     url = window.URL.createObjectURL(files);
+     return url;
+  }
+	//提交提醒
+	$(".mypj68").click(function(){
+
+    // 描述相符统计
+    var miaoshu = "";
+    $(".msxf").each(function(index){
+      if($(this).attr("selected") == "selected"){
+          miaoshu+= ","+$(this).attr('pingjiasum');
+      }
+    });
+    miaoshu = miaoshu.substring(1);
+    miaoshu_split = miaoshu.split(",");
+    var arr = new Array();
+    $(miaoshu_split).each(function( key , value){
+      arr.push(value);
+    });
+    var miaoshu_sum=parseInt(0);
+    for( var i = 0;i<arr.length;i++ ){
+        miaoshu_sum+=parseInt(arr[i]);
+    }
+    if(isNaN(miaoshu_sum)){
+      miaoshu_sums = 0;
+    }else{
+      miaoshu_sums = miaoshu_sum;
+    }
+    // 卖家服务统计
+    var fuwu = "";
+    $(".mjfw").each(function(index){
+      if($(this).attr("selected") == "selected"){
+          fuwu+= ","+$(this).attr('fuwusum');
+      }
+    });
+    fuwu = fuwu.substring(1);
+    fuwu_split = fuwu.split(",");
+    var arr = new Array();
+    $(fuwu_split).each(function( key , value){
+      arr.push(value);
+    });
+    var fuwu_sum=parseInt(0);
+    for( var i = 0;i<arr.length;i++ ){
+        fuwu_sum+=parseInt(arr[i]);
+    }
+    if(isNaN(fuwu_sum)){
+      fuwu_sums = 0;
+    }else{
+      fuwu_sums = fuwu_sum;
+    }
+    // 运送服务统计
+    var yunsong = "";
+    $(".ysfw").each(function(index){
+      if($(this).attr("selected") == "selected"){
+          yunsong+= ","+$(this).attr('yunsongsum');
+      }
+    });
+    yunsong = yunsong.substring(1);
+    yunsong_split = yunsong.split(",");
+    var arr = new Array();
+    $(yunsong_split).each(function( key , value){
+      arr.push(value);
+    });
+    var yunsong_sum=parseInt(0);
+    for( var i = 0;i<arr.length;i++ ){
+        yunsong_sum+=parseInt(arr[i]);
+    }
+    if(isNaN(yunsong_sum)){
+      yunsong_sums = 0;
+    }else{
+      yunsong_sums = yunsong_sum;
+    }
+    $.ajaxFileUpload({
+        type: "POST",
+    dataType: "JSON",
+         url: "{:U('AjaxPingjia')}",
+         async: false,
+         fileElementId:['DoumentInputFile1','DoumentInputFile2','DoumentInputFile3','DoumentInputFile4','DoumentInputFile5'],
+         secureuri: false,
+        data: { 'pingjia_id':"{$pingjia_id}" , "textarea_content":$(".textarea_content").val() , 'pingjia_descriptions_pingjia':miaoshu_sums , 'pingjia_maijia_pingjia':fuwu_sums , 'pingjia_yunsong_pingjia':yunsong_sums },
+      success: function( data ){
+        var reg = /<pre.+?>(.+)<\/pre>/g;  
+        var result = data.match(reg);  
+        data = RegExp.$1;
+        var obj  = eval('('+data+')');
+        if( obj.status == 2000 ){
+          tkcx(obj.message);
+          self.location = document.referrer;
+          return false;
+        }else if( obj.status == 2001 ){
+          tkcx(obj.message);
+          return false;
+        }else if( obj.status == -2002 ){
+          tkcx(obj.message);
+          return false;
+        }
+      },
+      error: function( XMLHttpRequest , status , error ){
+        tkcx("出现错误,错误位置在：" + status);
+      }
+    });
+		
+			//弹框消失
+			
+	})
+	
+
+	
+ function tkcx(message){
+    $(".zhezhao").css("display","block");  
+    $(".zz_nr_fbcg").css("display","block");
+     $(".zdsc").eq(1).text(message);
+		
+         tkgb();
+		
+  }	
+	
+	
+		 //自动消失(弹框)
+	function tkgb(){
+	  $(".zhezhao").click(function(){
+
+	  	 	 $(".zhezhao").css("display","none");
+	  	     $(".zz_nr_fbcg").css("display","none"); 
+         
+           if($(".zdsc").eq(1).text()=="提交成功"){
+                location.href="{:U('User/my_dingdan')}";
+           }
+
+	  });
+	}	
+	
+});
+
+
+
+</script>
+
+<script type="text/javascript">
+ my_top(0,"0px","");
+ function public_dy(bqsx,djg){
+   for(var i=0;i<5;i++){
+     if(i>djg){
+        $(bqsx).eq(i).attr("src","__PUBLIC__/Home/image/my_top5.jpg");
+     }
+     else{
+         $(bqsx).eq(i).attr("src","__PUBLIC__/Home/image/my_top3.jpg");
+     }
+   }
+   /*if($(bqsx).eq(djg).attr('src')=="__PUBLIC__/Home/image/my_top5.jpg"){
+  		$(bqsx).eq(djg).attr("src","__PUBLIC__/Home/image/my_top3.jpg");
+  	}
+  	else{
+  		$(bqsx).eq(djg).attr("src","__PUBLIC__/Home/image/my_top5.jpg");
+  	}*/
+ }
+ 
+ //描述相符
+	$(".msxf").each(function(index){
+		$(this).attr("data-title","msxf"+index);
+		$(this).click(function(){
+      if( !$(this).attr("selected") ){
+        $(this).attr("pingjiasum",1);
+        $(this).attr("selected","selected");
+      }else{
+         $(this).removeAttr("pingjiasum",1);
+         $(this).removeAttr("selected","selected");
+      }
+			public_dy(".msxf",index);
+		})
+	})
+	//卖家服务
+	
+	$(".mjfw").each(function(index){
+		$(this).attr("data-title","mjfw"+index);
+		$(this).click(function(){
+      if( !$(this).attr("selected") ){
+        $(this).attr("fuwusum",1);
+        $(this).attr("selected","selected");
+      }else{
+         $(this).removeAttr("fuwusum",1);
+         $(this).removeAttr("selected","selected");
+      }
+			public_dy(".mjfw",index);
+		})
+	})
+	//运送服务
+	
+	$(".ysfw").each(function(index){
+		$(this).attr("data-title","ysfw"+index);
+		$(this).click(function(){
+      if( !$(this).attr("selected") ){
+        $(this).attr("yunsongsum",1);
+        $(this).attr("selected","selected");
+      }else{
+         $(this).removeAttr("yunsongsum",1);
+         $(this).removeAttr("selected","selected");
+      }
+			public_dy(".ysfw",index)
+		})
+		
+	})
+  
+  //左边浮动滑块距离头部
+
+  
+</script>
+<br/><br/>
+{:W('Common/footer')}
+</body>
+</html>

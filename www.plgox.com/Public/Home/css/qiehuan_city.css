@@ -1,0 +1,85 @@
+.q_city_box{
+  position:relative;
+  width:100%;
+/*    border-top:1px solid #1F61C3;
+    top:18px;*/
+   height:550px;
+}
+.q_city{
+  width:1192px;
+  margin:0 auto;
+  overflow:hidden;
+}
+
+.q_city1{
+        font-size:14px;
+        color:#333333;
+        margin-left:32px;
+        margin-top:22px;
+
+      }
+  .q_city1 span{
+        color:#1f61c3;
+    }
+ .q_city2,.q_city3,.q_city4{
+     font-size:14px;
+     color:#666666;
+     margin-left:12px;
+     margin-top:15px;
+  }
+  .q_city2 div,.q_city3 div,.q_city4 div{
+    display:inline;
+     color:#1f61c3;  
+     margin:0 20px;
+  }
+  .q_city3{
+  	margin-top:20px;
+  }
+  .q_city3 div{
+    color:#666666;
+  }
+  .q_city4 div{
+    color:#666666;
+    font-size:12px;
+
+  }
+   .q_city2 span{
+     color；1f61c3；
+     display:inline;
+     margin-left:16px;
+         cursor: pointer;
+  }
+  .q_city2 span:hover{
+  	color:#1f61c3;
+  }
+  .prov,.city{
+    border:1px solid #B7B7B7;
+    outline:none;
+    font-size:12px;
+    width:102px;
+    height:26px;
+    background-color:#EEEEEE;
+  }
+ .prov{
+    margin-left:-5px;
+  }
+  .city{
+    margin-left: 20px;
+  }
+   .q_city4 p{
+    margin:0px;
+    line-height:35px;
+  }
+.q_city4 p a{
+  margin-left:30px;
+  margin-right:10px;
+}
+ 
+  .q_city4 p span{
+     font-size:12px;
+     margin-left:13px;
+     cursor: pointer;
+  } 
+  .q_city4 p span:hover{
+color:#1f61c3;
+  }

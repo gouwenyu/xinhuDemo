@@ -1,0 +1,108 @@
+[ 2018-09-16T01:00:22+08:00 ] 111.206.198.123 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+
+[ 2018-09-16T05:16:16+08:00 ] 118.25.215.235 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-16T06:09:00+08:00 ] 203.208.60.62 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T08:58:32+08:00 ] 111.206.221.79 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+
+[ 2018-09-16T09:34:19+08:00 ] 106.12.38.17 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-16T09:44:31+08:00 ] 203.208.60.125 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T10:54:15+08:00 ] 125.79.214.60 //data/admin/ver.txt
+ERR: 无法加载控制器:Data
+
+[ 2018-09-16T10:54:39+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T11:06:15+08:00 ] 157.55.39.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T13:12:40+08:00 ] 119.188.248.134 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-16T13:39:52+08:00 ] 203.208.60.123 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0007s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '35'  [ RunTime:0.0005s ]
+
+[ 2018-09-16T16:09:16+08:00 ] 78.46.61.245 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T16:09:17+08:00 ] 78.46.61.245 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-09-16T16:09:20+08:00 ] 78.46.61.245 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T16:09:21+08:00 ] 78.46.61.245 /Index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-16T16:09:23+08:00 ] 78.46.61.245 /Xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-16T16:09:25+08:00 ] 78.46.61.245 /index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-16T16:09:27+08:00 ] 78.46.61.245 /poli/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Poli
+
+[ 2018-09-16T16:09:29+08:00 ] 78.46.61.245 /share/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Share
+
+[ 2018-09-16T16:09:31+08:00 ] 78.46.61.245 /xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-16T16:09:33+08:00 ] 78.46.61.245 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-09-16T16:12:31+08:00 ] 220.181.124.191 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T19:49:45+08:00 ] 137.175.11.219 /admin1/fckeditor/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:Admin1
+
+[ 2018-09-16T19:49:46+08:00 ] 137.175.11.219 /bianjiqi/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:Bianjiqi
+
+[ 2018-09-16T19:49:48+08:00 ] 137.175.11.219 /SK_Edit/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:SK_Edit
+
+[ 2018-09-16T19:49:48+08:00 ] 137.175.11.219 /editor/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:Editor
+
+[ 2018-09-16T19:52:41+08:00 ] 157.55.39.90 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T19:52:41+08:00 ] 157.55.39.90 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T19:52:41+08:00 ] 157.55.39.90 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T19:52:41+08:00 ] 157.55.39.90 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-16T20:06:18+08:00 ] 203.208.60.45 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '43'  [ RunTime:0.0003s ]
+
+[ 2018-09-16T21:36:54+08:00 ] 203.208.60.124 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

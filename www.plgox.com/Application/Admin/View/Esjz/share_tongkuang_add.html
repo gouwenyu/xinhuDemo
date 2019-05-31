@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+  		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">当前所属分类：</td>
+  		<td>
+  			<input type="text" name="classify_name" disabled class="form-control classify_name" value="{$classify_name['classify_title']}" style="width:470px;height: 40px">
+  		</td>
+  	</tr>
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">主店铺名称：</td>
+		<td style="border:none">
+			<eq name="tongkuang_id" value="">
+				<input type="hidden" class="tongkuang_share_id" name="tongkuang_share_id" value="{$share_data['share_id']}">
+				<input type="text" class="form-control tongkuang_product"  value="{$share_data['share_name']}" style="width:470px;height: 40px" name="tongkuang_product" disabled>
+			<else />
+				<input type="hidden" class="tongkuang_share_id" name="tongkuang_share_id" value="{$tongkuang_id['share_id']}">
+				<input type="text" class="form-control tongkuang_product"  value="{$tongkuang_id['share_name']}" style="width:470px;height: 40px" name="tongkuang_product" disabled>
+			</eq>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">选择所属分类：</td>
+		<td>
+			<select class="form-control classify_id" name="classify_id" style="width:470px;height: 40px">
+			<option value="0">--请选择所属分类--</option>
+			{$classify}
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">推荐商品名称：</td>
+		<td style="border:none">
+			<select multiple class="form-control tongkuang_product_id" style="width:470px;" name="tongkuang_product_id[]">
+			<neq name="tongkuang_id['share_id']" value="">
+			<volist name="tuijian_product" id="tuijian_product_">
+				<in name="tuijian_product_['share_id']" value="$tongkuang_id['tongkuang_product_id']">
+			 	   <option value="{$tuijian_product_['share_id']}" selected>{$tuijian_product_['share_name']}</option>
+			 	</in>  
+			</volist>
+			</neq>
+			</select>
+			<br />
+			<!-- <@neq name="tongkuang_id['share_id']" value=""> -->
+			<!-- <@volist name="tuijian_product" id="tuijian_product_"> -->
+				<!-- <@in name="tuijian_product_['share_id']" value="$tongkuang_id['tongkuang_product_id']"> -->
+					<!-- <a href="javascript:void(0)" style="border:1px solid #CCCCCC;padding:5px 10px 5px 10px;text-decoration:none;color:black;" value="{$tuijian_product_['share_id']}">{$tuijian_product_['share_name']}</a>&nbsp;&nbsp; -->
+				<!-- <@/in> -->
+			<!-- <@/volist> -->
+			<!-- <br /> -->
+			<!-- <br /> -->
+			<!-- <@/neq> -->
+			<font style="color:red;float: left">温馨提示：Windows多选请使用Ctrl键+鼠标选择，Mac请使用Command键+鼠标选择，取消亦是如此!</font>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">推荐设置：</td>
+		<td>
+			<div class="radio">
+				<label>
+					<input type="radio" name="tongkuang_stauts" id="tongkuang_stauts" value="0" checked <eq name="tongkuang_id['tongkuang_stauts']" value="0">checked</eq> >开启&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="tongkuang_stauts" id="tongkuang_stauts" value="1" <eq name="tongkuang_id['tongkuang_stauts']" value="1">checked</eq> >关闭
+				</label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<eq name="tongkuang_id['tongkuang_id']" value="">
+				<button type="button" class="btn btn-success" value="{$share_data['share_id']}">添加推荐</button>
+			<else />
+				<button type="button" class="btn btn-success" value="{$tongkuang_id['tongkuang_id']}">修改推荐</button>
+			</eq>
+			<button type="button" class="btn btn-danger">返回上页</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Share/share_product_list')}";
+	});
+	$(".btn-success").click(function(){
+		if( $(".classify_id").val() == "0" ){
+			alert("请选择所属分类!");
+			return false;
+		}
+		if( $(".tongkuang_product_id").val() == null ){
+			alert("您的同款推荐商品还未选择,无法添加!");
+			return false;
+		}
+		
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('Share/share_tongkuang_setup')}",
+			data: { 'tongkuang_classify_id':$(".classify_id").val() , 'tongkuang_id':$(this).val() , 'tongkuang_stauts':$("#tongkuang_stauts:checked").val() , 'tongkuang_share_id':$(".tongkuang_share_id").val() , 'tongkuang_product_id':$(".tongkuang_product_id").val() },
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Share/share_product_list')}";
+					return false;
+				}else if( data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});
+	// 分类
+	$(document).ready(function(){
+		var tongkuang_id = "{$tongkuang_id['tongkuang_id']}";
+		$.post("{:U('Share/getTongkuang')}",{'tongkuang_id':tongkuang_id},function( datas ){
+				$(".classify_id").change(function(){
+					$(".tongkuang_product_id").empty();
+					$.ajax({
+						type: "post",
+					dataType: "json",
+						 url: "{:U('Share/getClassify')}",
+						data: { 'classify_id':$(this).val() },
+						success: function( data ){
+							$.each(data,function( index , value ){
+								if( datas != null ){
+									if( datas['tongkuang_classify_id'] == value['share_classify_pid'] ){
+										$(".tongkuang_product_id").append("<option value='"+value['share_id']+"' selected>"+value['share_name']+"</option>");
+									}else{
+										$(".tongkuang_product_id").append("<option value='"+value['share_id']+"'>"+value['share_name']+"</option>");
+									}
+								}else{
+									$(".tongkuang_product_id").append("<option value='"+value['share_id']+"'>"+value['share_name']+"</option>");
+								}
+							});
+						},
+						error: function( XMLHttpRequest , error , status ){
+							alert("网络错误,请稍后再尝试!"+ status );
+						}
+					});
+				});
+		},'json');
+	});
+</script>
+</html>

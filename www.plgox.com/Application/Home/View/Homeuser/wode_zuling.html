@@ -1,0 +1,273 @@
+{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/htsy_index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zhezhao.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/wode_zulin.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/fen_ye.css">
+<style>
+
+</style>
+<div class="ht_in1">
+	<div class="ht_in10">
+		<span >
+			我的租赁
+		</span>
+	</div>
+	
+	
+   <div class="ht_content">
+   	<form action="{:U('Homeuser/share_search')}" method="get">
+	 <div class="wdzl">
+		<input type="text" class="wdzl1 share_name" name="share_name" placeholder=" 请输入关键字" />
+		<div class="wdzl2 submit_value">
+			&nbsp;&nbsp;&nbsp;&nbsp;搜索
+		</div>
+	 </div>
+	</form>
+	<script type="text/javascript">
+		$(".submit_value").click(function(){
+			if( $(".share_name").val() == '' ){
+				alert("筛选条件是必选的!");
+				return false;
+			}else{
+				$("form").submit();
+			}
+		});
+	</script>
+	 <div class="wdz2">
+	 	 <br/>
+	 <table >
+	 	<thead>
+	 		<tr class="wdz21">
+	 			<td>
+	 				产品标题
+	 			</td>
+	 			<td>
+	 				品牌
+	 			</td>
+	 			<td>
+	 				型号
+	 			</td>
+	 			<td>
+	 				日租金
+	 			</td>
+	 			<td>
+	 				押金
+	 			</td>
+	 			<td>
+	 				城市
+	 			</td>
+	 			<td>
+	 				状态
+	 			</td>
+	 			<td>
+	 				操作
+	 			</td>
+	 		</tr>
+	 	</thead>
+	 	<tbody class="wdz22">
+	 	<volist name="shangjia_share" id="shangjia_share_">
+	 		<tr class="share_tr_{$shangjia_share_['share_id']}">
+	 			<td >
+	 			  <div><a href="{:U('Cart/shop_detil',array('id'=>$shangjia_share_['share_id']))}" title="{$shangjia_share_['share_name']}-{$shangjia_share_['share_key']}" style="outline: none;color:#666666;">{$shangjia_share_['share_name']}</a></div>
+	 			</td>
+	 			<td>
+	 				{$shangjia_share_['share_sj_pq']}
+	 			</td>
+	 			<td>
+	 				{$shangjia_share_['share_key']}
+	 			</td>
+	 			<td>
+	 				<volist name="specifications" id="specifications_">
+	 					<in name="specifications_['specifications_id']" value="$shangjia_share_['share_product_type_id']">
+	 						<span class="span_number">【套餐<span class="number_"></span>：¥{$specifications_['specifications_rent']}元/日】<br/></span>
+	 					</in>
+	 				</volist>
+	 			</td>
+	 			<td>
+	 				<volist name="specifications" id="specifications_">
+	 					<in name="specifications_['specifications_id']" value="$shangjia_share_['share_product_type_id']">
+	 						<span class="span_number_">【套餐<span class="number"></span>：¥{$specifications_['specifications_deposit']}】<br/></span>
+	 					</in>
+	 				</volist>
+	 			</td>
+	 			<td>
+	 				{$shangjia_share_['city_name']}
+	 			</td>
+	 			<td>
+	 				<eq name="shangjia_share_['share_status']" value="0">
+	 					已上架
+	 				<else/>
+	 					已下架
+	 				</eq>
+	 			</td>
+	 			<td>
+	 				<a href="{:U('Homeuser/wode_zl_bj',array('edit_id'=>$shangjia_share_['share_id'] ) )}" class="wdz23">编辑</a>
+	 				<a class="wdz25 share_del" href="javascript:void(0);" attr_del_id="{$shangjia_share_['share_id']}">删除</a>
+	 				<eq name="shangjia_share_['share_status']" value="0">
+	 					<a class="wdz23 share_status" href="javascript:void(0);" attr_del_id="{$shangjia_share_['share_id']}" style="margin-left: 14px">下架</a>
+	 				<else/>
+	 					<a class="wdz23 share_status" href="javascript:void(0);" attr_del_id="{$shangjia_share_['share_id']}" style="margin-left: 14px">上架</a>
+	 				</eq>
+	 			</td>
+	 		</tr>
+	 	</volist>
+	 	</tbody>
+	 	<script type="text/javascript">
+	 			// 租金套餐
+	 			var number = parseInt(1);
+	 			$(".span_number").each(function( index ){
+	 				$(".number_").eq(index).text(index);
+	 			});
+	 			$(".number_").each(function( index ){
+	 				var number_count = parseInt($(this).text())+number;
+	 				$(this).text(number_count);
+	 			})
+	 			// 押金套餐
+	 			$(".span_number_").each(function( index ){
+	 				$(".number").eq(index).text(index);
+	 			});
+	 			$(".number").each(function( index ){
+	 				var number_count = parseInt($(this).text())+number;
+	 				$(this).text(number_count);
+	 			})
+	 			// 商品上下架
+	 			$(".share_status").click(function(){
+	 				var xiajia = $(this).attr("attr_del_id");
+	 				$.post("{:U('Homeuser/AjaxShare_status')}",{ "share_id":xiajia },function( data ){
+	 					if( data.status == 2000 ){
+	 						alert(data.message);
+	 						location.reload();
+	 						return false;
+	 					}else{
+	 						alert(data.message);
+	 						return false;
+	 					}
+	 				},"json");
+	 			});
+	 	</script>
+	 </table>
+	 </div>
+	 <div class="message" >
+        {$page}
+     </div>
+   </div>
+</div>
+<script type="text/javascript">
+
+/*	$(".share_del").click(function(){
+			
+	});*/
+</script>
+<!--遮罩-->
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr" style="display:none;">
+	  <div class="zz_nr1">
+		<span style="display:block;float:left;font-size:18px;margin-left:30px;">温馨提示<span>
+		<span style="display:block;float:right;margin-left:460px;font-size:33px;color:white;cursor:pointer;" class="scqr">×</span>
+	  </div>
+	  <div class="zz_nr2" style="line-height:30px;height:146px;">
+		确认删除这个任务吗?			
+	  </div>
+	  <div class="zz_nr3" >
+			<a href="#wss" class="tyjs0">确认</a>
+			<a href="#wss" class="tyjs">取消</a>	
+	  </div>
+	  
+	  
+	</div>	
+
+
+  <div class="zz_nr_fbcg" style="display:none;">
+	  <div class="zdsc">
+	  	提交成功，平台会核实处理
+	  </div>
+	   
+	  <div class="zz_gbtk" >
+			关闭
+	  </div> 
+	</div>
+
+
+</div>
+<script type="text/javascript" src="__PUBLIC__/Home/js/fen_ye.js"></script>
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		alert("由于国家政策原因，该功能暂时不对外开放，请见谅！");
+		window.opener=null;
+		window.open('','_self');
+		window.close();
+		return false;
+	});
+
+	$(".htsy_2 li").eq(1).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(1).siblings().css("background","none");
+	$(".htsy_2 li div").eq(1).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(1).siblings().css("background","none");
+ 		
+	$(".htsy_top_yd").css("top","50px");
+	
+	
+	//删除
+	$(".wdz25").each(function(index){
+		$(this).click(function(){
+			var share_id = $(this).attr('attr_del_id');
+			share_del(share_id);
+			$(".zhezhao").css("display","block");
+			$(".zz_nr").css("display","block");
+		})
+	});
+	function share_del( id ){
+		$(".tyjs0").off("click");
+		$(".tyjs0").on("click",function(){
+			$.post("{:U('Homeuser/AjaxShare_del')}",{ 'share_id':id },function(data){
+				console.log(data);
+				if( data.status == 2000 ){
+					$(".share_tr_"+id).remove();
+					tkcx(data.message);
+				}else if( data.status == -2001 ){
+					tkcx(data.message);
+				}
+			});
+			$(".zhezhao").css("display","none");
+		});
+	}
+	$(".tyjs").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+	});
+	$(".scqr").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+	});
+
+
+
+	 function tkcx(message){
+  	    $(".zhezhao").css("display","block");  
+		$(".zz_nr_fbcg").css("display","block");
+		$(".zz_nr").css("display","none");
+		$(".zdsc").text(message);
+		
+         tkgb();
+		
+		
+  }	
+	
+	
+		 //自动消失(弹框)
+	function tkgb(){
+	  $(".zhezhao").click(function(){
+		  
+	  	 	 $(".zhezhao").css("display","none");
+
+	  	     $(".zz_nr_fbcg").css("display","none"); 
+	  	  
+	  	     return false;
+	  });
+	}	
+	
+</script>
+</body>
+</html>

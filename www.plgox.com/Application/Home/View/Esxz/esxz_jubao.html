@@ -1,0 +1,221 @@
+﻿{:W('Common/header_esxz')}
+{:W('Common/header1_esxz')}
+   <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_bx_ts_pj.css"> 
+   <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/esxz_jb.css">
+   <style>
+ .mypj63 img{
+ 	margin-top:20px;
+ }
+   </style>
+<div class="es_sy">
+  <div class="es_sy_small">
+  	
+  	<div  class="my_jubao">
+          <div class="mypj6">
+             举报该信息
+          </div>
+
+          <div class="mypj61">
+            <div class="mypj62">
+              <span><span class="hszt">*</span>&nbsp;举报原因：</span>
+            </div>
+            <div class="mypj63">
+	            <div class="my_bx1">
+	            	<select type="checkbox" class="select_season">
+	            		<option>虚假供应</option>
+	            		<option>虚假报价</option>
+	            		<option>信息描述不符</option>
+	            		<option>涉嫌欺诈</option>
+	            		<option>内容违规</option>
+	            		<option>钓鱼链接</option>
+	            		<option>质量惨假</option>
+	            		<option>其他原因</option>
+	            	</select>
+	            	
+	            </div>
+			      </div>
+          </div>
+  
+<div style="clear:both;"></div>
+
+<div class="mypj61">
+            <div class="mypj62">
+              <span><span class="hszt">*</span>&nbsp;详细描述：</span>
+            </div>
+            <div class="mypj63">
+             <textarea id="description"  style="height:212px;width:435px;" onfocus="this.value=''; this.onfocus=null;">300字以内，填写详细举报原因、信息等
+               </textarea> 
+            </div>
+          </div>
+<div style="clear:both;"></div>
+
+          <div class="mypj61">
+            <div class="mypj62">
+              <span>上传图片：</span>
+            </div>
+            <div class="mypj63" style="width:900px;margin-top:-10px;float:left;">
+           
+          <img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image1 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile1" value="" style="display:none" name="pic_img[]">	
+      	           
+      	           <img src="__PUBLIC__/Home/image/sctp.jpg" alt=""  class="image2 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile2" value="" style="display:none" name="pic_img[]">
+      	          
+      	           <img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image3 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile3" value="" style="display:none" name="pic_img[]">
+      	           
+      	           <img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image4 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile4" value="" style="display:none" name="pic_img[]">
+      	           
+      	           <img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image5 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile5" value="" style="display:none" name="pic_img[]">
+      	           
+      	            <img src="__PUBLIC__/Home/image/sctp.jpg" alt="" class="image6 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile6" value="" style="display:none" name="pic_img[]">
+      	           
+      	            <img src="__PUBLIC__/Home/image/sctp.jpg" alt=""  class="image7 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile7" value="" style="display:none" name="pic_img[]">
+      	           
+      	           <img src="__PUBLIC__/Home/image/sctp.jpg" alt=""  class="image8 image_tp">&nbsp;&nbsp;&nbsp;
+      	           <input type="file" id="exampleInputFile8" value="" style="display:none" name="pic_img[]">
+            <div class="esxz_jb6" style="margin-top:20px;">
+            	支持格式JPG、PNG、BMP，最大支持5M，最多添加8张。
+            </div>
+            
+            </div>
+          </div>
+          
+<div style="clear:both;"></div>
+
+   <div class="mypj68">提交</div>
+
+     </div>
+  	
+  	
+  	
+  	
+  </div>
+</div>
+
+
+<!--遮罩-->
+<div class="zhezhao">
+<!--弹框-->	
+
+
+	 <div class="zz_nr_fbcg" style="display:none;">
+	  <div class="zdsc">
+	 您已成功举报，感谢您的热心反馈！
+	  </div>
+	   
+	  <div class="zz_gbtk" >
+			关闭
+	  </div> 
+	</div>
+	
+
+
+</div>
+ 
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/cropbox.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+<script type="text/javascript">
+	//举报弹框
+	$(".mypj68").click(function(){
+		
+		
+		var shuoming = $("#description").val();
+		var yuanyin = $(":selected",".select_season").val();
+		//alert(yuanyin);
+		//return false;
+		$.ajaxFileUpload({
+			dataType: "json",
+			fileElementId:["exampleInputFile1","exampleInputFile2","exampleInputFile3","exampleInputFile4","exampleInputFile5","exampleInputFile6","exampleInputFile7","exampleInputFile8"],
+            url:"{:U('Esxz/esxz_push_jubao')}",
+            type:'post',
+            data:{
+            	goods_id:{$goods_id},
+            	shuoming:shuoming,
+            	yuanyin:yuanyin
+            }, 
+            success:function(data){
+            	console.log(data);
+            	
+            }
+            
+
+        });
+		
+		 $(".zhezhao").css("display","block");
+		 $(".zz_nr_fbcg").css("display","block");
+		  
+         
+         djxs();
+	})
+	
+	 number = [0,1,2,3,4,5,6,7,8,9,10,11];
+	 	$.each(number,function( index ){
+	 		if( index != 0 ){
+	 			$(".image"+index).click(function(){
+	 				//alert(index);
+	 				//return false;
+	 				$("#exampleInputFile"+index).click();
+	 				//$("#exampleInputFile"+index).off("change");
+	 				$("#exampleInputFile"+index).on('change',function(){
+	 					// 判断上传的限制
+	 					if( $(this)[0].files[0].size > 10485760){
+	 						alert("上传文件超出了特定的上传限制!");
+	 						return false;
+	 					}else{
+	 						var objUrl = getUploads(this.files[0]);
+	 						if( objUrl ){
+	 							$(".image"+index).attr("src",objUrl);
+	 							$("#image"+index).val(objUrl);
+	 						}
+	 					}
+	 				});
+	 			});
+	 		}
+	 	});
+		
+	function getUploads(files){
+ 		url = null;
+ 		if( window.createObjectURL !== undefined ){
+ 			url = window.createObjectURL(files);
+ 		}else if( window.URL !== undefined ){
+ 			url = window.URL.createObjectURL(files);
+ 		}else if( window.webkitURL != undefined ){
+ 			url = window.webkitURL.createObjectURL(files);
+ 		}
+ 		return url;
+ 	};
+ function djxs(){
+	$(".zhezhao").click(function(){
+		$(".zhezhao").css("display","none");
+  	     $(".zz_nr_fbcg").css("display","none"); 
+  	     window.location.href="{:U('Esxz/index')}"; 
+	})
+}	
+  //上传图片
+ $(window).load(function() {
+	var oid=0;
+	$(".esxz_jb1").click(function(){
+		 $(".zhezhao").css("display","block");
+		 $(".container").css("display","block");
+	});
+	
+	
+	
+	
+	
+	$(".wdzl_tp60").each(function(index){
+		$(this).click(function(){
+			$(".wdzl_tp").eq(index).css("display","none");
+		});
+	});
+});
+</script>
+{:W('Common/footer_esxz')}

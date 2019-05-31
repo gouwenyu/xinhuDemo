@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">关键词类型：</td>
+		<td style="border:none">
+			<select class="form-control selected" style="width:400px;" name="data[keyword_type]">
+			  	<option value="0">请选择</option>
+		    	<option value="1" <eq name="user_value['keyword_type']" value='1'>selected</eq> >共享关键词</option>
+		    	<option value="2" <eq name="user_value['keyword_type']" value='2'>selected</eq> >闲置关键词</option>
+		    	<option value="3" <eq name="user_value['keyword_type']" value='3'>selected</eq> >商城关键词</option>
+			</select>				
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">关键词：</td>
+		<td style="border:none">
+		      <input type="text" class="form-control keyword_name"  value="{$user_value['keyword_name']}" style="width:400px;height: 40px">		 
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">排序：</td>
+		<td style="border:none">
+			<input type="text" class="form-control paixun" value="{$user_value['keyword_px']}"  style="width:400px;height: 40px">
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<button type="button" class="btn btn-success" value="{$user_value['keyword_id']}">确认修改</button>
+			<button type="button" class="btn btn-danger">返回上页</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('User/hot_keyword')}";
+	});
+	$(".btn-success").click(function(){
+		if( $('.selected').val() == '0' ){
+			alert("请选择您关键字所在的类型");
+			return false;
+		}
+		if( $(".keyword_name").val() == "" ){
+			alert("关键字不能为空");
+			return false;
+		}
+		var number = /^[0-9]\d*$/;
+		if( !number.test($('.paixun').val())  ){
+			alert("请输入数字");
+			return false;
+		}
+		var plgox_id = $(this).val();
+				$.ajax({
+					type: "POST",
+				dataType: "JSON",
+					 url: "{:U('User/hot_keyword_')}",
+					data: { 'keyword_id':$(this).val() ,'keyword_type':$(".selected").val() , 'keyword_name':$(".keyword_name").val() , 'keyword_px':$(".paixun").val() },
+					success: function( data ){
+						if(data.status == 2000 ){
+							alert(data.message);
+							window.location.href="{:U('User/hot_keyword')}";
+							return false;
+						}else if( data.status == -2000 ){
+							alert(data.message);
+							return false;
+						}
+					},
+					error: function(XMLHttpRequest , error , status ){
+						alert("网络错误，请稍后再尝试" + status );
+						return false;
+					}
+				});
+				return false;
+			
+
+	});
+</script>
+</html>

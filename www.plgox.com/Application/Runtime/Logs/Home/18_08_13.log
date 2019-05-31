@@ -1,0 +1,106 @@
+[ 2018-08-13T00:45:58+08:00 ] 203.208.60.22 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T00:46:24+08:00 ] 123.125.71.26 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T00:58:41+08:00 ] 111.206.198.20 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+
+[ 2018-08-13T01:13:33+08:00 ] 123.125.67.158 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T05:30:53+08:00 ] 203.208.60.97 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T07:03:13+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T07:03:13+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T08:52:37+08:00 ] 111.206.198.49 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+
+[ 2018-08-13T09:05:21+08:00 ] 40.77.167.80 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T11:00:44+08:00 ] 216.145.17.190 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T12:23:03+08:00 ] 144.76.119.99 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T13:22:41+08:00 ] 203.208.60.106 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T15:37:53+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T15:38:03+08:00 ] 220.181.125.177 /index/fuwenben/id/8.html
+ERR: 非法操作:fuwenben
+
+[ 2018-08-13T18:18:31+08:00 ] 40.77.167.80 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T18:18:46+08:00 ] 40.77.167.80 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T21:38:46+08:00 ] 203.208.60.50 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '115'  [ RunTime:0.0004s ]
+
+[ 2018-08-13T21:48:53+08:00 ] 203.208.60.122 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T21:48:53+08:00 ] 203.208.60.32 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '17'  [ RunTime:0.0003s ]
+
+[ 2018-08-13T22:25:36+08:00 ] 93.209.8.124 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T22:25:39+08:00 ] 93.209.8.124 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-08-13T22:25:41+08:00 ] 93.209.8.124 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-13T22:25:44+08:00 ] 93.209.8.124 /Index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-08-13T22:25:46+08:00 ] 93.209.8.124 /Xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-08-13T22:25:47+08:00 ] 93.209.8.124 /index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-08-13T22:25:49+08:00 ] 93.209.8.124 /poli/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Poli
+
+[ 2018-08-13T22:25:51+08:00 ] 93.209.8.124 /share/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Share
+
+[ 2018-08-13T22:25:53+08:00 ] 93.209.8.124 /xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-08-13T22:25:54+08:00 ] 93.209.8.124 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-08-13T22:28:30+08:00 ] 203.208.60.117 /Cart/shop_detil/id/221
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-08-13T23:09:15+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

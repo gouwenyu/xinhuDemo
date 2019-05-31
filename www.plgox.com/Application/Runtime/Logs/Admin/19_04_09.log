@@ -1,0 +1,15 @@
+[ 2019-04-09T09:45:06+08:00 ] 94.191.64.183 /admin.zip
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-04-09T09:45:26+08:00 ] 94.191.64.183 /admin.rar
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-04-09T09:46:01+08:00 ] 94.191.64.183 /admin.tgz
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-04-09T09:52:08+08:00 ] 94.191.64.183 /admin.sql
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-04-09T23:44:17+08:00 ] 5.165.127.203 /admin/
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+

@@ -1,0 +1,59 @@
+.gwfk-zhifufangshi { position:relative; width:920px; margin:0 auto; height:175px;  padding-left:60px;margin-top:100px; overflow:hidden;}
+.gwfk-zhifufangshi-title { position:relative; width:1200px; margin:0 auto; height:60px; overflow:hidden; line-height:60px; text-align:left; font-weight:bold; color:#000; font-size:16px;}
+.gwfk-zhifufangshi-title span { font-size:16px; color:#020202; margin-left:10px; font-weight:normal;}
+.gwfk-zhifufangshi-a { width:225px; height:75px; overflow:hidden; float:left; margin-right:60px;}
+.gwfk-zhifufangshi-a input { width:20px; height:20px; float:left; margin-top:27.5px;}
+.gwfk-zhifufangshi-a img { width:200px; height:75px; float:right;} 
+.gwfk-zhifufangshi-sub { width:155px; height:50px; background:#2060C4; color:#FFF; font-weight:bold; line-height:50px; text-align:center; margin:50px auto; font-size:18px; border-radius:5px; cursor:pointer;}
+.dd_js{
+	position:relative;
+	width:100%;
+/*    border-top:1px solid #1F61C3;*/
+    top:18px;
+}
+.dd_js_box{
+	width:1192px;
+	margin:0 auto;
+	overflow:hidden;
+}
+  .gouw_1{
+      	font-size:14px;
+      	color:#333333;
+      	margin-left:32px;
+      	margin-top:22px;
+
+      }
+      .gouw_1 span{
+      	color:#1f61c3;
+      }
+ .wechat{
+ 	margin-top:70px;
+ }
+ .wechat3{
+ 	display:block;
+ 	float:left;
+ 	width:46px;height:41px;
+ }
+.wechat1{
+  width:476px;margin:0 auto;
+  margin-bottom:100px;
+}
+.wechat2{
+	display:block;
+	width:100px;
+	height:41px;
+	line-height:41px;
+ 	float:left;
+	font-size:22px;
+	margin-left:10px;
+	color:black;
+}
+.wechat5{
+	display:block;
+	float:left;
+	width:195px;
+	margin-left:50px;
+}
+.wechat9{
+	display:block;margin-top:20px;width:195px;height:66px;
+}

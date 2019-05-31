@@ -1,0 +1,125 @@
+ .wdzj{
+	background-color:#FAFAFA;
+}	
+.wdzj_xz{
+	padding-left:20px;
+	padding-top:0px;
+}
+.wdzl_bj10{
+	color:#333333;
+	font-size:24px;
+}
+.wdzl_bj11{
+	font-size:12px;
+}
+.wdzl_bj12{
+	font-size:12px;
+	margin-left:18px;
+	color:black;
+}
+.wdzl_bj_first{
+	margin-top:40px;
+}
+.wdzl_bj2{
+	position:relative;
+	width:984px;
+	height:100%;
+	overflow:hidden;
+	margin-left:-15px;
+}
+.wdzl_bj21{
+     float:left;
+	width: 230px;
+	margin:15px 0px 15px 15px;
+	height: 280px;
+	padding:15px;
+	cursor:pointer;
+	background-color: #ffffff;
+}
+.wdzl_bj21{
+  position:relative;
+  width:230px;
+  overflow:hidden;
+}
+.wdzl_bj210{
+	position:absolute;
+	width: 44px;
+	height: 44px;
+	top:0px;
+	display:none;
+	left:186px;
+	z-index:3;
+	background:url('../image/juezhi_ljt.png') no-repeat center center;
+	background-color: rgba(0, 0, 0, 0.6);
+	opacity: 0.6;
+	cursor:pointer;
+}
+.wdzl_bj210:hover{
+	background-color:#e4002b;
+	opacity: 1;
+}
+.wdzl_bj211{
+	width:200px;
+	height:200px;
+}
+.wdzl_bj212{
+	color: #e4002b;
+	font-size:16px;
+	text-align:center;
+	margin-top:24px;
+}
+.wdzj6{
+	margin-top:50px;
+	color: #666666;
+	font-size: 12px;
+	text-align:center;
+}
+
+.zz_nr{
+ 		height:270px;
+ 		width:363px;
+ 	}
+.esxz_de_zz5{
+ 		font-size:16px;
+ 		width:258px;
+ 		margin:0 auto;
+ 		line-height:25px;
+ 		margin-top:65px;
+ 		text-align:center;
+ 		margin-bottom:30px;
+ 	}
+ 	.zz_nr1{
+ 		background-color:#eeeeee;
+ 		height:50px;
+ 		line-height:50px;
+ 		border-bottom: 1px solid #d6d6d6;
+ 	}
+ 	
+.zz_nr3{
+ 		width:240px;
+ 		padding-top:30px;
+ 	}
+ 	.ty_esxz,.ty_esxz1{
+ 	  width:104px;border-radius: 2px;height:45px;display:block;
+ 	  color:white;
+ 	  font-size:18px;
+ 	  line-height:45px;
+ 	  cursor:pointer;
+ 	  text-align:center;
+ 	  border-radius:5px;
+ 	  }
+ 	  .ty_esxz{
+ 	  	float:left;
+ 	  	background-color:#cccccc;
+ 	  	
+ 	  }
+ 	   .ty_esxz:hover{
+ 	   	background-color: #b3b3b3;
+ 	   }
+ 	   .ty_esxz1{
+ 	   	background-color:#e40050;
+ 	  	float:right;
+ 	  }
+ 	   .ty_esxz1:hover{
+ 	   	background-color: #c90047;
+ 	   }

@@ -1,0 +1,52 @@
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/header.css">
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/fen_ye.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zulin.css">
+<style type="text/css">
+	body{
+		background-color:#FAFAFA;
+	}
+</style>
+<div class="zulin_box_big">
+		<ul class="zulin8" >
+		<volist name="share" id="share_">
+			<li class="zulin81" >
+			  <a href="{:U('Cart/shop_detil',array('id'=>$share_['share_id']))}" target="_blank">
+				<div  class="zulin82">
+					<img src="__ROOT__/Uploads/admin/{$share_['share_home_img']}" />
+				</div>
+				<div  class="zulin83">
+					<div class="zulin831">{$share_['share_name']}</div>
+				</div>
+				<div  class="zulin85">
+					<span class="zulin851">¥{$share_['share_rent']}/天</span>
+					<eq name="share_['share_self_support']" value="1">
+						<span class="zulin852">自营</span>
+					</eq>
+				</div>
+				
+				<div class="in_center1228">
+	             	<div class="in_center12281">
+	             		<span class="incenter_12_hs">满意度：</span>
+	             		<span class="incenter_12_zs">58%</span>
+	             	</div>
+	             	<div class="in_center12282">
+	             		<span class="incenter_12_hs">出租率：</span>
+	             		<span class="incenter_12_zs">30次</span>
+	             	</div>
+                </div>
+				
+				
+			  </a>
+			<li>
+		</volist>	
+		</ul>
+		<div class="message" >
+      {$page}
+     </div>
+  </div>
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script type="text/javascript">
+	//$(".zulin_box_big").height()
+</script>

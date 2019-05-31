@@ -1,0 +1,78 @@
+[ 2018-08-19T00:40:52+08:00 ] 123.125.67.165 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-19T00:56:47+08:00 ] 111.206.221.6 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+
+[ 2018-08-19T01:10:42+08:00 ] 123.125.71.100 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-19T04:20:46+08:00 ] 54.36.150.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-19T04:20:47+08:00 ] 54.36.148.85 /user/shoucang.html
+ERR: 非法操作:shoucang
+
+[ 2018-08-19T06:41:11+08:00 ] 203.208.60.58 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-19T07:13:51+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-19T07:13:51+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-19T08:54:35+08:00 ] 111.206.198.36 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+
+[ 2018-08-19T09:41:12+08:00 ] 42.236.10.76 /index/fuwenben/id/4.html
+ERR: 非法操作:fuwenben
+
+[ 2018-08-19T10:31:31+08:00 ] 203.208.60.20 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '82'  [ RunTime:0.0004s ]
+
+[ 2018-08-19T10:54:59+08:00 ] 120.220.21.212 /plug/comment/commentList.asp?id=0%20unmasterion%20semasterlect%20top%201%20UserID,GroupID,LoginName,Password,now%28%29,null,1%20%20frmasterom%20%7Bprefix%7Duser
+ERR: 无法加载控制器:Plug
+
+[ 2018-08-19T10:54:59+08:00 ] 120.220.21.212 /news/html
+ERR: 无法加载控制器:News
+
+[ 2018-08-19T13:55:19+08:00 ] 66.249.75.156 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-19T13:55:23+08:00 ] 66.249.75.154 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '45'  [ RunTime:0.0003s ]
+
+[ 2018-08-19T14:48:26+08:00 ] 115.159.186.223 /wls-wsat/CoordinatorPortType
+ERR: 无法加载控制器:Wls-wsat
+
+[ 2018-08-19T16:24:03+08:00 ] 42.120.160.4 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+
+[ 2018-08-19T19:27:45+08:00 ] 203.208.60.117 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '30'  [ RunTime:0.0005s ]
+
+[ 2018-08-19T22:53:19+08:00 ] 203.208.60.71 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-19T23:46:49+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

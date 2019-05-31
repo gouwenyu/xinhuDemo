@@ -1,0 +1,24 @@
+[ 2019-05-31T02:43:00+08:00 ] 162.243.138.97 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-05-31T07:03:14+08:00 ] 45.168.122.136 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-05-31T07:23:28+08:00 ] 200.168.45.219 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-05-31T07:52:20+08:00 ] 101.226.79.190 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-05-31T08:45:13+08:00 ] 143.255.247.162 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-05-31T08:47:38+08:00 ] 31.222.174.141 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-05-31T09:17:03+08:00 ] 216.245.193.10 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2019-05-31T09:30:32+08:00 ] 180.249.181.112 /
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+

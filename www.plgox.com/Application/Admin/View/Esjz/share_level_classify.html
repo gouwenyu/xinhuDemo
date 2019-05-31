@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">父级分类：</td>
+		<td style="border:none">
+			<div class="form-group">
+		      <input type="text" class="form-control classify_level_title" style="width:470px;height: 40px" name="classify_level_title" value="{$classify_id['classify_title']}" readonly="readonly">	
+		    </div>
+		</td>
+	</tr>
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">分类名称：</td>
+		<td style="border:none">
+			<input type="text" class="form-control classify_title" style="width:470px;height: 40px" name="classify_title">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">分类状态：</td>
+		<td style="border:none;line-height: 40px">
+			  <label>
+			    <input type="radio" name="classify_status" id="optionsRadios2" value="0" checked>&nbsp;开启
+			  </label>
+			  <label>
+			    <input type="radio" name="classify_status" id="optionsRadios2" value="1">&nbsp;关闭
+			  </label>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">分类排序：</td>
+		<td style="border:none">
+				<input type="text" class="form-control classify_order"  value="0" style="width:470px;height: 40px" name="classify_order">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<button type="button" class="btn btn-success" value="{$classify_ids}">确认新增</button>
+			<button type="button" class="btn btn-danger">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Share/share_classify_list')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	$(".btn-success").click(function(){
+		classify_ids = $(this).val();
+		if( $('.classify_title').val() == "" ){
+			alert("分类的名称是不能够为空的");
+			return false;
+		}
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('Share/share_level_classify_add')}",
+			data: { 'classify_ids':classify_ids , 'classify_title':$(".classify_title").val() , 'classify_status':$("input[type='radio']:checked").val() , 'classify_order':$(".classify_order").val() },
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Share/share_classify_list')}";
+					return false;
+				}else if( data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});
+</script>
+</html>

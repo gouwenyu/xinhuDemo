@@ -1,0 +1,160 @@
+[ 2018-09-07T00:00:04+08:00 ] 203.208.60.118 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '30'  [ RunTime:0.0003s ]
+
+[ 2018-09-07T00:52:48+08:00 ] 54.36.148.126 /Cart/shop_detil/id/205.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-09-07T00:58:12+08:00 ] 111.206.221.71 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+
+[ 2018-09-07T01:19:41+08:00 ] 203.208.60.9 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '17'  [ RunTime:0.0003s ]
+
+[ 2018-09-07T02:01:16+08:00 ] 203.208.60.35 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '19'  [ RunTime:0.0003s ]
+
+[ 2018-09-07T02:18:56+08:00 ] 157.55.39.15 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T03:19:13+08:00 ] 203.208.60.3 /Zulin/share_list?order1=1
+ERR: 非法操作:share_list
+
+[ 2018-09-07T06:10:54+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T06:10:54+08:00 ] 220.181.125.177 /share/share_detail/id/14.html
+ERR: 无法加载控制器:Share
+
+[ 2018-09-07T06:11:03+08:00 ] 220.181.125.177 /share/share_detail/id/32.html
+ERR: 无法加载控制器:Share
+
+[ 2018-09-07T06:38:05+08:00 ] 203.208.60.99 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T07:16:13+08:00 ] 144.76.38.10 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T07:16:15+08:00 ] 144.76.38.10 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-09-07T07:16:17+08:00 ] 144.76.38.10 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T07:16:19+08:00 ] 144.76.38.10 /Index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-07T07:16:48+08:00 ] 154.91.200.110 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-07T07:19:40+08:00 ] 203.208.60.76 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '19'  [ RunTime:0.0004s ]
+
+[ 2018-09-07T08:01:09+08:00 ] 203.208.60.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T08:56:50+08:00 ] 111.206.221.104 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+
+[ 2018-09-07T09:10:26+08:00 ] 203.208.60.66 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0004s ]
+
+[ 2018-09-07T09:25:20+08:00 ] 203.208.60.13 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '52'  [ RunTime:0.0003s ]
+
+[ 2018-09-07T09:38:07+08:00 ] 203.208.60.2 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '19'  [ RunTime:0.0003s ]
+
+[ 2018-09-07T12:59:34+08:00 ] 180.163.220.41 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+
+[ 2018-09-07T12:59:38+08:00 ] 180.163.220.99 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+
+[ 2018-09-07T14:52:48+08:00 ] 123.126.114.194 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+
+[ 2018-09-07T16:13:10+08:00 ] 218.30.103.70 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T16:24:01+08:00 ] 54.36.150.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T16:24:02+08:00 ] 54.36.148.117 /index/fuwenben/id/5.html
+ERR: 非法操作:fuwenben
+
+[ 2018-09-07T17:17:52+08:00 ] 157.55.39.15 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T21:04:26+08:00 ] 203.208.60.0 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T22:53:20+08:00 ] 157.55.39.15 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-07T23:03:27+08:00 ] 220.181.125.177 /share/share_detail/id/10.html
+ERR: 无法加载控制器:Share
+
+[ 2018-09-07T23:03:37+08:00 ] 220.181.125.177 /index/falv.html
+ERR: 非法操作:falv
+
+[ 2018-09-07T23:39:49+08:00 ] 137.175.11.218 /w78editor/asp/upload_json.asp?dir=Image
+ERR: 无法加载控制器:W78editor
+
+[ 2018-09-07T23:39:50+08:00 ] 137.175.11.218 /bianji/upload_json.asp?dir=Image
+ERR: 无法加载控制器:Bianji
+
+[ 2018-09-07T23:39:51+08:00 ] 137.175.11.218 /_cmseditor/asp/upload_json.asp?dir=Image
+ERR: 无法加载控制器:_cmseditor
+
+[ 2018-09-07T23:39:54+08:00 ] 137.175.11.218 /upload/upload_json.asp?dir=Image
+ERR: 无法加载控制器:Upload
+
+[ 2018-09-07T23:39:55+08:00 ] 137.175.11.218 /lhedit/asp/upload_json.asp?dir=Image
+ERR: 无法加载控制器:Lhedit
+
+[ 2018-09-07T23:54:37+08:00 ] 66.102.6.243 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '24'  [ RunTime:0.0005s ]
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">承租方：</td>
+		<td style="border:none">
+			<input type="text" class="form-control order_memberuid"  value="{$orders['plgox_user']}" style="width:470px;height: 40px" name="order_memberuid" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">联系方式：</td>
+		<td style="border:none">
+			<input type="text" class="form-control plgox_tel"  value="{$orders['plgox_tel']}" style="width:470px;height: 40px" name="plgox_tel" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">商户号：</td>
+		<td style="border:none">
+			<input type="text" class="form-control order_weixin_number"  value="{$orders['order_weixin_number']}" style="width:470px;height: 40px" name="order_weixin_number" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">押金总数：</td>
+		<td style="border:none">
+			<input type="text" class="form-control order_deposit"  value="{$orders['order_deposit']}" style="width:470px;height: 40px" name="order_deposit" readonly="readonly">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">退款金额：</td>
+		<td style="border:none">
+			<input type="text" class="form-control refund_prices"  value="{$orders['refund_prices']}" style="width:470px;height: 40px" name="refund_prices">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">退押金状态：</td>
+		<td style="border:none">
+			<div class="radio">
+				<label>
+					<input type="radio" name="refund_status" class="refund_status" value="1" <eq name="orders['refund_status']" value="1">checked</eq>>未退押金&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="refund_status" class="refund_status" value="2" <eq name="orders['refund_status']" value="2">checked</eq> >已退押金&nbsp;&nbsp;
+				</label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">支付来源：</td>
+		<td style="border:none">
+			<div class="radio">
+				<label>
+					<input type="radio" name="order_pay_type" class="order_pay_type" disabled="disabled" value="1" <eq name="orders['order_pay_type']" value="1">checked</eq>>支付宝&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_pay_type" class="order_pay_type" disabled="disabled" value="2" <eq name="orders['order_pay_type']" value="2">checked</eq> >微信&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="order_pay_type" class="order_pay_type" disabled="disabled" value="3" <eq name="orders['order_pay_type']" value="3">checked</eq> >银联&nbsp;&nbsp;
+				</label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<button type="button" class="btn btn-success" orderid="{$orders['order_id']}">确认退款</button>
+			<button type="button" class="btn btn-danger">返回上页</button>
+			<button type="button" class="btn btn-info">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-info").click(function(){
+		location.reload();
+	});
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Orderdetails/order_details')}";
+	});
+	$(".btn-success").click(function(){
+		var prices = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+		if( !prices.test($(".refund_prices").val()) ){
+			alert("请输入正确的退款金额!");
+			return false;
+		}
+		if( $(".refund_status:checked").val() == null ){
+			alert("请选择退款状态!");
+		}
+		// 订单状态
+		$.post("{:U('Orderdetails/order_yes_fhyj')}",{ 'order_deposit':$(".order_deposit").val() , 'refund_order_id':$(this).attr("orderid") , 'order_weixin_number':$(".order_weixin_number").val() , 'refund_status':$(".refund_status:checked").val() ,'refund_prices':$(".refund_prices").val() },function( data ){
+			console.log(data);
+			//return false;
+			if( data.status == 2000 ){
+				alert(data.message);
+				window.location.href="{:U('Orderdetails/order_details')}";
+				return false;
+			}else if( data.status == -2000 ){
+				alert(data.message);
+				return false;
+			}
+		},"json");
+	});
+</script>
+</html>

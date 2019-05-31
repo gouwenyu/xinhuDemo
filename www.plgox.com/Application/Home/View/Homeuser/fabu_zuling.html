@@ -1,0 +1,243 @@
+{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/htsy_index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/fabu_zulin.css" />
+<style>
+</style>
+<div class="ht_in1">
+	<div class="ht_in10">
+		<span >
+			发布租赁 / 选择分类
+		</span>
+	</div>
+	<div class="ht_content">
+
+<div class="fbzl_dbox">
+       <ul class="fbzl first_fl">
+         <volist name="yijifenlei" id="yijifenlei_">
+            <li >
+              <a href="javascript:void(0);" classifyid="{$yijifenlei_['classify_id']}" class="yijifenlei" >{$yijifenlei_['classify_title']}</a>
+            </li>
+          </volist>
+           
+      </ul>
+      <ul class="fbzl_first second_fl">
+        <volist name="erjifenlei" id="erjifenlei_">
+            <li>
+              <a href="javascript:void(0);" classifyid="{$erjifenlei_['classify_id']}" class="erjifenlei" ><span>{$erjifenlei_['classify_title']}</span></a> 
+            </li>
+         </volist>
+        
+      </ul>
+</div>
+
+
+    </div>
+    <!-- {:U('Homeuser/wode_zl_bj')} -->
+   <!--  <div style="" class="classify_click">
+      <span style="cursor:pointer;color:#FFF;line-height:40px;font-size:20px;">下一步</span>
+    </div> -->
+
+
+<!--遮罩-->
+<div class="zhezhao"  style="display:none;">
+  
+  
+  <div class="zz_nr_fbcg" style="display:none;">
+    <div class="zdsc">
+      提交成功，平台会核实处理
+    </div>
+     
+    <div class="zz_gbtk" >
+      关闭
+    </div> 
+  </div>
+  
+  
+  
+  
+</div> 
+
+
+  <script type="text/javascript">
+    
+    var jdkd=parseInt($(".fbzl_first").css("width"))-248;
+    $(".fbzl_first").css("width",jdkd);
+  //默认第一个为被选中的状态
+	$(".yijifenlei").eq(0).addClass("fl_dj");
+  	$(".yijifenlei").each(function(index){
+  		$(this).mouseenter(function(){ 
+
+        if($(this).attr("classifyid")=="qt"){
+             $(this).addClass("fl_dj");
+            $(".second_fl").text(null);
+             for(var i=0;i<$(".yijifenlei").length-1;i++){
+                $(".yijifenlei").eq(i).removeClass("fl_dj");
+             }
+        }
+        else{
+             for(var i=0;i<$(".yijifenlei").length;i++){
+                  if(i==index){
+                    $(this).addClass("fl_dj");
+                    var idz=$(this).attr("classifyid");
+                $.post("{:U('Homeuser/fu_zfl')}",{'id':idz , 'type':1 },
+                  function( data ){
+                   //二级分类
+                   console.log(data);
+                   var opt='';
+                 $.each(data.list_two,function(index,value){
+                             opt+='<li><a href="javascript:void(0);" classifyid='+value.classify_id+' class="erjifenlei"><span>'+value.classify_title+'</span></a></li>';
+                
+                });
+                $(".second_fl").text(null);
+                $(".second_fl").append(opt);
+                        
+                   sx_thir();
+                   d_thid();
+                  
+                     },"json"); 
+                    
+                  }
+                  else{
+                    $(".yijifenlei").eq(i).removeClass("fl_dj");
+                  }
+                 }
+        }
+          	     
+		});
+  	})
+  	
+  	
+sx_thir();  	
+	   //二级点击效果
+function sx_thir(){
+	//默认第一个为被选中的状态	
+   $(".erjifenlei span").each(function(index){
+   	    $(this).mouseenter(function(){   
+    	     for(var i=0;i<$(".erjifenlei").length;i++){
+    	     	if(i==index){
+    	     		$(this).addClass("fl_dj1");
+    	     		
+    	     		var idz=$(".erjifenlei").eq(index).attr("classifyid");
+    	     		$(".fbzl_second").remove();
+						  $.post("{:U('Homeuser/fu_zfl')}",{'id':idz , 'type':2 },
+							  function( data ){
+                  
+			                    //三级分类
+			          var opt1='';
+								$.each(data.list_three,function(index,value){
+			      	  	            opt1+='<li><a href="#" classifyid='+value.classify_id+' class="sanjifenlei">'+value.classify_title+'</a></li>';       
+								});
+
+               if(data.list_three!=""){
+                  var tjxys='<ul class="third_fl fbzl_second">'+opt1+'</ul>';
+                  $(".erjifenlei").eq(index).append(tjxys);
+                }
+ 	
+							  	 d_thid();
+		
+		  	 	  	     },"json");
+		  	 	  	     
+    	     	}
+    	     	else{
+    	     		$(".erjifenlei").eq(i).removeClass("fl_dj1");
+    	     	}
+    	     }
+
+    	     
+		});
+ 
+
+     $(this).on("click",function(){
+        var id = $(".erjifenlei").eq(index).attr("classifyid");
+        window.location.href="{:U('Homeuser/wode_zl_bj/classify_id/"+id+"')}";
+      });
+
+
+
+
+   });
+     
+}
+
+sx_thir();
+
+function d_thid(){
+	 //三级
+    $(".sanjifenlei").each(function(index){
+   	    $(this).click(function(){   
+    	     for(var i=0;i<$(".sanjifenlei").length;i++){
+    	     	if(i==index){
+    	     		$(this).addClass("fl_dj1");
+              $(this).css("color","#5F93E0");
+    	     	}
+    	     	else{
+    	     		$(".sanjifenlei").eq(i).removeClass("fl_dj1");
+              $(".sanjifenlei").eq(i).css("color","#666");
+    	     	}
+    	     }
+        $(".sanjifenlei").eq(0).addClass("fl_dj");
+           
+        var idz = $(this).attr("classifyid");
+
+        window.location.href="{:U('Homeuser/wode_zl_bj/classify_id/"+idz+"')}";
+
+		});
+   });
+}
+d_thid();
+//一级分类点击
+   $(".yijifenlei").each(function( index ){
+      $(this).on("click",function(){
+        id = $(this).attr("classifyid");
+       window.location.href="{:U('Homeuser/wode_zl_bj/classify_id/"+id+"')}";
+      });
+   });
+
+
+
+
+
+function tkcx(message){
+        $(".zhezhao").css("display","block");  
+    $(".zz_nr_fbcg").css("display","block");
+    $(".zdsc").text(message);
+    
+         tkgb();
+    
+    
+  } 
+  
+  
+     //自动消失(弹框)
+  function tkgb(){
+    $(".zhezhao").click(function(){
+      
+         $(".zhezhao").css("display","none");
+         $(".zz_nr_fbcg").css("display","none"); 
+        
+           return false;
+    });
+  }
+
+
+  </script>
+</div>
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    alert("由于国家政策原因，该功能暂时不对外开放，请见谅！");
+    window.opener=null;
+    window.open('','_self');
+    window.close();
+    return false;
+  });
+$(".htsy_top_yd").css("top","92px");
+
+	$(".htsy_2 li").eq(2).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(2).siblings().css("background","none");
+	$(".htsy_2 li div").eq(2).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(2).siblings().css("background","none");
+</script>
+</body>
+</html>

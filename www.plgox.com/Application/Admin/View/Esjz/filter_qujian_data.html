@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">价格(一)：</td>
+		<td style="border:none">
+			<input type="text" class="form-control filter_content"  value="{$prices[0]}" style="width:235px;height: 40px" name="filter_content" >	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">价格(二)：</td>
+		<td style="border:none">
+			<input type="text" class="form-control filter_content"  value="{$prices[1]}" style="width:235px;height: 40px" name="filter_content" >	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">状态：</td>
+		<td style="border:none">
+			<div class="radio">
+				<label>
+					<input type="radio" name="filter_status" id="filter_status" value="0" checked <eq name="filter['filter_status']" value="0">checked</eq>>开启&nbsp;&nbsp;
+				</label>
+				<label>
+					<input type="radio" name="filter_status" id="filter_status" value="1" <eq name="filter['filter_status']" value="1">checked</eq>>关闭
+				</label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<neq name="filter['filter_id']" value="">
+				<button type="button" class="btn btn-success" value="{$filter['filter_id']}">确认修改</button>
+			<else />
+				<button type="button" class="btn btn-success">确认新增</button>
+			</neq>
+			<button type="button" class="btn btn-danger">返回上页</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Share/filter_qujian')}";
+	});
+	$(".btn-success").click(function(){
+		number = /^\d*$/;
+		if( !number.test($(".filter_content").eq(0).val()) || !number.test($(".filter_content").eq(1).val()) ){
+			alert("输入的金额字符不标准!");
+			return false;
+		}
+		if( $(".filter_content").eq(0).val() == $(".filter_content").eq(1).val() ){
+			alert("输入的价格区间不能一样!");
+			return false;
+		}
+		
+		if( $(".filter_content").eq(0).val() !="" && $(".filter_content").eq(1).val() !="" ){
+			prices1 = $(".filter_content").eq(0).val();
+			prices2 = $(".filter_content").eq(1).val();
+			filter_content = prices1+"-"+prices2;
+		}else if( $(".filter_content").eq(0).val() != "" ){
+			prices1 = $(".filter_content").eq(0).val();
+			filter_content = prices1;
+		}else if( $(".filter_content").eq(1).val() != ""){
+			alert("请输入的第一个金额");
+			return false;
+		}
+		filter_id = $(this).val();
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('Share/filter_qujian_add')}",
+		   data: { 'filter_id':filter_id, 'filter_content':filter_content , 'filter_status':$("#filter_status:checked").val() },
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Share/filter_qujian')}";
+					return false;
+				}else if( data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});
+</script>
+</html>

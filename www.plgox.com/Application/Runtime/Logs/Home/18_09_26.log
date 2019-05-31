@@ -1,0 +1,213 @@
+[ 2018-09-26T00:27:15+08:00 ] 220.181.108.141 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T01:06:54+08:00 ] 203.208.60.124 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '32'  [ RunTime:0.0004s ]
+
+[ 2018-09-26T02:01:35+08:00 ] 203.208.60.8 /Esxz/ajaxUploadFiles.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = null LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-26T02:01:46+08:00 ] 203.208.60.105 /Esxz/ajaxUploadFiles.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `plgox_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_member` WHERE `plgox_id` = null LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-26T02:03:49+08:00 ] 79.132.118.100 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+
+[ 2018-09-26T02:41:53+08:00 ] 106.11.152.179 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T02:41:54+08:00 ] 106.11.152.179 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T02:41:55+08:00 ] 221.232.176.93 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T02:42:16+08:00 ] 218.93.86.49 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T03:49:18+08:00 ] 58.19.92.215 /english/
+ERR: 无法加载控制器:English
+
+[ 2018-09-26T06:01:51+08:00 ] 82.221.105.6 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T06:01:52+08:00 ] 82.221.105.6 /sitemap.xml
+ERR: 无法加载控制器:Sitemap.xml
+
+[ 2018-09-26T06:49:24+08:00 ] 117.184.250.101 /skins/vector/csshover.htc
+ERR: 无法加载控制器:Skins
+
+[ 2018-09-26T06:49:26+08:00 ] 117.184.250.101 /rockmongo/
+ERR: 无法加载控制器:Rockmongo
+
+[ 2018-09-26T06:49:26+08:00 ] 117.184.250.101 /server-status
+ERR: 无法加载控制器:Server-status
+
+[ 2018-09-26T06:49:27+08:00 ] 117.184.250.101 /wikilib.d/PmWiki.ChangeLog
+ERR: 无法加载控制器:Wikilib.d
+
+[ 2018-09-26T06:49:27+08:00 ] 117.184.250.101 /jenkins/
+ERR: 无法加载控制器:Jenkins
+
+[ 2018-09-26T06:49:27+08:00 ] 117.184.250.101 /console/login/LoginForm.jsp
+ERR: 无法加载控制器:Console
+
+[ 2018-09-26T06:49:27+08:00 ] 117.184.250.101 /solr/
+ERR: 无法加载控制器:Solr
+
+[ 2018-09-26T06:51:42+08:00 ] 137.175.11.219 /install/index.php.bak
+ERR: 无法加载控制器:Install
+
+[ 2018-09-26T07:27:00+08:00 ] 42.236.10.92 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+
+[ 2018-09-26T08:43:57+08:00 ] 47.106.115.236 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-09-26T10:01:00+08:00 ] 223.71.40.74 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+
+[ 2018-09-26T10:01:20+08:00 ] 203.208.60.7 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T10:01:30+08:00 ] 223.71.40.74 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 109  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 109  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 110  [ RunTime:0.0002s ]
+
+[ 2018-09-26T10:01:51+08:00 ] 223.71.40.74 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 105  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 105  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 106  [ RunTime:0.0002s ]
+
+[ 2018-09-26T10:01:51+08:00 ] 223.71.40.74 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 102  [ RunTime:0.0001s ]
+
+[ 2018-09-26T10:01:51+08:00 ] 223.71.40.74 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 105  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 105  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 106  [ RunTime:0.0002s ]
+
+[ 2018-09-26T10:02:56+08:00 ] 223.71.40.74 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 102  [ RunTime:0.0001s ]
+
+[ 2018-09-26T10:02:56+08:00 ] 223.71.40.74 /Homeuser/fu_zfl.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `plgox_classify` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 101  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `plgox_classify` WHERE `classify_pid` = 102  [ RunTime:0.0002s ]
+
+[ 2018-09-26T10:06:20+08:00 ] 120.52.147.18 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2018-09-26T10:30:40+08:00 ] 137.175.42.3 /system/kindeditor/asp/upload_json.asp?dir=Image
+ERR: 无法加载控制器:System
+
+[ 2018-09-26T10:30:41+08:00 ] 137.175.42.3 /system/editor/zkeditor/asp/upload_json.asp?dir=Image
+ERR: 无法加载控制器:System
+
+[ 2018-09-26T10:30:41+08:00 ] 137.175.42.3 /manage/editor/asp/upload_json.asp?dir=Image
+ERR: 无法加载控制器:Manage
+
+[ 2018-09-26T10:30:42+08:00 ] 137.175.42.3 /manage/keditor/asp/upload_json.asp?dir=Image
+ERR: 无法加载控制器:Manage
+
+[ 2018-09-26T11:01:16+08:00 ] 42.236.10.124 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+
+[ 2018-09-26T11:11:24+08:00 ] 1.203.116.88 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+
+[ 2018-09-26T11:11:48+08:00 ] 79.132.118.100 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+
+[ 2018-09-26T11:31:48+08:00 ] 203.208.60.42 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T11:44:18+08:00 ] 220.181.125.177 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T17:25:04+08:00 ] 106.120.173.112 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T19:35:57+08:00 ] 27.209.26.193 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+
+[ 2018-09-26T19:39:08+08:00 ] 27.209.26.193 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+
+[ 2018-09-26T19:41:17+08:00 ] 54.36.148.234 /index/fuwenben/id/10.html
+ERR: 非法操作:fuwenben
+
+[ 2018-09-26T20:15:34+08:00 ] 157.55.39.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-26T20:58:47+08:00 ] 118.24.78.192 /console
+ERR: 无法加载控制器:Console
+
+[ 2018-09-26T20:58:47+08:00 ] 118.24.78.192 /STRUTS_STRU
+ERR: 无法加载控制器:STRUTS_STRU
+
+[ 2018-09-26T21:15:40+08:00 ] 118.25.46.60 /console
+ERR: 无法加载控制器:Console
+
+[ 2018-09-26T21:15:41+08:00 ] 118.25.46.60 /STRUTS_STRU
+ERR: 无法加载控制器:STRUTS_STRU
+
+[ 2018-09-26T21:28:58+08:00 ] 54.36.149.18 /Cart/shop_detil/id/164.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+

@@ -1,0 +1,640 @@
+{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_zl_bj.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zhezhao.css" />
+<style type="text/css">
+	.wdzl_bj_ts{
+		width:100px;
+	}
+</style>
+<div class="ht_in1"  >
+	<div class="ht_in10">
+		<span >
+			我的租赁 / {$setTitle}/{$class_ify['classify_title']}
+		</span>
+	</div>
+   <div class="ht_content">
+
+      <div class="wdzl_bj1">
+      	<p>
+      		品名： 
+      	</p>
+      	<p>
+      	 <input type="text" placeholder="产品名称" name="share_name" class="share_name"  value="{$class_ify['classify_title']}-{$share_data['share_name']}"/>	
+      	</p>
+      </div>
+      
+     <div class="wdzl_bj1">
+      	<p>
+      		品牌： 
+      	</p>
+      	<p>
+      	  <input type="text" placeholder="输入产品品牌" name="brand_name" class="brand_name" value="{$share_data['share_sj_pq']}" />
+      	 <!--  <input type="text" placeholder="HF-输入产品型号" class="brand_model" name="brand_model" style="margin-left:20px;" value="{$share_data['share_sj_xh']}" />	 -->
+      	  <span style="color:#999999;">&nbsp;&nbsp;&nbsp;（为了今后更加精准筛选，请正确填写，此项不在前端展示。）</span>
+      	</p>
+      </div>
+
+
+      <div class="wdzl_bj1">
+      	<p>
+      		关键词： 
+      	</p>
+      	<p>
+      	  <input type="text" placeholder="主型号" name="share_key" class="share_key" value="{$share_data['share_key']}"/>	
+      	</p>
+      </div>
+     <!--  <div class="wdzl_bj1">
+      	<p>
+      		参考租金 ： 
+      	</p>
+      	<p>
+      	  <input type="text" placeholder="参考租金" name="share_rent" class="share_rent" value="{$share_data['share_rent']}"/>	
+      	</p>
+      </div> -->
+      
+      
+       <div class="wdzl_bj1">
+      	<p>
+      		产地 ： 
+      	</p>
+      	<p>
+      	  <select class="wdzl_thdz chandi" name="chandi" >
+      	  	<option>请选择</option>
+      	  	<volist name="city" id="city_">
+      	  		<option value="{$city_['city_name']}" <eq name="share_data['share_chandi']" value="$city_['city_name']">selected</eq>>{$city_['city_name']}</option>
+      	  	</volist>
+      	  </select>
+      	</p>
+      </div>
+      <div class="wdzl_bj1">
+      	<p>
+      		交易细则 ： 
+      	</p>
+      	<p>
+		 <volist name="specifications" id="specifications_">
+		 	<a href="{:U('Homeuser/taocan_guanli')}&edit_id=<?php echo base64_encode($specifications_['specifications_id']) ?>">
+	      	  <div class="wdzl_fxk">
+	      	  	<span style="color:#333333;">{$specifications_['specifications_name']}</span>
+	      	  	<input type="checkbox" value="{$specifications_['specifications_id']}" class="specifications_id_checked" <in name="specifications_['specifications_id']" value="$share_data['share_product_type_id']">checked</in> />
+	      	  </div>
+	      	 </a>
+	      	  
+		 </volist>
+		 <empty name="specifications">
+      		<div style="margin-top: 4px;">
+      			<span attr-value="请添加套餐" class="tj_tc"></span>
+      		</div>
+      		<a href="{:U('Homeuser/taocan_guanli')}" style="font-size: 14px;margin-left:10px;color:#1D85BF;" class="tj_tc_">请添加套餐</a>
+      	  <else/>
+      	  	<a href="{:U('Homeuser/taocan_guanli')}" style="font-size: 14px;margin-left:10px;color:#1D85BF;" class="tj_tc_">继续添加套餐</a>
+	      </empty>
+	      
+      	</p>
+      </div>
+<script type="text/javascript">
+$(window).load(function() {
+	//添加新套餐
+	var oid=1;
+	$(".wdzl_bj25").click(function(){
+             
+				if(oid>9){
+					alert("套餐最多为10个");
+				}
+				else{
+					
+					var ss=$('.wdzl_bj_bigbox:last').clone(true).attr('id','wdzl_b'+oid); 
+		            $('.wdzl_bj_bigbox:last').after(ss);
+		            $(".wdzl_bj210").eq(oid).css("opacity","1");
+		            var oidx=oid+1;
+		            $(".wdzl_bj210").eq(oid).attr('id',oid);
+		            //给框子
+		            $(".wdzl_bj26").eq(oid).attr('id',oid);
+		            
+		            $(".wdzl_bjtc").eq(oid).text("套餐"+oidx);
+
+		            //套餐名称
+                    $(".class_gg1").eq(oid).attr("id","specifications_name"+oidx);
+                    $(".class_gg1").eq(oid).attr("name","specifications_name"+oidx);
+
+                    // 押金
+                     $(".class_gg2").eq(oid).attr("id","specifications_deposit"+oidx);
+                    $(".class_gg2").eq(oid).attr("name","specifications_deposit"+oidx);
+
+                    // 市场参考价 
+                     $(".class_gg3").eq(oid).attr("id","specifications_market"+oidx);
+                    $(".class_gg3").eq(oid).attr("name","specifications_market"+oidx);
+
+                    // 库存量  
+                     $(".class_gg4").eq(oid).attr("id","specifications_stock"+oidx);
+                    $(".class_gg4").eq(oid).attr("name","specifications_stock"+oidx);
+
+                     // 最低起租期  
+                     $(".class_gg5").eq(oid).attr("id","zulin_day_number"+oidx);
+                    $(".class_gg5").eq(oid).attr("name","zulin_day_number"+oidx);
+
+                     $(".class_gg6").eq(oid).attr("id","specifications_day_number"+oidx);
+                    $(".class_gg6").eq(oid).attr("name","specifications_day_number"+oidx);
+
+
+                    // 租满即送  
+                     $(".class_gg7").eq(oid).attr("id","specifications_give"+oidx);
+                    $(".class_gg7").eq(oid).attr("name","specifications_give"+oidx);
+
+                     $(".class_gg8").eq(oid).attr("id","specifications_rent"+oidx);
+                    $(".class_gg8").eq(oid).attr("name","specifications_rent"+oidx);
+
+
+		            ++oid;
+			        
+				}
+	})
+	//失去焦点
+	$(".wdzl_thdz").bind('click',function(){
+        $(".zqts").css("height",'162px');
+     })
+	$(".wdzl_thdz").bind('mouseout',function(){
+        $(".zqts").css("height",'32px');
+     })
+	
+	
+});	
+</script>
+
+    <div class="wdzl_bj1">
+      <p>
+        扫码上传图：
+      </p>
+      <p>
+         &nbsp;&nbsp;<!-- <img src="__PUBLIC__/Common/bootstrap/img/uploads_img.png" style="width:150px;height: 150px"> --><span id="qrcode"></span><span style="color:red;font-weight:bold;">扫码上传图片后,请刷新F5一下页面!</span>
+         <!-- <img src="__ROOT__/Uploads/saoma_img/{$cache[0]}" style="width:100px;height: 100px;display: block;">
+         <img src="__ROOT__/Uploads/saoma_img/{$cache[1]}" style="width:100px;height: 100px;display: block;">
+         <img src="__ROOT__/Uploads/saoma_img/{$cache[2]}" style="width:100px;height: 100px;display: block;">
+         <img src="__ROOT__/Uploads/saoma_img/{$cache[3]}" style="width:100px;height: 100px;display: block;">
+         <img src="__ROOT__/Uploads/saoma_img/{$cache[4]}" style="width:100px;height: 100px;display: block;"> -->
+      </p>
+    </div>
+    <div class="wdzl_bj1" style="margin-top:30px;position:relative;">
+      	<p style="margin-top:10px;">
+      		<span class="nlh">*</span>&nbsp;图片 ： 
+      	</p>
+      	<p style="padding-top:0px;">
+<!--       		<img class="image1 imgga" <eq name="share_img[0]" value="">src="__PUBLIC__/Home/image/my_top2.jpg"<else/>src="__ROOT__/Uploads/admin/{$share_img[0]}"</eq> />
+      	  	<input type="file" name="my_images[]" id="exampleInputFile1" style="display: none;">
+      	   <img  class="image2 imgga" <eq name="share_img[1]" value="">src="__PUBLIC__/Home/image/my_top2.jpg"<else/>src="__ROOT__/Uploads/admin/{$share_img[1]}"</eq>/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile2" style="display: none;">
+      	   <img  class="image3 imgga" <eq name="share_img[2]" value="">src="__PUBLIC__/Home/image/my_top2.jpg"<else/>src="__ROOT__/Uploads/admin/{$share_img[2]}"</eq>/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile3" style="display: none;">
+      	   <img  class="image4 imgga" <eq name="share_img[3]" value="">src="__PUBLIC__/Home/image/my_top2.jpg"<else/>src="__ROOT__/Uploads/admin/{$share_img[3]}"</eq>/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile4" style="display: none;">
+      	   <img  class="image5 imgga" <eq name="share_img[4]" value="">src="__PUBLIC__/Home/image/my_top2.jpg"<else/>src="__ROOT__/Uploads/admin/{$share_img[4]}"</eq>/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile5" style="display: none;">
+      	   <img  class="image6 imgga" <eq name="share_img[5]" value="">src="__PUBLIC__/Home/image/my_top2.jpg"<else/>src="__ROOT__/Uploads/admin/{$share_img[5]}"</eq>/>
+      	   <input type="file" name="my_images[]" id="exampleInputFile6" style="display: none;"> -->
+
+      	   <!-- <img  class="image7 imgga" <eq name="share_img[6]" value="">src="__PUBLIC__/Home/image/my_top2.jpg"<else/>src="__ROOT__/Uploads/admin/{$share_img[6]}"</eq>/> -->
+      	   <!-- <input type="file" name="my_images[]" id="exampleInputFile7" style="display: none;"> -->
+      	   <!-- <img  class="image8 imgga" <eq name="share_img[7]" value="">src="__PUBLIC__/Home/image/my_top2.jpg"<else/>src="__ROOT__/Uploads/admin/{$share_img[7]}"</eq>/> -->
+      	   <!-- <input type="file" name="my_images[]" id="exampleInputFile8" style="display: none;"> -->
+           <!-- if判断 -->
+           <if condition="( $cache[0][1] neq null )">
+              <img class="image1 imgga images" src="__ROOT__/Uploads/admin/{$cache[0][1]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile1" style="display: none;">
+          <elseif condition="( $share_img[0] eq null )" />
+              <img class="image1 imgga imagess" src="__PUBLIC__/Home/image/my_top2.jpg"/>
+              <input type="file" name="my_images[]" id="exampleInputFile1" style="display: none;">
+          <elseif condition="( $share_img[0] neq null )" />
+              <img class="image1 imgga" src="__ROOT__/Uploads/admin/{$share_img[0]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile1" style="display: none;">
+           </if>
+           <if condition="( $cache[1][1] neq null )">
+              <img class="image2 imgga images" src="__ROOT__/Uploads/admin/{$cache[1][1]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile2" style="display: none;">
+          <elseif condition="( $share_img[1] eq null )" />
+              <img class="image2 imgga imagess" src="__PUBLIC__/Home/image/my_top2.jpg"/>
+              <input type="file" name="my_images[]" id="exampleInputFile2" style="display: none;">
+          <elseif condition="( $share_img[1] neq null )" />
+              <img class="image2 imgga" src="__ROOT__/Uploads/admin/{$share_img[1]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile2" style="display: none;">
+           </if>
+           <if condition="( $cache[2][1] neq null )">
+              <img class="image3 imgga images" src="__ROOT__/Uploads/admin/{$cache[2][1]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile3" style="display: none;">
+          <elseif condition="( $share_img[2] eq null )" />
+              <img class="image3 imgga imagess" src="__PUBLIC__/Home/image/my_top2.jpg"/>
+              <input type="file" name="my_images[]" id="exampleInputFile3" style="display: none;">
+          <elseif condition="( $share_img[2] neq null )" />
+              <img class="image3 imgga" src="__ROOT__/Uploads/admin/{$share_img[2]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile3" style="display: none;">
+           </if>
+           <if condition="( $cache[3][1] neq null )">
+              <img class="image4 imgga images" src="__ROOT__/Uploads/admin/{$cache[3][1]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile4" style="display: none;">
+          <elseif condition="( $share_img[3] eq null )" />
+              <img class="image4 imgga imagess" src="__PUBLIC__/Home/image/my_top2.jpg"/>
+              <input type="file" name="my_images[]" id="exampleInputFile4" style="display: none;">
+          <elseif condition="( $share_img[3] neq null )" />
+              <img class="image4 imgga" src="__ROOT__/Uploads/admin/{$share_img[3]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile4" style="display: none;">
+           </if>
+           <if condition="( $cache[4][1] neq null )">
+              <img class="image5 imgga images" src="__ROOT__/Uploads/admin/{$cache[4][1]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile5" style="display: none;">
+          <elseif condition="( $share_img[4] eq null )" />
+              <img class="image5 imgga imagess" src="__PUBLIC__/Home/image/my_top2.jpg"/>
+              <input type="file" name="my_images[]" id="exampleInputFile5" style="display: none;">
+          <elseif condition="( $share_img[4] neq null )" />
+              <img class="image5 imgga" src="__ROOT__/Uploads/admin/{$share_img[4]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile5" style="display: none;">
+           </if>
+           <if condition="( $cache[5][1] neq null )">
+              <img class="image6 imgga images" src="__ROOT__/Uploads/admin/{$cache[5][1]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile6" style="display: none;">
+          <elseif condition="( $share_img[5] eq null )" />
+              <img class="image6 imgga imagess" src="__PUBLIC__/Home/image/my_top2.jpg"/>
+              <input type="file" name="my_images[]" id="exampleInputFile6" style="display: none;">
+          <elseif condition="( $share_img[5] neq null )" />
+              <img class="image6 imgga" src="__ROOT__/Uploads/admin/{$share_img[5]}"/>
+              <input type="file" name="my_images[]" id="exampleInputFile6" style="display: none;">
+           </if>
+
+      	</p>
+      	<div class="wdzl_tp61" style="">支持格式JPG、PNG、BMP，最大支持5M。最多添加6张</div>	
+     </div>
+ <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/qrcode.min.js"></script>
+ <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/qrcode.js"></script>
+<script type="text/javascript">
+    // ajax无刷新
+    function UploadsLook(){
+      $.post("{:U('ajax_redis_')}",{status_:2},function(data){
+        if( data.status == 2000 ){
+          $.each(data.message,function(index , value ){
+            $(".imagess").eq(index).attr("src","__ROOT__/Uploads/admin/"+value[1]); //第一张图
+            /*$(".imagess").eq(index).attr("src","__ROOT__/Uploads/admin/"+value[1]); //第二张图
+            $(".imagess").eq(index).attr("src","__ROOT__/Uploads/admin/"+value[1]); //第三张图
+            $(".imagess").eq(index).attr("src","__ROOT__/Uploads/admin/"+value[1]); //第四张图
+            $(".imagess").eq(index).attr("src","__ROOT__/Uploads/admin/"+value[1]); //第五张图
+            $(".imagess").eq(index).attr("src","__ROOT__/Uploads/admin/"+value[1]); //第六张图*/
+          });
+        }
+      },"json");
+    }
+    setInterval("UploadsLook()",1000);
+    //先查询redis缓存在执行删除
+    $(document).ready(function(){
+      $.post("{:U('ajax_redis_')}",{status_:1},function(data){
+         if( data.status == -2000 ){
+            console.log(data.message);
+         }
+      },"json");
+    });
+    // 二维码生成代码
+    var url = "http://www.plgox.com/Uploadfiles?token={$token}&status_keys={$status_keys}";
+    var qrcode = new QRCode("qrcode",{
+      width: 150,
+      height: 150,
+    correctLevel : QRCode.CorrectLevel.H
+    });
+      qrcode.clear();
+      qrcode.makeCode(url);
+    $("#qrcode").removeAttr("title");
+    // 多图上传
+		number = [0,1,2,3,4,5,6,7,8];
+		$.each(number,function( index ){
+			if( index != 0 ){
+				$(".image"+index).click(function(){
+					$("#exampleInputFile"+index).click();
+					$("#exampleInputFile"+index).off("change");
+					$("#exampleInputFile"+index).on('change',function(){
+						// 判断上传的限制
+						if( $(this)[0].files[0].size > 10485760){
+							alert("上传文件超出了特定的上传限制!");
+							return false;
+						}else{
+							var objUrl = getUploads(this.files[0]);
+							if( objUrl ){
+								$(".image"+index).attr("src",objUrl);
+							}
+						}
+					});
+				});
+			}
+		});
+		function getUploads(files){
+			url = null;
+			if( window.createObjectURL !== undefined ){
+				url = window.createObjectURL(files);
+			}else if( window.URL !== undefined ){
+				url = window.URL.createObjectURL(files);
+			}else if( window.webkitURL != undefined ){
+				url = window.webkitURL.createObjectURL(files);
+			}
+			return url;
+		}
+    </script>
+     
+     
+     <div class="wdzl_bj1">
+      	<p>
+      		<span class="nlh">*</span>&nbsp;产品描述 ： 
+      	</p>
+      	
+      	
+		<div id="sample" style="width:900px;margin-left:95px;">
+			<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Common/bootstrap/UEditor/ueditor.config.js"></script>
+		    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Common/bootstrap/UEditor/ueditor.all.min.js"> </script>
+		    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Common/bootstrap/UEditor/lang/zh-cn/zh-cn.js"></script>
+		    <script id="editor" type="text/plain" style="width:1000px;height:500px;" name="share_descriptions" class="share_descriptions">{$share_data['share_descriptions']}</script>
+			<script type="text/javascript">
+		    	//实例化编辑器
+		    	//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+		    	var ue = UE.getEditor('editor');
+			</script>
+	   </div>
+			
+			
+     </div>
+     
+     
+     
+     
+      <!-- <div class="wdzl_bj1">
+      	<p>
+      		展示城市 ： 
+      	</p>
+      	<p>
+      	  <span class="city_tk">
+      	  	未选择
+      	  </span>
+      	  <span style="color:#555555;">&nbsp;&nbsp;&nbsp;（说明：选择租赁方案展示的城市，点击选框选择城市）</span>
+      	</p>
+      </div> -->
+      
+       <div class="wdzl_bj1">
+      	<p>
+      		服务地址 ： 
+      	</p>
+      	<p>
+
+      	 
+      	   <select class="wdzl_thdz" id="exampleInputSheng" style="width:130px;" onchange="loadArea(this.value,'sheng')">
+			<option value="0">--省--</option>
+				<volist name="city" id="city_">
+					<option value="{$city_['city_id']}">{$city_['city_name']}</option>
+				</volist>
+			</select>
+			<select class="wdzl_thdz shr_dz" style="width:130px;"  id="sheng" onchange="loadArea(this.value,'shi')">
+				<option value="0">--市--</option>
+			</select>
+			<input type="text" class="wdzl_thdz" style="height:30px;"  placeholder="请输入详细地址" />
+      	  <!-- <div class="dd_js220" style="clear:both;float:left;margin-left:95px;">
+	      	<span style="display:block;float:left;margin-left:12px;font-size:24px;font-weight:700;">＋</span>
+	      	<span style="display:block;float:left;">添加新地址</span>
+	      </div> -->
+      	</p>
+      </div>
+     <div class="wdzl_tj" id="wss" attr_id="{$share_data['share_id']}">
+     	<a style="color:white;">确认发布商品</a></div>
+   </div>
+</div>
+<!-- href="{:U('Homeuser/wode_zuling')}"
+-->
+<!--遮罩-->
+<div class="zhezhao"  style="display:none;">
+
+	
+	<!--发布成功  3秒后自动消失-->
+	<div class="zz_nr_fbcg" style="display:none;width:350px;height:260px;">
+	  <div class="zdsc">
+		发布成功	
+	  </div>
+	   
+	  <div class="zz_nr3" >
+			<div href="#wss" class="zdxs" >
+				<img src="__PUBLIC__/Home/image/duihao.png" />
+			</div>	
+	  </div> 
+	</div>	
+
+</div>
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/cropbox.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/city.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/base_64.js"></script>
+
+<script type="text/javascript">
+  // 地址三级联动
+	function loadArea(cityId,cityType){
+		$.post("{:U('User/ajaxAddress')}",{'cityId':cityId},function( data ){
+			if( cityType == 'sheng'){
+				$("#"+cityType).html('<option value="0">--市--</option>');
+				$("#shi").html('<option value="0">--县/区/镇--</option>');
+			}else if( cityType == "shi"){
+				$("#"+cityType).html('<option value="0">--县/区/镇--</option>');
+			}
+			if( cityType != 'null' ){
+				$.each(data,function(index,value){
+					opt = $("<option/>").text(value['city_name']).attr("value",value['city_id']);
+					$("#"+cityType).append(opt);
+				});
+			}
+		},"json");
+	}
+	$(".wdzl_tj").click(function(){
+	if( $(".share_name").val() == "" ){
+		alert("请输入填写商品名称!");
+		return false;
+	}
+	if( $(".specifications_name").val() == "" ){
+		alert("请输入套餐名称!");
+		return false;
+	}
+	if( $('#cid').val() == "0" ){
+		alert("分类必须要选择的!");
+		return false;
+	}
+	if( $(".specifications_deposit").val() == "" ){
+		alert("请输入押金!");
+		return false;
+	}
+	if( $(".specifications_market").val() == "" ){
+		alert("请输入市场参考价!");
+		return false;
+	}
+	if( $(".specifications_stock").val() == "" ){
+		alert("请输入库存量!");
+		return false;
+	}
+	if( $(".tj_tc").attr("attr-value") == "请添加套餐" ){
+		alert("你目前没有添加，请选添加套餐!");
+		window.location.href="{:U('Homeuser/taocan_guanli')}";
+		return false;
+	}
+	// 获取套餐规格
+	var Mosaic = "";
+	$(".specifications_id_checked").each(function( index ){
+		if( $(this).is(":checked") ){
+			Mosaic+=","+$(this).val();
+		}
+	});
+	Mosaic_id = Mosaic.substring(1);
+	if( Mosaic_id.length == 0 ){
+		alert("请按照你所发布的产品选择相对应的套餐！");
+		return false;
+	}
+  // 扫码上传图片的截取的路径
+  var images = "";
+  var arr1 = new Array();
+  $(".imagess").each(function( index ){
+    if( $(this).attr("src") != "/Public/Home/image/my_top2.jpg" ){
+      var images_ =  $(this).attr("src");
+      var images_1 = images_.split("/")[3];
+      var images_2 = images_.split("/")[4];
+      images_s=images_1+"/"+images_2;
+      arr1.push(images_s);
+    }
+  });
+	// 获取编辑器内容
+	var html = ue.getContent();
+	// base64加密
+	var base64 = new Base64();
+	var str_content = base64.encode(html);
+	$.ajaxFileUpload({
+        type: "POST",
+    dataType: "JSON",
+         url: "{:U('Homeuser/AjaxHomeuserProduct')}",
+         fileElementId:['exampleInputFile1','exampleInputFile2','exampleInputFile3','exampleInputFile4','exampleInputFile5','exampleInputFile6'], 
+         // ,'exampleInputFile7','exampleInputFile8'
+        data: {
+        	'share_id':$(this).attr("attr_id"),// 产品id
+        	'share_name':$('.share_name').val(),// 产品名称
+        	'share_key':$('.share_key').val(),// 副标题
+        	'share_classify_pid':"{$classify_id}",// 分类
+          'share_many_img':arr1, // 扫码上传的路径
+        	'share_sj_pq':$('.brand_name').val(),// 品牌
+        	'share_sj_xh':$('.brand_model').val(),// 型号
+        	'share_chandi':$(".chandi").val(),// 产地
+        	'share_descriptions':str_content,// 编辑器内容
+        	'share_product_type_id':Mosaic_id, // 产品规格
+        	'share_sheng':$('#exampleInputSheng').val(), // 发货省
+        	'share_shi':$("#sheng").val(), // 发货市
+        	'share_rent':$(".share_rent").val(), //参考租金
+        },
+      success: function( data ){
+        console.log(data);
+      	var res = /<pre.+?>(.+)<\/pre>/g;
+      	var result = data.match(res)
+      	data = RegExp.$1;
+      	obj = eval( '('+data+')' );
+      	if( obj.status == 2000 ){
+      		alert(obj.message);
+      		window.location.href="{:U('Homeuser/wode_zuling')}";
+      		return false;
+      	}else if( obj.status == -2000 ){
+      		alert(obj.message);
+      		return false;
+      	}else if( obj.status == -2001 ){
+      		alert(obj.message);
+      		return false;
+      	}
+      },
+      error: function( XMLHttpRequest , status , error ){
+        tkcx("出现错误,错误位置在：" + status);
+      }
+    });
+		return false;
+		 $(".zhezhao").css("display","block");
+   	     $(".zz_nr_fbcg").css("display","block");
+   	      setTimeout(function(){
+   	      	 $(".zhezhao").css("display","none");
+   	         $(".zz_nr_fbcg").css("display","none");
+   	         window.location="{:U('Homeuser/wode_zuling')}";
+   	      },3000);
+	})
+	  //自动消失(弹框)
+  $(".zdxs").click(function(){
+  	 $(".zhezhao").css("display","none");
+   	 $(".zz_nr_fbcg").css("display","none");
+   	 window.location="{:U('Homeuser/wode_zuling')}";
+  })
+
+	function bdsj(idz){
+    	$(".wdzl_bj_bigbox").eq(idz).css("display","none");
+    }
+	function cmsj(iddz){
+		$(".wdzl_bj26").eq(iddz).css("display","block");
+	}
+	function yksj(iddz){
+		$(".wdzl_bj26").eq(iddz).css("display","none");
+	}
+  //上传图片
+ 
+
+
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  $(".htsy_top_yd").css("top","92px");
+
+	$(".htsy_2 li").eq(2).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(2).siblings().css("background","none");
+	$(".htsy_2 li div").eq(2).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(2).siblings().css("background","none");
+ 		
+	
+	
+	
+	/*添加城市*/
+/*	$(".dd_js220").click(function(){
+		$(".zhezhao").css("display","block");
+		$(".zz_nr").css("display","block");
+		$(".zz_nr_cy").css("display","none");
+		 $(".container").css("display","none");
+		
+	});*/
+	
+	$(".tyjs").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+		
+	});
+	$(".tyjs0").click(function(){
+		var jg="<option>北京dssdsd</option>";
+		$(".wdzl_thdz:last").append(jg);
+		$(".zhezhao").css("display","none");
+	    $(".zz_nr").css("display","none");
+	});
+	
+	/*选择城市*/
+	/*$(".city_tk").click(function(){
+		$(".zhezhao").css("display","block");
+		$(".zz_nr_cy").css("display","block");
+		 $(".container").css("display","none");
+		  $(".zz_nr").css("display","none");
+		
+	});*/
+	$(".tyjs_city1").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr_cy").css("display","none");
+		
+	});
+	$(".tyjs_city2").click(function(){
+		$(".zhezhao").css("display","none");
+	    $(".zz_nr_cy").css("display","none");
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.dd_js{
+	position:relative;
+	width:100%;
+
+    top:18px;
+}
+.dd_js_box{
+	width:1195px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+  .gouw_1{
+      	font-size:14px;
+      	color:#333333;
+      	margin-left:32px;
+      	margin-top:22px;
+
+      }
+      .gouw_1 span{
+      	color:#1f61c3;
+      }
+      .mes_detai,.mes_detai1{  	
+      	text-align:center;
+      	width:100%;
+      }
+      .mes_detai{
+      	font-size:16px;
+      	margin-top:55px;
+      	color:#1f61c3;
+      }
+      .mes_detai1{
+      	font-size:14px;
+      	color:#666666;
+      	margin-top:10px;
+      }
+      .mes_detai2{
+      	width:94%;
+      	line-height:57px;
+      	font-size:16px;
+      	margin:0 auto;
+      	color:#666666;
+      	text-align:left;
+      	margin-top:48px;
+      	border-top:1px solid #D6D6D6;
+      }

@@ -1,0 +1,12 @@
+[ 2019-04-10T11:36:13+08:00 ] 45.76.169.124 /?s=admin/%5Cthink%5Capp/invokefunction
+ERR: 无法加载控制器:\think\app
+
+[ 2019-04-10T11:36:14+08:00 ] 45.76.169.124 /index.php?s=admin/%5Cthink%5Capp/invokefunction
+ERR: 无法加载控制器:\think\app
+
+[ 2019-04-10T13:33:35+08:00 ] 45.76.169.124 /?s=admin/%5Cthink%5Capp/invokefunction
+ERR: 无法加载控制器:\think\app
+
+[ 2019-04-10T13:33:36+08:00 ] 45.76.169.124 /index.php?s=admin/%5Cthink%5Capp/invokefunction
+ERR: 无法加载控制器:\think\app
+

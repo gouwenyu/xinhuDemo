@@ -1,0 +1,489 @@
+<include file="User:my_top" />
+<title>{$setTitle}</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_update.css">
+<style type="text/css">
+
+</style>
+
+<div class="mypj">
+   <div class="mypj1">
+      <div  class="mypj2" style="padding-bottom:35px;">
+	      <div class="mypj6">
+	                 基本资料
+	      </div>   
+	      <div class="myqyrz1">
+	                 修改手机号码
+	      </div>   
+          <ul class="myqyrz2" style="margin:0 auto;margin-top:70px;">
+	         <li>
+	         	<div class="myqyrz21">
+	         		<div class="myqyrz210 myqyrz210_dj">
+	         		</div>
+	         		<div class="myqyrz211 myqyrz210_dj">
+	         			1
+	         		</div>         		
+	         	</div>
+	         	<div class="myqyrz22">
+	         			验证身份
+	         	</div>  
+	         </li>
+	         <li>
+	         	<div class="myqyrz21">
+	         		<div class="myqyrz210">
+	         		</div>
+	         		<div class="myqyrz211">
+	         			2
+	         		</div>         		
+	         	</div>
+	         	<div class="myqyrz22">
+	         			修改手机号码
+	         	</div>
+	         </li>
+	         <li>
+	         	<div class="myqyrz21">
+	         		<div class="myqyrz210">
+	         		</div>
+	         		<div class="myqyrz211">
+	         			3
+	         		</div>         		
+	         	</div>
+	         	<div class="myqyrz22">
+	         			完成
+	         	</div> 
+	         </li>
+	      </ul> 
+	      
+	      
+	       <!--资金密码弹框-->
+  <div class="zjmmk" style="display:block;">
+  	 <div class="zjmmk1">
+  	 	修改手机号码
+  	 </div>
+  	 <div class="zjmmk2" style="display:block;">
+  	 	
+  	 	
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">已验证手机：</div>
+  	 		<div class="zjmmk21_ri tel_number">{$member['plgox_tel']}</div>
+  	 	</div>
+      <div class="zjmmk21">
+        <div class="zjmmk21_le">短信验证码：</div>
+        <div class="zjmmk21_ri">
+          <input type="text" class="zjmm_bdk send_code" name="code_val" style="width:190px;"/>
+          <div class="zjmm_hqyzm zjmm_hqyzm_div">
+            <span class="zjmm_hqyzm get_send_code">获取短信验证码</span>
+          </div>
+        </div>
+      </div>
+
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">验证码：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk img_code" name="img_codes" style="width:190px;"/>
+  	 			<span class="zjmm_hqyzm"><img src="{:U('App/Checkcode/checkcode')}" style="width:100px;height:34px;" class="img-responsive" onclick="yzmCodes();" id="yzmCodes"></span>
+  	 		</div>
+  	 	</div>
+      <script type="text/javascript">
+        function yzmCodes(){
+          var time = new Date().getTime();
+          $("#yzmCodes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand="+ time);
+        }
+      </script>
+  	 	<div class="zjmmk22">
+  	 		<div class="zjmmk22_le">
+  	 			下一步
+  	 		</div>
+  	 		
+  	 	</div>
+  	 	
+  	 	
+  	 </div>
+  	 
+  	 <div class="zjszxmm" style="display:none;">
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">新手机号码：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk new_tel" name="new_tel" placeholder="请输入新手机号码"/>	
+  	 		</div>
+  	 	</div>
+      <div class="zjmmk21">
+        <div class="zjmmk21_le">短信验证码：</div>
+        <div class="zjmmk21_ri">
+          <input type="text" class="zjmm_bdk new_send_code" name="new_send_code" style="width:190px;"/>
+          <div class="zjmm_hqyzm new_code_div">
+            <span class="zjmm_hqyzm new_code">获取短信验证码</span>
+          </div>
+        </div>
+      </div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">验证码：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk new_imgs_code" name="new_imgs_code" style="width:190px;"/>
+            <span class="zjmm_hqyzm new_img_code" ><img src="{:U('App/Checkcode/checkcode')}" onclick="new_imgd_codes();" style="width:100px;height:34px;" class="img-responsive" id="new_imgd_codes"></span>
+  	 		</div>
+  	 	</div>
+  	 	
+  	 	<script type="text/javascript">
+       function new_imgd_codes(){
+          var time = new Date().getTime();
+          $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand" + time );
+       } 
+      </script>
+  	 	<div class="zjmmk22">
+  	 		<div class="zjmmk22_next">
+  	 			下一步
+  	 		</div>
+  	 		
+  	 	</div>
+  	 	
+  	 	
+  	 	
+  	 </div>
+  	 
+  	 
+  	 <div class="zjsz_finish" style="display:none;">
+  	 	
+  	 	<div class="zjsz_fin_wz">
+恭喜你，您的手机号码修改完成
+  	 	</div>
+  	 	
+  	 	<div class="zjsz_fin_img">
+  	 		<img src="__PUBLIC__/Home/image/duihao.png" />
+  	 	</div>
+  	 	
+  	 	
+  	 	
+  	 </div>
+  	 
+  	 
+  	 
+  	 
+  	 
+  	 
+   </div> 
+	      
+	      
+	      
+	      
+	      <br/><br/>
+     </div>
+   </div>
+ </div>
+
+<script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/alert.js"></script>
+<script type="text/javascript">
+
+ my_top(4,"200px","企业认证");
+ +74
+// 检测文本是否为空 eq(0)
+
+
+
+
+
+$(".send_code").change(function(){
+  if( $(".send_code").val() == "" ){
+    alert("短信验证码不能为空");
+    $(".send_code").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#yzmCodes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else{
+    $(".send_code").css("border","1px solid green");
+  }
+});
+// 检测文本是否为空 eq(1)
+$(".img_code").change(function(){
+  if( $(".img_code").val() == "" ){
+    alert("图形验证码不能为空");
+    $(".img_code").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#yzmCodes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else{
+    $(".img_code").css("border","1px solid green");
+  }
+});
+// 获取短信验证码的时候，检测我的图形验证码是否正确或者是否为空
+$(".get_send_code").click(function(){
+  if( $(".img_code").val() == "" ){
+    alert("图形验证码不能为空");
+    $(".img_code").css("border","1px solid red");
+    return false;
+  }else if( $(".img_code").val() != "" ){
+    $.post("{:U('Ajax_save_tel')}",{ "check_status":1 , "fs_code": "success", "img_codes":$(".img_code").val() },function( data ){
+        if( data.status == 2000 ){
+          alert(data.message);
+          times = 120;
+          timess = self.setInterval("get_check_time()",1000);
+          return false;
+        }else if( data.status == -2001 ){
+          alert(data.message);
+          var time = new Date().getTime();
+          $("#yzmCodes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+          return false;
+        }
+     },"json");
+  }else{
+    $(".img_code").css("border","1px solid green");
+  }
+});
+//下一步（第二步）
+$(".zjmmk22_le").click(function(){
+  if( $(".send_code").val() == "" ){
+    alert("短信验证码不能为空");
+    $(".send_code").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#yzmCodes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else{
+    $(".send_code").css("border","1px solid green");
+  }
+  // 判断图形验证码是否为空
+  if( $(".img_code").val() == "" ){
+    alert("图形验证码不能为空");
+    $(".img_code").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#yzmCodes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+  }else{
+    $(".img_code").css("border","1px solid green");
+  }
+  // 都不为空的情况下
+  if( $(".send_code").val() !="" &&  $(".img_code").val() != "" ){
+     $.post("{:U('Ajax_save_tel')}",{ "check_status":1 , "fs_code":"success1" , "img_codes":$(".img_code").val() },function( data ){
+        if( data.status == 2000 ){
+          $.post("{:U('Ajax_save_tel')}",{ "check_status":2 , "send_code":$(".send_code").val() },function( data ){
+              if( data.status == 2000 ){
+                $(".zjmmk2").css("display","none");
+                $(".zjszxmm").css("display","block");
+                $(".myqyrz210").eq(1).addClass("myqyrz210_dj");
+                $(".myqyrz211").eq(1).addClass("myqyrz210_dj");
+                return false;
+              }else if( data.status == -2001 ){
+                alert(data.message);
+                var time = new Date().getTime();
+                $("#yzmCodes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+                return false;
+              }else if( data.status == -2002 ){
+                alert(data.message);
+                var time = new Date().getTime();
+                $("#yzmCodes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+                return false;
+              }
+          },"json");
+          /*times = 120;
+          timess = self.setInterval("get_check_time()",1000);*/
+          return false;
+        }else if( data.status == -2001 ){
+          alert(data.message);
+          var time = new Date().getTime();
+          $("#yzmCodes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+          return false;
+        }
+     },"json");
+  }
+  $(".zjmmk2").css("display","none");
+  $(".zjszxmm").css("display","block");
+  $(".myqyrz210").eq(1).addClass("myqyrz210_dj");
+  $(".myqyrz211").eq(1).addClass("myqyrz210_dj");
+});
+// 获取验证码时间
+var times;
+function get_check_time() {
+   $(".zjmm_hqyzm_div").html('<span class="zjmm_hqyzm">'+times+'秒</span>');
+   times--;
+   if( times < 0 ){
+      clearInterval(timess);
+      timess = 0;
+      $(".zjmm_hqyzm_div").html('<span class="zjmm_hqyzm get_send_code">获取短信验证码</span>');
+   }
+}
+// changge检测 密码文本判断
+$(".new_tel").change(function(){
+  var tel = /^1[34578]\d{9}$/;
+  if( $(".new_tel").val() == "" ){
+    alert("新手机号码不能为空!");
+    $(".new_tel").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else if( !tel.test($(".new_tel").val()) ){
+    alert("新手机号码不正确!");
+    $(".new_tel").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else{
+    $(".new_tel").css("border","1px solid green");
+  }
+});
+// 短信验证码文本判断
+$(".new_send_code").change(function(){
+  if( $(".new_send_code").val() == "" ){
+    alert("短信验证码不能为空");
+    $(".new_send_code").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else{
+    $(".new_send_code").css("border","1px solid green");
+  }
+});
+// 图形验证码文本判断
+$(".new_imgs_code").change(function(){
+  if( $(".new_imgs_code").val() == "" ){
+    alert("图形验证码不能为空");
+    $(".new_imgs_code").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+  }else{
+    $(".new_imgs_code").css("border","1px solid green");
+  }
+});
+$(".new_code").click(function(){
+  var tel = /^1[34578]\d{9}$/;
+  if( $(".new_imgs_code").val() == "" ){
+    alert("图形验证码不能为空");
+    $(".new_imgs_code").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+  }else if( $(".new_tel").val() == "" ){
+    alert("新手机号码不能为空!");
+    $(".new_tel").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else if( !tel.test($(".new_tel").val()) ){
+    alert("新手机号码不正确!");
+    $(".new_tel").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else{
+    // 检测输入的手机号 是否存在
+    if( $(".new_tel").val() == $(".tel_number").text() ){
+      alert("已经是当前的手机号码无需重复修改!");
+      var time = new Date().getTime();
+      $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+      return false;
+    }else{
+      $.post("{:U('Ajax_save_tel')}",{ "check_status": 4 , "new_tel":$(".new_tel").val() },function( data ){
+          if( data.status == 2000 ){
+            $.post("{:U('Ajax_save_tel')}",{ 'check_status':1 , "fs_code":"success2" , "img_codes":$(".new_imgs_code").val() , "new_tel":$(".new_tel").val() },function( data ){
+                if( data.status == -2001 ){
+                  alert(data.message);
+                  var time = new Date().getTime();
+                  $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+                  return false;
+                }else if(data.status == 2000 ){
+                  alert(data.message);
+                  times = 120;
+                  timess = self.setInterval("get_time()",1000);
+                  return false;
+                }
+            },"json");
+          }else if( data.status == -2001 ){
+            alert(data.message);
+            var time = new Date().getTime();
+            $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+            return false;
+          }
+      },"json");      
+    }
+  }
+});
+var times;
+function get_time(){
+  $(".new_code_div").html('<span class="zjmm_hqyzm">'+times+'秒</span>');
+  times--;
+  if( times < 0 ){
+    clearInterval(timess);
+    times = 0;
+    $(".new_code_div").html('<span class="zjmm_hqyzm new_code">获取短信验证码</span>');
+  }
+}
+//下一步（最后一步）
+$(".zjmmk22_next").click(function(){
+  // 密码文本判断
+  var tel = /^1[34578]\d{9}$/;
+  if( $(".new_tel").val() == "" ){
+    alert("新手机号码不能为空!");
+    $(".new_tel").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else if( !tel.test($(".new_tel").val()) ){
+    alert("新手机号码不正确!");
+    $(".new_tel").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else{
+    $(".new_tel").css("border","1px solid green");
+  }
+  // 短信验证码文本判断
+  if( $(".new_send_code").val() == "" ){
+    alert("短信验证码不能为空");
+    $(".new_send_code").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+    return false;
+  }else{
+    $(".new_send_code").css("border","1px solid green");
+  }
+  // 图形验证码文本判断
+  if( $(".new_imgs_code").val() == "" ){
+    alert("图形验证码不能为空");
+    $(".new_imgs_code").css("border","1px solid red");
+    var time = new Date().getTime();
+    $("#new_imgd_codes").attr("src","{:U('App/Checkcode/checkcode')}?yzmRand=" + time );
+  }else{
+    $(".new_imgs_code").css("border","1px solid green");
+  }
+  if( $(".new_tel").val() != "" && $(".new_send_code").val() !="" && $(".new_imgs_code").val() != "" ){
+      $.post("{:U('Ajax_save_tel')}",{ "check_status":3, "new_tel":$(".new_tel").val() , "new_send_code":$(".new_send_code").val() },function( data ){
+        if( data.status == 2000 ){
+          $(".zjszxmm").css("display","none");
+          $(".zjsz_finish").css("display","block");
+          $(".myqyrz210").eq(2).addClass("myqyrz210_dj");
+          $(".myqyrz211").eq(2).addClass("myqyrz210_dj");
+          return false;
+        }else if( data.status == -2001 ){
+          alert(data.message);
+          return false;
+        }else if( data.status == -2002 ){
+          alert(data.message);
+          return false;
+        }
+      },"json");
+  }
+});
+//密码眼睛设置	
+	function show_pass() {
+	if($(".szmmkj").attr("type")=="password"){
+		$(".szmmkj").attr("type","text");
+		$(".findmm1").attr("src","__PUBLIC__/Home/image/reginster.png");
+	}
+	else{
+		$(".szmmkj").attr("type","password");
+		$(".findmm1").attr("src","__PUBLIC__/Home/image/findpass1.png");
+	}
+}
+
+function show_repass() {
+    if($(".reszmmkj").attr("type")=="password"){
+		$(".reszmmkj").attr("type","text");
+		$(".findmm2").attr("src","__PUBLIC__/Home/image/reginster.png");
+	}
+	else{
+		$(".reszmmkj").attr("type","password");
+		$(".findmm2").attr("src","__PUBLIC__/Home/image/findpass1.png");
+	}
+} 
+ 
+ 
+</script>
+{:W('Common/footer')}
+</body>
+</html>

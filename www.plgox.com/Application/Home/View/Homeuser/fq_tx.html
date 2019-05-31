@@ -1,0 +1,173 @@
+{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/htsy_index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_zh.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zhezhao.css" />
+<style type="text/css">
+	
+.htddgl_1{
+	height:42px;
+	    padding: 36px 26px;
+	margin-bottom:50px;
+}
+.htddgl li,.htddgl_1 li{
+	float:left;
+	padding:0px 20px;
+	font-size:16px;
+}
+.ddglsy,.htddgl li a,.htddgl_1 li a{
+	display:block;
+	height:42px;
+	padding:0px 10px;
+	color:#000000;
+	line-height:42px;
+}
+
+.htddgl_yg{
+	border-bottom: 1px solid #1f61c3;
+	color:#1f61c3;
+}
+
+
+
+.htddgl li:not(:first-child) a:hover,.htddgl li:first-child a{
+	color:#1f61c3;
+
+}
+</style>
+<div class="ht_in1">
+	<div class="ht_in10">
+		<span >
+			发起提现
+		</span>
+	</div>
+	
+
+   <ul class="htddgl_1" >
+      <li><a href="#" onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_guanli')}'">账户管理</a></li>
+      <li><a href="#" onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_mingxi')}'">账户明细</a></li>
+      <li><a href="#"  class="htddgl_yg" style="color:#1f61c3;"  onclick="javascript:window.location.href='{:U('Homeuser/fq_tx')}'">我要提现</a></li>
+      <li><a href="#" onclick="javascript:window.location.href='{:U('Homeuser/tixian_jilu')}'">提现记录</a></li>
+     </ul>
+
+<div style="padding-left:36px;">
+	<div class="txjl6">
+		<span class="txjl61">请输入提现额度：</span>
+		<input type="text" class="txjl62" placeholder="当前最大可提现¥500.00"/>
+	</div>
+    
+    <div class="wdzh5">
+		<div class="txjl1">支付宝账号：123****8877</div>
+		<div class="txjl2">真实姓名：王*</div>
+        <div class="txjl3 txjl_zfb">提现到支付宝</div>
+    </div>
+    
+    <div class="wdzh6">
+		<div class="txjl1">银行账户：3642  ****  ****  ****  123</div>
+		<div class="txjl2">开户银行：建设银行</div>
+        <div class="txjl3 txjl_yhk">提现到银行账户</div>
+    </div>
+</div>
+</div>
+
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr" style="display:none;height:300px;">
+	  <div class="zz_nr1">
+		<span style="wxts">温馨提示<span>
+		<span class="scqr" style="margin-left:0px;">×&nbsp;</span>
+	  </div>
+	  <div class="zz_nr2" style="line-height:30px;padding:50px 0px;margin:0 auto;display:block;">
+		您还未设置资金密码，请先设置资金密码！		
+	  </div>
+	  
+	  <div class="zz_nr3" style="margin-top:0px;">
+			<a href="#wss" class="tyjs0">确认</a>
+			<a href="#wss" class="tyjs">取消</a>	
+	  </div>  
+	</div>	
+	
+
+	
+	
+	<!--发布成功  3秒后自动消失-->
+	<div class="zz_nr_fbcg" style="display:none;">
+	  <div class="zdsc">
+	  	提交成功，平台会核实处理
+	  </div>
+	   
+	  <div class="zz_gbtk" >
+			关闭
+	  </div> 
+	</div>
+	
+</div>
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript">
+$(".htsy_top_yd").css("top","138px");
+
+
+
+	$(".htsy_2 li").eq(3).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(3).siblings().css("background","none");
+	$(".htsy_2 li div").eq(3).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(3).siblings().css("background","none");
+
+
+    //提现支付宝
+	$(".txjl_zfb").click(function(){
+		$(".zhezhao").css("display","block");
+		$(".zz_nr").css("display","block");
+		$(".zz_nr2").text("您还未绑定支付宝，无法完成支付宝提现操作。请先绑定。");
+		
+	});
+	//提现银行卡
+	$(".txjl_yhk").click(function(){
+		$(".zhezhao").css("display","block");
+		$(".zz_nr").css("display","block");
+		$(".zz_nr2").text("您还未绑定银行账户，无法完成银行卡提现操作。请先绑定");
+		
+	});
+	
+	//提现银行卡
+	$(".txjl_zjmm").click(function(){
+		$(".zhezhao").css("display","block");
+		$(".zz_nr").css("display","block");
+		$(".zz_nr2").text("您还未设置资金密码，请先设置资金密码！");
+		
+	});
+	
+	$(".tyjs0").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+	});
+	$(".tyjs").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+	});
+	$(".scqr").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+	});
+	
+	
+	
+	//弹框出现
+/*	$(".fprw").click(function(){
+			$(".zz_nr").css("display","none");
+		$(".zz_nr_fbcg").css("display","block");
+		$(".zdsc").text('分配成功，货送到记得点击确认送达');
+		
+		//弹框消失
+		 setTimeout(function(){
+   	      	 $(".zhezhao").css("display","none");
+   	      	 $(".zz_nr").css("display","block");
+   	         $(".zz_nr_fbcg").css("display","none");
+   	      },3000);
+		
+	})
+	
+	$(".zdxs").click(function(){
+  	 $(".zhezhao").css("display","none");
+   	 $(".zz_nr_fbcg").css("display","none");
+  })*/
+</script>

@@ -1,0 +1,241 @@
+{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_dingdan.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/ht_ddgl_zadd.css">
+<style>
+
+</style>
+<div class="ht_in1">
+	<div class="ht_in10">
+		<span >
+			订单管理
+		</span>
+	</div>
+
+<div class="ht_content">
+     <!--订单详情-->
+   <div class="spxq" style="display:block;">
+   	
+   	<div class="spxq1" >商品详情</div>
+   	
+    
+    
+    
+    <table class="spxq0" >
+    	<tr class="spxq10" style="height:40px;">
+            <td>商品图片</td>
+            <td>
+            商品名称
+            </td>
+            <td>
+            单台日租金
+            </td>
+            <td>
+            单台押金
+            </td>
+            <td>
+            数量
+            </td>
+          </tr>
+         <tr class="spxq12">
+            <td>
+              <img src="__ROOT__/Uploads/admin/{$order_detil['share_home_img']}" style="width: 100px;height: 100px;" />
+            </td>
+            <td style="padding:0px 70px;width:120px;">  
+            {$order_detil['share_name']}-{$order_detil['specifications_name']}
+            </td>
+            <td >
+               {$order_detil['specifications_rent']}元/天
+            </td>
+            <td >
+               {$order_detil['specifications_deposit']}元
+            </td>
+            <td >
+               {$order_detil['cart_number']}台
+            </td>
+         </tr>
+
+    </table>
+    
+    <table class="spxq2" >
+    	<tr class="spxq20" >
+            <td colspan="2">订单信息</td>
+          </tr>
+         <tr class="spxq21">
+            <td>
+              <ul class="spxq22">
+       	  	  	<li>订单号：</li>
+       	  	  	<li>下单日期：</li>
+       	  	  	<li>订单状态：</li>
+       	  	  	<li>最低租期：</li>
+       	  	  </ul>	
+            </td>
+            <td>
+              <ul class="spxq23">
+       	  	  	<li>{$order_detil['order_number']}</li>
+       	  	  	<li>{$order_detil['order_createtime']|date="Y-m-d H:i:s",###}</li>
+       	  	  	<li>退租中</li>
+       	  	  	<li>{$order_detil['zulin_day_number']}天</li>
+       	  	  </ul>	
+            </td>
+         </tr>
+
+    </table>
+    
+    
+    <table class="spxq2" >
+    	<tr class="spxq20" >
+            <td colspan="2">买家信息</td>
+          </tr>
+         <tr class="spxq21">
+            <td>
+              <ul class="spxq22">
+       	  	  	<li>用户名：</li>
+       	  	  	<li>联系电话：</li>
+       	  	  	<li>收货地址：</li>
+       	  	  	<li>买家备注：</li>
+       	  	  </ul>	
+            </td>
+            <td>
+              <ul class="spxq23">
+       	  	  	<li>{$order_detil['address_name']}</li>
+       	  	  	<li>{$order_detil['address_tel']}</li>
+       	  	  	<li>{$order_detil['address_default']}</li>
+       	  	  	<li>{$order_detil['order_detil_liuyan']}</li>
+       	  	  </ul>	
+            </td>
+         </tr>
+
+    </table>
+    
+    
+    <table class="spxq2" >
+    	<tr class="spxq20" >
+            <td colspan="2">支付信息</td>
+          </tr>
+          <tr class="spxq21">
+            <td>
+              <ul class="spxq22">
+       	  	  	<li>单台押金：</li>
+       	  	  	<li>数量：</li>
+       	  	  	<li>总计押金：</li>
+       	  	  </ul>	
+            </td>
+            <td>
+              <ul class="spxq23">
+       	  	  	<li>¥<span class="order_deposit">{$order_detil['order_deposit']}</span></li>
+       	  	  	<li><span class="order_number">{$order_detil['cart_number']}</span></li>
+       	  	  	<li><span class="deposit"></span></li>
+       	  	  </ul>	
+            </td>
+         </tr>
+         <tr class="spxq21" style="border-top:1px dashed #D6D6D6;">
+           <td>
+              <ul class="spxq22">
+       	  	  	<li>单台日租金：</li>
+       	  	  	<li>数量：</li>
+       	  	  	<li>每日租金：</li>
+       	  	  </ul>	
+            </td>
+            <td>
+              <ul class="spxq23">
+       	  	  	<li>¥<span class="zj_rent">{$order_detil['order_rent']}</span></li>
+       	  	  	<li><span class="zj_number">{$order_detil['cart_number']}</span></li>
+       	  	  	<li><span class="rent"></span></li>
+       	  	  </ul>	
+            </td>
+         </tr>
+    </table>
+    
+    
+      <table class="spxq2" >
+    	<tr class="spxq20" >
+            <td colspan="2">送货地址</td>
+          </tr>
+         <tr class="spxq21" >
+            <td>
+              <ul class="spxq22">
+       	  	  	<li>送货地址：</li>
+       	  	  	<li>送货人姓名：</li>
+       	  	  	<li>联系人电话：</li>
+       	  	  	<li>备注：</li>
+       	  	  </ul>	
+            </td>
+            <td>
+              <ul class="spxq23">
+       	  	  	<li>北京市经济技术开发区荣京东街250号</li>
+       	  	  	<li>吴尊</li>
+       	  	  	<li>13045493232</li>
+       	  	  	<li>无</li>
+       	  	  	<!--<li style="height:100px;">
+       	  	  		<textarea style="width:338px;height:100px;padding:10px;" onfocus="this.value=''; this.onfocus=null;">无
+       	  	  		</textarea>
+       	  	  	</li>-->
+       	  	  </ul>	
+            </td>
+         </tr>
+    </table>
+    
+    <table class="spxq2" >
+    	<tr class="spxq20" >
+            <td colspan="2">回收地址</td>
+          </tr>
+         <tr class="spxq21" >
+            <td>
+              <ul class="spxq22">
+       	  	  	<li>回收地址：</li>
+       	  	  	<li>送货人姓名：</li>
+       	  	  	<li>联系人电话：</li>
+       	  	 <li>备注：</li>
+       	  	  </ul>	
+            </td>
+            <td>
+              <ul class="spxq23">
+       	  	  	<li>北京市经济技术开发区荣京东街250号</li>
+       	  	  	<li>吴尊</li>
+       	  	  	<li>13045493232</li>
+       	  	  	<li>无</li>
+       	  	  	<!--<li style="height:100px;">
+       	  	  		<textarea style="width:338px;height:100px;padding:10px;" onfocus="this.value=''; this.onfocus=null;">无
+       	  	  		</textarea>
+       	  	  	</li>-->
+       	  	  </ul>	
+            </td>
+         </tr>
+    </table>
+    
+    
+    
+  </div> 
+   
+   
+    
+    </div>
+  
+</div>
+
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/fen_ye.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // 押金 
+    var cart_deposit = parseFloat($(".order_deposit").text());
+    // 数量
+    var order_number = parseFloat($(".order_number").text());
+    $(".deposit").text((cart_deposit*order_number).toFixed(2));
+    // 租金
+    var zj_rent    = parseFloat($(".zj_rent").text());
+    // 数量
+    var zj_number  = parseFloat($(".zj_number").text());
+    $(".rent").text((zj_rent*zj_number).toFixed(2));
+
+});
+$(".htsy_2 li").eq(4).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(4).siblings().css("background","none");
+	$(".htsy_2 li div").eq(4).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(4).siblings().css("background","none");
+	$(".htsy_top_yd").css("top","184px");
+</script>
+</body>
+</html> 

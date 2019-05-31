@@ -1,0 +1,952 @@
+{:W('Common/htsy_top')}
+ <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_zulin.css" />
+ 
+<style media="screen">
+  td{
+  	text-align:center;
+  }
+  .zjmm_bc{
+    overflow:hidden;width:200px;color:red;display:block;margin-left:100px;
+  }
+</style>
+<div class="ht_in1">
+	<div class="ht_in10">
+		<span >
+			账户管理
+		</span>
+	</div>
+
+  <div class="ht_content">	
+  	
+    <ul class="htddgl_1" >
+      <li><a href="#" class="htddgl_yg" style="color:#1f61c3;"  onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_guanli')}'">账户管理</a></li>
+      <li><a href="#" onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_mingxi')}'">账户明细</a></li>
+      <li><a href="#" onclick="javascript:window.location.href='{:U('Homeuser/fq_tx')}'">我要提现</a></li>
+      <li><a href="#" onclick="javascript:window.location.href='{:U('Homeuser/tixian_jilu')}'">提现记录</a></li>
+     </ul>
+
+
+
+  	 <ul class="htddgl">
+     	<li><a href="#">密码管理</a></li>
+     	<li><a href="#">银行卡管理</a></li>
+     	<li><a href="#">支付宝管理</a></li>
+     </ul>
+<!--密码管理-->
+ <div class="mm_gl"  style="display:block;">
+ 	
+ <!--如果资金密码没有设置则显示下面-->
+     <table class="zhgl">
+     	<thead>
+     		<tr>
+     			<td>登陆密码</td>
+     			<td>操作</td>
+     		</tr>
+     	</thead>
+     	<tbody>
+     		<tr>
+     			<td colspan="2">为了保证您的账号安全，请尽快设置资金密码，该密码用于您的提现操作。</td>
+     		</tr>
+     	</tbody>
+     </table>
+     
+ <!--如果资金密码已设置则显示下面-->
+     <table class="zhgl">
+     	<thead>
+     		<tr>
+     			<td>资金密码</td>
+     			<td>操作</td>
+     		</tr>
+     	</thead>
+     	<tbody>
+     		<tr>
+     			<td>**********</td>
+     			<td class="xgmm"><a href="javascript:void(0);" attr_id="{$edit_zijin['zjinpass_id']}" class="attr_id">修改</a></td>
+     		</tr>
+     	</tbody>
+     </table>    
+     <div class="ank">
+       <div class="ank1 ank1_0">创建资金密码</div>
+     </div>
+  </div>  
+  
+<!--银行卡管理-->  
+  
+   <div class="bd_yhk">
+ <!--如果绑定了银行卡显示下面-->
+ <if condition="($zhanghu_admin['zhanghu_add_id'] eq null )">
+     <table class="zhg2">
+     	<thead>
+     		<tr>
+     			<td>银行名称</td>
+     			<td>卡号</td>
+     			<td>绑定时间</td>
+     			<td>操作</td>
+     		</tr>
+     	</thead>
+     	<tbody>
+     		<tr>
+     			<td colspan="4">您还未绑定银行账户，无法完成银行卡提现操作。</td>
+     		</tr>
+     	</tbody>
+     </table>
+  </if>
+ <!--如果没有绑定银行卡显示下面-->
+ <if condition="($zhanghu_admin['zhanghu_add_id'] neq null )">
+     <table class="zhg2">
+     	<thead>
+     		<tr>
+     			<td>银行名称</td>
+     			<td>卡号</td>
+          <td>姓名</td>
+     			<td>绑定时间</td>
+     			<td >操作</td>
+     		</tr>
+     	</thead>
+    
+     	<tbody>
+     		<tr>
+          <td>{$zhanghu_admin['zhanghu_add_khh']}</td>
+     			<td>{$zhanghu_admin['zhanghu_add_acconut']}</td>
+          <td>{$zhanghu_admin['zhanghu_add_name']}</td>
+     			<td>{$zhanghu_admin['zhanghu_add_time']|date="Y-m-d H:i:s",###}</td>
+     			<td class="sckh"><a href="javascript:void(0);" attr_id="{$zhanghu_admin['zhanghu_add_id']}" class="zhanghu_del">删除</a></td>
+     		</tr>
+     	</tbody>
+     </table>
+  </if>
+    <if condition="($zhanghu_admin['zhanghu_add_id'] eq null )">    
+     <div class="ank">
+       <div class="ank1 ank1_1">马上绑定</div>
+     </div>
+   </if>
+  </div> 
+  <script type="text/javascript">
+    $(".zhanghu_del").click(function(){
+      if( confirm("确定要删除该银行卡的账号吗?") ){
+        $.post("{:U('Homeuser/AjaxDel')}",{ 'zhuanghu_id':$(this).attr("attr_id") },function( data ){
+            if( data.status == 2000 ){
+                alert(data.message);
+                location.reload();
+                return false;
+            }else if( data.status == -2001 ){
+                alert(data.message);
+                return false;
+            }
+        },"json");
+      }      
+    })
+  </script>
+  
+  <!--银行卡管理-->  
+  
+   <div class="bd_zfb">
+ <!--如果绑定了银行卡显示下面-->
+ <if condition="($zhifubao['zhanghu_add_id'] eq null)">
+     <table class="zhg2">
+     	<thead>
+     		<tr>
+     			<td>支付宝账号</td>
+     			<td>真实姓名</td>
+     			<td>绑定时间</td>
+     			<td >操作</td>
+     		</tr>
+     	</thead>
+     	<tbody>
+     		<tr>
+     			<td colspan="4">您还未绑定支付宝，无法完成支付宝提现操作。</td>
+     		</tr>
+     	</tbody>
+     </table>
+  </if>
+ <!--如果没有绑定银行卡显示下面-->
+  <if condition="($zhifubao['zhanghu_add_id'] neq null)">
+     <table class="zhg2">
+     	<thead>
+     		<tr>
+     			<td>支付宝账号</td>
+     			<td>真实姓名</td>
+     			<td>绑定时间</td>
+     			<td >操作</td>
+     		</tr>
+     	</thead>
+     	<tbody>
+     		<tr>
+     			<td>{$zhifubao['zhanghu_add_acconut']}</td>
+     			<td>{$zhifubao['zhanghu_add_name']}</td>
+     			<td>{$zhifubao['zhanghu_add_time']|date="Y-m-d H:i:s",###}</td>
+     			<td class="sckh"><a href="javascript:void(0);" attr_id="{$zhifubao['zhanghu_add_id']}" class="attr_del">删除</a></td>
+     		</tr>
+     	</tbody>
+     </table>
+  </if>
+     <if condition="($zhifubao['zhanghu_add_id'] eq null)">
+      <div class="ank">
+	       <div class="ank1 ank1_2">马上绑定</div>
+	     </div>
+     </if>
+  </div> 
+  <script type="text/javascript">
+    $(".attr_del").click(function(){
+        if( confirm("确定要删除支付宝账户吗?") ){
+           $.post("{:U('Homeuser/AjaxDel')}",{ 'zhifubao':$(this).attr("attr_id") },function( data ){
+              if( data.status == 2000 ){
+                  alert(data.message);
+                  location.reload();
+                  return false;
+              }else if( data.status == -2001 ){
+                  alert(data.message);
+                  return false;
+              }
+           },"json");
+        }
+    });
+  </script>
+
+
+
+   <!--资金密码弹框-->
+  <div class="zjmmk" style="display:none;">
+  	 <div class="zjmmk1">资金密码</div>
+  	 <div class="zjmmk2">
+  	 	
+  	 	
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">手机号码：</div>
+  	 		<div class="zjmmk21_ri user_phone1">{$member['plgox_tel']}</div>
+  	 	</div>
+  	 	
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">验证码：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk sendsMs_code" name="sendsMs_code" style="width:146px;"/>
+          <div class="telCode">
+  	 			   <span class="zjmm_hqyzm" >获取验证码</span>
+          </div>
+  	 		</div>
+        <div class="zjmm_bc" style=""></div>
+  	 	</div>
+
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">设置新密码：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk szmmkj password" name="password"/>
+  	 			
+  	 		</div>
+  	 		<img class="find_xsmm findmm1"  src="__PUBLIC__/Home/image/reginster.png" style="cursor:pointer;" onClick="show_pass();"/>
+
+        <div class="zjmm_bc" style=""></div>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">重复新密码：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="password" class="zjmm_bdk reszmmkj repassword" name="repassword"/>
+  	 			
+  	 		</div>
+  	 		<img class="find_xsmm findmm2"  src="__PUBLIC__/Home/image/findpass1.png" style="cursor:pointer;" onClick="show_repass();"/>
+        <div class="zjmm_bc" style=""></div>
+  	 	</div>
+  	 	
+  	 	
+  	 	<div class="zjmmk22">
+  	 		<div class="zjmmk22_le">
+  	 			提交
+  	 		</div>
+  	 		<div class="zjmmk22_ri">
+  	 			取消
+  	 		</div>
+  	 	</div>
+  	 	
+  	 	
+  	 </div>
+   </div>
+   
+ <!--修改资金密码弹框-->
+<div class="zjmmk_xg" style="display:none;">
+  	 <div class="zjmmk1">
+  	 	修改资金密码
+  	 </div>
+  	 <div class="zjmmk2">
+  	 	
+  	 	
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le_xg">手机号码：</div>
+  	 		<div class="zjmmk21_ri_xg user_phone1_xg">{$member['plgox_tel']}</div>
+  	 	</div>
+  	 	
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le_xg">验证码：</div>
+  	 		<div class="zjmmk21_ri_xg">
+  	 			<input type="text" class="zjmm_bdk_xg sendsMs_code_xg" name="sendsMs_code" style="width:146px;"/>
+          <div class="telCode_xg">
+  	 			   <span class="zjmm_hqyzm_xg get_yazm" >获取验证码</span>
+          </div>
+  	 		</div>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le_xg">设置新密码：</div>
+  	 		<div class="zjmmk21_ri_xg">
+  	 			<input type="text" class="zjmm_bdk_xg szmmkj password1" name="password"/>
+  	 			
+  	 		</div>
+  	 		<img class="find_xsmm_xg findmm1"  src="__PUBLIC__/Home/image/reginster.png" style="cursor:pointer;" onClick="show_pass();"/>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le_xg">重复新密码：</div>
+  	 		<div class="zjmmk21_ri_xg">
+  	 			<input type="password" class="zjmm_bdk_xg reszmmkj repassword1" name="repassword"/>
+  	 			
+  	 		</div>
+  	 		<img class="find_xsmm_xg findmm2"  src="__PUBLIC__/Home/image/findpass1.png" style="cursor:pointer;" onClick="show_repass();"/>
+  	 	</div>
+  	 	
+  	 	
+  	 	<div class="zjmmk22">
+  	 		<div class="zjmmk22_le_xg" attr_id="{$edit_zijin['zjinpass_id']}">
+  	 			提交
+  	 		</div>
+  	 		<div class="zjmmk22_ri_xg">
+  	 			取消
+  	 		</div>
+  	 	</div>
+  	 	<script type="text/javascript">
+        $(".zjmm_bdk_xg").eq(0).change(function(){
+            if( $(this).val() == "" ){
+               $(this).css("border","1px solid red");
+            }else{
+               $(this).css("border","1px solid green");
+            }
+        });
+        $(".zjmm_bdk_xg").eq(1).change(function(){
+            if( $(this).val() == "" ){
+               $(this).css("border","1px solid red");
+            }else{
+               $(this).css("border","1px solid green");
+            }
+        });
+        $(".zjmm_bdk_xg").eq(2).change(function(){
+            if( $(this).val() == "" ){
+               $(this).css("border","1px solid red");
+            }else{
+               $(this).css("border","1px solid green");
+            }
+            if( $(this).val() != $(".zjmm_bdk_xg").eq(1).val() ){
+                $(this).css("border","1px solid red");
+                $(".zjmm_bdk_xg").eq(1).css("border","1px solid red");
+            }else{
+                $(this).css("border","1px solid green");
+                $(".zjmm_bdk_xg").eq(1).css("border","1px solid green");
+            }
+        });
+        // 获取验证码
+        $(".get_yazm").click(function(){
+            $.post("{:U('Homeuser/sendsMs')}",{ 'message':1, 'user_phone':$(".user_phone1_xg").text() },function(data){
+            if( data.status == 2000 ){
+              alert(data.message);
+              timess = 120;
+              times = self.setInterval("code_Count_downs()",1000);
+              return false;
+            }else{
+              alert("手机验证码发送失败!");
+              return false;
+            }
+         },"json");
+        });
+        // 修改资金
+        $(".zjmmk22_le_xg").click(function(){
+          if( $(".zjmm_bdk_xg").eq(0).val() == "" ){
+             $(this).css("border","1px solid red");
+             alert("验证码不能够为空!");
+             return false;
+          }
+          if( $(".zjmm_bdk_xg").eq(1).val() == "" ){
+             $(this).css("border","1px solid red");
+             alert("新密码不能够为空!");
+             return false;
+          }
+          if( $(".zjmm_bdk_xg").eq(2).val() == "" ){
+             $(this).css("border","1px solid red");
+             alert("重复密码不能够为空!");
+             return false;
+          }
+          if( $(".zjmm_bdk_xg").eq(2).val() != $(".zjmm_bdk_xg").eq(1).val() ){
+            $(this).css("border","1px solid red");
+            $(".zjmm_bdk_xg").eq(1).css("border","1px solid red");
+            alert("输入的两次密码不一致!");
+            return false;
+          }
+          $.post("{:U('Homeuser/AjaxZH_admin')}",{ 'data_val':1 , 'zijin_id':$(this).attr("attr_id"), 'sendsMs_code':$('.sendsMs_code_xg').eq(0).val() ,'password':$(".password1").val() , 'zijinpass_tel':$(".user_phone1_xg").text() },function( data ){
+                 if( data.status == 2000 ){
+                    alert(data.message);
+                    location.reload();
+                    return false;
+                 }else if(  data.status == -2001 ){
+                    alert(data.message);
+                    return false;
+                 }else if(  data.status == -2002 ){
+                    alert(data.message);
+                    return false;
+                 }else if(  data.status == -2003 ){
+                    alert(data.message);
+                    return false;
+                 }
+            },"json");
+        });
+      </script>
+  	 	
+  	 </div>
+   </div>
+<!--银行卡密码弹框-->
+  <div class="zjmmk" style="display:none;">
+  	 <div class="zjmmk1">
+  	 	绑定银行卡
+  	 </div>
+  	 <div class="zjmmk2">
+  	 	
+  	 	
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">收款账户：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk skzh_" name="zhanghu"/>
+  	 		</div>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">真实姓名：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk username" name="username"/>
+  	 		</div>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">开户行：</div>
+  	 		<div class="zjmmk21_ri" >
+  	 			<select class="zjmm_bdk zhanghu_add_khh" name="zhanghu_add_khh" style="width:248px;">
+  	 				<option value="0">请选择</option>
+  	 				<option value="中国工商银行">中国工商银行</option>
+  	 				<option value="中国建设银行">中国建设银行</option>
+  	 				<option value="中国银行">中国银行</option>
+  	 				<option value="交通银行">交通银行</option>
+  	 				<option value="中国民生银行">中国民生银行</option>
+  	 				<option value="中国农业银行">中国农业银行</option>
+  	 				<option value="平安银行">平安银行</option>
+  	 				<option value="中信银行">中信银行</option>
+  	 				<option value="浦发银行">浦发银行</option>
+  	 				<option value="浦发银行">浦发银行</option>
+  	 				<option value="广发银行">广发银行</option>
+  	 				<option value="兴业银行">兴业银行</option>
+  	 				<option value="中国广大银行">中国广大银行</option>
+  	 				<option value="华夏银行">华夏银行</option>
+  	 				<option value="中国邮政储蓄银行">中国邮政储蓄银行</option>
+  	 			</select>
+  	 		</div>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">手机号码：</div>
+  	 		<div class="zjmmk21_ri user_phone_2">{$member['plgox_tel']}</div>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">验证码：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk yyzz_code" name="yyzz_code" style="width:146px;"/>
+          <div class="telCode">
+  	 			   <span class="zjmm_hqyzm">获取验证码</span>
+          </div>
+  	 		</div>
+  	 	</div>
+  	 	
+  	 	
+  	 	
+  	 	<div class="zjmmk22">
+  	 		<div class="zjmmk22_le yykh_tj">
+  	 			提交
+  	 		</div>
+  	 		<div class="zjmmk22_ri">
+  	 			取消
+  	 		</div>
+  	 	</div>
+  	 	
+  	 	
+  	 </div>
+   </div>
+
+
+
+<!--银行卡密码弹框-->
+  <div class="zjmmk">
+  	 <div class="zjmmk1">
+  	 	绑定支付宝
+  	 </div>
+  	 <div class="zjmmk2">
+  	 	
+  	 	
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">收款账号：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk zfb_sk" name="zfb_sk" />
+  	 		</div>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">真实姓名：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk zs_name" name="zfb_name" />
+  	 		</div>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">手机号码：</div>
+  	 		<div class="zjmmk21_ri user_phone3">{$member['plgox_tel']}</div>
+  	 	</div>
+  	 	<div class="zjmmk21">
+  	 		<div class="zjmmk21_le">验证码：</div>
+  	 		<div class="zjmmk21_ri">
+  	 			<input type="text" class="zjmm_bdk zfb_ceode" name="zfb_ceode" style="width:146px;"/>
+          <div class="telCode">
+            <span class="zjmm_hqyzm">获取验证码</span>
+          </div>
+  	 		</div>
+  	 	</div>
+  	 	<div class="zjmmk22">
+  	 		<div class="zjmmk22_le">
+  	 			提交
+  	 		</div>
+  	 		<div class="zjmmk22_ri">
+  	 			取消
+  	 		</div>
+  	 	</div>
+  	 </div>
+   </div>
+   </div>
+</div>
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    alert("由于国家政策原因，该功能暂时不对外开放，请见谅！");
+    window.opener=null;
+    window.open('','_self');
+    window.close();
+    return false;
+  });
+	var kd=document.body.clientWidth;
+	var gd=window.screen.height-244;
+	var zkd=kd-256;
+     $(".htsy_2").css("height",gd);
+$(".htsy_top_yd").css("top","188px");
+
+
+
+  $(".htsy_2 li").eq(4).css("background","#3E4F65");
+
+  $(".htsy_2 li").eq(4).siblings().css("background","none");
+  $(".htsy_2 li div").eq(4).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+  $(".htsy_2 li div").eq(4).siblings().css("background","none");
+	
+	$(".htddgl li a").each(function(index){
+			$(this).click(function(){
+				$(this).css("color","#1f61c3").css("borderBottom","1px solid #1f61c3");
+				var cd=3;
+	    		for(var j=0; j<cd;j++){
+	    			if(index!=j){
+	    				$(".htddgl li a").eq(j).css("color","black").css("borderBottom","none");
+	    			}
+	    		}
+	    		
+	    		
+	    		if(index==0){
+	    			$(".mm_gl").css("display","block");
+	    			$(".bd_yhk").css("display","none");
+	    			$(".bd_zfb").css("display","none");
+	    			$(".zjmmk").eq(0).css("display","none");
+	    			$(".zjmmk").eq(1).css("display","none");
+	    			$(".zjmmk").eq(2).css("display","none");
+	    		}
+	    		else if(index==1){
+	    			$(".mm_gl").css("display","none");
+	    			$(".bd_yhk").css("display","block");
+	    			$(".bd_zfb").css("display","none");
+	    			$(".zjmmk").eq(0).css("display","none");
+	    			$(".zjmmk").eq(1).css("display","none");
+	    			$(".zjmmk").eq(2).css("display","none");
+	    		}
+	    		else if(index==2){
+	    			$(".mm_gl").css("display","none");
+	    			$(".bd_yhk").css("display","none");
+	    			$(".bd_zfb").css("display","block");
+	    			$(".zjmmk").eq(0).css("display","none");
+	    			$(".zjmmk").eq(1).css("display","none");
+	    			$(".zjmmk").eq(2).css("display","none");
+	    		}
+	    		
+			})
+	})
+	
+
+	$(".ank1_0").click(function(){
+		$(".mm_gl").css("display","none");
+	    $(".zjmmk").eq(0).css("display","block");
+	})
+	$(".ank1_1").click(function(){
+		$(".bd_yhk").css("display","none");
+    	$(".zjmmk").eq(1).css("display","block");
+	})
+	$(".ank1_2").click(function(){
+		$(".bd_zfb").css("display","none");
+    	$(".zjmmk").eq(2).css("display","block");
+	})
+	//取消按钮
+	$(".zjmmk22_ri").each(function(index){
+		$(this).click(function(){
+			$(".zjmmk").eq(index).css("display","none");
+	        if(index==0){
+    			$(".mm_gl").css("display","block");
+    		}
+    		else if(index==1){
+    			$(".bd_yhk").css("display","block");
+    		}
+    		else if(index==2){
+    			$(".bd_zfb").css("display","block");
+    	     }
+    		$(".zjmmk").eq(0).css("display","none");
+			$(".zjmmk").eq(1).css("display","none");
+			$(".zjmmk").eq(2).css("display","none");
+			$(".zjmmk_xg").eq(0).css("display","none");
+    	})
+	})
+	$(".zjmmk22_ri_xg").click(function(){
+		$(".mm_gl").css("display","block");
+		$(".zjmmk").eq(0).css("display","none");
+		$(".zjmmk").eq(1).css("display","none");
+		$(".zjmmk").eq(2).css("display","none");
+		$(".zjmmk_xg").eq(0).css("display","none");
+	})
+  // 资金短信判断内容
+ $('.zjmm_bdk').eq(0).change(function(){
+    if( $(this).val() == "" ){
+        $('.zjmm_bdk').eq(0).css("border","1px solid red");
+    }else{
+        $('.zjmm_bdk').eq(0).css("border","1px solid green");
+    }
+ });
+ // 资金密码判断
+ $(".password").change(function(){
+  if( $(this).val() == "" ){
+        $(this).css("border","1px solid red");
+    }else{
+        $(this).css("border","1px solid green");
+    }
+ });
+$(".repassword").change(function(){
+  if( $(this).val() == "" ){
+        $(this).css("border","1px solid red");
+    }else{
+        $(this).css("border","1px solid green");
+    }
+    if( $(this).val() != $(".password").val() ){
+        $(this).css("border","1px solid red");
+        $(".password").css("border","1px solid red");
+    }else{
+        $(this).css("border","1px solid green");
+        $(".password").css("border","1px solid green");
+    }
+ });
+  // 绑定银行卡
+  $(".skzh_").change(function(){
+     if( $(this).val() == "" ){
+       $(this).css("border","1px solid red");
+     }else{
+       $(this).css("border","1px solid green");
+     }
+  });
+  $(".username").change(function(){
+     if( $(this).val() == "" ){
+       $(this).css("border","1px solid red");
+     }else{
+       $(this).css("border","1px solid green");
+     }
+  });
+  $(".yyzz_code").change(function(){
+     if( $(this).val() == "" ){
+       $(this).css("border","1px solid red");
+     }else{
+       $(this).css("border","1px solid green");
+     }
+  });  
+  // 支付宝
+  $(".zfb_sk").change(function(){
+     if( $(this).val() == "" ){
+       $(this).css("border","1px solid red");
+     }else{
+       $(this).css("border","1px solid green");
+     }
+  });
+  $(".zs_name").change(function(){
+     if( $(this).val() == "" ){
+       $(this).css("border","1px solid red");
+     }else{
+       $(this).css("border","1px solid green");
+     }
+  });
+  $(".zfb_ceode").change(function(){
+     if( $(this).val() == "" ){
+       $(this).css("border","1px solid red");
+     }else{
+       $(this).css("border","1px solid green");
+     }
+  }); 
+	//提交按钮
+	$(".zjmmk22_le").each(function(index){
+		$(this).click(function(){
+			// $(".zjmmk").eq(index).css("display","none");
+	        if(index==0){
+	        	   if( $('.zjmm_bdk').eq(0).val() == "" ){
+		                $('.zjmm_bdk').eq(0).css("border","1px solid red");
+                    $(".zjmm_bc").eq(0).text("验证码不能够为空");
+
+		                return false;
+		            }
+                else{
+                  $(".zjmm_bc").eq(0).text("");
+                }
+		            if( $(".password").val() == "" ){
+		               $(".password").css("border","1px solid red");
+                   $(".zjmm_bc").eq(1).text("密码不能够为空");
+		               return false;
+		            }
+                else{
+                   $(".zjmm_bc").eq(1).text("");
+                }
+		            if( $(".repassword").val() == "" ){
+		               $(".password").css("border","1px solid red");
+                   $(".zjmm_bc").eq(2).text("重复密码不能够为空");
+		               
+		               return false;
+		            }
+                else{
+                  $(".zjmm_bc").eq(2).text("");
+                }
+		            if( $(".password").val() != $(".repassword").val()  ){
+		               $(".password").css("border","1px solid red");
+		               $(".repassword").css("border","1px solid red");
+
+                   $(".zjmm_bc").eq(2).text("输入的两次密码不一致");
+		               return false;
+		            }
+                else{
+                  $(".zjmm_bc").eq(2).text("");
+                }
+		            $.post("{:U('Homeuser/AjaxZH_admin')}",{ 'data_val':1 , 'sendsMs_code':$('.zjmm_bdk').eq(0).val() ,'password':$(".password").val() , 'zijinpass_tel':$(".user_phone1").text() },function( data ){
+		               if( data.status == 2000 ){
+		                  alert(data.message);
+		                  return false;
+		               }else if(  data.status == -2001 ){
+		                  alert(data.message);
+		                  return false;
+		               }else if(  data.status == -2002 ){
+		                  alert(data.message);
+		                  return false;
+		               }else if(  data.status == -2003 ){
+		                  alert(data.message);
+		                  return false;
+		               }else if( data.status == -2004 ){
+                      alert(data.message);
+                      return false;
+                   }
+		            },"json");
+		    			$(".mm_gl").css("display","block");
+		    			$(".zjmmk").eq(0).css("display","none");
+		    			$(".zjmmk").eq(1).css("display","none");
+		    			$(".zjmmk").eq(2).css("display","none");
+		    			$(".zjmmk_xg").eq(0).css("display","none");
+
+	        }
+	        else if(index==1){
+           if( $(".skzh_").val() == "" ){
+              $(".skzh_").css("border","1px solid red");
+              alert("收款账户不能够为空!");
+              return false;
+           }
+           if( $(".username").val() == "" ){
+              $(".username").css("border","1px solid red");
+              alert("真实姓名不能够为空!");
+              return false;
+           }
+           if( $(".zhanghu_add_khh").val() == "0" ){
+              alert("开户行是必须要选择的!");
+              return false;
+           }
+           if( $(".yyzz_code").val() == "" ){
+              $(".yyzz_code").css("border","1px solid red");
+              alert("验证码不能为空!");
+              return false;
+           }
+          $.post("{:U('Homeuser/AjaxZH_admin')}",{'data_val':2 , 'zhanghu':$(".skzh_").val() , 'username':$(".username").val() , 'user_phone_1':$(".user_phone_2").text() , 'zhanghu_add_khh':$(".zhanghu_add_khh").val() , 'yyzz_code':$(".yyzz_code").val() },function( data ){
+             if( data.status == 2000 ){
+                alert(data.message);
+                location.reload();
+                return false;
+             }else if(  data.status == -2001 ){
+                alert(data.message);
+                return false;
+             }else if(  data.status == -2002 ){
+                alert(data.message);
+                return false;
+             }else if(  data.status == -2003 ){
+                alert(data.message);
+                return false;
+             }else if( data.status == -2004 ){
+                alert(data.message);
+                return false;
+             }
+          },"json");
+    			$(".bd_yhk").css("display","block");
+    			$(".zjmmk").eq(0).css("display","none");
+    			$(".zjmmk").eq(1).css("display","none");
+    			$(".zjmmk").eq(2).css("display","none");
+    			$(".zjmmk_xg").eq(0).css("display","none");
+    		}
+    		else if(index==2){
+          if( $(".zfb_sk").val() == "" ){
+              $(".zfb_sk").css("border","1px solid red");
+              alert("收款账户不能够为空!");
+              return false;
+           }
+           if( $(".zfb_name").val() == "" ){
+              $(".zfb_name").css("border","1px solid red");
+              alert("真实姓名不能够为空!");
+              return false;
+           }
+           if( $(".zfb_ceode").val() == "" ){
+              $(".zfb_ceode").css("border","1px solid red");
+              alert("验证码不能为空!");
+              return false;
+           }
+           $.post("{:U('Homeuser/AjaxZH_admin')}",{'data_val':3 , 'zfb_sk':$(".zfb_sk").val() , 'zfb_name':$(".zs_name").val() , 'user_phone3':$(".user_phone3").text() , 'zfb_ceode':$(".zfb_ceode").val() },function( data ){
+             if( data.status == 2000 ){
+                alert(data.message);
+                location.reload();
+                return false;
+             }else if(  data.status == -2001 ){
+                alert(data.message);
+                return false;
+             }else if(  data.status == -2002 ){
+                alert(data.message);
+                return false;
+             }else if(  data.status == -2003 ){
+                alert(data.message);
+                return false;
+             }else if( data.status == -2004 ){
+                alert(data.message);
+                return false;
+             }
+          },"json");
+    			$(".bd_zfb").css("display","block");
+    			$(".zjmmk").eq(0).css("display","none");
+    			$(".zjmmk").eq(1).css("display","none");
+    			$(".zjmmk").eq(2).css("display","none");
+    			$(".zjmmk_xg").eq(0).css("display","none");
+    	    }
+    	})
+	})
+	
+	
+//密码眼睛设置	
+	function show_pass() {
+	if($(".szmmkj").attr("type")=="password"){
+		$(".szmmkj").attr("type","text");
+		$(".findmm1").attr("src","__PUBLIC__/Home/image/reginster.png");
+	}
+	else{
+		$(".szmmkj").attr("type","password");
+		$(".findmm1").attr("src","__PUBLIC__/Home/image/findpass1.png");
+	}
+}
+
+function show_repass() {
+    if($(".reszmmkj").attr("type")=="password"){
+		$(".reszmmkj").attr("type","text");
+		$(".findmm2").attr("src","__PUBLIC__/Home/image/reginster.png");
+	}
+	else{
+		$(".reszmmkj").attr("type","password");
+		$(".findmm2").attr("src","__PUBLIC__/Home/image/findpass1.png");
+	}
+}
+// 获取验证码
+$(".zjmm_hqyzm").each(function( index ){
+   if( index == 0 ){
+      $(this).click(function(){
+         $.post("{:U('Homeuser/sendsMs')}",{ 'message':1, 'user_phone':$(".user_phone1").text() },function(data){
+            if( data.status == 2000 ){
+              alert(data.message);
+              timess = 120;
+              times = self.setInterval("code_Count_down(0)",1000);
+              return false;
+            }else{
+              $(".zjmm_hqyzm").eq(0).text("手机验证码发送失败");
+              //alert("手机验证码发送失败!");
+              return false;
+            }
+         },"json");
+      });
+   }else if( index == 1 ){
+      $(this).click(function(){
+       $.post("{:U('Homeuser/sendsMs')}",{ 'message':2, 'user_phone':$(".user_phone_2").text() },function(data){
+            if( data.status == 2000 ){
+              alert(data.message);
+              timess = 120;
+              times = self.setInterval("code_Count_down(1)",1000);
+              return false;
+            }else{
+              alert("手机验证码发送失败!");
+              return false;
+            }
+         },"json");
+       });
+   }else if( index == 2 ) {
+      $(this).click(function(){
+         $.post("{:U('Homeuser/sendsMs')}",{ 'message':3, 'user_phone':$(".user_phone3").text() },function(data){
+            if( data.status == 2000 ){
+              alert(data.message);
+              timess = 120;
+              times = self.setInterval("code_Count_down(2)",1000);
+              return false;
+            }else{
+              alert("手机验证码发送失败!");
+              return false;
+            }
+         },"json");
+      });
+   }
+});
+// 验证码倒计时
+var timess;
+function code_Count_down( index ){
+   $(".telCode").eq(index).html("<sapn class='zjmm_hqyzm'>剩余("+timess+")秒</span>");
+    timess--;
+    if( timess < 0 ){
+      clearInterval(times);
+      times=0;
+      $(".telCode").eq(index).html("<sapn class='zjmm_hqyzm'>获取验证码</span>");
+    }
+}
+// 验证码倒计时2
+function code_Count_downs(){
+     $(".telCode_xg").html("<sapn class='zjmm_hqyzm_xg'>剩余("+timess+")秒</span>");
+    timess--;
+    if( timess < 0 ){
+      clearInterval(times);
+      times=0;
+      $(".telCode_xg").html("<sapn class='zjmm_hqyzm_xg get_yazm'>获取验证码</span>");
+    }
+}
+
+
+//修改密码
+$(".attr_id").click(function(){
+	$(".zjmmk_xg").eq(0).css("display","block");
+	$(".mm_gl").css("display","none");
+	$(".zjmmk").eq(0).css("display","none");
+	$(".zjmmk").eq(1).css("display","none");
+	$(".zjmmk").eq(2).css("display","none");
+});
+
+</script>
+</body>
+</html>

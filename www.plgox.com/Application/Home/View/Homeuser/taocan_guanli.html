@@ -1,0 +1,369 @@
+{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_zl_bj.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zhezhao.css" />
+<style type="text/css">
+	.wdzl_bj_ts{
+		width:100px;
+	}
+</style>
+<form action="{:U('Homeuser/AjaxHomeuserProduct')}" method="post">
+<div class="ht_in1"  >
+	<div class="ht_in10">
+		<span >
+			我的租赁 / {$setTitle}
+		</span>
+	</div>
+   <div class="ht_content">
+      <div class="wdzl_bj2">
+      	<div class="wdzl_bj_bigbox" id="wdzl_b0">
+      	  <div class="wdzl_bj21" >
+      	  	<span class="wdzl_bjtc">规格分类</span> 
+      	  	<!--<span class="wdzl_bj210" id='0' onClick="bdsj(this.id);">×</span>-->
+      	  </div>
+      	  <div class="wdzl_bj22">
+      	  	<div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;<span class="text_cont">规格描述</span> ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		 <input type="text" style="width:350px;" placeholder="产品标题描述" id="specifications_keys" name="specifications_keys" value="{$specifications_save['specifications_keys']}" class="class_gg1 class_value" />	
+	      	  	</div>
+	      	 </div>
+      	  	<div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;<span class="text_cont">规格名称</span> ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		 <input type="text" placeholder="傲笛电磁炉" id="specifications_name1" name="specifications_name1" value="{$specifications_save['specifications_name']}" class="class_gg1 class_value" />	
+	      	  	</div>
+	      	 </div>
+	      	 <div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;<span class="text_cont">规格分类</span> ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		 <select name="specifications_classify_id" class="wdzl_thdz specifications_classify_id" style="width: 232px;">
+	      	  		 	<option value="0">请选择套餐分类</option>
+	      	  		 	{$classify}
+	      	  		 </select>
+	      	  	</div>
+	      	 </div>
+	      	 <div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;<span class="text_cont">产品图</span> ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		<neq name="specifications_save['specifications_img']" value="">
+	      	  			<img src="__ROOT__/Uploads/admin/{$specifications_save['specifications_img']}" style="width:100px;height: 100px" class="images">
+	      	  		<else />
+	      	  		 	<img src="__PUBLIC__/Home/image/my_top2.jpg" style="width:100px;height: 100px" class="images">
+	      	  		</neq>
+	      	  		 <input type="file" id="DcoumentInputFiles" name="DcoumentInputFiles[]" style="display:none;">
+	      	  	</div>
+	      	 </div>
+	      	 
+	      	 <div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;<span class="text_cont">押金</span> ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		<input type="text" style="width:80px;" class="class_gg2 class_value" placeholder="请输入" value="{$specifications_save['specifications_deposit']}" name="specifications_deposit1" id="specifications_deposit1" />&nbsp;&nbsp;元			
+	      	  	</div>
+	      	 </div>
+	      	 
+	      	  <div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;<span class="text_cont">市场参考价</span> ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		<input type="text" style="width:80px;" class="class_gg3 class_value" placeholder="请输入" value="{$specifications_save['specifications_market']}" name="specifications_market1" id="specifications_market1" />&nbsp;&nbsp;元		
+	      	  	</div>
+	      	 </div>
+	      	 
+	      	 <div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;<span class="text_cont">库存量</span> ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		<input type="text" style="width:80px;" class="class_gg4 class_value" value="{$specifications_save['specifications_stock']}" placeholder="库数量" name="specifications_stock1" id="specifications_stock1"/>	
+	      	  	</div>
+	      	 </div>
+	      	 <div class="wdzl_bj220" style="height:230px;overflow:hidden;">
+	      	  	<div class="wdzl_bj221">
+	      	  		<span class="nlh">*</span>&nbsp;最低起租期 ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222 zqts">
+	      	  	   <table class="wdzl_bj_bg">
+	      	  	   	<volist name="zulin" id="zulin_">
+	      	  	   	 <tr class="wdzl_bj_tr">
+	      	  	   	 	<td>	
+	      	  	   	 	  <span  class="ybdq" >{$zulin_['zulin_day_number']}{$zulin_['zulin_name']}</span>
+	      	  	   	 	</td>
+	      	  	   	 	<td>
+	      	  	   	 	  <input type="radio" id="zulin_day_number1" class="class_gg5"  name="zulin_day_number1" value="{$zulin_['zulin_id']}" <eq name="specifications_save['zulin_id']" value="$zulin_['zulin_id']">checked</eq> />
+	      	  	   	 	</td>
+	      	  	   	 	<td>
+	      	  	   	 		<input type="text" class="class_gg6" placeholder="日租金" name="specifications_rent1"  id="specifications_rent1"  style="width:80px;"/>
+	      	  	   	 		<span>元/日</span>
+	      	  	   	 	</td>
+	      	  	   	 </tr>
+	      	  	   	</volist>
+	      	  	   </table>
+	      	  	   <div>租金包含运费、维护管理费、税费、请根据自己情况定价。</div>
+	      	  	</div>
+	      	 </div>
+	      	<div class="wdzl_bj220">
+	      	  	<div class="wdzl_bj221">
+	      	  		租满即送 ： 
+	      	  	</div>
+	      	  	<div class="wdzl_bj222">
+	      	  		<div id="checkbox">
+	      	  			<label>
+	      	  				<input type="checkbox" class="class_gg7" value="租满即送" name="specifications_give1" id="specifications_give1" <eq name="specifications_save['specifications_give']" value="租满即送">checked</eq> >&nbsp;送&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	  			</label>
+	      	  		</div>
+	      	  		<input type="text" id="specifications_day_number1"class="class_gg8" name="specifications_day_number1" placeholder="150/天" style="width:88px;" value="{$specifications_save['specifications_day_number']}"  />&nbsp;&nbsp;天
+	      	  	</div>
+	      	 </div> 
+	      </div>
+	   </div>
+ </div>
+<div class="wdzl_tj" id="wss" attr_id="{$specifications_save['specifications_id']}">
+     	<a style="color:white;">确认提交</a></div>
+   </div>
+   <script type="text/javascript" src="__PUBLIC__/Home/js/alert.js"></script>
+<script type="text/javascript">
+
+
+
+	
+	     	$(".images").click(function(){
+	     		$("#DcoumentInputFiles").click();
+	     		$("#DcoumentInputFiles").off();
+	     		$("#DcoumentInputFiles").change(function(){
+	     			var objUrl = getFilesUpload(this.files[0]);
+	     			if( objUrl ){
+	     				$(".images").attr("src",objUrl);
+	     			}
+	     		});
+	     	});
+	     	function getFilesUpload(files){
+	     		url = null;
+				if( window.createObjectURL !== undefined ){
+					url = window.createObjectURL(files);
+				}else if( window.URL !== undefined ){
+					url = window.URL.createObjectURL(files);
+				}else if( window.webkitURL != undefined ){
+					url = window.webkitURL.createObjectURL(files);
+				}
+				return url;
+	     	}
+	     </script>
+<script type="text/javascript">
+$(window).load(function() {
+	// 判断日租金是否为空
+	// $(".class_gg6").eq(index).val("{$specifications_save['specifications_rent']}");
+	if( "{$specifications_save['specifications_rent']}" != null ){
+		$(".class_gg5").each(function( index ){
+			if( $(this).is(":checked") ){
+				$(".class_gg6").eq(index).val("{$specifications_save['specifications_rent']}");
+			}
+		});
+	}
+	//添加新套餐
+	var oid=1;
+	$(".wdzl_bj25").click(function(){
+             
+				if(oid>9){
+					alert("套餐最多为10个");
+				}
+				else{
+					var ss=$('.wdzl_bj_bigbox:last').clone(true).attr('id','wdzl_b'+oid); 
+		            $('.wdzl_bj_bigbox:last').after(ss);
+		            $(".wdzl_bj210").eq(oid).css("opacity","1");
+		            var oidx=oid+1;
+		            $(".wdzl_bj210").eq(oid).attr('id',oid);
+		            //给框子
+		            $(".wdzl_bj26").eq(oid).attr('id',oid);
+		            $(".wdzl_bjtc").eq(oid).text("套餐"+oidx);
+		            //套餐名称
+                    $(".class_gg1").eq(oid).attr("id","specifications_name"+oidx);
+                    $(".class_gg1").eq(oid).attr("name","specifications_name"+oidx);
+                    // 押金
+                     $(".class_gg2").eq(oid).attr("id","specifications_deposit"+oidx);
+                    $(".class_gg2").eq(oid).attr("name","specifications_deposit"+oidx);
+                    // 市场参考价 
+                     $(".class_gg3").eq(oid).attr("id","specifications_market"+oidx);
+                    $(".class_gg3").eq(oid).attr("name","specifications_market"+oidx);
+                    // 库存量  
+                     $(".class_gg4").eq(oid).attr("id","specifications_stock"+oidx);
+                    $(".class_gg4").eq(oid).attr("name","specifications_stock"+oidx);
+                     // 最低起租期  
+                     $(".class_gg5").eq(oid).attr("id","zulin_day_number"+oidx);
+                    $(".class_gg5").eq(oid).attr("name","zulin_day_number"+oidx);
+                     $(".class_gg6").eq(oid).attr("id","specifications_day_number"+oidx);
+                    $(".class_gg6").eq(oid).attr("name","specifications_day_number"+oidx);
+                    // 租满即送  
+                     $(".class_gg7").eq(oid).attr("id","specifications_give"+oidx);
+                    $(".class_gg7").eq(oid).attr("name","specifications_give"+oidx);
+
+                     $(".class_gg8").eq(oid).attr("id","specifications_rent"+oidx);
+                    $(".class_gg8").eq(oid).attr("name","specifications_rent"+oidx);
+		            ++oid;
+				}
+	})
+	 
+    
+	
+	//失去焦点
+	$(".wdzl_thdz").bind('click',function(){
+        $(".zqts").css("height",'162px');
+     })
+	$(".wdzl_thdz").bind('mouseout',function(){
+        $(".zqts").css("height",'32px');
+     })
+});
+// 文本内容检测
+$(".class_value").each(function( index ){
+	$(this).change(function(){
+		if( $(this).val() == "" ){
+			alert($(".text_cont").eq(index).text()+"不能为空");
+			$(this).css("border","1px solid red");
+		}else{
+			$(this).css("border","1px solid green");
+		}
+	});
+});
+// 最低起租期功能检测
+$(".class_gg6").each(function( index ){
+	$(this).change(function(){
+		if( $(this).val() == "" ){
+			alert("最低起租的价格必须要填写!");
+			$(this).css("border","1px solid red");
+			return false;
+		}else if( $(this).val() != "" ){
+			$(this).css("border","1px solid green");
+			return false;
+		}
+	});
+});
+// 数据添加
+$(".wdzl_tj").click(function(){
+		if( $("#specifications_name1").val() == "" ){
+			alert("套餐名称不能够为空!");
+			$("#specifications_name1").css("border","1px solid red");
+			return false;
+		}else if( $("#specifications_deposit1").val() == "" ){
+			alert("套餐金额不能够为空!");
+			$("#specifications_deposit1").css("border","1px solid red");
+			return false;
+		}else if( $("#specifications_market1").val() == "" ){
+			alert("市场参考价不能够为空!");
+			$("#specifications_market1").css("border","1px solid red");
+			return false;
+		}else if( $("#specifications_stock1").val() == "" ){
+			alert("库存量不能够为空!");
+			$("#specifications_stock1").css("border","1px solid red");
+			return false;
+		}else if( $(".class_gg5:checked").val() == null ){
+			alert("最低起租期必须任选一个!");
+			return false;
+		}else if( $(".specifications_classify_id").val() == 0 ){
+			alert("规格分类是必须要选择的!");
+			return false;
+		}
+	// 判断最低起租被选中后的价格金额是否填写
+	var rent_val = "";
+	$(".class_gg5").each(function( index ){
+		if( $(this).is(":checked") ){
+			if( $(".class_gg6").eq(index).val() == "" ){
+				alert("最低起租的价格必须要填写!");
+				$(".class_gg6").eq(index).css("border","1px solid red");
+				return false;
+			}else{
+				rent_val+=$(".class_gg6").eq(index).val();
+				return false;
+			}
+		}
+	});
+	// 进行入库
+	$.ajaxFileUpload({
+        type: "POST",
+    dataType: "JSON",
+         url: "{:U('Homeuser/specifications_add')}",
+         fileElementId:['DcoumentInputFiles'],
+        data: {
+			'specifications_id':$(this).attr("attr_id"),
+			'specifications_keys':$("#specifications_keys").val(),//套餐名称
+			'specifications_name':$("#specifications_name1").val(),//规格名称
+			'specifications_deposit':$("#specifications_deposit1").val(), //押金
+			'specifications_classify_id':$(".specifications_classify_id").val(),// 分类
+			'specifications_market':$("#specifications_market1").val(), // 市场价
+			'specifications_stock':$("#specifications_stock1").val(), // 库存
+			'specifications_day_number_id':$(".class_gg5:checked").val(), // 起租天数
+			'specifications_rent':rent_val, // 租金
+			'specifications_give':$("#specifications_give1:checked").val(), // 优惠政策
+			'specifications_day_number':$("#specifications_day_number1").val() //天数
+		},
+      success: function( data ){
+      	var res = /<pre.+?>(.+)<\/pre>/g;
+      	var result = data.match(res)
+      	data = RegExp.$1;
+      	obj = eval( '('+data+')' );
+      	if( obj.status == 2000 ){
+      		alert( obj.message );
+      		// window.location.href="{:U('Homeuser/wode_zl_bj')}";
+      		self.location=document.referrer;
+      		return false;
+      	}else if( obj.status == -2000 ){
+      		alert(obj.message);
+      		return false;
+      	}else if( obj.status == -2001 ){
+      		alert(obj.message);
+      		return false;
+      	}
+      },
+      error: function( XMLHttpRequest , status , error ){
+        tkcx("出现错误,错误位置在：" + status);
+      }
+    });
+});
+</script>
+
+
+
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/cropbox.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/city.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/base_64.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+ 		
+$(".htsy_top_yd").css("top","138px");
+
+
+
+  $(".htsy_2 li").eq(3).css("background","#3E4F65");
+
+  $(".htsy_2 li").eq(3).siblings().css("background","none");
+  $(".htsy_2 li div").eq(3).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+  $(".htsy_2 li div").eq(3).siblings().css("background","none");
+	
+</script>
+</body>
+</html> 

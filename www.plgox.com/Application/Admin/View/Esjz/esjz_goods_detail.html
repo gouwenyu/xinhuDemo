@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/loading-style.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/base_64.js"></script>
+</head>
+<style type="text/css">
+	#hideShow{opacity: 0.2;background-color:#000;position: fixed;width:100%;height: 100%;z-index: 9999;display: none;}
+	.loading{border:1px solid #AEDEF4;background:#FFFFFF;width:512px;height:367px;border-radius:10px;position:fixed;left:32%;top:200px;z-index: 99999;display: none;}
+	.font-style{position:relative;left:110px;font-size:35px;font-family:楷体;top:100px;font-weight:bold;}
+	.font-styles{position: relative;left:90px;top:200px;font-family:楷体;}
+</style>
+<body>
+
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">标题<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td style="border:none">
+				{$goods_detail.goods_name}
+		</td>
+	</tr>
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">图片<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td style="border:none">
+			<volist name="img_url" id = "i_u">
+  				
+  					 <li class="es_detil_left_img">
+	  					<img height="100%" width="30%" src="__ROOT__/Uploads/admin/{$i_u}" />
+	  				</li> 
+	  				
+  				</volist>			
+		</td>
+	</tr>
+	<tr>
+	<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">详情<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+	<td style="border:none;line-height: 40px">
+		{$goods_detail.goods_description}
+	</td>
+</tr>
+<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px"></td>
+		<td style="border:none">
+			<input type="hidden" id="goods_id" value="{$goods_detail.goods_id}" />
+			<button type="button" class="btn-success tongguo">通过审核</button>
+			<button type="button" class="btn-success butongguo" value="{$share['share_id']}">不通过审核</button>
+			<input type="text" id="reason" placeholder="不通过原因">
+			<button type="button" class="btn btn-danger">返回上页</button>
+		</td>
+	</tr>
+
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+<script type="text/javascript">
+	// 数据
+	$(".tongguo").click(function(){
+		var goods_id = $("#goods_id").val();
+		$.ajaxFileUpload({
+			type: "POST",
+	  		dataType: "JSON",
+	  		url: "{:U('Esjz/check_goods')}",
+	  		data: {
+	  					'id':goods_id,
+	  					'type':1
+	  			    },
+	  		success: function( data ){
+				window.location.href="{:U('Esjz/esjz_goods_list')}";
+	  		},
+	  		error: function( XMLHttpRequest , error , status ){
+	  			alert("出现错误，错误位置在：" + status );
+	  			return false;
+	  		}
+		});
+	});
+	$(".butongguo").click(function(){
+		var reason = $("#reason").val();
+		if(reason==""){
+			alert("请填写审核不通过原因");
+			return false;
+		}
+		var goods_id = $("#goods_id").val();
+		$.ajaxFileUpload({
+			type: "POST",
+	  		dataType: "JSON",
+	  		url: "{:U('Esjz/check_goods')}",
+	  		data: {
+	  					'id':goods_id,
+	  					'reason':reason,
+	  					'type':2
+	  			    },
+	  		success: function( data ){
+				window.location.href="{:U('Esjz/esjz_goods_list')}";
+	  		},
+	  		error: function( XMLHttpRequest , error , status ){
+	  			alert("出现错误，错误位置在：" + status );
+	  			return false;
+	  		}
+		});
+	});
+</script>
+</html>

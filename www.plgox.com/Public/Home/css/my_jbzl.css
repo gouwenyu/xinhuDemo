@@ -1,0 +1,61 @@
+.zz_nr2{
+	width:998px;
+	height:60px;
+	line-height:60px;
+	font-size:14px;
+	color:#666666;
+	margin-left:52px;
+	
+}
+
+.zz_nr2 input{
+	display:inline-block;
+	width:338px;
+	height:32px;
+	font-size:12px;
+	padding-left:10px;
+	border:1px solid #d6d6d6;
+}	
+	
+	
+.my_jbzl{
+	width:910px;
+	margin-top:20px;
+}
+.my_jbzl tr{
+	height:45px;
+}
+.my_jbzl tr td{
+	border-bottom:1px solid #D6D6D6;
+	line-height:45px;
+}
+.ysz{
+	width:125px;
+	background:url("../image/my_zd3.jpg") no-repeat 22px center;
+	padding-left:50px;
+	cursor:pointer;
+	background-color:#F2F2F2;
+}
+.wsz{
+	background:url("../image/my_zd5.jpg") no-repeat 22px center;
+    color:#d81e06;
+    background-color:#F2F2F2;
+}
+.my_jbzl tr td:nth-child(2){
+	width:224px;
+	text-align:center;
+	
+}
+.my_jbzl tr td:nth-child(3){
+	width:425px;
+	text-align:left;
+	color:#999999;	
+}
+.my_jbzl tr td:nth-child(4){
+	text-align:left;
+	cursor:pointer;
+	color:#1f61c3;
+}
+.my_jbzl tr td:nth-child(4):hover{
+	color:#1b53a6;
+}

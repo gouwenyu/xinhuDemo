@@ -1,0 +1,136 @@
+.wdzh1,.wdzh2,.wdzh3,.wdzh5,.wdzh6{
+		margin-top:32px;
+		margin-left:22px;
+		width:95%;
+		height: 60px;
+		line-height:60px;
+		padding:0px 20px; 
+		overflow:hidden; 
+	}
+	.wdzh1{
+		margin-top:22px;
+		 background-color: #e9f2ff;
+	}
+	.wdzh2{
+		background-color: #dff0d8;
+	}
+	.wdzh3{
+		background-color: #f0ebd8;
+	}
+	.wdzh5{
+		background-color: #F2DEDE;
+		font-size:12px;
+	}
+	.wdzh6{
+		background-color: #D9EDF7;
+		font-size:12px;
+	}
+	.wytx{
+text-align:center;
+		margin-top:30px;
+	}
+	.wdzh_left{
+		display:inline-block;
+		float:left;
+		
+	}
+	.txjl1,.txjl2,.txjl3{
+		display:inline-block;
+		float:left;
+	}
+	.txjl1,.txjl2{
+		width:400px;
+		overflow:hidden;
+	}
+	.txjl3{
+	padding:0px 20px;
+	height: 34px;
+	line-height:34px ;
+	background-color: #6ea3f2;
+	border-radius: 2px;
+	font-size:12px;
+	color:white;
+	cursor:pointer;
+	margin-top:13px;
+	text-align:center;
+	}
+.txjl3:hover,.wdzh13:hover,.wytx1:hover{
+	background-color: #1f61c3;
+}
+.txjl6{
+	margin-top:30px;
+	margin-left:25px;
+}
+.txjl61{
+	font-size: 14px;
+	color: #555555;
+}
+.txjl62{
+	display:inline-block;
+	width: 244px;
+	height: 38px;
+	padding-left:10px;
+	background-color: #ffffff;
+	border: solid 1px #d6d6d6;
+}
+	.wdzh10{
+	display:inline-block;
+	width: 18px;
+	height: 18px;
+	margin-top:18px;
+	line-height:18px;
+	background-color:#999999;
+	border-radius: 50%;
+	color:white;
+	text-align:center;
+	font-size:15px;
+	}
+	.wdzh11{
+		color:#777777;
+		font-size:16px;
+	}
+	.wdzh12{
+		color:#de4946;
+		font-size:18px;
+}
+.wdzh13,.wytx1{
+	display:inline-block;
+	margin-top:15px;
+	background-color: #6ea3f2;
+	border-radius: 2px;
+	text-align:center;
+	line-height:32px;
+	cursor:pointer;
+	font-size:14px;
+	color:white;
+		width: 98px;
+	height: 32px;
+}
+.wytx1{
+	width:150px;
+}
+.wdzh_right{
+	display:inline-block;
+	float:right;	
+	margin-right:300px;
+
+	
+}
+.wdzh21{
+	display:inline-block;
+	font-size:18px;
+	color: #333333;
+}
+.wdzh22{
+	display:inline-block;
+	font-size:12px;
+	color: #444444;
+	margin-left:15px;
+}
+.wdzh23{
+	display:inline-block;
+	color:#de4946;
+	font-size:12px;
+	width: 98px;
+	text-align:center;
+}

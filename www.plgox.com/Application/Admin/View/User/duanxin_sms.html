@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+</head>
+<style type="text/css">
+	.page{text-align: center;height:40px;}
+	.page :hover{text-decoration: none}
+	.num{border:1px solid #C0D9D9;border-radius: 10px;line-height: 40px;padding:5px 10px 5px 10px;margin: 0px 4px 0px 0px;}
+	.current{border: 1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin: 0px 4px 0px 0px;background: #007FFF;color:#FFFFFF;}
+	.next{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;}
+	.prev{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-right:4px;}
+	.first{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-right:4px;}
+	.end{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-left:4px;}
+	.page_style{color:#007FFF;font-size:15px;}
+</style>
+<body>
+<ol class="breadcrumb">
+	<li>当前位置</li>
+	<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+	<table style="border: 1px solid #DDDDDD;" class="table">
+		<tr>
+			<td>
+				<button type="button" class="btn btn-success" value="{$message_sms}">添加新消息</button>
+				<button type="button" class="btn btn-info" >全选</button>
+				<button type="button" class="btn btn-danger" >一件删除</button>
+			</td>
+		</tr>
+	</table>
+	<table class="table table-striped">
+		<tr></tr>
+		<tr style="background:#F5F5F5">
+			<th style="text-align: center">全选</th>
+			<th style="text-align: center">ID</th>
+			<th style="text-align: center">用户昵称</th>
+			<th style="text-align: center">手机号</th>
+			<th style="text-align: center">内容</th>
+			<th style="text-align: center">状态</th>
+			<th style="text-align: center">是否读取</th>
+			<th style="text-align: center">发送时间</th>
+			<th style="text-align: center">操作</th>
+		</tr>
+	<volist name="sms_send_sel" id="user_message_">
+		<tr class="table_tr_{$user_message_['message_id']}" style="cursor:pointer;">
+			<td style="text-align: center;line-height:50px"><input type="checkbox" value="{$user_message_['message_id']}" class="check"></td>
+			<td style="text-align: center;line-height:50px">{$user_message_['message_id']}</td>
+			<td style="text-align: center;line-height:50px">{$user_message_['plgox_user']}</td>
+			<td style="text-align: center;line-height:50px">{$user_message_['plgox_tel']}</td>
+			<td style="text-align: center;line-height:50px" class="content">{$user_message_['message_content']}</td>
+			<td style="text-align: center;line-height:50px"><eq name="user_message_['message_success']" value="0">待发送<else />已发送</eq></td>
+			<td style="text-align: center;line-height:50px"><eq name="user_message_['message_status']" value="0">未读取<else />已读取</eq></td>
+			<td style="text-align: center;line-height:50px">{$user_message_['message_createtime']|date="Y-m-d",###}</td>
+			<td style="text-align: center;line-height:50px">
+				<a href="javascript:void(0);" title="删除" class="del" value="{$user_message_['message_id']}"><span class="glyphicon glyphicon-trash"></span></a>
+			</td>
+		</tr>
+	</volist>
+	</table>
+</div>
+<div class="container-fluid">
+	  <div class="col-xs-12 col-md-8 page" style="width: 100%">{$page}</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".content").each(function(){
+			var fontNumber = 20;
+			if( $(this).text().length > fontNumber ){
+				$(this).text($(this).text().substring(0,fontNumber)+"....");
+			}
+		});
+	});
+	$(".btn-success").click(function(){
+		window.location.href="{:U('User/message_sms_adddata')}&user_message_insert_ids="+$(this).val();
+	});
+		// 全选
+	$(".btn-info").click(function(){
+		if( $(".check").is(":checked") ){
+			$(".check").prop("checked",false);
+		}else{
+			$(".check").prop("checked",true);
+		}
+	});
+	$('table').find('tr').click(function(){
+		if( $(this).find("input").is(":checked") ){
+			$(this).find("input").prop("checked",false);
+		}else{
+			$(this).find("input").prop("checked",true);
+		}
+	});
+	// 删除
+	$(".del").click(function(){
+		var message_id = $(this).attr("value");
+		if( confirm("确定要删除我吗？(｡ì _ í｡)") ){
+			$.ajax({
+				type: "POST",
+			dataType: "JSON",
+				 url: "{:U('User/del_message')}",
+				data: { 'message_id':message_id },
+				success: function( data ){
+					if( data.status == 2000 ){
+						alert(data.message);
+						$(".table_tr_"+message_id).remove();
+						return false;
+					}else{
+						alert("删除失败");
+						return false;
+					}
+				},
+				error: function( XMLHttpRequest , error , status ) {
+					alert("出现错误，出错位置在："+status);
+					return false;
+				}
+			});
+		}
+	});
+	// 全选删除
+	$(".btn-danger").click(function(){
+		var check_id = "";
+		$(".check").each(function(){
+			if( $(this).is(":checked" )){
+				check_id += " , "+$(this).val();
+			}
+		});
+		check_ids = check_id.substring(2);
+		if( check_ids.length == 0 ){
+			alert("你并未选中任何选项!");
+		}else if( confirm( "确定要删除这些数据吗？♪(´ε｀ )" ) ) {
+			$.ajax({
+				type: "POST",
+			dataType: "JSON",
+				 url: "{:U('User/del_message')}",
+				data: { 'message_ids':check_ids },
+				success: function( data ){
+					if( data.status == 2000 ){
+						alert(data.message);
+						location.reload();
+						return false;
+					}else{
+						alert("删除失败");
+						return false;
+					}
+				},
+				error: function( XMLHttpRequest , error , status ) {
+					alert("出现错误，出错位置在："+status);
+					return false;
+				}
+			});
+		}
+	});
+</script>
+</html>

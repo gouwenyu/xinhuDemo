@@ -1,0 +1,121 @@
+[ 2018-08-26T00:38:57+08:00 ] 123.125.67.227 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T01:05:50+08:00 ] 123.125.67.165 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T01:28:30+08:00 ] 203.208.60.64 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T01:36:12+08:00 ] 157.55.39.150 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T02:29:52+08:00 ] 54.36.148.242 /Cart/shop_detil/id/164.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-08-26T03:38:56+08:00 ] 203.208.60.94 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0008s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '42'  [ RunTime:0.0010s ]
+
+[ 2018-08-26T03:53:00+08:00 ] 203.208.60.76 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '35'  [ RunTime:0.0003s ]
+
+[ 2018-08-26T04:00:57+08:00 ] 209.94.191.213 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T04:09:45+08:00 ] 54.36.148.163 /index/fuwenben/id/10.html
+ERR: 非法操作:fuwenben
+
+[ 2018-08-26T04:26:45+08:00 ] 40.77.167.54 /xianzhi/index.html
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-08-26T04:31:38+08:00 ] 203.208.60.30 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '24'  [ RunTime:0.0003s ]
+
+[ 2018-08-26T04:59:10+08:00 ] 203.208.60.26 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T05:17:49+08:00 ] 107.21.249.139 /clientaccesspolicy.xml
+ERR: 无法加载控制器:Clientaccesspolicy.xml
+
+[ 2018-08-26T05:34:01+08:00 ] 203.208.60.32 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '17'  [ RunTime:0.0003s ]
+
+[ 2018-08-26T05:59:57+08:00 ] 54.36.148.30 /share/index.html
+ERR: 无法加载控制器:Share
+
+[ 2018-08-26T07:43:04+08:00 ] 203.208.60.12 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '31'  [ RunTime:0.0003s ]
+
+[ 2018-08-26T07:51:24+08:00 ] 203.208.60.64 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '18'  [ RunTime:0.0003s ]
+
+[ 2018-08-26T08:27:42+08:00 ] 203.208.60.94 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '32'  [ RunTime:0.0003s ]
+
+[ 2018-08-26T08:43:37+08:00 ] 54.36.149.101 /user/dingdan.html
+ERR: 非法操作:dingdan
+
+[ 2018-08-26T10:03:49+08:00 ] 203.208.60.69 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '34'  [ RunTime:0.0004s ]
+
+[ 2018-08-26T13:06:52+08:00 ] 37.49.231.153 /ncsi.txt
+ERR: 无法加载控制器:Ncsi.txt
+
+[ 2018-08-26T13:30:50+08:00 ] 203.208.60.95 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T16:10:56+08:00 ] 218.30.103.4 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T16:11:23+08:00 ] 123.126.113.164 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T16:46:14+08:00 ] 173.249.24.53 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T17:48:46+08:00 ] 203.208.60.21 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-26T17:49:01+08:00 ] 203.208.60.70 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0009s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '52'  [ RunTime:0.0006s ]
+
+[ 2018-08-26T23:44:28+08:00 ] 37.204.237.3 /HNAP1/
+ERR: 无法加载控制器:HNAP1
+

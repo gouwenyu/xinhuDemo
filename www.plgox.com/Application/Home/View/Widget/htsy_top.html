@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
+		<META HTTP-EQUIV="expires" CONTENT="0">
+		<title>无限魄力</title>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/htsy_top.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zhezhao.css" />
+		<script src="__PUBLIC__/Home/js/jquery.js"></script>
+		<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+		<script src="__PUBLIC__/Home/js/animate1.js"></script>	
+	</head>
+<style type="text/css">
+</style>
+<body >
+	<div class="htsy_1">
+	    <div class="htsy_10">
+	    	<img src="__PUBLIC__/Home/image/htsy_1.png"/>
+	    </div>
+	    <div class="htsy_11">
+	    	Hi,17600102428
+	    </div>
+	    <div class="htsy_12">
+	    	<span onclick="homes();" style="cursor:pointer;">&nbsp;&nbsp;回到首页</span>
+	    </div>
+	</div>
+	
+	<ul class="htsy_2">
+		<li >
+			<div>
+                 <if condition="($loguser['plgox_id'] eq '' )">
+                   <a href="{:U('Tourist/login')}" class="display_none">
+					租赁管理
+				   </a>
+			       
+			   <elseif condition="($sjrz_renzheng['plgox_usertype'] eq 4 )"/>
+			     <a href="{:U('Homeuser/dingdan_guanli')}" class="display_none">
+					租赁管理
+				   </a>
+			    <else/>
+			      	<a href="#" class="sjzx_rz" class="display_none">
+					租赁管理
+				   </a>  
+			 </if>
+
+			</div>
+		</li>
+	    <li >
+			<div>
+               <if condition="($loguser['plgox_id'] eq '' )">
+                   <a href="{:U('Tourist/login')}" class="display_none">
+					我的租赁
+				   </a>
+			       
+			   <elseif condition="($sjrz_renzheng['plgox_usertype'] eq 4 )"/>
+			     <a href="{:U('Homeuser/wode_zuling')}" class="display_none">
+					我的租赁
+				   </a>
+			    <else/>
+			      	<a href="#" class="sjzx_rz" class="display_none">
+					我的租赁
+				   </a>  
+			 </if>
+
+		
+			</div>
+		</li>
+		<li >
+			<div>
+				 <if condition="($loguser['plgox_id'] eq '' )">
+                   <a href="{:U('Tourist/login')}" class="display_none">
+					发布租赁
+				   </a>
+			       
+			   <elseif condition="($sjrz_renzheng['plgox_usertype'] eq 4 )"/>
+			     <a href="{:U('Homeuser/fabu_zuling')}" class="display_none">
+					发布租赁
+				   </a>
+			    <else/>
+			      	<a href="#" class="sjzx_rz" class="display_none">
+					发布租赁
+				   </a>  
+			 </if>
+			</div>
+		</li>
+		<li>
+			<div>
+				 <if condition="($loguser['plgox_id'] eq '' )">
+                   <a href="{:U('Tourist/login')}" class="display_none">
+					规格管理
+				   </a>
+			       
+			   <elseif condition="($sjrz_renzheng['plgox_usertype'] eq 4 )"/>
+			     <a href="{:U('Homeuser/fabutaocan')}" class="display_none">
+					规格管理
+				   </a>
+			    <else/>
+			      	<a href="#" class="sjzx_rz" class="display_none">
+					规格管理
+				   </a>  
+			   </if>
+			</div>
+		</li>
+		<li >
+		   <div>
+		   	<if condition="($loguser['plgox_id'] eq '' )">
+                   <a href="{:U('Tourist/login')}" class="display_none">
+					账户管理	
+				   </a>
+			       
+			   <elseif condition="($sjrz_renzheng['plgox_usertype'] eq 4 )"/>
+			     <a href="{:U('Homeuser/zhanghu_guanli')}" class="display_none">	
+					账户管理	
+				   </a>
+			    <else/>
+			      	<a href="#" class="sjzx_rz" class="display_none">
+					账户管理	
+				   </a>  
+			   </if>
+			</div>
+		</li>
+		<li >
+			<div>
+				<if condition="($loguser['plgox_id'] eq '' )">
+                   <a href="{:U('Tourist/login')}" class="display_none">
+					生成子账号
+				   </a>
+			       
+			   <elseif condition="($sjrz_renzheng['plgox_usertype'] eq 4 )"/>
+			     <a href="{:U('Homeuser/shengcheng_zizhanghu')}" class="display_none">
+				生成子账号
+			    </a>
+			    <else/>
+			      <a href="#" class="sjzx_rz" class="display_none">
+					生成子账号
+				   </a>  
+			   </if>
+				
+			</div>
+		</li>
+		<li   style="margin-top:30px;">
+			<div>
+			<a href="{:U('Homeuser/JueZhi_fbgl')}" >
+				二手管理
+			 </a>
+			</div>
+		</li>
+		<li >
+			<div>
+				<a href="{:U('Homeuser/esxz_choose_fl')}">
+				发布二手
+				 </a>
+			</div>
+		</li>
+		 <li >
+			<div>
+				<a href="{:U('Homeuser/select_baojia')}">
+				查看报价
+				</a>
+			</div>
+		</li>
+		
+		
+		<li>
+		  	<a  href="#"  class="htsy_top_yd" >&nbsp;
+		  	</a>
+		</li>
+ </ul>
+ <div class="zhezhao1" style="display:none;">
+<!--弹框-->	
+<div class="zz_nr_fbcg_tc" >
+	  <div class="zdsc">
+您已成功举报，您已成功举报，
+	  </div>
+	   
+	  <div class="zz_gbtk" >
+			<span class="qrzym" style="display:none;">去认证</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="qgbym">关闭</span>
+	  </div> 
+	</div>	
+	
+
+
+</div> 
+  <script src="__PUBLIC__/Home/js/syrztk.js"></script>
+  <script type="text/javascript">
+  $(".display_none").click(function(){
+  	alert("由于国家政策原因，该功能暂时不对外开放，请见谅！");
+  	return false;
+  });
+$(".sjzx_rz").click(function(){
+  		$.post("{:U('Homeuser/ajaxRZ_select')}",function(data){
+  			if( data.status == -2000 ){
+  				tkcx6(data.message);
+  				return false;
+  			}else if( data.status == -2001 ){
+
+  				window.location.href="http://www.plgox.com/Homeuser/dingdan_guanli.html";
+  				return false;
+  			}
+  		},"json");
+	});
+	   //企业认证
+
+  $(".htsy_2 li div a").each(function(index){
+  	var jsjg=index+3;
+  	var htsy_jg="url('__PUBLIC__/Home/image/htsy_"+jsjg+".png') no-repeat 30px center";
+		$(".htsy_2 li div a").eq(index).css("background",htsy_jg);
+		$(this).mouseover(function(){
+			if(index>5){
+                var pxs=index*46+30+"px";  
+			}
+			else{
+				var pxs=index*46+"px";  
+			}
+			
+			$(".htsy_top_yd").stop().animate({top:pxs},'fast');
+		});
+       
+		
+	});
+	$(".htsy_2").mouseover(function(){
+			$(".htsy_top_yd").css("height","46px");
+	})
+	$(".htsy_2").mouseout(function(){
+			$(".htsy_top_yd").css("height","0px");
+	})
+	
+	
+	var gd=window.screen.height-244;
+	$(".htsy_2").css("height",gd);
+
+	function homes(){
+		window.location.href="{:U('Index/index')}";
+	}
+  </script>
+</body>
+</html>

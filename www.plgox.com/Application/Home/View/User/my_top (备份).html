@@ -1,0 +1,53 @@
+﻿{:W('Common/header')}
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_top.css">
+<div class="my_topzd">
+  <div class="my_top_box">
+    <div class="my_t1">
+      所在位置：    首页  > 用户中心 > <span class="my_tbxd">我的订单</span>
+     </div>
+</div>
+</div>
+<div style="height:685px;">
+	<div style="width:1192px;margin:0 auto;">
+     <div class="my_t2">
+         <div class="my_t3">用户中心</div> 
+         <ul class="my_t5">
+           <li><a href="{:U('User/my_dingdan')}">租赁订单</a></li>
+           <li><a href="{:U('User/my_mm_dingdan')}">买卖订单</a></li>
+           <li><a href="{:U('User/my_zhangdan')}">我的账单</a></li>
+<!--   <li><a href="{:U('User/my_xinyun')}">我的信用</a></li>-->
+           <li><a href="{:U('User/my_qyrz')}">企业认证</a></li>
+           <li><a href="{:U('User/my_shdz')}">收货地址</a></li>
+           <li><a href="{:U('User/my_jbzl')}">基本资料</a></li>
+           <li><a href="{:U('User/JueZhi_wdsc')}">我的意向</a></li>
+           <li >
+		  	     <a  href="#" class="hdmk">
+		  	     </a>
+		        </li>
+         </ul>   
+     </div>
+    </div> 
+  </div>
+  {:W('Common/header1_search')} 
+<script type="text/javascript">
+
+ $(".my_t5 li a").each(function(index){
+		$(this).mouseover(function(){
+			var pxs=index*50+"px";
+			$(".hdmk").stop().animate({top:pxs},'fast');
+		});
+	
+	});
+ $(".my_t5").mouseover(function(){
+ 	 $(".hdmk").css("display","block");
+ });
+  $(".my_t5").mouseout(function(){
+ 	 $(".hdmk").css("display","none");
+ });
+
+$(".header_bottom1_middle li").eq(2).siblings().removeClass("header_dj");
+ $(".header_bottom1_middle li").eq(2).addClass("header_dj");
+
+ 
+</script>

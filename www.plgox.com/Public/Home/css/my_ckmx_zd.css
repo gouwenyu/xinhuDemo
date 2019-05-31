@@ -1,0 +1,278 @@
+.my_ckmx0{
+	width:908px;
+	margin-top:40px;
+
+	margin-bottom:50px;
+	overflow:hidden;
+	border:1px solid #EBEBEB;
+}
+.my_ckmx{
+	width:850px;
+	margin:0 auto;
+}
+.my_ckmx li{
+  
+}
+.cmdf1,.cmdf2,.cmdf3,.cmdf4,.cmdf5{
+	float:left;
+	width:170px;
+	height:45px;
+	line-height:45px;
+}
+
+.my_ckmx1{
+	height:42px;
+	background: #EEEEEE;
+	color:#6ea3f2;
+	font-size:16px;
+	text-align:left;padding-left:30px;
+	line-height:42px;
+	cursor:pointer;
+}
+.my_ckmx2{
+	height:56px;
+	border-bottom:1px solid #EBEBEB;
+	font-size:12px;
+	color:#666666;
+	line-height:56px;
+}
+.my_ckmx2 div:first-child{
+	text-align:left;font-size:20px;padding-left:30px;
+}
+.my_ckmx21{
+	width:90px;height:35px;font-size:14px;line-height:35px;text-align:center;color:white;background-color:#1f61c3;margin-top:10px;	margin-left:63px;
+	cursor:pointer;
+}
+.my_ckmx21:hover{
+	background-color:#1b53a6;
+}
+/*.my_ckmx2 div:last-child:hover{
+	background-color:#1b53a6;
+	}*/
+.my_ckmx2 div{
+	float:left;
+}
+.my_ckmx2 div span:nth-child(2){
+	color:#ff0000;
+}
+.my_ckmx1 div:not(:first-child){
+	text-align:center;
+}
+
+
+tr:nth-child(1) td{
+	font-weight:bold;
+}
+tr td:first-child{
+	padding-left:30px;
+}
+tr td:last-child{
+	padding-right:30px;
+}
+.dyls{
+	width:200px;
+}
+.dels{
+	width:172px;
+}
+.dsls{
+	width:150px;
+}
+.my_ckmx5{
+	width:100%;
+	height:50px;
+	font-weight:800;
+	font-size:16px;
+	color:black;
+}
+.my_ckmx5 div{
+	display:block;
+	line-height:50px;
+	float:left;
+}
+.my_ckmx6,.my_ckmx99{
+	height:45px;
+}
+.my_ckmx99 div{
+		display:block;
+		float:left;
+	line-height:45px;
+	border-bottom: 1px solid #EBEBEB;
+}
+
+.my_ckmx7 div{
+	height:90px;
+	width:824px;
+	overflow:hidden;
+	text-align:right;
+	line-height:90px;
+	font-size:14px;
+}
+.my_ckmx7 td div{
+	width:100%;
+	text-align:right;
+	line-height:28px;
+}
+.my_ckmx7 td div:nth-child(1){
+	text-align:right;
+	padding-right:8px;
+	color:#ff0000;
+}
+.my_zd1{
+	width:908px;
+	margin-top:15px;
+	line-height: 28px;
+	overflow:hidden;
+	color:#FF0000;
+	font-size:12px;
+	background: #FAF8DC;
+}
+.my_zd1 span{
+	margin-left:22px;
+}
+.my_zd2{
+	width:908px;
+	margin-top:18px;
+	height: 122px;
+	overflow:hidden;
+	border:1px solid #EBEBEB;
+	border-top:5px solid #6EA3F2;
+	background: #EFF5FF;
+	padding:25px 20px;
+}
+.my_zd2 div{
+	font-size:20px;
+}
+.my_zd2 div span{
+	color:#ff1010;
+}
+.my_zd2 p span{
+	color:#D32B28;
+}
+.my_zd2 p{
+	font-size:14px;
+	margin-top:12px;
+}
+.my_zd3{
+	margin-top:18px;
+	height:158px;
+}
+.my_zd31{
+	float:left;
+	height:168px;
+	width:357px;
+
+	padding:18px 20px;
+	background:url('../image/shuiyin.png') no-repeat top left;
+	color:#333333;
+	
+}
+.my_zd31:nth-child(2){
+	background-color:#DFF0D8;
+	margin-left:50px;
+
+}
+.my_zd310{
+	font-size:18px;
+	color:#333333;
+}
+.my_zd311{
+	font-size:16px;
+	font-weight:bold;
+	margin-top:13px;
+}
+.my_zd312{
+	margin-top:13px;
+	color:#1f61c3;
+	cursor:pointer;
+	font-size:14px;
+}
+.my_zd312 a{
+	color:#1f61c3;
+}
+.my_zd312 a:hover{
+	color:#1b53a6;
+}
+.my_zd313{
+	font-size:12px;
+	margin-top:13px;
+}
+
+.my_zd6_box{
+	width:908px;
+	height:48px;
+	margin-top:25px;
+	border:1px solid #EBEBEB;
+}
+.my_zd6_big{
+	height:48px;
+	width:780px;
+
+	float:left;
+	overflow:hidden;
+}
+.my_zd6{
+	height:48px;
+    width:600px;
+	overflow:hidden;
+	float:left;
+
+}
+.my_zd666{
+	height:48px;
+	float:left;
+	margin-left:0px;
+}
+.my_zd6_a{
+	float:left;
+	width:150px;
+	text-align:center;
+	display:inline-block;
+	height:48px;
+	color:black;
+	cursor:pointer;	
+	font-size:16px;
+}
+.my_zd6_a a{
+	display:inline-block;
+	padding:0px 5px;
+	height:48px;
+	line-height:48px;
+}
+.my_zd_jt{
+	width:14px;
+	height:20px;
+	float:left;
+	cursor:pointer;
+	margin:14px 30px;
+	overflow:hidden;
+}
+.my_zd_jt img{
+width:14px;
+	height:20px;
+}
+.my_zd6_a_last{
+	float:left;
+	width:100px;
+	height:48px;
+	text-align:center;
+	line-height:48px;
+	overflow:hidden;
+	cursor:pointer;
+
+ /* background:url("../image/my_zd2.png") no-repeat 0px 17px;*/
+
+}
+.my_zd6_a_last select{
+   border:0px;
+   background-color:transparent;
+}
+.my_zd6_a_last select:focus{
+	outline: none;
+}
+/*
+.my_zd6 li:last-child:hover{
+	 background:url("../image/my_zd1.png") no-repeat 0px 17px;
+}*/
+
+

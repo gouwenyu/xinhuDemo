@@ -1,0 +1,148 @@
+.my_dind190{
+	height:10px;
+	overflow:hidden;
+}
+.myht_dd{
+	height:26px;
+	width:82px;
+	background-color:#1E60C3;
+	color:white;
+	text-align:center;
+	margin:5px auto;
+	line-height:26px;
+	font-size:12px;
+	cursor:pointer;
+}
+.myht_dd1{
+	height:26px;
+	width:82px;
+	color:#555555;
+	text-align:center;
+	margin:5px auto;
+	line-height:26px;
+	font-size:12px;
+	cursor:pointer;
+}
+.myht_dd:hover{
+   background-color:#1A52A7;
+   color:white;
+}
+.htddgl{
+	height:42px;
+	border-bottom:1px solid #A8A9A8;
+}
+.htddgl_1{
+	height:42px;
+	margin-bottom:50px;
+}
+.htddgl li,.htddgl_1 li{
+	float:left;
+	padding:0px 20px;
+	font-size:16px;
+}
+.ddglsy,.htddgl li a,.htddgl_1 li a{
+	display:block;
+	height:42px;
+	padding:0px 10px;
+	color:#000000;
+	line-height:42px;
+}
+
+.htddgl_yg{
+	border-bottom: 1px solid #1f61c3;
+	color:#1f61c3;
+}
+.my_dind11{
+	background-color:white;
+}
+.message_fy{
+   	height:35px;
+   	margin:100px auto;
+
+   }
+   .message_fy li{
+   	  width:33px;  	  
+   	  border:1px solid #D6D6D6;
+   	  border-left:0px;
+   	  float:left;  	  
+   	  font-size:12px;
+   }
+.xdbh{
+	display:block;
+	width:100%;
+	color:#333333;
+	text-align:center;
+   	  line-height:35px;
+}
+
+   .message_fy li:first-child
+   {
+border-left:1px solid #D6D6D6;
+   }
+   .message_fy li:first-child,.message_fy li:last-child{
+     width:65px;
+     height:35px;
+     line-height:35px;
+   }
+    .message_fy li a:first-child,.message_fy li a:last-child{
+    	display:block;
+     width:100%;
+     height:35px;
+     line-height:35px;
+   }
+ .xdbh_on{
+	background-color:#1b53a6;
+	color:white;
+}
+   .spxq0,.spxq2{
+   	width:100%;margin-top:20px;
+   	border:1px solid #EBEBEB;
+   }
+  
+ .spxq1{
+ 	font-size:16px;color:#333333;margin-bottom:26px;margin-left:10px;
+ } 
+.spxq12{
+	height:130px;border:1px solid #EBEBEB;background-color:white;
+}
+.spxq12 td{
+	border-left:1px solid #EBEBEB;
+}
+ .spxq10,.spxq20{
+   	height:45px;background-color:#f0f0f0;
+   	border:1px solid #EBEBEB;
+   }
+ .spxq10 td{
+ 	font-size:14px;
+ }
+ .spxq20 td{ 	
+ 	font-size:16px;
+ 	text-align:left;
+ 	margin-left:30px;
+ }
+ .spxq21 td{
+ 	background-color:white;
+ 	text-align:left;
+ }
+ .spxq21 td:nth-child(1){
+ 	text-align:right;	
+ 	width:110px;
+ 	padding:10px 0px;
+ }
+  .spxq21 td:nth-child(2){
+ 	text-align:left;	
+ 	padding:10px 0px;
+ 	padding:20px;
+ }
+ .spxq21 td ul li{
+ 	line-height:35px;
+ }
+
+.my_dind199{
+	height:32px;
+	border:1px solid #EBEBEB;
+	line-height:32px;
+}
+.my_dind199 td{
+	text-align:left;
+}

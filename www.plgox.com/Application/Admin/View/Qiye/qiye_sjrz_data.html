@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">用户昵称：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_memberuid" style="width:470px;height: 40px" name="renzheng_memberuid" readonly="readonly" value="{$shop_info['plgox_user']}">	
+		</td>
+	</tr>
+ 	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">用户姓名：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_commpany" style="width:470px;height: 40px" name="renzheng_commpany" readonly="readonly" value="{$shop_info['shop_name']}">	
+		</td>
+	</tr>
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">申请人手机号：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_commpany_nature" style="width:470px;height: 40px" name="renzheng_commpany_nature" readonly="readonly" value="{$shop_info['shop_telephone']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">报修手机号：</td>
+		<td style="border:none">
+			<input type="text" class="form-control renzheng_zhucehao" style="width:470px;height: 40px" name="renzheng_zhucehao" readonly="readonly" value="{$shop_info['shop_bx_telephone']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">商家唯一编号：</td>
+		<td style="border:none">
+			<input type="text" class="form-control shop_xieyi_bianhao" style="width:470px;height: 40px" name="shop_xieyi_bianhao" readonly="readonly" value="{$shop_info['shop_xieyi_bianhao']}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">线下协议凭证：</td>
+		<td style="border:none">
+			<eq name="shop_info['shop_xieyi_img']" value="">
+				<img src="__PUBLIC__/Common/bootstrap/img/upload_img.jpg" class="shop_xieyi_img" style="width:200px;height: 200px;">
+			<else />
+				<img src="__ROOT__/Uploads/home_sjrz_img/{$shop_info['shop_xieyi_img']}" class="shop_xieyi_img" style="width:200px;height: 200px;">
+			</eq>
+			<input type="file" name="sjzr_pz[]" id="DocumentInputFile" style="display: none;">
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">发票类型：</td>
+		<td style="border:none">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="shop_fp_type" id="shop_fp_type" value="1" <eq name="shop_info['shop_fp_type']" value="1">checked</eq> >普通发票&nbsp;
+			  </label>
+			  <label>
+			    <input type="radio" name="shop_fp_type" id="shop_fp_type" value="2" <eq name="shop_info['shop_fp_type']" value="2">checked</eq> >增值税专用发票&nbsp;
+			  </label>
+			  <label>
+			    <input type="radio" name="shop_fp_type" id="shop_fp_type" value="3" <eq name="shop_info['shop_fp_type']" value="3">checked</eq> >暂无租赁发票&nbsp;
+			  </label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">电子协议：</td>
+		<td style="border:none">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="shop_is_xieyi" id="shop_is_xieyi" value="1" <eq name="shop_info['shop_is_xieyi']" value="1">checked</eq> >已签署线上协议&nbsp;
+			  </label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">线下协议：</td>
+		<td style="border:none">
+			<div class="radio">
+			  <label>
+			  	<if condition="($shop_info['shop_xianxia_xieyi'] eq 1 )">
+			  		<input type="radio" name="shop_xianxia_xieyi" id="shop_xianxia_xieyi" disabled="disabled" value="0" <eq name="shop_info['shop_xianxia_xieyi']" value="0">checked</eq> >未签署线下协议&nbsp;
+			  	<else />
+			    	<input type="radio" name="shop_xianxia_xieyi" id="shop_xianxia_xieyi" value="0" <eq name="shop_info['shop_xianxia_xieyi']" value="0">checked</eq> >未签署线下协议&nbsp;
+				</if>
+			  </label>
+			  <label>
+			    <input type="radio" name="shop_xianxia_xieyi" id="shop_xianxia_xieyi" value="1" <eq name="shop_info['shop_xianxia_xieyi']" value="1">checked</eq> >已签署线下协议&nbsp;
+			  </label>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">签署时间：</td>
+		<td style="border:none">
+			<eq name="shop_info['shop_updatetime']" value="0">
+				<input type="text" class="form-control shop_updatetime" style="width:470px;height: 40px" name="shop_updatetime" readonly="readonly" value="00:00:00">	
+			<else />
+				<input type="text" class="form-control shop_updatetime" style="width:470px;height: 40px" name="shop_updatetime" readonly="readonly" value="{$shop_info['shop_updatetime']|date='Y-m-d H:i:s',###}">	
+			</eq>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<button type="button" class="btn btn-success" value="{$shop_info['shop_id']}">确认修改</button>
+			<button type="button" class="btn btn-info">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-info").click(function(){
+		window.location.href="{:U('Qiye/shangjia_index')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	// 图片上传预浏览
+	$(".shop_xieyi_img").click(function(){
+		$("#DocumentInputFile").click();
+		$("#DocumentInputFile").off("change");
+		$("#DocumentInputFile").on("change",function(){
+			var suiffx = /(\.*.jpg$)|(\.*.png$)|(\.*.jpeg$)|(\.*.gif$)|(\.*.bmp$)/;
+			if( !suiffx.test($(this).val()) ){
+				alert("error：upload file suffix error,please upload:jpg|png|gif|bmp|jpeg");
+				return false;
+			}
+			if($(this)[0].files[0].size > 3145728 ){
+				alert("error：upload file size too large,please upload size by 3145728 ");
+				return false;
+			}
+			var objUrl =  getUploads(this.files[0]);
+			if( objUrl ){
+				$(".shop_xieyi_img").attr("src",objUrl);
+			}
+		});
+	});
+	function getUploads( files ){
+		url = null;
+		url = window.URL.createObjectURL(files);
+		return url;
+	}
+	$(".btn-success").click(function(){
+		shop_id = $(this).val();
+		$.ajaxFileUpload({
+			type: "POST",
+		dataType: "JSON",
+		secureuri: false,
+		fileElementId:['DocumentInputFile'],
+		    async: false,
+			 url: "{:U('Qiye/AjaxRjrz')}",
+			data: { 'shop_id':shop_id , 'shop_fp_type':$("#shop_fp_type:checked").val() , 'shop_xianxia_xieyi':$("#shop_xianxia_xieyi:checked").val()  },
+			success: function( data ){
+				var obj = /<pre.+?>(.+)<\/pre>/g;
+				var result = data.match(obj);
+				var data = RegExp.$1;
+				var data = eval( '('+data+')' );
+				if( data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Qiye/shangjia_index')}";
+				}else if( data.status == -2001 ){
+					alert(data.message);
+				}else if( data.status == -2002 ){
+					alert(data.message);
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});
+</script>
+</html>

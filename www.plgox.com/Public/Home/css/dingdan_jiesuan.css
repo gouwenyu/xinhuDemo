@@ -1,0 +1,377 @@
+.dd_js{
+	position:relative;
+	width:100%;
+  /*  border-top:1px solid #1F61C3;*/
+    overflow:hidden;
+}
+.dd_js_box{
+	width:1192px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.dd_js1{
+	margin-top:30px;
+	width:100%;
+	overflow:hidden;
+}
+.qmkdz{
+	width:60px;display:inline-block;
+}
+.dd_js10{
+	font-size:16px;
+}
+.dd_js11{
+	width:100%;
+	margin-top:18px;
+	height:216px;
+	border:1px solid #EBEBEB;
+}
+.dd_js11 thead tr{
+	height:50px;
+	border-bottom:1px solid #EBEBEB;
+	background-color:#FAFAFA;
+}
+
+th,td{
+  text-align: center;
+}
+.caozuo{
+	cursor: pointer;
+}
+.caozuo:hover{
+	color:#1B53A6;
+}
+.dd_js1110 img{
+	display:inline-block;
+	cursor:pointer;
+}
+.dd_js11101{
+	display:inline-block;
+	width:228px;
+	line-height:20px;
+	margin-left:5px;
+	text-align:left;
+	vertical-align: middle;
+}
+td{
+	font-size:12px;
+	vertical-align: middle;
+}
+.dd_js21{
+	width:100%;
+	border:1px solid #EBEBEB;
+	margin-top:15px;
+	padding:0px 12px;
+	font-size:12px;
+	overflow:hidden;
+	padding-bottom:20px;
+}
+.dd_js211{
+	background:url('../image/dd_js2.jpg') no-repeat right bottom;
+}
+.dd_js211_11{
+	display:block;
+	width:75px;
+	float:left;
+	cursor:pointer;
+	border:1px solid #EBEBEB;
+	text-align:center;
+	background-color:transparent;
+	line-height:30px;	
+}
+.dd_js211_11:hover{
+	background-color:transparent;
+	border:1px solid #6EA3F2;
+}
+
+.dd_js212{
+	display:block;
+	width:1065px;
+	float:left;
+	overflow:hidden;
+	line-height:32px;
+	margin-left:8px;
+	
+}
+.dd_js212:hover{
+	background-color:#D3E3FB;
+}
+.dd_js210{
+	margin-top:20px;
+    height:32px;
+    width:1165px;
+    overflow:hidden;	
+	
+}
+.dd_js2120{
+
+	width:1065px;
+	display:inline-block;
+}
+.dd_js2120 span{
+	display:inline-block;
+}
+.dd_js_name{
+	width:90px;
+	overflow:hidden;
+	margin-left:20px;
+}
+.dd_js_address,.dd_js_address1{
+	width:200px;
+		overflow:hidden;
+}
+.dd_js_telephone{
+	width:90px;
+	overflow:hidden;
+}
+.dd_js2121{
+	display:none;
+    width:220px;
+	float:right;
+	text-align:right;
+	margin-left:100px;
+	overflow:hidden;
+}	
+.dd_js2121 span{
+	padding:0px 15px;
+	color:#1F61C3;
+	cursor:pointer;
+}
+.dd_js2121 span a{
+	color:#1F61C3;
+}
+
+.dd_js220{
+	margin-top:20px;
+	width:125px;
+	height:28px;
+	background:url('../image/dd_js3.jpg') no-repeat 18px center;
+	background-color:#6EA3F2;
+	color:white;
+	cursor:pointer;
+	padding-left:40px;
+	line-height:28px;
+}
+.dd_js_fpkq{
+	width:125px;
+	height:28px;
+	border:1px solid #EBEBEB;
+	float:left;
+	text-align:center;
+	line-height:28px;
+}
+.dd_js_fpkq1{
+	width:125px;
+	height:28px;
+	cursor:pointer;
+	color:#6EA3F2;
+	float:left;
+	text-align:center;
+	line-height:28px;
+}
+.dd_js230{
+	font-size:12px;
+	margin-top:12px;
+}
+.dd_js31{
+	width:100%;
+	height:108px;
+	margin-top:6px;
+	font-size:12px;color:#999999;
+	padding:10px;
+	
+	border:1px solid #EBEBEB;
+}
+.dd_js6{
+	float:right;
+	width:360px;
+	height:200px;
+	overflow:hidden;
+	margin-top:55px;
+   margin-right:77px;
+   font-size:12px;
+}
+.dd_js61{
+	margin-top:10px;
+}
+.dd_js61 span:nth-child(1){
+	font-weight:bold;
+	font-size:14px;
+	margin-left:10px;
+}
+.dd_js61 span:nth-child(2){
+	color:#fd3535;
+	margin-left:10px;
+}
+.dd_js61:nth-child(1){
+	margin-left:26px;
+}
+.dd_js61:nth-child(2){
+	margin-left:13px;
+}
+.zhuce_jsxy{
+	color:#7E7E7E;font-size:14px;
+	margin-top:25px;
+	margin-left:140px;
+}
+.zhuce_jsxy1{
+	float:left;
+}
+.zhuce_jsxy2{
+	float:left;
+	margin-left:10px;
+	margin-top:3px;
+	
+}
+.dd_js66 input{
+	margin-top:12px;
+	margin-left:150px;
+	height:32px;width:160px;
+	font-size:14px;
+	color:white;
+	border:0px;
+	background-color:#BFBFBF;
+}
+.dd_js66 input:hover{
+	background:#6ea3f2;
+}
+.quanxuan_box,.fanxuan_box{
+	display:block;
+	float:left;
+}
+.xzan{
+	display:block;
+	float:left;
+	cursor:pointer;
+	padding-top:3px;
+	margin-left:3px;
+	margin-right:20px;
+}
+/*购物*/
+.gouw_1{
+      	font-size:14px;
+      	color:#333333;
+      	margin-top:22px;
+
+      }
+      .gouw_1 span{
+      	color:#1f61c3;
+      }
+      .gouw_10{
+          display:inline-block;
+      }
+       .gouw2{
+     	margin-top:15px;
+     	margin-left:30px;
+     }
+     .gouw21{
+margin-left:30px;
+     }
+     tr{
+     	height:130px;
+     	border-bottom:1px solid #D6D6D6;
+     }
+     tr:last-child{
+		border-bottom:none;
+     }
+     .gouw23{
+     	display:block;
+     	margin-top:5px;
+     	width:50px;
+     	height:20px;
+     	text-align:center;
+     	line-height:20px;
+     	background-color:red;
+     	color:white;
+     }
+     .gouw3{
+     	width:260px;
+     	height:225px;
+     	margin-top:55px;
+     	float:right;
+     	overflow:hidden;
+     	text-align:left;
+     }
+     .gouw3 div{
+     	line-height:30px;
+     }
+      .gouw_js{
+      	background:url('../image/gouwu1.jpg') no-repeat center center;
+      }
+      .gouw_zd{
+      	background:url('../image/gouwu2.jpg') no-repeat center center;
+      }
+       .gouw_js,.gouw_zd{
+      	display:inline-block;
+      	float:left;
+           width:26px;
+           height:24px;
+           border:1px solid #D6D6D6;
+           cursor:pointer;
+           background-color:#EEEEEE;
+      }
+      .gouw_xsk{
+      	display:inline-block;
+      	float:left;
+      	width:58px;
+         height:24px;
+         text-align:center;
+         border:0px;
+         border-top:1px solid #D6D6D6;
+         border-bottom:1px solid #D6D6D6;
+      }
+      .gouw310{
+    	width:165px;
+    	height:50px;	
+    	cursor:pointer;
+    	color:white;
+    	margin-top:20px;
+		line-height:50px;    	
+		text-align:center;
+		font-size:16px;
+    	background-color:#1f61c3;
+    }
+     .gouw310 span{
+     	line-height:50px;
+     }
+    .gouw310:hover{
+    	background-color:#1b53a6;
+    }
+.dd_js_mrdz1{
+	width:80px;
+	text-align:center;
+	color:white;
+	overflow:hidden;
+	margin-left:50px;
+	color:#6EA3F2;
+	cursor:pointer;
+    
+}
+/**
+* 购买加减样式
+*/
+.gouw_js_{
+	background:url('../image/gouwu1.jpg') no-repeat center center;
+}
+.gouw_zd_{
+	background:url('../image/gouwu2.jpg') no-repeat center center;
+}
+.gouw_js_,.gouw_zd_{
+	display:inline-block;
+	float:left;
+   width:26px;
+   height:24px;
+   border:1px solid #D6D6D6;
+   cursor:pointer;
+   background-color:#EEEEEE;
+}
+.gouw_xsk_{
+	display:inline-block;
+	float:left;
+	width:58px;
+ height:24px;
+ text-align:center;
+ border:0px;
+ border-top:1px solid #D6D6D6;
+ border-bottom:1px solid #D6D6D6;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+</head>
+<style type="text/css">
+	.page{text-align: center;height:40px;}
+	.page :hover{text-decoration: none}
+	.num{border:1px solid #C0D9D9;border-radius: 10px;line-height: 40px;padding:5px 10px 5px 10px;margin: 0px 4px 0px 0px;}
+	.current{border: 1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin: 0px 4px 0px 0px;background: #007FFF;color:#FFFFFF;}
+	.next{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;}
+	.prev{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-right:4px;}
+	.first{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-right:4px;}
+	.end{border:1px solid #C0D9D9;border-radius: 10px;padding:5px 10px 5px 10px;margin-left:4px;}
+	.page_style{color:#007FFF;font-size:15px;}
+</style>
+<body>
+<ol class="breadcrumb">
+	<li>当前位置</li>
+	<li>{$setTitle}</li>
+</ol>
+<div class="container-fluid">
+<form class="bs-example bs-example-form" role="form" action="{:U('User/user_address_list')}" method="get">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="input-group" style="width:400px;">
+				<input type="text" class="form-control search" style="height:30px;" name="search_fields" value="{$search_name}">
+				<span class="input-group-btn">
+					<input type="submit" class="btn btn-default" value="搜索" style="height: 30px;">
+				</span>
+			</div><!-- /input-group -->
+			<br>
+		</div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+</form>
+</div>
+<div class="table-responsive">
+	<table style="border: 1px solid #DDDDDD;" class="table">
+		<tr>
+			<td>
+				<!-- <button type="button" class="btn btn-success">添加新产品</button> -->
+				<button type="button" class="btn btn-success">添加二手分类</button>
+			</td>
+		</tr>
+	</table>
+	<table class="table table-striped">
+		<tr></tr>
+		<tr style="background:#F5F5F5;">
+			<th style="text-align: center;">编号</th>
+			<th style="text-align: center;">分类名称</th>
+			<th style="text-align: center;">发布时间</th>
+			<th style="text-align: center;">操作</th>
+		</tr>
+	<volist name="brand_list" id="brand_list_">
+		<tr class="table_tr_{$goods_list_['goods_id']}">
+			<td style="text-align: center;line-height:50px;">{$brand_list_['juezhi_brand_id']}</td>
+			<td style="text-align: center;line-height:50px;">{$brand_list_['juezhi_brand_title']}{$brand_list_['juezhi_brand_aid']}{$brand_list_['juezhi_brand_bid']}{$brand_list_['juezhi_brand_name']}</td>
+			<td style="text-align: center;line-height:50px;">{$brand_list_['juezhi_brand_publish_time']}</td>
+			<td style="text-align: center;line-height:50px;">
+				  <a href="{:U('Esjz/esjz_goods_edit')}&edit_id=<?php echo base64_encode($brand_list_['juezhi_brand_id']) ?>" title="编辑板块" class="">编辑</a>&nbsp;&nbsp;
+				<a href="javascript:void(0);" title="删除" class="del" value="{$brand_list_['juezhi_brand_id']}">删除</a>&nbsp;&nbsp; 
+			</td>
+		</tr>
+	</volist>
+	</table>
+</div>
+<div class="container-fluid">
+	  <div class="col-xs-12 col-md-8 page" style="width: 100%">{$page}</div>
+</div>
+</body>
+<script type="text/javascript">
+	// 添加新板块
+	$(".btn-success").click(function(){
+		window.location.href="{:U('Esjz/add_brand')}";
+	});
+	// 单个删除
+	$(".del").click(function(){
+		share_id = $(this).attr("value");
+		if( confirm( "确定要删除该用户吗？" ) ){
+			$.ajax({
+				type: "POST",
+				 url: "{:U('Esjz/delete_brand')}",
+				data: { 'id':share_id },
+				success: function( data ){
+						alert("删除成功！");
+    					location.reload();
+				},
+				error: function( XMLHttpRequest , error , status ){
+					alert("网络错误，请稍后再尝试" + status );
+					return false;
+				}
+			});
+		}
+	});
+	// 全选删除
+    $(".btn-danger").click(function(){
+    	var ids = "";
+    	$("input[type='checkbox']").each(function(){
+    		if( $(this).is(":checked") ){
+    			ids+=','+$(this).val();
+    		}
+    	});
+    	share_ids = ids.substring(1);
+    	if( share_ids.length == 0 ){
+    		alert("请选择要删除的数据");
+    	}else if( confirm("确定要全部删除所有数据") ){
+    		$.ajax({
+    			type: "POST",
+    		dataType: "JSON",
+    			 url: "{:U('Share/share_product_del')}",
+    			data: { 'share_ids':share_ids },
+    			success: function( data ){
+    				if( data.status == 2002 ){
+    					alert(data.message);
+    					location.reload();
+    					return false;
+    				}else{
+    					alert("删除失败");
+    					return false;
+    				}
+    			},
+    			error: function( XMLHttpRequest , error , status ){
+    				alert("网络出现错误，请稍后再尝试!" + status );
+    			}
+    		});
+    	}
+    });
+	// 全选
+	$(".btn-info").click(function(){
+		if( $("input[type='checkbox']").is(":checked") ){
+			$("input[type='checkbox']").prop("checked",false);
+		}else{
+			$("input[type='checkbox']").prop("checked",true);
+		}
+	});
+	// 点击tr选中checkbox
+   $("table").find("tr").each(function(){
+       $(this).click(function(){
+			if( $(this).find('input').is(":checked") ){
+				$(this).find("input").prop("checked",false);
+			}else{
+				$(this).find("input").prop("checked",true);
+			}
+       	});            
+     });
+   $(".btn-default").click(function(){
+   		if( $(".search").val() == "" ){
+   			alert("搜索框当中的内容是不能为空的");
+   			return false;
+   		}
+   });
+   // 字体长度
+   $(".share_name").each(function(){
+   		var fontSize = 28;
+   		if( $(this).text().length > fontSize ){
+   			$(this).text($(this).text().substring(0,fontSize));
+   		}
+   });
+     $(".share_key").each(function(){
+   		var fontSize = 28;
+   		if( $(this).text().length > fontSize ){
+   			$(this).text($(this).text().substring(0,fontSize));
+   		}
+   });
+</script>
+</html>

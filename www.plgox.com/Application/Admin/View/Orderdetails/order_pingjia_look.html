@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">评价方：</td>
+		<td style="border:none">
+			<input type="text" class="form-control plgox_user_vip" style="width:470px;height: 40px" name="plgox_user_vip" readonly="readonly" value="{$pingjia['plgox_user']}">	
+		</td>
+	</tr>
+ 	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">被平方：</td>
+		<td style="border:none">
+			<input type="text" class="form-control plgox_user_uid" style="width:470px;height: 40px" name="plgox_user_uid" readonly="readonly" value="{$pingjia['cart_shangjia_id']|get_shanjia_by_id='Member','plgox_user','plgox_id'}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">评价内容：</td>
+		<td style="border:none">
+		<textarea class="form-control" rows="6" style="width:470px;resize: none" readonly="readonly" class="pingjia_content">{$pingjia['pingjia_content']}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">买家晒图：</td>
+		<td style="border:none">
+			<if condition="( $images['0'] neq null ) OR ( $images['0'] neq '' ) ">
+				<img src="__ROOT__/Uploads/home_pingjia_img/{$images['0']}" style="width:70px;height:70px;">
+			</if>
+			<if condition="( $images['1'] neq null ) OR ( $images['1'] neq '' ) ">
+				<img src="__ROOT__/Uploads/home_pingjia_img/{$images['1']}" style="width:70px;height:70px;">
+			</if>
+			<if condition="( $images['2'] neq null ) OR ( $images['2'] neq '' ) ">
+				<img src="__ROOT__/Uploads/home_pingjia_img/{$images['2']}" style="width:70px;height:70px;">
+			</if>
+			<if condition="( $images['3'] neq null ) OR ( $images['3'] neq '' ) ">
+				<img src="__ROOT__/Uploads/home_pingjia_img/{$images['3']}" style="width:70px;height:70px;">
+			</if>
+			<if condition="( $images['4'] neq null ) OR ( $images['4'] neq '' ) ">
+				<img src="__ROOT__/Uploads/home_pingjia_img/{$images['4']}" style="width:70px;height:70px;">
+			</if>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">描述相符星级：</td>
+		<td style="border:none">
+			<neq name="pingjia['pingjia_descriptions_pingjia']" value="0">
+				<div style="border:1px solid #ccc;width: 470px;height: 40px;border-radius: 6px;" >
+				<for start="0"  end="$pingjia['pingjia_descriptions_pingjia']">
+						<img src="__PUBLIC__/Home/image/my_top3.jpg" style="position: relative;top:6px;">	
+				</for>
+				</div>
+			</neq>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">卖家服务星级：</td>
+		<td style="border:none">
+			<neq name="pingjia['pingjia_maijia_pingjia']" value="0">
+				<div style="border:1px solid #ccc;width: 470px;height: 40px;border-radius: 6px">
+				<for start="0"  end="$pingjia['pingjia_maijia_pingjia']">
+					<img src="__PUBLIC__/Home/image/my_top3.jpg" style="position: relative;top:6px;">	
+				</for>
+				</div>
+			</neq>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">运送服务星级：</td>
+		<td style="border:none">
+			<neq name="pingjia['pingjia_yunsong_pingjia']" value="0">
+				<div style="border:1px solid #ccc;width: 470px;height: 40px;border-radius: 6px">
+				<for start="0"  end="$pingjia['pingjia_yunsong_pingjia']">
+					<img src="__PUBLIC__/Home/image/my_top3.jpg" style="position: relative;top:6px;">	
+				</for>
+				</div>
+			</neq>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">评价时间：</td>
+		<td style="border:none">
+			<input type="text" class="form-control pingjia_createtime" style="width:470px;height: 40px" name="pingjia_createtime" readonly="readonly" value="{$pingjia['pingjia_createtime']|date='Y-m-d H:i:s',###}">	
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<!-- <button type="button" class="btn btn-success" value="{$repair['repair_id']}">确认修改</button> -->
+			<button type="button" class="btn btn-info">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-info").click(function(){
+		window.location.href="{:U('Orderdetails/order_pingjia')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+/*	$(".btn-success").click(function(){
+		repair_id = $(this).val();
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('Orderdetails/AjaxBaoxiuChuli')}",
+			data: { 'repair_id':repair_id , 'repair_status':$("#repair_status:checked").val() },
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Orderdetails/order_baoxiu')}";
+					return false;
+				}else if( data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});*/
+</script>
+</html>

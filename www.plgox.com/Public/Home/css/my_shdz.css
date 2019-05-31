@@ -1,0 +1,98 @@
+
+.zz_nr2{
+	width:998px;
+	height:60px;
+	line-height:60px;
+	font-size:14px;
+	color:#666666;
+	margin-left:52px;
+	
+}
+.zz_nr2 input,.shr_xtk{
+	display:inline-block;
+	width:338px;
+	height:32px;
+	line-height:32px;
+	font-size:12px;
+	border:1px solid #d6d6d6;
+}
+.shr_xtk{
+	width:100px;
+}
+.shr_dz{
+	margin-left:14px;
+}
+.myshdz{
+font-size:14px;
+margin-top:20px;
+}
+.myshdz1{
+	width:100%;
+	overglow:hidden;
+	margin-top:18px;
+	margin-left:10px;
+}
+.myshdz2,.myshdz2_last{
+  float:left;
+  width:290px;
+  overflow:hidden;
+  margin-top:15px;
+}
+.myshdz21{
+  width:260px;
+  border:1px dashed #DDDDDD;
+  background-color:#F9F9F9;
+}
+.myshdz22{
+	width:235px;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px dashed #DDDDDD;
+	margin:0 auto;
+	margin-top:12px;
+	font-size:12px;
+}
+.myshdz22 span{
+	display:block;
+	float:left;
+	color:black;
+}
+.myshdz22 span:nth-child(2){
+	float:right;
+}
+.myshdz23{
+	width:235px;
+	height:30px;
+	line-height:30px;
+	margin:0 auto;
+	color:black;
+	font-size:12px;
+}
+.myshdz25{
+	width:190px;
+	height:30px;
+	line-height:30px;
+	margin:0 auto;
+	color:black;
+	text-align: right;
+	font-size:12px;
+	color:#333333;
+	
+}
+.myshdz25 span{
+	cursor: pointer;
+}
+.myshdz30{
+	width:42px;
+	height:42px;
+	margin:0 auto;
+	margin-top:25px;
+    background:url("../image/my_zd6.png") no-repeat center center;
+    cursor:pointer;
+}
+.myshdz31{
+	font-size:16px;
+	color:#666666;
+    text-align:center;
+    margin-top:20px;
+}

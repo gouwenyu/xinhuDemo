@@ -1,0 +1,156 @@
+[ 2018-08-16T00:53:40+08:00 ] 111.206.221.96 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001049s ]
+
+[ 2018-08-16T01:03:25+08:00 ] 157.55.39.144 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T01:05:33+08:00 ] 123.125.67.166 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T01:10:13+08:00 ] 180.97.106.39 /check_proxy
+ERR: 无法加载控制器:Check_proxy
+
+[ 2018-08-16T01:31:29+08:00 ] 123.125.71.98 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T01:34:03+08:00 ] 203.208.60.9 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T02:40:10+08:00 ] 40.77.167.80 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T02:40:54+08:00 ] 157.55.39.144 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T02:41:01+08:00 ] 40.77.167.80 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T04:24:17+08:00 ] 122.227.189.200 /search/www.ymwears.cn
+ERR: 无法加载控制器:Search
+
+[ 2018-08-16T07:49:20+08:00 ] 54.36.150.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T07:49:21+08:00 ] 54.36.148.87 /share/share_detail/id/41.html
+ERR: 无法加载控制器:Share
+
+[ 2018-08-16T08:07:49+08:00 ] 106.11.152.131 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T08:08:55+08:00 ] 106.11.152.131 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T08:09:47+08:00 ] 114.217.100.135 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T08:10:52+08:00 ] 180.107.27.41 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T09:19:28+08:00 ] 111.206.198.76 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+
+[ 2018-08-16T11:27:17+08:00 ] 222.186.190.100 /jacknccss.jsp%20
+ERR: 无法加载控制器:Jacknccss.jsp 
+
+[ 2018-08-16T11:27:17+08:00 ] 222.186.190.100 /jacknccss.jsp
+ERR: 无法加载控制器:Jacknccss.jsp
+
+[ 2018-08-16T12:54:50+08:00 ] 203.208.60.116 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '43'  [ RunTime:0.0005s ]
+
+[ 2018-08-16T14:24:31+08:00 ] 203.208.60.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T14:41:04+08:00 ] 203.208.60.5 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T14:41:04+08:00 ] 203.208.60.68 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '24'  [ RunTime:0.0003s ]
+
+[ 2018-08-16T15:04:53+08:00 ] 123.126.113.164 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T15:06:50+08:00 ] 54.36.148.242 /Cart/shop_detil/id/216.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-08-16T15:35:42+08:00 ] 210.12.31.250 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+
+[ 2018-08-16T15:36:44+08:00 ] 137.175.11.218 /sys/doc9/admin/login.asp
+ERR: 无法加载控制器:Sys
+
+[ 2018-08-16T15:36:45+08:00 ] 137.175.11.218 /adminpic/eWebEditor_v280/Admin_Login.asp
+ERR: 无法加载控制器:Adminpic
+
+[ 2018-08-16T15:36:46+08:00 ] 137.175.11.218 /Management/HTMLEDIT/Admin_Login.asp
+ERR: 无法加载控制器:Management
+
+[ 2018-08-16T16:21:40+08:00 ] 58.250.125.148 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T19:22:02+08:00 ] 122.114.160.240 /data/%23data.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-08-16T19:22:02+08:00 ] 122.114.160.240 /data/%23aspcms252.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-08-16T19:22:02+08:00 ] 122.114.160.240 /data/%235Dp8Gh.asp
+ERR: 无法加载控制器:Data
+
+[ 2018-08-16T19:22:02+08:00 ] 122.114.160.240 /xydata/xycms.mdb
+ERR: 无法加载控制器:Xydata
+
+[ 2018-08-16T19:22:02+08:00 ] 122.114.160.240 /data/xy
+ERR: 无法加载控制器:Data
+
+[ 2018-08-16T22:48:48+08:00 ] 91.210.147.222 /blog/
+ERR: 无法加载控制器:Blog
+
+[ 2018-08-16T23:02:46+08:00 ] 69.30.226.234 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T23:02:48+08:00 ] 69.30.226.234 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-08-16T23:02:51+08:00 ] 69.30.226.234 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-16T23:02:54+08:00 ] 69.30.226.234 /Index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-08-16T23:02:57+08:00 ] 69.30.226.234 /Xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-08-16T23:03:00+08:00 ] 69.30.226.234 /index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-08-16T23:03:02+08:00 ] 69.30.226.234 /poli/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Poli
+
+[ 2018-08-16T23:03:05+08:00 ] 69.30.226.234 /share/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Share
+
+[ 2018-08-16T23:03:08+08:00 ] 69.30.226.234 /xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-08-16T23:03:12+08:00 ] 69.30.226.234 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-08-16T23:42:25+08:00 ] 122.227.189.200 /search/www.ymwears.cn
+ERR: 无法加载控制器:Search
+

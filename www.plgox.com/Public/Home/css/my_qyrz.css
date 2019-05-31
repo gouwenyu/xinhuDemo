@@ -1,0 +1,94 @@
+.myqyrz{
+	height:85px;
+	width:920px;
+	margin-top:18px;
+	background-color:#EEF3F7;
+	font-size:18px;
+	line-height:85px;
+	color:#1f61c3;
+	padding-left:30px;
+	overflow:hidden;
+	border-bottom:1px solid #9E9E9E;
+}
+.myqyrz a{
+	display:inline-block;
+	height:35px;
+	width:85px;
+	text-align:center;
+	line-height:35px;
+	font-size:14px;
+	color:white;
+	margin-top:10px;
+	margin-left:33px;
+	background-color:#1F61C3;
+	
+}
+.myqyrz a:hover{
+background-color:#1b53a6;
+}
+.myqyrz1{
+	margin-top:50px;
+	font-size:16px;
+}
+.myqyrz2{
+	width:495px;
+	height:65px;
+	margin-top:48px;
+}
+.myqyrz2 li{
+	width:165px;
+	height:65px;
+	float:left;
+}
+.myqyrz210{
+	height:7px;
+	width:165px;
+	background-color:#1F61C3;
+}
+
+.myqyrz211{
+	display:block;
+	height:25px;
+	width:25px;
+	background-color:#1F61C3;
+	border-radius: 50%;
+	margin:0 auto;
+	color:white;
+	font-size:16px;
+	text-align:center;
+	line-height:25px;
+	margin-top:-16.5px;
+}
+
+
+.myqyrz22{
+	font-size:16px;
+	color:black;
+	width:165px;
+	text-align: center;
+	margin-top:20px;
+}
+.myqyrz3{
+	color:#1F61C3;
+	font-size:14px;
+	margin-top:50px;
+}
+.myqyrz5{
+	margin-top:20px;
+	font-size:12px;
+}
+.myqyrz5 p{
+	
+	line-height:20px;
+}
+.qyrz_tp{
+	width:920px;
+	height:220px;
+	overflow:hidden;
+	margin-top:30px;
+	background-color:pink;
+}
+.qyrz_tp img{
+	width:920px;
+	height:220px;
+}

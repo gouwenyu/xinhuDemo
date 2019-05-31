@@ -1,0 +1,97 @@
+{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/htsy_index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_zulin.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/fen_ye.css">
+<div class="ht_in1">
+	<div class="ht_in10">
+		<span >
+			提现记录
+		</span>
+	</div>
+	
+  <div class="ht_content">	
+	
+    <ul class="htddgl_1" >
+      <li><a href="#" onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_guanli')}'">账户管理</a></li>
+      <li><a href="#" onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_mingxi')}'">账户明细</a></li>
+      <li><a href="#"   onclick="javascript:window.location.href='{:U('Homeuser/fq_tx')}'">我要提现</a></li>
+      <li><a href="#" class="htddgl_yg" style="color:#1f61c3;"  onclick="javascript:window.location.href='{:U('Homeuser/tixian_jilu')}'">提现记录</a></li>
+     </ul>
+
+
+	<div class="wdz2">
+	 	 <br/>
+	 <table >
+	 	<thead>
+	 		<tr class="wdz21">
+	 			<td>
+	 				提现单号
+	 			</td>
+	 			<td>
+	 				提现方式
+	 			</td>
+	 			<td>
+	 				提现金额
+	 			</td>
+	 			<td>
+	 				时间
+	 			</td>
+	 			<td>
+	 				状态
+	 			</td>
+	 		</tr>
+	 	</thead>
+	 	<tbody class="wdz22">
+	 	<volist name="withdrawals" id="withdrawals_">
+	 	<eq name="withdrawals_['withdrawals_status']" value="2">
+	 		<tr >
+	 			<td>
+	 			  {$withdrawals_['withdrawals_ordernumber']}
+	 			</td>
+	 			<td>
+	 			<if condition="($withdrawals_['withdrawals_type'] eq 1)">
+	 				支付宝
+	 			<elseif condition="($withdrawals_['withdrawals_type'] eq 2)" />
+	 				银行卡
+	 			</if>
+	 			</td>
+	 			<td>
+	 				￥{$withdrawals_['withdrawals_prices']}
+	 			</td>
+	 			<td>
+	 				{$withdrawals_['withdrawals_time']|date="Y-m-d H:i:s",###}
+	 			</td>
+	 			<td>
+	 				<if condition="($withdrawals_['withdrawals_status'] eq 1)">
+	 					提现中
+		 			<elseif condition="($withdrawals_['withdrawals_status'] eq 2)" />
+		 				提现成功
+		 			</if>
+	 			</td>
+	 		</tr>	 		
+	 	</eq>
+	 	</volist>
+	 	</tbody>
+	 </table>
+	 </div>
+	 <div class="message" >
+        {$page}
+     </div>
+ </div>
+
+</div>
+
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/fen_ye.js"></script>
+<script type="text/javascript">
+	$(".htsy_top_yd").css("top","138px");
+
+
+
+	$(".htsy_2 li").eq(3).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(3).siblings().css("background","none");
+	$(".htsy_2 li div").eq(3).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(3).siblings().css("background","none");
+
+</script>

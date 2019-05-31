@@ -1,0 +1,62 @@
+{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/htsy_index.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_zh.css" />
+<div class="ht_in1">
+	<div class="ht_in10">
+		<span >
+			我的账户
+		</span>
+	</div>
+    
+    
+    <div class="wdzh1">
+    	<div class="wdzh_left">
+    		<div class="wdzh10">￥</div>
+    		<span class="wdzh11">我的可用资金：</span>
+    		<span class="wdzh12">2600.00  </span>
+    		<span class="wdzh11">（押金￥2300.00 + 租金￥300.00）</span>
+    	</div>
+    	<div class="wdzh_right">
+    		<a class="wdzh13" href="{:U('Homeuser/zhanghu_mingxi')}">账户明细</a>
+    	</div>
+    </div>
+    
+    <div class="wdzh2">
+    	<div class="wdzh_left">
+    		<div class="wdzh21">总收入</div>
+    		<div class="wdzh22">（租金、押金、人工运费）</div>
+    	</div>
+    	<div class="wdzh_right">
+    		<span class="wdzh23">+ ￥2300.00</span>
+    	</div>
+    </div>
+    
+    <div class="wdzh3">
+    	<div class="wdzh_left">
+    		<div class="wdzh21">总支出</div>
+    		<div class="wdzh22">（返还押金）</div>
+    	</div>
+    	<div class="wdzh_right">
+    		<span class="wdzh23">- ￥2300.00</span>
+    	</div>
+    </div>
+   <div class="wytx">
+    		<a class="wytx1" href="{:U('Homeuser/fq_tx')}">我要提现</a>
+    </div>
+</div>
+
+
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript">
+$(".htsy_top_yd").css("top","270px");
+
+
+
+	$(".htsy_2 li").eq(5).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(5).siblings().css("background","none");
+	$(".htsy_2 li div").eq(5).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(5).siblings().css("background","none");
+
+
+</script>

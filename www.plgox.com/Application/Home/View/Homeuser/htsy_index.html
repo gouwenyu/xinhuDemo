@@ -1,0 +1,102 @@
+﻿{:W('Common/htsy_top')}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/htsy_index.css" />
+<!--<img alt="5" src="__PUBLIC__/Home/image/index_lb5.jpg" />-->
+<div class="ht_in1">
+
+	 <div class="ht_in10">
+		<span >
+			待处理事项
+		</span>
+	</div>
+	
+	<!-- <ul class="ht_in11" style="width:1180px;overflow:hidden;">
+		<li  >
+           <div class="ht_ints">
+           	 <img src="__PUBLIC__/Home/image/my_top1.jpg" />
+           </div>
+           <div  class="ht_ints1">
+           	  <p class="ht_ints10">可用资金</p>
+           	  <p class="ht_ints11">¥2600.00</p>
+           	  <p class="ht_ints12">押金：¥2600.00</p>
+           	  <p class="ht_ints13">租金：¥2600.00</p>
+           </div>
+
+           <div class="ht_ints222">
+           	  <span onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_mingxi')}'">账户明细</span>
+           	  <span onclick="javascript:window.location.href='{:U('Homeuser/fq_tx')}'">我要提现</span>
+           	  <span onclick="javascript:window.location.href='{:U('Homeuser/tixian_jilu')}'">提现记录</span>
+           </div>
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/dingdan_guanli')}'">
+			新订单<span>（{$order_detil}）</span>
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/zaizu_dingdan')}'">
+			维修订单<span>（{$repair}）</span>
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/zaizu_dingdan')}'">
+			退租订单<span>（1000）</span>
+		</li>
+	</ul>
+	<ul class="ht_in11_1"  style="width:1230px;overflow:hidden;">
+		<li onclick="javascript:window.location.href='{:U('Homeuser/dingdan_guanli')}'">
+			订单管理
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/zaizu_dingdan')}'">
+			在租订单
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_guanli')}'">
+			账户管理
+		</li>
+		
+	</ul> -->
+	<ul class="ht_in11">
+		<li >
+			<div class="htin1"><span class="htin10">可用资金：</span><span class="htin11">1000.00</span></div>
+			<div class="htin1"><span class="htin10">押金：</span><span class="htin11">100.00</span></div>
+			<div class="htin1"><span class="htin10">租金：</span><span class="htin11">100.00</span></div>
+		</li>
+		<li >
+			<div class="htin2" onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_mingxi')}'">账户明细</div>
+			<div class="htin2" onclick="javascript:window.location.href='{:U('Homeuser/fq_tx')}'">我要提现</div>
+			<div class="htin2"  onclick="javascript:window.location.href='{:U('Homeuser/tixian_jilu')}'">提现记录</div>
+			
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/dingdan_guanli')}'">
+			<div class="htin3" >新订单</div>
+			<div class="htin3">1000</div>
+		</li>
+		<li  onclick="javascript:window.location.href='{:U('Homeuser/zaizu_dingdan')}'">
+			<div class="htin3">维修订单</div>
+			<div class="htin3">1000</div>
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/zaizu_dingdan')}'">
+			<div class="htin3">退租订单</div>
+			<div class="htin3">1000</div>
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/dingdan_guanli')}'">
+			<div class="htin3">订单管理</div>
+			<div class="htin3">1000</div>
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/zaizu_dingdan')}'">
+			<div class="htin3">在租订单</div>
+			<div class="htin3">1000</div>
+		</li>
+		<li onclick="javascript:window.location.href='{:U('Homeuser/zhanghu_guanli')}'">
+			<div class="htin3">账户管理</div>
+			<div class="htin3">1000</div>
+		</li>
+	</ul>
+
+
+</div>
+<script src="__PUBLIC__/Home/js/szgd.js"></script>
+<script type="text/javascript">
+
+	$(".htsy_2 li").eq(0).css("background","#3E4F65");
+
+	$(".htsy_2 li").eq(0).siblings().css("background","none");
+	$(".htsy_2 li div").eq(0).css("background","url('__PUBLIC__/Home/image/htsy_2.png') no-repeat 0px 0px");
+	$(".htsy_2 li div").eq(0).siblings().css("background","none");
+</script>
+</body>
+</html>

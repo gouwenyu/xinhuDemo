@@ -1,0 +1,444 @@
+<?php if (!defined('THINK_PATH')) exit();?>﻿<?php echo W('Common/header_esxz');?>
+<?php echo W('Common/header1_esxz');?>
+
+ <link rel="stylesheet" type="text/css" href="/Public/Home/css/esxz_index.css"> 
+ <link rel="stylesheet" type="text/css" href="/Public/Home/css/esxz_detil.css"> 
+ <style>
+ 	
+ </style>
+<div class="es_sy">
+  <div class="es_sy_small">
+  	
+  	<div class="es_detil">
+  		<div class="es_detil_left">
+  			<div class="es_detil_left_tp">
+  				<img src="/Uploads/admin/<?php echo ($img_url[0]); ?>" />
+  			</div>
+  			<div class="es_detil_left_sm_img">
+  			  <div class="es_detil_left_tb">
+  			  	<img src="/Public/Home/image/exsz_detil7.png" />
+  			  </div>
+  			  <ul  class="es_detil_left_box">
+  				<?php if(is_array($img_url)): $i = 0; $__LIST__ = $img_url;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$i_u): $mod = ($i % 2 );++$i;?><li class="es_detil_left_img">
+	  					<img src="/Uploads/admin/<?php echo ($i_u); ?>" />
+	  				</li><?php endforeach; endif; else: echo "" ;endif; ?>
+  				
+  			  </ul>
+  			  <div class="es_detil_right_tb">
+  			  	<img src="/Public/Home/image/exsz_detil6.png" />
+  			  </div>
+  			</div>
+  		</div>
+  <script type="text/javascript">
+  	$(".es_detil_left_img img").each(function(){
+  		$(this).mouseover(function(){
+  			var tpdz=$(this).attr("src");
+  			$(".es_detil_left_tp img").attr("src",tpdz);
+  		})
+  	})
+  </script>			
+  		
+  		<div class="es_detil_mi">
+  			<div class="es_detil_mi1" style="margin-top:40px;">
+  				<?php echo ($goods_detail["goods_name"]); ?>
+  			</div>
+  			<div class="es_detil_mi2">
+           发布：<?php echo ($goods_detail["goods_publish_time"]); ?>
+  			</div>
+  			<div class="es_detil_mi3">
+                 <span class="es_detil_jg"> 价格：</span>
+                 <span class="es_detil_jg_1" style="font-size:14px;">¥<?php echo ($goods_detail["goods_deal_price"]); ?></span>
+  			</div>
+
+  			<!--<div class="es_detil_mi5">
+                                    购买/出厂时间：2010年
+  			</div>-->
+  			
+  			
+  		<div class="es_detil_mi99">
+  			<div class="es_detil_xz">
+               房屋面积：<?php echo ($goods_detail["goods_zr_area"]); ?>㎡
+  			</div>
+  			
+  			<div class="es_detil_sz">
+  			店铺类型：
+	  			<?php if($goods_detail["goods_zr_shop_type"] == 1): ?>中餐厅<?php endif; ?>
+	  			<?php if($goods_detail["goods_zr_shop_type"] == 2): ?>西餐厅<?php endif; ?>
+	  			<?php if($goods_detail["goods_zr_shop_type"] == 3): ?>火锅餐厅<?php endif; ?>
+	  			<?php if($goods_detail["goods_zr_shop_type"] == 4): ?>自助餐厅<?php endif; ?>
+	  			<?php if($goods_detail["goods_zr_shop_type"] == 5): ?>日韩餐厅<?php endif; ?>
+  			</div>
+  			<div style="clear:both;"></div>
+  			<div class="es_detil_xz">
+                                    面宽：<?php echo ($goods_detail["goods_zr_weight"]); ?>m
+  			</div>
+  			<div class="es_detil_sz">
+                                   经营状态：
+                                   
+  			<?php if($goods_detail["goods_zr_shop_type"] == 1): ?>经营中
+            <?php else: ?>
+                                 闲置中<?php endif; ?>
+  			</div>
+  			<div style="clear:both;"></div>
+  			<div class="es_detil_xz">
+                                  进深：<?php echo ($goods_detail["goods_zr_depth"]); ?>m
+  			</div>
+  			<div class="es_detil_sz">
+                                  层高：<?php echo ($goods_detail["goods_zr_height"]); ?>m
+  			</div>
+  			
+  		</div>
+  		
+  		<div class="es_detil_mi99">
+  			<div class="es_detil_xz">
+          楼层：<?php echo ($goods_detail["goods_zr_floor_num"]); ?>层/共<?php echo ($goods_detail["goods_zr_floor_count"]); ?>层
+  			</div>
+  			
+  		</div>
+  		<div class="es_detil_mi99">
+  			<div style="clear:both;"></div>
+  			<div class="es_detil_sz">
+        区域地址：<?php echo ($goods_detail["goods_province"]); echo ($goods_detail["city"]); echo ($goods_detail["goods_address"]); ?>
+  			</div>	
+  		</div>
+  		<!---->
+  		
+  			<div class="es_detil_mi7">
+          <?php if(( $wyyx_id['wyyx_status'] == 1 ) OR ( $wyyx_id['wyyx_status'] != null )): ?><span class="es_detil_mi71">查看卖家联系方式</span><?php endif; ?>
+        <!--  <img class="es_detil_mi72" src="/Public/Home/image/esxz_detil_sc.jpg" />
+          &nbsp;<span class="es_detil_mi73">收藏</span> -->
+           <span class="es_detil_mi76" style="width:100px;margin-left:20px;">我有意向</span>
+  				
+  			</div>
+  			
+  		    <div class="es_detil_mi8">
+  		    	以企业发布的信息，营业执照已在我公司完成备案，相对于个人发布，信誉相对更有保障。
+  		    </div>
+  		    
+  		    <div class="es_detil_mi9">
+  		    	批量是指卖家一条信息发布了多件商品。此类型适合于餐厅整体转让或接手。
+  		    </div>
+  		</div>
+  		
+  		
+  		
+  		<div class="es_detil_right">
+  			<div class="es_detil_right1">				
+  			</div>
+  			<div class="es_detil_right2">	
+  				用户名：<?php echo ($user_info["plgox_user"]); ?>
+  			</div>
+  			<div class="es_detil_right3">	
+  			</div>
+  			<div class="es_detil_right5">
+  				注册时间：<?php echo ($user_info["plgox_createtime"]); ?>
+  			</div>
+  			<div class="es_detil_right6">
+  				发布信息：<?php echo ($user_info["plgox_publish_num"]); ?>
+  			</div>
+  			<div class="es_detil_right6">
+  				被举报   ：<?php echo ($user_info["plgox_reported_num"]); ?>
+  			</div>
+  			<div class="es_detil_right6">
+  				被删信息：<?php echo ($user_info["plgox_deleted"]); ?>
+  			</div>
+  			<div class="es_detil_right6">
+  				该信息被浏览次数：<?php echo ($goods_detail["goods_is_watched"]); ?>次
+  			</div>
+  		</div>
+  	</div>
+  	<div style="background-color:white;height:20px;width:100%;">&nbsp;</div>
+  	<div class="es_detil2">
+  		<div>
+  			<b>温馨提示：</b>凡要求提前汇款或者不见面交易都属于欺诈行为，请您提高警惕！如果有虚假信息请立即举报！
+  		</div>
+  		<span>!</span>
+  		&nbsp;&nbsp;<b class="es_detil21" onclick="location='<?php echo U('Esxz/esxz_jubao',array('id'=>$goods_detail['goods_id']));?>'">举报</b>
+  	</div>
+  	
+  	
+  	<div class="es_sy2">
+  	  <div class="es_sy21">
+  	  	
+  	  	<div class="es_sy210">
+  	  		闲置物品详情
+  	  	</div>
+  	  	
+  	  	<div class="esxz_detil5">
+  	  		<div class="esxz_xjnr">
+  	  		  <span class="esxz_xjnr1">中央空调</span>
+  	  		  <span class="esxz_xjnr2">停车位</span>
+  	  		  <span class="esxz_xjnr1">客梯</span>
+  	  		  <span class="esxz_xjnr2">货梯</span>
+  	  		  <span class="esxz_xjnr1">天然气</span>
+  	  		  <span class="esxz_xjnr2">暖气</span>
+  	  		  <span class="esxz_xjnr1">扶梯</span>
+  	  		  <span class="esxz_xjnr2">上水</span>
+  	  		  <span class="esxz_xjnr1">下水</span>
+  	  		  <span class="esxz_xjnr2">排烟</span>
+  	  		  <span class="esxz_xjnr1">排污</span>
+  	  		  <span class="esxz_xjnr2">管煤</span>
+  	  		  <span class="esxz_xjnr1">可明火</span>
+  	  		  <span class="esxz_xjnr2">外摆区</span>
+  	  		</div>
+  	  		<div class="esxz_detil51">
+  	  			<?php echo ($goods_detail["goods_description"]); ?>	
+  	  		</div>
+  	  		<div class="esxz_detil52">
+  	  			<?php if(is_array($img_url)): $i = 0; $__LIST__ = $img_url;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$i_u): $mod = ($i % 2 );++$i;?><img src="/Uploads/admin/<?php echo ($i_u); ?>" /><?php endforeach; endif; else: echo "" ;endif; ?>
+  	  		</div>
+  	  		<div class="esxz_detil52">
+  	  			
+  	  		</div>
+  	  		<div class="esxz_detil52">
+  	  			
+  	  		</div>
+  	  	</div>
+  	  	
+  	  	
+  	  </div>
+  	 
+  	</div>
+  	
+
+  </div>
+</div>
+
+<!--遮罩-->
+
+<!--遮罩-->
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr" style="display:none;height:380px;">
+	  <div class="zz_nr1">
+		<span class="esxz_de_zz" >查看卖家联系方式</span>
+		<span class="scqr">×</span>
+	  </div>
+	  <div class="esxz_de_zz1" >
+			友情提示：为了您的资金安全，请选择见面交易，不要提前给卖家汇款，不要轻信和点击卖家发送的任何链接，谨防上当受骗。	
+	  </div>
+	  <br/>
+	  <div class="esxz_de_zz2" >
+			<div>卖家：</div>
+			<div><?php echo ($goods_detail["goods_link_name"]); echo ($goods_detail["goods_link_sex"]); ?></div>
+	  </div>
+	  <br/> 
+	  <div class="esxz_de_zz2" >
+			<div>手机号码：</div>
+			<div><?php echo ($goods_detail["goods_link_phone"]); ?></div>
+	  </div>
+	  <br/> 
+	 <div class="esxz_de_zz2" >
+			<div>微信号码：</div>
+			<div><?php echo ($goods_detail["goods_link_wechat"]); ?></div>
+	  </div>
+	  <br/>
+	   <div class="esxz_de_zz2" >
+			<div>QQ号码：</div>
+			<div><?php echo ($goods_detail["goods_link_qq"]); ?></div>
+	  </div>
+	  <br/>
+	   <div class="esxz_de_zz2" >
+			<div>交易地址：</div>
+			<div style="line-height:23px;margin-top:-5px;"><?php echo ($goods_detail["goods_province"]); ?>&nbsp;<?php echo ($goods_detail["goods_city"]); ?>&nbsp;<?php echo ($goods_detail["goods_address"]); ?></div>
+	  </div>
+	   <div class="esxz_de_zz3" >
+		<b>联系后发现信息有问题，可以向平台举报</b>
+<!--		<span onclick="location='<?php echo U('Esxz/esxz_jubao');?>'">举报</span>-->
+	  </div> 
+   </div>	
+	
+
+
+ 
+
+
+
+<!--查看买家联系方式后-->	
+	<div class="zz_nr" style="display:none;">
+	  <div class="esxz_de_zz5">
+	  	<!--很抱歉，您还不是企业用户，先通过企业认证后再查看。-->
+	  	查看卖家联系方式需要登录后可见。
+	  </div>
+	  <div class="zz_nr3" >
+			<span class="ty_esxz">取消</span>
+			<span class="ty_esxz1">马上登录</span>	
+	  </div> 
+   </div>
+
+
+
+<!--查看买家联系方式--> 
+  <div class="zz_nr_bjzd2" style="display:none;height:460px;">
+    <div class="zz_nr1">
+    <span class="esxz_de_zz" >查看卖家联系方式</span>
+    <span class="scqr">×</span>
+    </div>
+    <div class="esxz_de_zz1" >
+      友情提示：为了提升您的交易速度，顺利的完成交易，请填写完整信息，才可以看到对方联系方式！
+    </div>
+    <br/>
+    <div class="esxz_de_zz2" >
+      <div>报价：</div>
+      <div>¥&nbsp;&nbsp;<input type="text" style="width:80px;" name="baojia" class="baojia" /></div>
+    </div>
+    <br/> 
+    <div class="esxz_de_zz2" >
+      <div>手机号码：</div>
+      <div><input type="text" name="jz_tel" class="jz_tel" /></div>
+    </div>
+    <br/> 
+   <div class="esxz_de_zz2" >
+      <div>微信号码：</div>
+      <div><input type="text" name="wxhm" class="wxhm" /></div>
+    </div>
+    <br/>
+     <div class="esxz_de_zz2" >
+      <div>QQ号码：</div>
+      <div><input type="text" name="qqhm" class="qqhm" /></div>
+    </div>
+    <br/>
+     <div class="esxz_de_zz2" >
+      <div>交易地址：</div>
+      <div><input type="text" name="address" class="address" /></div>
+    </div>
+    <div class="fsgsj">发送</div>
+     <div class="esxz_de_zz3" >
+    <b>联系后发现信息有问题，可以向平台举报</b>
+<!--    <span onclick="location='<?php echo U('Esxz/esxz_jubao');?>'">举报</span>-->
+    </div> 
+   </div>  
+
+
+	
+</div>
+
+<script type="text/javascript" src="/Public/Home/js/lbt.js">
+</script>
+<script type="text/javascript" src="/Public/Home/js/fen_ye.js">
+</script>
+<script type="text/javascript">
+	 $(".fsgsj").click(function(){
+    $.post("<?php echo U('AjaxWyyx');?>",{ 'juezi_detil_id': "<?php echo ($juezi_detil_id); ?>" ,'baojia':$(".baojia").val() , 'jz_tel':$(".jz_tel").val() , 'wxhm':$(".wxhm").val() , 'qqhm':$(".qqhm").val() , 'address':$(".address").val() },function( data ){
+      console.log(data);
+        if( data.status == 2000 ){
+          alert(data.message);
+          location.reload();
+          return false;
+        }else if( data.status == -2001 ){
+          alert(data.message);
+          return false;
+        }
+     },"json");
+  });
+	//轮播图
+var detil=".es_detil_left_box";
+  var detil_li=".es_detil_left_img";
+  var detil_ri=".es_detil_right_tb";
+  var detil_le=".es_detil_left_tb";
+  var detil_zcd=$(detil_li).length;
+  var detil_kd=detil_zcd*96+"px";
+  var detil_jgz=3;
+  ggz(detil,detil_li,detil_ri,detil_le,detil_zcd,detil_kd,detil_jgz);
+
+	
+	
+	//给其他人都在看设置height
+	
+	var zbbk=$(".es_sy21").css('height');
+	var ybbk=$(".es_sy22").css('height');
+	var zbk=parseInt(zbbk);
+	var ybk=parseInt(ybbk);
+	if(zbk>ybk){
+		$(".es_sy22").css('height',zbbk);
+	}
+	else{
+		$(".es_sy21").css('height',ybbk);
+	}
+	
+$(".es_detil_mi76").click(function(){
+    // 代码
+    $.post("<?php echo U('AjaxLogin');?>",function( data ){
+      if( data.status == -2001 ){
+        alert(data.message);
+        window.location.href="<?php echo U('Tourist/login');?>";
+        return false;
+      }else{
+        $.post("<?php echo U('AjaxTime');?>",function( data ){
+          if( data.status == 2000 ){
+            $(".zhezhao").css("display","block");
+            $(".zz_nr_bjzd2").css("display","block");
+            return false;
+          }else if( data.status == -2001 ){
+             alert(data.message);
+             return false;
+          }else if( data.status == 2002 ){
+            $(".zhezhao").css("display","block");
+            $(".zz_nr_bjzd2").css("display","block");
+            return false;
+          }
+        },"json");
+      }
+     },"json");
+  });
+//收藏
+$(".es_detil_mi72").click(function(){
+	if($(this).attr('src')=='/Public/Home/image/esxz_detil_dj.jpg'){
+		$(this).attr('src','/Public/Home/image/esxz_detil_sc.jpg');
+	}
+	else{
+		$(this).attr('src','/Public/Home/image/esxz_detil_dj.jpg');
+	}
+});
+
+//移动到问号上面出现弹框
+$(".es_detil_mi31").each(function(index){
+	$(this).mouseover(function(){
+		if(index==0){
+			$(".es_detil_mi8").css("display","block");
+		}
+		else{
+			$(".es_detil_mi9").css("display","block");
+		}
+	});
+	$(this).mouseout(function(){
+		if(index==0){
+			$(".es_detil_mi8").css("display","none");
+		}
+		else{
+			$(".es_detil_mi9").css("display","none");
+		}
+	})
+})
+$(".es_detil_mi71").click(function(){
+  //首先判断是否登录如果没登录则显示
+  if(<?php echo ($is_login); ?>==1){
+    $(".zz_nr").eq(0).css("display","block");
+    $(".zhezhao").css("display","block");
+  }else{
+    $(".zz_nr").eq(1).css("display","block");
+    $(".zhezhao").css("display","block");
+  }
+});
+//取消
+$(".ty_esxz").click(function(){
+	$(".zhezhao").css("display","none");
+	$(".zz_nr").eq(0).css("display","none");
+	$(".zz_nr").eq(1).css("display","none");
+});
+
+$(".ty_esxz1").click(function(){
+	if($(this).text()=="马上登录"){
+		location.href="<?php echo U('Tourist/login');?>";
+	}
+	$(".zhezhao").css("display","none");
+	$(".zz_nr").eq(0).css("display","none");
+	$(".zz_nr").eq(1).css("display","none");
+});
+$(".scqr").click(function(){
+	$(".zhezhao").css("display","none");
+	$(".zz_nr").eq(0).css("display","none");
+	$(".zz_nr").eq(1).css("display","none");
+  $(".zz_nr_bjzd2").eq(1).css("display","none");
+});
+</script>
+<?php echo W('Common/footer_esxz');?>

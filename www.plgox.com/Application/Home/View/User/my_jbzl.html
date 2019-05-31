@@ -1,0 +1,366 @@
+<include file="User:my_top" />
+<title>{$setTitle}</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_jbzl.css">
+<style type="text/css">
+
+</style>
+
+<div class="mypj">
+   <div class="mypj1">
+      <div  class="mypj2" style="height:513px;">
+	      <div class="mypj6">
+	                  基本资料
+	      </div>   
+          <div style="margin-top:20px;font-size:16px;">
+	                    用户名：无限魄力
+	      </div>
+	      <table class="my_jbzl">
+	      	<tr style="border-top:1px solid #D6D6D6;">
+	      		<td class="ysz">已设置</td>
+	      		<td>登录密码</td>
+	      		<td>请牢记登录密码</td>
+	      		<td class="xg" onclick="location='{:U('User/my_update_password')}'">修改</td>
+	      	</tr>
+	      	<tr>
+	      		<eq name="member['plgox_email']" value="">
+	      			<td class="ysz wsz">未设置</td>
+	      		<else />
+	      			<td class="ysz">已设置</td>
+				</eq>
+	      		<td>电子邮箱</td>
+	      		<td>绑定邮箱可第一时间查看账单详情</td>
+	      		<eq name="member['plgox_email']" value="">
+	      			<td class="msbd" onclick="location='{:U('User/my_update_email')}'">绑定</td>
+	      		<else />
+	      			<td class="msbd">修改邮箱</td>
+	      		</eq>
+	      	</tr>
+	      	<tr>
+	      		<td class="ysz">已设置</td>
+	      		<td>手机号</td>
+	      		<td>当前手机号：无限魄力</td>
+	      		<td class="xgnc" onclick="location='{:U('User/my_update_telephone')}'">修改</td>
+	      	</tr>
+	      </table>
+     </div>
+   </div>
+ </div>
+
+<!--遮罩-->
+<div class="zhezhao" >
+	<div class="zz_nr" style="display:none;height:350px;">
+	  <div class="zz_nr1">
+		修改密码	
+	  </div>
+	  <div class="zz_nr2" style="margin-top:25px;">
+		<span>
+			*&nbsp;原密码&nbsp;&nbsp;&nbsp;：
+		</span>
+		<input type="password" class="plgox_pwd" name="plgox_pwd"  style="margin-left:2px;"/>
+		<font style='color:red;'></font>
+	  </div>
+	  <div class="zz_nr2">
+		<span>
+			*&nbsp;新密码&nbsp;&nbsp;&nbsp;：
+		</span>
+		<input type="password" class="plgox_pwd" name="plgox_password" />
+		<font style='color:red;'></font>
+	  </div>
+	   <div class="zz_nr2">
+		<span>
+			*&nbsp;确认密码：
+		</span>
+		<input type="password" class="plgox_pwd"  name="plgox_repassword" />	
+		<font style='color:red;'></font>		
+	  </div>
+	  <div class="zz_nr3" style="margin-top:30px;">
+			<a href="javascript:void(0);" class="tyjs0">提交</a>
+			<a href="javascript:void(0);" class="tyjs">取消</a>	
+	  </div>  
+	</div>	
+	<div class="zz_nr_1" style="display:none;">
+	  <div class="zz_nr1">
+		邮箱
+	  </div>
+	  <div class="zz_nr2" style="margin-top:40px;">
+		<span>
+			*&nbsp;邮箱账号：
+		</span>
+		<input type="email" class="plgox_email" name="plgox_email"  style="margin-left:2px;"/>
+		<font style="color:red;font-size:13px;"></font>
+	  </div>
+	  
+	  <div class="zz_nr3" style="margin-top:50px;">
+			<a href="#" class="tyjs1">提交</a>
+			<a href="#" class="tyjs2">取消</a>	
+	  </div>  
+	</div>
+	
+	<div class="zz_nr_2" style="display:none;">
+	  <div class="zz_nr1">
+		用户昵称
+	  </div>
+	  <div class="zz_nr2" style="margin-top:40px;">
+		<span>
+			*&nbsp;用户昵称：
+		</span>
+		<input type="text" class="plgox_user" name="plgox_user"  style="margin-left:2px;"/>
+		<font style="color:red;font-size:13px;"></font>
+	  </div>
+	  
+	  <div class="zz_nr3" style="margin-top:50px;">
+			<a href="#" class="tyjs3">提交</a>
+			<a href="#" class="tyjs4">取消</a>	
+	  </div>  
+	</div>
+	
+	
+	<div class="zz_nr_fbcg" style="display:none;width:350px;height:260px;">
+	  <div class="zdsc">
+提交成功，商家1-3个工作日内处理
+	  </div>
+	   
+	  <div class="zz_nr3" >
+			<div href="#wss" class="zdxs" >
+				<img src="__PUBLIC__/Home/image/duihao.png" />
+			</div>	
+	  </div> 
+	</div>
+	
+	
+</div>
+ 
+<script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+<script type="text/javascript">
+    my_top(5,"200px","基本资料");
+  //修改密码
+ /* $(".xg").click(function(){
+		$(".zhezhao").css("display","block");
+		$(".zz_nr").css("display","block");
+  });*/
+
+// 原密码
+$(".plgox_pwd").eq(0).change(function(){
+ $.post("{:U('User/ajaxPassword')}",{"plgox_pwd":$(".plgox_pwd").eq(0).val()},function( data ){
+ 	if( data !=  null ){
+ 		$(".plgox_pwd").eq(0).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(".plgox_pwd").eq(0).css("border","1px solid green");
+ 		return false;
+ 	}else{
+ 		$(".plgox_pwd").eq(0).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(".plgox_pwd").eq(0).css("border","1px solid red");
+ 		return false;
+ 	}
+},"json");
+});
+// 新密码是否一致
+$(".plgox_pwd").eq(1).change(function(){
+	if( $(this).val() == "" ){
+		$(this).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(this).css("border","1px solid red");
+	}else{
+		$(this).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(this).css("border","1px solid green");
+	}
+ 	if( $(this).val() != $(".plgox_pwd").eq(2).val() ){
+ 		$(".plgox_pwd").eq(2).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(".plgox_pwd").eq(2).css("border","1px solid red");
+ 	}else{
+ 		$(this).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(this).css("border","1px solid green");
+ 	}
+});
+
+$(".plgox_pwd").eq(2).change(function(){
+	if( $(this).val() == "" ){
+		$(this).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(this).css("border","1px solid red");
+	}else{
+		$(this).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(this).css("border","1px solid green");
+	}
+ 	if( $(this).val() != $(".plgox_pwd").eq(1).val() ){
+ 		$(".plgox_pwd").eq(1).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(".plgox_pwd").eq(1).css("border","1px solid red");
+ 	}else{
+ 		$(this).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 		$(this).css("border","1px solid green");
+ 	}
+});
+
+  $(".tyjs0").click(function(){
+  		if( $(".plgox_pwd").eq(0).val() == "" ){
+  			$(".plgox_pwd").eq(0).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 			$(".plgox_pwd").eq(0).css("border","1px solid red");
+  		}else{
+  			 $.post("{:U('User/ajaxPassword')}",{"plgox_pwd":$(".plgox_pwd").eq(0).val()},function( data ){
+			 	if( data !=  null ){
+			 		$(".plgox_pwd").eq(0).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:-3px;'>");
+			 		$(".plgox_pwd").eq(0).css("border","1px solid green");
+			 	}else{
+			 		$(".plgox_pwd").eq(0).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+			 		$(".plgox_pwd").eq(0).css("border","1px solid red");
+			 	}
+			},"json");
+  		}
+  		if( $(".plgox_pwd").eq(1).val() == "" ){
+  			$(".plgox_pwd").eq(1).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 			$(".plgox_pwd").eq(1).css("border","1px solid red");
+  		}else{
+  			$(".plgox_pwd").eq(1).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:-3px;'>");
+			$(".plgox_pwd").eq(1).css("border","1px solid green");
+  		}
+  		if( $(".plgox_pwd").eq(2).val() == "" ){
+  			$(".plgox_pwd").eq(2).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 			$(".plgox_pwd").eq(2).css("border","1px solid red");
+  		}else{
+  			$(".plgox_pwd").eq(2).next().html("<img src='__PUBLIC__/Common/bootstrap/img/success.jpg' style='width:25px;position:relative;top:-3px;'>");
+			$(".plgox_pwd").eq(2).css("border","1px solid green");
+  		}
+  		if( $(".plgox_pwd").eq(1).val() !=  $(".plgox_pwd").eq(2).val() ){
+  			$(".plgox_pwd").eq(2).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 			$(".plgox_pwd").eq(2).css("border","1px solid red");
+  		}
+  		if( $(".plgox_pwd").eq(2).val() != $(".plgox_pwd").eq(1).val() ){
+  			$(".plgox_pwd").eq(1).next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+ 			$(".plgox_pwd").eq(1).css("border","1px solid red");
+  		}
+		$.post("{:U('User/ajaxPassword')}",{"plgox_pwd":$(".plgox_pwd").eq(0).val()},function( data ){
+	 	if( data !=  null && $(".plgox_pwd").eq(1).val() == $(".plgox_pwd").eq(2).val() ){
+	 		$.post("{:U('User/ajaxPassword')}",{"plgox_password":$(".plgox_pwd").eq(1).val() },function( data ){
+  				if( data.status == 2000 ){
+  					$(".plgox_pwd").val("");
+	                $(".plgox_pwd").next().html("");
+	                $(".plgox_pwd").css("border","");
+  					zstk(data.message,".zz_nr");
+  					
+  				}else if( data.status == -2000 ){
+  					$(".plgox_pwd").val("");
+	                $(".plgox_pwd").next().html("");
+	                $(".plgox_pwd").css("border","");
+  					zstk(data.message,".zz_nr");
+  				}
+  			},"json");			 		
+	 	}
+	},"json");
+   });
+   
+ 
+   
+   
+   $(".tyjs").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr").css("display","none");
+	})
+   
+  //绑定电子邮箱
+  $(".msbd").click(function(){
+  	  	$.post("{:U('User/ajaxCheck')}",function( data ){
+		$(".plgox_email").val(data.plgox_email);	
+  		},'json');
+		$(".zhezhao").css("display","block");
+		$(".zz_nr_1").css("display","block");
+	});
+
+  $(".tyjs1").click(function(){
+  		if( $(".plgox_email").val() == "" ){
+  			$(".plgox_email").css("border","1px solid red");
+  			$(".plgox_email").next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-3px;'>");
+  		}else{
+  			var email = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+  			if( !email.test( $(".plgox_email").val() ) ){
+  				$(".plgox_email").css("border","1px solid red");
+  				$(".plgox_email").next().html("格式不正确!");
+  			}else{
+  				$.post("{:U('User/ajaxCheck')}",{ 'plgox_email':$(".plgox_email").val() },function( data ){
+  					if( data.length != 0 ){
+  						$(".plgox_email").css("border","1px solid red");
+  						$(".plgox_email").next().html("邮箱已存在!");
+  					}else{
+  						$.post("{:U('User/ajaxCheck')}",{ 'plgox_emails':$(".plgox_email").val() },function( data ){
+  							if( data.status == 2000 ){
+								$(".plgox_email").val("");
+  								zstk(data.message,".zz_nr_1");
+  							}else if( data.status == -2000 ){
+  								$(".plgox_email").val("");
+  								zstk(data.message,".zz_nr_1");
+  							}
+  						},"json");
+  					}
+  				},'json');
+  			}
+  		}
+	});
+   $(".tyjs2").click(function(){
+   		$(".plgox_email").css("border","");
+   		$(".plgox_email").next().html("");
+		$(".zhezhao").css("display","none");
+		$(".zz_nr_1").css("display","none");
+	});
+   
+    //修改昵称
+  $(".xgnc").click(function(){
+  		$.post("{:U('User/ajaxMember')}",function( data ){
+  			$(".plgox_user").val(data.plgox_nickname);
+  		},"json");
+		$(".zhezhao").css("display","block");
+		$(".zz_nr_2").css("display","block");
+	})
+  $(".tyjs3").click(function(){
+  		if( $(".plgox_user").val() == "" ){
+  			$(".plgox_user").css("border","1px solid red");
+  			$(".plgox_user").next().html("<img src='__PUBLIC__/Common/bootstrap/img/error.jpg' style='width:25px;position:relative;top:-4px;'>");
+  		}else{
+  			$.post("{:U('User/ajaxMember')}",{ 'plgox_nickname':$(".plgox_user").val() },function( data ){
+  				if( data == null ){
+					$.post("{:U('User/ajaxMember')}",{ 'plgox_nicknames':$(".plgox_user").val() },function( data ){
+						if( data.status == 2000 ){
+							$(".plgox_email").val("");
+  							zstk(data.message,".zz_nr_2");
+						}else if( data.status == -2000 ){
+							$(".plgox_email").val("");
+  							zstk(data.message,".zz_nr_2");
+						}
+					},"json");  
+				}else{
+					$(".zhezhao").css("display","none");
+					$(".zz_nr_2").css("display","none");
+				}					
+  			},'json');
+  		}
+	})
+    //展示弹框
+   function zstk(message,zznr){
+   	 $(".zhezhao").css("display","block");
+	 $(zznr).css("display","none");
+	 $(".zz_nr_fbcg").css("display","block");
+	 $(".zdsc").text(message);
+	 setTimeout(function(){
+             $(".zhezhao").css("display","none");
+			 $(".zz_nr_fbcg").css("display","none");
+			 location.reload();
+		     return false;
+        },3000);
+   }
+
+     
+   	//点击消失(弹框)
+  $(".zdxs").click(function(){
+  	  location.reload();
+  	  $(".zhezhao").css("display","none");
+  	  $(".zz_nr_fbcg").css("display","none");
+  	  return false;
+  });
+  
+  
+   $(".tyjs4").click(function(){
+   		$(".plgox_user").css("border","");
+  		$(".plgox_user").next().html("");
+		$(".zhezhao").css("display","none");
+		$(".zz_nr_2").css("display","none");
+	})
+    $(".wodegb").html("基本资料");
+</script>
+{:W('Common/footer')}
+</body>
+</html>

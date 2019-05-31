@@ -1,0 +1,301 @@
+﻿{:W('Common/header')}
+<title>魄力共享-上魄力，低价格，大优惠</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/index.css" />
+
+<style>
+	body{
+		background-color:#FAFAFA;
+	}
+</style>
+ <div class="container" id="container">
+  <div id="list">
+           <img alt="5" src="" />
+       <volist name="banner" id="banner_">
+         <img src="__ROOT__/Uploads/admin/{$banner_['banner_pic']}" />
+       </volist>
+            <img alt="1" src="" />
+        </div>
+      <div class="zytz">
+       <div class="zytz1">
+	        <a href="javascript:void(0)" class="arrow" id="left" >
+	        	<img src="__PUBLIC__/Home/image/header_top8.png"/>
+	        </a>
+	        <a href="javascript:void(0)" class="arrow" id="right" >
+	        	<img src="__PUBLIC__/Home/image/header_top7.png"/>
+	        </a>
+        </div>
+      </div>
+        <div class="btns1">
+        	<div class="btns">
+	          <volist name="banner" id="banner_">
+	            <span index=""></span>
+	           </volist>
+           </div>
+        </div>
+    </div>
+  </div>
+
+ <script type="text/javascript">
+ 	$(".header_box").removeClass("header_box_empty");
+ 	$(".header_box").addClass("header_box_sy");
+ </script> 	
+ <div class="index_add">
+ 	<div class="index_add1">
+ 	  <a href="{:U('Zulin/zulin')}" class="index_add10">
+ 	  	我要租赁
+ 	  </a>	
+ 	  <div class="header_middle_center1">
+					<input type="text" name="share_product_search" class="header_middle_center_bd1" placeholder=" 请输入关键字" value="{$share_product_search}"/>
+					<div class="header_middle_center_cz" onclick="ImgSubmit();">
+						<img src="__PUBLIC__/Home/image/header_top2.png"/>
+					</div>
+	  </div>
+	  <a href="{:U('Zulin/zulin')}" class="index_add10" style="margin-left:70px;">
+ 	  	委托租赁
+ 	  </a>	
+ 	</div>
+ 	
+ 	<div class="index_add2">
+ 	  <div class="index_add21">
+                    商家中心
+    <if condition="($loguser['plgox_id'] eq '' )">
+       <a href="{:U('Tourist/login')}" class="index_add221"></a>
+    <elseif condition="($sjrz_renzheng['plgox_usertype'] eq 4 )" />
+       <a href="{:U('Homeuser/index')}" class="index_add221"></a>
+    <else/>
+       <a href="javascript:void(0);" class="sjzx_rz index_add221"></a>
+    </if>
+ 	  </div>
+ 	  <div class="index_add22">
+ 	  	餐饮租赁
+ 	  	<a href="{:U('Zulin/zulin')}" class="index_add220"></a>
+ 	  </div>
+ 	  <div class="index_add23">
+ 	  	<input type="text" class="index_add231" name="weituo_tel"  placeholder="请输入您的手机号" />
+ 	  	<span class="index_add232">我要租赁</span>
+ 	  </div>
+ 	</div>
+ 	
+ </div>   
+ <script type="text/javascript">
+   $(".index_add232").click(function(){
+    if( "{$user_info}" == "" ){
+      alert("您还未登录,请先登录!");
+    }else{
+      var tel = /^1\d{10}$/;
+      if( !tel.test($(".index_add231").val()) ){
+        alert("手机号不正确!");
+        return false;
+      }
+      $.post("{:U('Index/weituo')}",{ 'weituo_tel':$(".index_add231").val() },function(data){
+        if( data.status == 2000 ){
+            alert(data.message);
+            $(".index_add231").val("");
+        }else if( data.status == -2001 ){
+            alert(data.message);
+            $(".index_add231").val("");
+        }
+      });      
+    }
+   });
+ </script>
+
+
+  <div class="in_center">
+
+<volist name="module" id="module_">
+    <neq name="module_['module_id']" value="">
+  	<div class="in_center1">
+  		<div class="in_center10">
+  			<div class="in_center11">
+  				{$module_['module_title']}
+  			</div>
+  			<ul class="in_center12">
+          <volist name="shares_" id="shares_list">
+               <eq name="module_['module_id']" value="$shares_list['share_module_id']">
+               <eq name="shares_list['share_recommend']" value="1">
+               <eq name="shares_list['share_status']" value="0">
+                  <li class="in_center121" style="">
+                    <div class="in_center1210">
+                      爆款产品
+                    </div>
+                    <div class="in_center1211">
+                      <div class="share_name">{$shares_list['share_name']}</div>
+                      <div>一天可租/使用方便/超低租金</div>
+                      <a href="{:U('Cart/shop_detil',array('id'=>$shares_list['share_id']))}">
+                      	<p class="pdcolor"><span class="pdcolor_jc">￥</span><span class="pdcolor_jc1">{$shares_list['share_rent']}</span><span class="pdcolor_jc">/天</span></p>
+                      </a>
+                    </div>
+                    <div class="in_center1212">
+                      <a href="{:U('Cart/shop_detil',array('id'=>$shares_list['share_id']))}"><img src="__ROOT__/Uploads/admin/{$shares_list['share_home_img']}" class="in_center1226 in_center1226_big"/></a>
+                    </div>
+                  </li>                 
+               </eq>
+                </eq>
+                </eq>
+            </volist>
+  				<li class="in_center122">
+  					<ul >
+              <volist name="share" id="share_">
+                <if condition="($share_['share_recommend'] eq 0 )">
+                      <eq name="module_['module_id']" value="$share_['share_module_id']">
+                        <if condition="($share_['share_recommend'] neq 1) OR ($share_['share_recommend'] neq 2) OR ($share_['share_recommend'] neq 3) ">
+                          <if condition="($share_['share_status'] eq 0) and ($share_['share_recommend'] eq 0)">
+                            <li class="in_center1221">
+                               <div class="in_center1222">
+                            <a >
+                              <img src="__ROOT__/Uploads/admin/{$share_['share_home_img']}" onclick="location='{:U('Cart/shop_detil',array('id'=>$share_['share_id']))}'" class="in_center1226" />
+                             </a>
+                               </div>
+                               <div class="in_center1223">
+                          {$share_['share_name']}
+                               </div>
+                                <div class="in_center1225">
+                                    ￥{$share_['share_rent']}/天
+                               </div>
+                            </li>
+                            
+                            </if>
+                        </if>
+                      </eq>
+                  </if>
+  					</volist>
+
+
+            <volist name="shares_home" id="share_">
+                <if condition="($share_['share_recommend'] eq 4 )">
+                      <eq name="module_['module_id']" value="$share_['share_module_id']">
+                        <if condition="($share_['share_recommend'] neq 1) OR ($share_['share_recommend'] neq 2) OR ($share_['share_recommend'] neq 3) ">
+                          <if condition="($share_['share_status'] eq 0) and ($share_['share_recommend'] eq 4)">
+                            <li class="in_center1221">
+                               <div class="in_center1222">
+                            <a >
+                              <img src="__ROOT__/Uploads/admin/{$share_['share_home_img']}" onclick="location='{:U('Cart/shop_detil',array('id'=>$share_['share_id']))}'" class="in_center1226" />
+                             </a>
+                               </div>
+                               <div class="in_center1223">
+                          {$share_['share_name']}
+                               </div>
+                                <div class="in_center1225">
+                                    ￥{$share_['share_rent']}/天
+                               </div>
+                            </li>
+                            
+                            </if>
+                        </if>
+                      </eq>
+                  </if>
+            </volist>
+  					</ul>
+  				</li>
+  			</ul>
+  		</div>
+  	</div>
+    </neq>
+  </volist>  
+
+  	
+  	<div class="index_add6">
+  		<img src="__PUBLIC__/Home/image/index_new6.jpg" />
+  	</div>
+ 
+  	<div class="in_center1">
+  		<div class="in_center10">
+  			<div class="in_center11">
+  				合作伙伴
+  			</div>
+  			<ul class="in_center51">
+        <volist name="cooperation" id="cooperation_">
+  				<li>
+            <img src="__ROOT__/Uploads/admin/{$cooperation_['cooperation_img']}" />
+  				</li>
+        </volist>
+  			</ul>
+  		</div>
+  	</div>  
+    <br/><br/><br/><br/>
+    
+    
+    
+    
+</div>
+
+
+  	
+  </div>
+  
+<div class="zhezhao" style="display:none;">		
+	
+  <div class="zz_nr_fbcg" style="display:none;">
+      <div class="zdsc">
+       删除成功
+      </div>
+       
+      <div class="zz_gbtk" >
+        关闭
+      </div> 
+    </div>
+
+</div>
+   	<br/><br/>
+  {:W('Common/header1_search')} 
+<script src="__PUBLIC__/Home/js/index_lbt.js"></script>	
+  	<script type="text/javascript">
+ //自动消失(弹框)
+ function qkgwc(){
+	  $(".zhezhao").click(function(){
+  
+	  	 	 $(".zhezhao").css("display","none");
+	  	     $(".zz_nr_fbcg").css("display","none"); 
+	  	     window.location.href="{:U('User/my_qyrz')}";
+
+	  	 
+	  	 $(".zz_nr_scdz").css("display","none");
+		    return false;
+	  });
+} 
+
+ function tkcx(message){
+  	    $(".zhezhao").css("display","block");  
+		$(".zz_nr_fbcg").css("display","block");
+
+		$(".zdsc").text(message);
+		var ss=$(".dd_js1110").length;
+    qkgwc();
+		
+  }
+
+	$(".in_center121").each(function(index){
+		if(index%2==0){
+			$(this).css("background","#4998A1");
+			$(".in_center1210").eq(index).css("color","#02686A");
+			$(".pdcolor").eq(index).css("color","#226677");
+		}
+		else{
+			$(this).css("background","#D16142");
+			$(".in_center1210").eq(index).css("color","#771000");
+			$(".pdcolor").eq(index).css("color","#771000");
+		}
+	})
+	
+	$(".in_center1226").each(function(index){
+		$(this).mouseover(function(){
+			$(this).stop(true).animate({"marginLeft":"-10px"},300);
+		});
+		$(this).mouseout(function(){
+			$(this).stop(true).animate({"marginLeft":"0px"},300);
+		});
+	});
+
+	
+	$(".sjzx_rz").click(function(){
+			if( "{$is_sjrz}" == 1 ){
+				tkcx("你尚未进行企业认证,请先认证后再进行商家入驻!")
+				//alert("你尚未进行企业认证,请先认证后再进行商家入驻!");
+			}else if( "{$is_sjrz}" == 2 ){
+				window.location.href="{:U('Shopcenter/sj_center')}";
+				return false;
+			}
+	});	
+</script>
+{:W('Common/footer')}

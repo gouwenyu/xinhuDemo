@@ -1,0 +1,177 @@
+{:W('Common/header')}
+
+<title>{$setTitle}</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/pay.css" />
+<style type="text/css">
+
+</style>
+<div class="dd_js">
+	<div class="dd_js_box">
+        
+          <div class="gouw_1">
+            所在位置：    首页  > <span>支付页面</span>  > <span>{$setTitle}</span>
+           </div>
+
+
+    <div class="gwfk-zhifufangshi">
+        <div class="gwfk-zhifufangshi-title">
+            在线支付  <span>请选择支付方式:</span>
+        </div>
+
+        <div class="gwfk-zhifufangshi-a" style="">
+            <input type="radio" name="radio" class="zhifu" value="1" checked/>
+            <img src="__PUBLIC__/Home/image/p6_5.png"/>
+        </div>
+        <div class="gwfk-zhifufangshi-a" style="">
+            <input type="radio" name="radio" class="zhifu" value="2"/>
+            <img src="__PUBLIC__/Home/image/p6_6.png"/>
+        </div>
+        <div class="gwfk-zhifufangshi-a" style="">
+            <input type="radio" name="radio" class="zhifu" value="3"/>
+            <img src="__PUBLIC__/Home/image/p6_50.png"/>
+        </div>
+    </div>
+
+    <div onclick="zhifu()" class="gwfk-zhifufangshi-sub">
+        立即支付
+    </div>
+
+
+
+
+
+	</div> 
+</div>
+  {:W('Common/header1_search')} 
+<script type="text/javascript">
+	function zhifu() {
+		// type=>1 缴纳押金
+		if( "{$type}" == 1 ){
+			// 押金
+			var prices =parseFloat("{$orders['order_deposit']}")-parseFloat("{$orders['order_detill_xyj']}");
+			// id 
+			var id = "{$orders['order_id']}";
+			// 支付type 选中判断
+			var pay = $(".zhifu:checked").val();
+			// 判断属于那个支付类型
+			var type = "{$type}";// 1 支付宝 2 微信 3 银联
+			if( pay == 1 ){
+				window.location.href="{:U('alipay')}?price="+prices+"&id="+id+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 2 ){
+				window.location.href="{:U('Pay/wechat')}?price="+prices+"&id="+id+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 3 ){
+				// window.location.href="{:U('Pay/yinlian')}?price="+prices+"&id="+id+"&pay_type="+pay+"&type="+"{$type}";
+				window.location.href="{:U('Pay/ylpay')}";
+				return false;
+			}
+		}else if( "{$type}" == 2 ){
+			alert("租金暂无开通!");
+		}else if( "{$type}" == 3 ){ //信用金支付
+			// 押金
+			var prices ="{$orders['order_detill_xyj']}";
+			// id 
+			var id = "{$orders['order_id']}";
+			// 支付type 选中判断
+			var pay = $(".zhifu:checked").val();
+			// 判断属于那个支付类型
+			var type = "{$type}";// 1 支付宝 2 微信 3 银联
+			if( pay == 1 ){
+				window.location.href="{:U('alipay')}?price="+prices+"&id="+id+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 2 ){
+				window.location.href="{:U('Pay/wechat')}?price="+prices+"&id="+id+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 3 ){
+				// window.location.href="{:U('Pay/yinlian')}?price="+prices+"&id="+id+"&pay_type="+pay+"&type="+"{$type}";
+				window.location.href="{:U('Pay/ylpay')}"; // 跳转至银行对公账号说明
+				return false;
+			}
+			// 话合并订单并且统一支付信用金 
+		}else if( "{$type}" == 4 ){ 
+			var pay = $(".zhifu:checked").val();
+			var pay_number = "{$pay_number}";//统一支付的订单号
+			if( pay == 1 ){ // 支付宝支付
+				window.location.href="{:U('alipay')}?price={$prices}&pay_number="+pay_number+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 2 ){ // 微信支付
+				window.location.href="{:U('Pay/wechat')}?price={$prices}&pay_number="+pay_number+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 3 ){
+				window.location.href="{:U('Pay/ylpay')}"; // 跳转至银行对公账号说明
+				return false;
+			}
+		}else if( "{$type}" ==  5 ){ // 购买商品支付状态 5
+			// 支付金额
+			var prices = "{$orders['order_mm_prices']}";
+			// 支付type 选中判断
+			var pay = $(".zhifu:checked").val();
+			// id 
+			var id = "{$orders['order_id']}";
+			// 判断属于那个支付类型
+			var type = "{$type}";// 1 支付宝 2 微信 3 银联
+			if( pay == 1 ){ // 支付宝支付
+				window.location.href="{:U('alipay')}?price="+prices+"&id="+id+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 2 ){ // 微信支付
+				window.location.href="{:U('Pay/wechat')}?price="+prices+"&id="+id+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 3 ){
+				window.location.href="{:U('Pay/ylpay')}"; // 跳转至银行对公账号说明
+				return false;
+			}
+		}else if( "{$type}" == 6 ){ // 购买统统一下单支付
+			var pay = $(".zhifu:checked").val();
+			var pay_number = "{$pay_number}";//统一支付的订单号
+			if( pay == 1 ){ // 支付宝支付
+				window.location.href="{:U('alipay')}?price={$prices}&pay_number="+pay_number+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 2 ){ // 微信支付
+				window.location.href="{:U('Pay/wechat')}?price={$prices}&pay_number="+pay_number+"&pay_type="+pay+"&type="+"{$type}";
+				return false;
+			}else if( pay == 3 ){
+				window.location.href="{:U('Pay/ylpay')}"; // 跳转至银行对公账号说明
+				return false;
+			}
+		}
+	}
+</script>
+
+<!--发布成功  3秒后自动消失-->
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr_fbcg" style="display:none;width:350px;height:260px;">
+		<div class="djs">3</div>
+	  <div class="zdsc">
+		删除成功
+	  </div>
+	   
+	  <div class="zz_nr3" >
+			<div href="#wss" class="zdxs" >
+				<img src="__PUBLIC__/Home/image/duihao.png" />
+			</div>	
+	  </div> 
+	</div>
+	
+	<div class="zz_nr_scdz" style="display:none;">
+	  <div class="zz_nr1">
+		<span class="wxts">温馨提示<span>
+		<span class="scqr">×</span>
+	  </div>
+	  <div class="zz_nr2" style="line-height:146px;height:146px;display:block;font-size:18px;"> 确定删除本条地址!</div>
+	 
+	  <div class="zz_nr3" >
+			<a href="#wss" class="qrsc">确认</a>
+			<a href="#wss" class="tyjs">取消</a>	
+	  </div>  
+	</div>	
+	
+	
+	
+</div>
+<br/><br/>
+<script type="text/javascript" src="__PUBLIC__/Home/js/fen_ye.js">
+</script>
+  	
+{:W('Common/footer')} 
+

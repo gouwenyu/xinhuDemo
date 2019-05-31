@@ -1,0 +1,301 @@
+
+<include file="User:my_top" />
+<title>{$setTitle}</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/juezhi_fb.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/fen_ye.css" />
+ <style>
+  tr{
+  	line-height:143px;
+  }	
+  .jzfb2{
+	padding-bottom: 0px;
+	margin-left:-230px;
+}
+.jzfb_bj_sc{
+	width:77px;
+}
+.jzfb22{
+	line-height:22px;
+	text-align:left;
+	margin-left:20px;
+	margin-top:25px;
+
+}
+.jzfb3{
+	margin-left:-230px;
+}
+.current{
+		background-color:#E70052 !important; 
+		border:1px solid #E70052 !important;
+		color:#FFFFFF;padding:8px 12px 8px 12px;
+	}
+.jz_wdsc1:hover, .jz_wdsc1_dj{
+        color:#1F61C3;
+}
+.jzfb310{
+	padding-top:0px;
+}
+.wdsc_dbj{
+	 color:#1F61C3;
+}	
+.wdsc_ys{
+	color:#1F61C3;
+}	
+</style> 
+<div class="mypj">
+   <div class="mypj1">
+      <div  class="mypj2">
+	      <div class="mypj6">
+	                   我的意向
+	      </div>
+
+	
+
+   	      
+   	      
+   	      <div  class="mypj2">
+             	
+               	
+              <div class="jzfb2">
+              	   <div class="jz_wdsc">
+              	   	 <a href="{:U('User/JueZhi_wdsc',array('type'=>0))}"><span class="jz_wdsc1">默认排序</span></a>
+              	   	 <a href="{:U('User/JueZhi_wdsc',array('type'=>1))}"><span class="jz_wdsc1">价格低到高</span></a>
+              	   	 <a href="{:U('User/JueZhi_wdsc',array('type'=>2))}"><span class="jz_wdsc1">价格高到低</span></a>
+              	   </div>
+	               <table class="myxy32">
+	               	<tr>
+	               		<td></td>
+	               	</tr>
+	               	
+	               	<volist name="goods" id="goods_list">
+	               	
+		    		<tr>
+		    			<td class="wdsy_first">
+		    				<input type="checkbox" class="choose_all"   value="{$goods_list.collect_id}"/>
+		    			</td>
+		    			<td style="width:458px;">
+		    			  <div class="jzfbbox">
+			    			  <div class="jzfb21" >
+			    			   <img src="__ROOT__/Uploads/admin/{$goods_list['goods_first_pic']}"  name="jzfb21"/>
+			    			  </div>
+			    			  <div class="jzfb22" >
+			    			    <div class="wdsc6">
+			    			    	<b class="wdsc_dbj">{$goods_list.goods_name}</b>
+			    			    	<if condition="$goods_list.goods_is_business eq 1">
+			    			    		<span class="wdsc_qy">企</span>
+			    			    	</if>
+			    			    	
+			    			    </div>
+			    			    <div class="wdsc61">
+			    			    	 	{$goods_list.goods_name}
+			    			    </div>
+			    			    <div class="wdsc62">
+			    			    	 {$goods_list.goods_province}&nbsp;&nbsp;{$goods_list.	goods_city}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$goods_list.goods_publish_time}
+			    			    </div>
+			    			  </div>
+			    		  </div>
+		    			</td>
+		    			<td>
+		    				<span class="wdsc_ys">{$goods_list.goods_deal_price}</span>
+		    			</td>
+		    			<td>
+		    				<span class="jzfb_bj_sc" onclick="cancel_collect({$goods_list.collect_id})" >取消意向</span>
+		    			</td>
+		    			<input type="hidden" class="check_id" value="{$goods_list.goods_id}">
+		    		</tr>
+		    		
+		    		</volist>
+		    	
+		    	</table>
+             </div>
+             
+             <input type="hidden" id="all_check_id" value="">
+             <div class="jzfb3">
+             	<div class="jzfb31">
+         		  <div class="jzfb21 jzfb310" >
+	    			 <input type="checkbox" class="qx_button"  name="jzfb21"/>
+	    		   </div>
+	    	      <div class="jzfb2_xm" >
+	    			  <span>全选</span>
+	    	      </div>
+             	</div>
+             	
+             	<div class="jzfb31">
+         		  <div class="jzfb21 jzfb310" >
+	    			 <input type="checkbox" class="sc_button"  name="jzfb21"/>
+	    		   </div>
+	    	      <div class="jzfb2_xm" >
+	    			  <span>取消收藏已选项</span>
+	    	      </div>
+             	</div>
+             </div>
+             
+             <div class="message" style="height:120px;padding:50px 0px;margin-left:-430px;">
+             	{$page}
+             	</div>
+             
+             
+             
+          </div>
+   	
+   	
+   	
+ 
+   	 </div>  
+   </div>
+ </div>
+ <input type="hidden" id="change_color" value="{$change_color}" />
+ <!--遮罩-->
+<div class="zhezhao" style="display:none;">
+
+	<div class="zz_nr_scdz" style="display:none;">
+	  <div class="zz_nr1" >
+		<span class="wxts">温馨提示<span>
+		<span class="scqr">×</span>
+	  </div>
+	  <div class="zz_nr2" style="line-height:146px;height:146px;display:block;font-size:18px;"></div>
+	 
+	  <div class="zz_nr3" >
+			<a href="#wss" class="qrsc" >确认</a>
+			<a href="#wss" class="tyjs">取消</a>	
+	  </div>  
+	</div>	
+
+<div class="zz_nr_fbcg11" style="display:none;">
+	  <div class="zdsc">
+	  	提交成功，平台会核实处理
+	  </div>
+	   
+	  <div class="zz_gbtk" >
+			关闭
+	  </div> 
+	</div>
+
+
+</div>
+<script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+ <script type="text/javascript">
+var change_color=$("#change_color").attr("value");
+if(change_color==0){
+	$(".jz_wdsc1").eq(0).addClass("jz_wdsc1_dj");
+}
+else if(change_color==1){
+	$(".jz_wdsc1").eq(1).addClass("jz_wdsc1_dj");
+}
+else if(change_color==2){
+	$(".jz_wdsc1").eq(2).addClass("jz_wdsc1_dj");
+}
+ $(".tyjs").click(function(){
+	$(".zhezhao").css("display","none");
+	$(".zz_nr_scdz").css("display","none");
+});
+$(".scqr").click(function(){
+	$(".zhezhao").css("display","none");
+	$(".zz_nr_scdz").css("display","none");
+});
+</script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+<script type="text/javascript">
+    my_top(6,"250px","我的收藏");
+ </script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/hkhd1.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/ajaxfileupload.js"></script>
+<script type="text/javascript">
+function cancel_collect(goods_id){
+	 $(".zhezhao").css("display","block");
+	$(".zz_nr_scdz").css("display","block");
+  $(".zz_nr2").text("确认取消关注该选项吗？");
+  window.goods_id=goods_id;
+	
+}
+
+$(".qrsc").click(function(){
+	$(".zz_nr_scdz").css("display","none");
+	if($(".zz_nr2").text()=="确认取消收藏已选项吗？"){
+			var k=0;
+		var arra2=new Array();
+		for(var j=0;j<$(".choose_all").length;j++){
+			if($(".choose_all").eq(j).is(":checked")){
+				arra2[k]=$(".choose_all").eq(j).attr("value");
+				k++;
+			}
+		}
+		$("#all_check_id").val(arra2);
+		$.ajaxFileUpload({
+			dataType: "json",
+			url:"{:U('JueZhi/delete_goods')}",
+	        type:'post',
+	        data:{
+	        	type:4,
+	        	id:arra2
+	        }, 
+	        success:function(data){
+	        	tyxs("取消关注成功");
+	        }
+	        
+	
+	    });
+	}
+	else if($(".zz_nr2").text()=="确认取消关注该选项吗？"){
+		  $.ajaxFileUpload({
+			dataType: "json",
+			url:"{:U('JueZhi/delete_goods')}",
+	        type:'post',
+	        data:{
+	        	type:3,
+	        	id:goods_id
+	        }, 
+	        success:function(data){
+	        	tyxs("取消关注成功");
+	        }
+	        
+	
+	    });
+	}
+})
+
+function tyxs(message){
+	     $(".zhezhao").css("display","block");
+		 $(".zz_nr_fbcg11").css("display","block");
+		 $(".zdsc").text(message);         
+         
+         djxs();
+}
+ function djxs(){
+	 $(".zhezhao").click(function(){
+		 $(".zhezhao").css("display","none");
+  	     $(".zz_nr_fbcg11").css("display","none"); 
+  	      location.reload();
+	})
+}
+
+
+
+
+
+//删除选中项目
+$(".sc_button").click(function(){
+	$(".zhezhao").css("display","block");
+	$(".zz_nr_scdz").css("display","block");
+	$(".zz_nr2").text("确认取消收藏已选项吗？");
+	
+})
+//全选
+$(".qx_button").click(function(){
+	if($(this).is(':checked')){
+		$(".choose_all").prop("checked", true);
+		var arra1=new Array();
+		for(var i=0;i<$(".choose_all").length;i++){
+			arra1[i]=$(".choose_all").eq(i).attr("value");
+		}
+		$("#all_check_id").val(arra1);
+	}
+	else{
+		$(".choose_all").prop("checked", false);
+		$("#all_check_id").val(null);
+	}
+})
+</script>
+{:W('Common/footer')}
+</body>
+</html>

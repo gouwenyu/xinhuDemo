@@ -1,0 +1,111 @@
+<include file="User:my_top" />
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_ckmx_zd.css">  
+<style type="text/css">
+	
+</style>
+
+<div class="mypj">
+   <div class="mypj1">
+      <div  class="mypj2">
+	      <div class="mypj6">
+	                    查看明细
+	      </div>
+	    <div class="my_ckmx0" >
+          	<div class="my_ckmx1">
+                      下月账单
+          	</div>
+          	<div class="my_ckmx2">
+          	  <div style="text-align:left;font-size:20px;padding-left:30px;">
+          	  	<span >账单总额: </span>
+          	  	<span>¥<span class="total_money"></span></span>
+          	  </div>	
+          	  <div style="padding-left:370px;">
+          	  	<span>出账日期: </span>
+          	  	<span class="start_time"></span>
+          	  </div>	
+          	  <div style="padding-left:25px;">
+          	  	<span>最后还款日: </span>
+          	  	<span class="last_time"></span>
+          	  </div>	
+          	</div>
+          <ul class="my_ckmx" >
+            <li class="my_ckmx5" >
+          	  <div class="cmdf1" style="text-align:center;">订单号</div>
+          	  <div class="cmdf2" style="text-align:center;">记租日期</div>
+          	  <div class="cmdf2" style="text-align:center;">每日租金</div>
+          	  <div class="cmdf4" style="text-align:center;">实时租赁天数</div>
+          	  <div class="cmdf5" style="text-align:center;">小结</div>
+          	</li>
+          	<li class="my_ckmx99" ></li>
+          	<li class="my_ckmx7">
+          	  <div colspan="5">
+          	  	<!-- <div>滞纳金：¥0.00</div> -->
+          	  	<div>共   计：¥<span class="count_money">445.00</span></div>  
+          	  </div>
+          	  
+          	</li>
+          </ul>
+       <span style="color:red;height:30px;">注意：账单实时租赁天数，以每月实际租赁天数为主，在未退租的情况下，天数以及租赁价格将会实时累计。算法：实时天数+每日租金=小结</span>
+       </div>   
+        <br/>
+      
+     </div>
+   </div>
+ </div>
+
+
+ 
+<script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+<script type="text/javascript">
+   	    my_top(1,"50px","我的账单");
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var date = new Date();
+    var date_getFullYear = date.getFullYear();//年
+    var date_getMonth = date.getMonth()+2;//月
+    $(".start_time").text(date_getFullYear+"-"+date_getMonth+"-1");
+    $(".last_time").text(date_getFullYear+"-"+date_getMonth+"-5");
+    $.post("{:U('AjaxDateLook')}",{ "bill_lookta_status":4  , 'date_year':date_getFullYear , 'date_month':date_getMonth },function( data ){
+      if( data.status == 2000){
+          $.each(data.message,function( index , value ){
+              // 实时租赁天数
+              var RealTime_time_year = date.getFullYear()+"-"+parseInt(date.getMonth()+1)+"-"+date.getDate();
+              var total_realtime = RealTime_time_year.split("-")[2];
+              // 数据库时间
+              var total_time = getLoadTime(value.zujin_charging_time);
+              var time_days = total_time.split("-")[2];
+              // 时间天数求总
+              var count_time = parseInt(total_realtime)-parseInt(time_days)+parseInt(1);
+              // 小结金额总计
+              var count_prices = parseInt(count_time)*value.zujin_prices;
+              $(".my_ckmx99").append("<div class='cmdf1' style='text-align:center;'>"+value['order_number']+"</div><div class='cmdf2' style='text-align:center;'>"+getLoadTime(value['zujin_charging_time'])+"</div><div class='cmdf3' style='text-align:center;'>"+value['zujin_prices']+"</div><div class='cmdf4' style='text-align:center;'>"+count_time+"天</div><div class='cmdf5' style='text-align:center;'>￥<span class='count_prices'>"+count_prices+"</span></div>");
+          });
+          // 共计金额  账单总额
+          var gjje = parseFloat(0);
+          $(".count_prices").each(function( index , val ){
+                gjje+=parseFloat($(this).text());
+          });
+          gjje = gjje.toFixed(2);
+          $(".count_money").text(gjje);//共计金额
+          $(".total_money").text(gjje);// 账单总额
+      }else if( data.status == -2000  ){
+          $(".count_money").text("00.00");//共计金额
+          $(".total_money").text("00.00");// 账单总额
+          $(".my_ckmx99").append("<div class='dyls' style='width:100%;text-align:center;color:red'>"+data.message+"</div>");
+      }
+    },"json");
+});
+//js 时间戳解析
+function  getLoadTime(nS) {
+    var da = nS;
+    times  = new Date(da*1000);
+    var year = times.getFullYear(); // 年
+    var month = times.getMonth()+1; //月
+    var days = times.getDate();//天
+    return [year,month,days].join("-");
+}
+</script>
+{:W('Common/footer')}
+</body>
+</html>

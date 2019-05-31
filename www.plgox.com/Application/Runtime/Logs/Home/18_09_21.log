@@ -1,0 +1,136 @@
+[ 2018-09-21T00:55:43+08:00 ] 220.181.108.139 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T01:03:24+08:00 ] 111.206.221.74 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+
+[ 2018-09-21T02:42:32+08:00 ] 185.128.40.182 /manager/html
+ERR: 无法加载控制器:Manager
+
+[ 2018-09-21T03:13:43+08:00 ] 157.55.39.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T03:27:25+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T05:04:52+08:00 ] 185.126.176.23 /muieblackcat
+ERR: 无法加载控制器:Muieblackcat
+
+[ 2018-09-21T05:18:08+08:00 ] 203.208.60.61 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T05:43:09+08:00 ] 91.134.241.204 /?_=die('z!a'.'x');&q=die('z!a'.'x');&w=die('z!a'.'x');&e=die('z!a'.'x');&r=die('z!a'.'x');&t=die('z!a'.'x');&y=die('z!a'.'x');&u=die('z!a'.'x');&i=die('z!a'.'x');&o=die('z!a'.'x');&p=die('z!a'.'x');&a=die('z!a'.'x');&s=die('z!a'.'x');&d=die('z!a'.'x');&f=die('z!a'.'x');&g=die('z!a'.'x');&h=die('z!a'.'x');&j=die('z!a'.'x');&k=die('z!a'.'x');&l=die('z!a'.'x');&z=die('z!a'.'x');&x=die('z!a'.'x');&c=die('z!a'.'x');&v=die('z!a'.'x');&b=die('z!a'.'x');&n=die('z!a'.'x');&m=die('z!a'.'x');&eval=die('z!a'.'x');&enter=die('z!a'.'x');
+ERR: 无法加载控制器:Die('z!a'.'x');
+
+[ 2018-09-21T05:58:24+08:00 ] 207.46.13.247 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T05:59:05+08:00 ] 207.46.13.247 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T07:10:58+08:00 ] 203.208.60.72 /Zulin/share_list?order2=20.39266586070880294
+ERR: 非法操作:share_list
+
+[ 2018-09-21T08:23:03+08:00 ] 54.36.150.76 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T08:23:04+08:00 ] 54.36.149.63 /Cart/shop_detil/id/162.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-09-21T08:36:46+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T08:36:57+08:00 ] 95.108.181.86 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T09:00:23+08:00 ] 111.206.198.99 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+
+[ 2018-09-21T09:47:23+08:00 ] 54.36.148.183 /Cart/shop_detil/id/216.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-09-21T09:49:56+08:00 ] 137.175.11.218 /Lj_feditor/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:Lj_feditor
+
+[ 2018-09-21T09:49:56+08:00 ] 137.175.11.218 /_data/admin/fckeditor/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:_data
+
+[ 2018-09-21T09:49:58+08:00 ] 137.175.11.218 /admin8/system/editor/FCKeditor/editor/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:Admin8
+
+[ 2018-09-21T09:49:59+08:00 ] 137.175.11.218 /Management/F_E_Folder/B_J_Q/filemanager/connectors/asp/upload.asp
+ERR: 无法加载控制器:Management
+
+[ 2018-09-21T11:27:50+08:00 ] 157.55.39.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T11:47:52+08:00 ] 203.208.60.91 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T12:23:14+08:00 ] 35.187.238.80 /dnscfg.cgi?dnsPrimary=198.27.121.241&dnsSecondary=198.27.121.241&dnsDynamic=0&dnsRefresh=1
+ERR: 无法加载控制器:Dnscfg.cgi
+
+[ 2018-09-21T12:44:30+08:00 ] 182.245.138.221 /english/
+ERR: 无法加载控制器:English
+
+[ 2018-09-21T16:25:51+08:00 ] 106.120.173.106 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T18:03:14+08:00 ] 203.208.60.30 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T18:03:56+08:00 ] 203.208.60.10 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0005s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '30'  [ RunTime:0.0004s ]
+
+[ 2018-09-21T18:40:27+08:00 ] 5.9.70.113 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T18:40:29+08:00 ] 5.9.70.113 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-09-21T18:40:31+08:00 ] 5.9.70.113 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T18:40:33+08:00 ] 5.9.70.113 /Index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-21T18:40:34+08:00 ] 5.9.70.113 /Xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-21T18:40:36+08:00 ] 5.9.70.113 /index/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 非法操作:就看见
+
+[ 2018-09-21T18:40:38+08:00 ] 5.9.70.113 /poli/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Poli
+
+[ 2018-09-21T18:40:40+08:00 ] 5.9.70.113 /share/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Share
+
+[ 2018-09-21T18:40:41+08:00 ] 5.9.70.113 /xianzhi/%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:Xianzhi
+
+[ 2018-09-21T18:40:43+08:00 ] 5.9.70.113 /%E5%B0%B1%E7%9C%8B%E8%A7%81
+ERR: 无法加载控制器:就看见
+
+[ 2018-09-21T19:59:06+08:00 ] 213.180.203.57 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T19:59:06+08:00 ] 141.8.142.170 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T22:33:35+08:00 ] 173.252.87.11 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-09-21T23:54:23+08:00 ] 203.208.60.12 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

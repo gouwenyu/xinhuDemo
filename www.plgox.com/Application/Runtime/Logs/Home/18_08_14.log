@@ -1,0 +1,82 @@
+[ 2018-08-14T00:45:01+08:00 ] 123.125.67.218 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-14T00:57:32+08:00 ] 111.206.198.14 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+
+[ 2018-08-14T01:13:20+08:00 ] 220.181.108.168 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-14T01:53:50+08:00 ] 203.208.60.68 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-14T03:27:37+08:00 ] 45.76.45.204 /CFIDE/administrator/
+ERR: 无法加载控制器:CFIDE
+
+[ 2018-08-14T07:31:49+08:00 ] 203.208.60.127 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '34'  [ RunTime:0.0004s ]
+
+[ 2018-08-14T08:52:04+08:00 ] 111.206.198.81 /Index/weizhi.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+
+[ 2018-08-14T09:10:17+08:00 ] 203.208.60.42 /Cart/ajaxFcuntion.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `plgox_specifications` [ RunTime:0.0006s ]
+SQL: SELECT * FROM plgox_specifications as sp left join plgox_zulin as zulin on zulin.zulin_id = sp.specifications_day_number_id  WHERE `specifications_id` = '28'  [ RunTime:0.0004s ]
+
+[ 2018-08-14T10:00:22+08:00 ] 203.208.60.18 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-14T13:03:57+08:00 ] 186.215.89.210 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-08-14T13:52:24+08:00 ] 117.184.250.101 /skins/vector/csshover.htc
+ERR: 无法加载控制器:Skins
+
+[ 2018-08-14T13:52:27+08:00 ] 117.184.250.101 /rockmongo/
+ERR: 无法加载控制器:Rockmongo
+
+[ 2018-08-14T13:52:27+08:00 ] 117.184.250.101 /server-status
+ERR: 无法加载控制器:Server-status
+
+[ 2018-08-14T13:52:27+08:00 ] 117.184.250.101 /wikilib.d/PmWiki.ChangeLog
+ERR: 无法加载控制器:Wikilib.d
+
+[ 2018-08-14T13:52:28+08:00 ] 117.184.250.101 /jenkins/
+ERR: 无法加载控制器:Jenkins
+
+[ 2018-08-14T13:52:28+08:00 ] 117.184.250.101 /console/login/LoginForm.jsp
+ERR: 无法加载控制器:Console
+
+[ 2018-08-14T13:52:28+08:00 ] 117.184.250.101 /solr/
+ERR: 无法加载控制器:Solr
+
+[ 2018-08-14T14:20:23+08:00 ] 203.208.60.106 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-14T20:58:59+08:00 ] 167.114.174.95 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2018-08-14T20:59:00+08:00 ] 167.114.174.95 /sitemap.xml
+ERR: 无法加载控制器:Sitemap.xml
+
+[ 2018-08-14T20:59:33+08:00 ] 167.114.174.95 /Cart/shop_detil.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `plgox_specifications` WHERE `specifications_id` IN () 
+
+[ 2018-08-14T20:59:42+08:00 ] 167.114.174.95 /ads.txt
+ERR: 无法加载控制器:Ads.txt
+
+[ 2018-08-14T23:53:01+08:00 ] 203.208.60.63 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+

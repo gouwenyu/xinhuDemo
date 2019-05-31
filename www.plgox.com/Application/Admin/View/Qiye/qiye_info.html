@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px" class="text_info">公司经营项目：</td>
+		<td style="border:none">
+			<input type="text" class="renzheng_jy_pg add_data" style="width:470px;height: 40px" name="renzheng_jy_pg" value="{$selecteds_['select_name']}" attr_name="commpany_programmer" authentication_number="1" placeholder="如:中餐，餐饮企业等等">
+			<button type="button" class="btn btn-success">确认新增</button>
+			<font class="font_tishi" style="color:red"></font>
+		</td>
+	</tr>
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px" class="text_info">公司性质：</td>
+		<td style="border:none">
+			<input type="text" class="renzheng_commpany_nature add_data" style="width:470px;height: 40px" name="renzheng_commpany_nature" value="{$selecteds_['select_name']}" attr_name="commpany_nature" authentication_number="2"  placeholder="如:高级餐饮，互联网，酒店，私人厨房等等" >
+			<button type="button" class="btn btn-success">确认新增</button>
+			<font class="font_tishi" style="color:red"></font>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px" class="text_info">公司负责人身份：</td>
+		<td style="border:none">
+			<input type="text" class="renzheng_info add_data" style="width:470px;height: 40px" name="renzheng_info" value="{$selecteds_['select_name']}" attr_name="contacts_sf" authentication_number="3"  placeholder="如:董事长，大堂经理，产品经理等等" >
+			<button type="button" class="btn btn-success">确认新增</button>
+			<font class="font_tishi" style="color:red"></font>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px" class="text_info">紧急联系人身份：</td>
+		<td style="border:none">
+			<input type="text" class="renzheng_shenfen add_data" style="width:470px;height: 40px" name="renzheng_shenfen" value="{$selecteds_['select_name']}" attr_name="jj_contacts_sf" authentication_number="4" placeholder="如:同事，朋友，亲人等等" >
+			<button type="button" class="btn btn-success">确认新增</button>
+			<font class="font_tishi" style="color:red"></font>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<eq name="selecteds_['select_id']" value="">
+				<button type="button" class="btn btn-warning">认证参数列表</button>
+				<button type="button" class="btn btn-danger">返回上页</button>
+			<else />
+				<button type="button" class="btn btn-info">返回上页</button>
+			</eq>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Qiye/qiye_index')}";
+	});
+	$(".btn-info").click(function(){
+		window.location.href="{:U('Qiye/order_renzheng_list')}";
+	});
+	// 报修列表
+	$(".btn-warning").click(function(){
+		window.location.href="{:U('Qiye/qiye_info_parameter_list')}";
+	});
+
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	var arr = [0,1,2,3];
+	$.each(arr,function( index ){
+		$(".btn-success").eq(index).click(function(){
+			var texts_info = $(".text_info").eq(index).text().replace("：","");
+			if( $(".add_data").eq(index).val() == "" ){
+				$(".font_tishi").eq(index).text("请填写"+texts_info);
+				return false;
+			}
+			$.ajax({
+				type: "POST",
+			dataType: "JSON",
+				 url: "{:U('Qiye/AjaxInfoAdd')}",
+				data: { 'renzheng_info_name' :$(".add_data").eq(index).val() , 'renzheng_info_attr':$(".add_data").eq(index).attr("attr_name") , 'texts_info':texts_info , 'authentication_number':$(".add_data").eq(index).attr("authentication_number") },
+				success: function( data ){
+					if(data.status == 2000 ){
+						alert(data.message);
+						// location.reload();
+						$(".add_data").eq(index).val("");
+						return false;
+					}else if( data.status == -2001 ){
+						alert(data.message);
+						return false;
+					}
+				},
+				error: function(XMLHttpRequest , error , status ){
+					alert("网络错误，请稍后再尝试" + status );
+					return false;
+				}
+			});
+		});
+	});
+</script>
+</html>

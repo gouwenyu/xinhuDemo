@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{$setTitle}</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Common/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="__PUBLIC__/Common/bootstrap/css/zebra_datepicker.min.css" type="text/css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/zebra_datepicker.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Common/bootstrap/js/examples.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<ol class="breadcrumb">
+<li>当前位置</li>
+<li>{$setTitle}</li>
+</ol>
+<div class="table-responsive">
+  <table class="table table-bordered">
+
+  	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">租赁天数：</td>
+		<td style="border:none">
+			<input type="text" class="form-control zulin_day_number" style="width:470px;height: 40px;float:left;" name="zulin_day_number" value="{$zulin_save['zulin_day_number']}">
+			<select class="form-control zulin_name" style="width: 70px;height: 40px;position: relative;right:70px" name="zulin_name">
+			  <option value="天" <eq name="zulin_save['zulin_name']" value="天">selected</eq> >天</option>
+			  <option value="周" <eq name="zulin_save['zulin_name']" value="周">selected</eq> >周</option>
+			  <option value="月" <eq name="zulin_save['zulin_name']" value="月">selected</eq> >月</option>
+			  <option value="年" <eq name="zulin_save['zulin_name']" value="年">selected</eq> >年</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">租赁状态：</td>
+		<td style="border:none;line-height: 40px">
+			  <label>
+			    <input type="radio" name="zulin_status" id="optionsRadios2" value="0" checked <eq name="zulin_save['zulin_status']" value="0">checked</eq>>&nbsp;开启
+			  </label>
+			  <label>
+			    <input type="radio" name="zulin_status" id="optionsRadios2" value="1" <eq name="zulin_save['zulin_status']" value="1">checked</eq>>&nbsp;关闭
+			  </label>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:130px;text-align: right;background: #EEEEEE;border-bottom:1px solid #FFFFFF;line-height: 40px">
+			
+		</td>
+		<td style="border:none">
+			<eq name="zulin_save['zulin_id']" value="">
+				<button type="button" class="btn btn-success">确认新增</button>
+			<else />
+				<button type="button" class="btn btn-success" value="{$zulin_save['zulin_id']}">确认修改</button>
+			</eq>
+			<button type="button" class="btn btn-danger">返回上页</button>
+			<button type="button" class="btn btn-primary">刷新</button>
+		</td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(".btn-danger").click(function(){
+		window.location.href="{:U('Share/share_zulin_type')}";
+	});
+	$(".btn-primary").click(function(){
+		location.reload();
+	});
+	$(".btn-success").click(function(){
+		var day_number = /^[0-9]\d*$/;
+		if( $('.zulin_day_number').val() == "" ){
+			alert("租赁天数是不能够为空的");
+			return false;
+		}else if( !day_number.test($(".zulin_day_number").val()) ){
+			alert("请输入正确的天数!");
+			return false;
+		}
+		zulin_id = $(this).val();
+		$.ajax({
+			type: "POST",
+		dataType: "JSON",
+			 url: "{:U('Share/share_zulin_add')}",
+			data: { 'zulin_id':zulin_id , 'zulin_name':$(".zulin_name").val()  , 'zulin_day_number':$(".zulin_day_number").val()  ,'zulin_give':$("input[type='checkbox']:checked").val() },
+			success: function( data ){
+				if(data.status == 2000 ){
+					alert(data.message);
+					window.location.href="{:U('Share/share_zulin_type')}";
+					return false;
+				}else if( data.status == -2000 ){
+					alert(data.message);
+					return false;
+				}
+			},
+			error: function(XMLHttpRequest , error , status ){
+				alert("网络错误，请稍后再尝试" + status );
+				return false;
+			}
+		});
+		return false;
+	});
+</script>
+</html>

@@ -1,0 +1,274 @@
+{:W('Common/header')}
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/message.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/zulin.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/fen_ye.css">
+<style type="text/css">
+
+</style>
+<div class="dd_js">
+	<div class="dd_js_box">
+        
+          <div class="gouw_1">
+            所在位置：    首页  > <span>消息</span>
+           </div>
+
+        	<table class="dd_js11">
+			  <thead>
+			    <tr>
+			      <th>选择</th>
+			      <th>发件人</th>
+			      <th>标题</th>
+			      <th>日期</th>
+			      <th>状态</th>
+			      <th>详情</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	<volist name="message" id="message_">
+			    <tr class="message_id_{$message_['message_id']}">
+			      <td>
+					<input type="checkbox" name="choose" class="choose" value="{$message_['message_id']}" />
+			      </td>
+			      <td class="dd_js1110">
+			      	{$message_['message_person']}
+			      </td>
+			      <td >
+			      		{$message_['message_title']}	
+			      </td>
+			      <td >{$message_['message_createtime']|date="Y-m-d H:i:s",###}</td>
+			      <eq name="message_['message_status']" value="0">
+			      	 <td class="message_yd">未读</td>
+			      <else />
+			       	 <td class="message_yd">已读</td>
+			   	  </eq>
+			        <td class="caozuo1">
+			        	<a href="{:U('Cart/look_xiangqin',array('message_id'=>$message_['message_id']))}">查看详情</a>	
+			      	</td>
+			    </tr>
+			    </volist>
+			    <empty name="message_['message_id']" value="">
+			    	<tr>
+			    		<td colspan="6">未获得任何消息～～～！</td>
+			    	</tr>
+			    </empty>
+			  </tbody>
+			</table>
+     <div class="gouw2">
+
+	        <div class="zhuce_jsxy1">
+	      		  <input type="checkbox"  class="xzyd"/>
+	      	</div>
+	  		<div class="zhuce_jsxy2">
+	  		 <span >已读</span>
+	  		</div>
+
+	        <div class="zhuce_jsxy1">
+	      		  <input type="checkbox"  class="xzwd"/>
+	      	</div>
+	  		<div class="zhuce_jsxy2">
+	  		 <span >未读</span>
+	  		</div>
+
+
+	  		<div class="zhuce_jsxy1">
+	      		  <input type="checkbox"  class="xzqd"/>
+	      	</div>
+	  		<div class="zhuce_jsxy2">
+	  		 <span >全选</span>
+	  		</div>
+
+
+	  		<div class="zhuce_jsxy1">
+	      		  <input type="checkbox" class="xzsc" />
+	      	</div>
+	  		<div class="zhuce_jsxy2">
+	  		 <span >删除</span>
+	  		</div>
+	  		<div class="zhuce_jtjl">
+	  		 共<span class="jtjl">4</span>条记录
+	  		</div>
+
+  	</div>
+     <div style="clear:both;"></div>  
+        
+  		<div class="message">
+      {$page}
+ </div>
+
+
+
+	</div> 
+</div>
+  {:W('Common/header1_search')} 
+
+<!--发布成功  3秒后自动消失-->
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr_fbcg" style="display:none;">
+	  <div class="zdsc">
+	  	提交成功，平台会核实处理
+	  </div>
+	   
+	  <div class="zz_gbtk" >
+			关闭
+	  </div> 
+	</div>
+	
+	<div class="zz_nr_scdz" style="display:none;">
+	  <div class="zz_nr1">
+		<span class="wxts">温馨提示<span>
+		<span class="scqr">×</span>
+	  </div>
+	  <div class="zz_nr2" style="line-height:146px;height:146px;display:block;font-size:18px;"> 确定删除本条地址!</div>
+	 
+	  <div class="zz_nr3" >
+			<a href="#wss" class="qrsc">确认</a>
+			<a href="#wss" class="tyjs">取消</a>	
+	  </div>  
+	</div>	
+	
+	
+	
+</div>
+<br/><br/>
+<script type="text/javascript" src="__PUBLIC__/Home/js/fen_ye.js">
+</script>
+  	<script type="text/javascript">
+  		//共计条记录
+  		$(".jtjl").text($(".choose").length);
+  	$(".scqr").click(function(){
+  		$(".zhezhao").css("display","none");
+		$(".zz_nr_scdz").css("display","none");
+		$(".zz_nr_fbcg").css("display","none");		
+		$(".xzsc").prop("checked", false);
+		return false;
+  	})
+  		
+  	function xzdq(value1,arra1){
+  		$(".message_yd").each(function(index){
+  		  	 	if($(this).text()==value1){
+  		  	 		$(".choose").eq(index).prop("checked", true);
+  		  	 	}
+  		  	 	else{
+  		  	 		$(".choose").eq(index).prop("checked", false);
+  		  	 	}
+  		 })
+  		
+  		for(var i=0;i<arra1.length;i++){
+  		  	  $(".zhuce_jsxy1 input").eq(arra1[i]).prop("checked", false);
+  		  	  $(".zhuce_jsxy2 span").eq(arra1[i]).css("color","black");
+  	    }
+  	}
+  	$(".choose").each(function(index){
+  		$(this).attr("id","choose_"+index);
+  	})
+  	
+  	$(".zhuce_jsxy1 input").each(function(index){
+  		$(this).click(function(){
+  		  
+  		  //选中已读
+  		  if($(this).attr("class")=="xzyd"){
+  		  	var arra1=new Array(1,2);
+  		  	 //已读选中
+  		  	 xzdq("已读",arra1);
+  		  }//选中未读
+  		  else if($(this).attr("class")=="xzwd"){
+  		  	var arra2=new Array(0,2);
+  		  	 xzdq("未读",arra2);
+  		  }
+  		  //选中全选
+  		  else if($(this).attr("class")=="xzqd"){
+  		  	$(".choose").prop("checked", true);
+  		  	var arra3=new Array(0,1);
+  		  	for(var i=0;i<arra3.length;i++){
+  		  	  $(".zhuce_jsxy1 input").eq(arra3[i]).prop("checked", false);
+  		  	  $(".zhuce_jsxy2 span").eq(arra3[i]).css("color","black");
+  	        }
+  		  }
+  		  else{
+  		  	//获取选中id
+  		  	var mids='';
+  		  	$(".choose").each(function(index){
+  		       if($(this).is(':checked')){
+  		       	 mids +=','+$(this).val();
+  		       }
+  	        })
+  		  	window.midss = mids.substring(1);
+  		  	if( mids.length == 0 ){
+  		  		tkcx("你未选中任何操作!");
+  		  	}else{
+  		  		$(".zhezhao").css("display","block");
+  		  	 	$(".zz_nr_scdz").css("display","block");
+				$(".zz_nr2").text("确认删除该消息吗？");
+			
+  		  	}
+  		  }
+		  if($(this).is(':checked')){
+			$(".zhuce_jsxy2 span").eq(index).css("color","#1f61c3");
+		  }
+		  else{
+		  	$(".zhuce_jsxy2 span").eq(index).css("color","black");
+		  }
+		});
+  	})
+
+//确认删除
+	$(".qrsc").click(function(){
+		if($(".zz_nr2").text()=="确认删除该消息吗？"){
+	  		$.ajax({
+  		  			type: "post",
+  		  		dataType: "json",
+  		  			 url: "{:U('Cart/AjaxMessage')}",
+  		  			data: {'message_id':midss},
+  		  		success: function( data ){
+  		  			if( data.status == 2000 ){
+  		  				$(".zhezhao").css("display","block");
+		  				$(".zz_nr_scdz").css("display","none");
+		  				console.log("dsds");
+		  	    		tkcx("删除成功");
+		  	    	
+  		  			}else if( data.status == -2000 ){
+  		  				console.log("111");
+  		  				tkcx("删除失败");
+  		  			}
+  		  			console.log(data);
+  		  		},
+  		  		error: function( XMLHttpRequest , status , error ){
+  		  			//alert("您好，出现了一个问题,问题位置在：" + status);
+  		  			tkcx("您好，出现了一个问题,问题位置在：" + status);
+  		  			return false;
+  		  		}
+	  		});
+	  	}	
+});
+
+	//取消
+ 	$(".tyjs").click(function(){
+		$(".zhezhao").css("display","none");
+		$(".zz_nr_scdz").css("display","none");
+		$(".xzsc").prop("checked", false);
+		return false;
+	});
+
+ //自动消失(弹框)
+ function zdxdtk(){
+  $(".zhezhao").click(function(){
+  	 $(".zhezhao").css("display","none");
+  	 $(".zz_nr_scdz").css("display","none");
+  	 $(".zz_nr_fbcg").css("display","none");
+  	 $(".zhuce_jsxy2 span").css("color","black");
+  	 location.reload();
+	 return false;
+  });
+}
+
+ function tkcx(message){
+  	    $(".zhezhao").css("display","block");
+		$(".zz_nr_fbcg").css("display","block");
+		$(".zdsc").text(message);
+		zdxdtk();
+  }
+</script>
+
+{:W('Common/footer')} 
+

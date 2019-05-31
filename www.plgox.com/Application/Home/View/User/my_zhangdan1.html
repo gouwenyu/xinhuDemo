@@ -1,0 +1,364 @@
+<include file="User:my_top" />
+<title>{$setTitle}</title>
+ <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/my_ckmx_zd.css">  
+<style type="text/css">
+   .my_zd6_dj{
+	color:#6ea3f2;
+	border-bottom:1px solid #6ea3f2;
+}
+</style>
+
+<div class="mypj">
+   <div class="mypj1">
+      <div  class="mypj2">
+	      <div class="mypj6">
+	                   我的账单
+	      </div>
+	     
+	     <div class="my_zd1">
+	     	<span>温馨提示：新订单在用户收到货时第二天开始计算租金，以后每月租金在次月1号生成账单，次月5号前还款</span>
+	     </div>
+	     
+	     <div class="my_zd2">
+	     	<div>当前需要支付租金：<span>¥234.00</span>元</div>
+	     	<p>
+	     	 最后付租日：2017-10-05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="__PUBLIC__/Home/image/my_zd.jpg">&nbsp;&nbsp;<span>已延期2天</span>	
+	     	</p>
+	     </div>	
+	  <div class="my_zd3">
+	     	<div class="my_zd31">
+	     		<div class="my_zd310">下月账单</div>
+	     		<div class="my_zd311">¥156.00</div>
+	     		<div class="my_zd313">还款开始日；2017-11-01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;还款结束日：2017-11-05</div>
+	     		<div class="my_zd312"><a href="{:U('User/my_ck_mingxi')}">查看明晰</a></div>
+	     	</div>
+	     </div>
+	    <div class="my_zd6_box">
+	      <div class="my_zd6_big">
+           <div  class="my_zd_jt">
+            <img src="__PUBLIC__/Home/image/zhangdan_jt1.png" />
+          </div>
+		<div class="my_zd6">
+       <ul class="my_zd666">
+          <for start="1" end="13" name="i">
+           <li class="my_zd6_a">
+              <a  class="my_zd6_a_a" href="javascript:void(0);" attr-data-id="{$i}">{$i}月账单</a>
+           </li>
+          </for>
+      </ul>
+	</div>
+          <div  class="my_zd_jt">
+            <img src="__PUBLIC__/Home/image/zhangdan_jt.png" />
+          </div>
+		   </div>
+	     <div class="my_zd6_a_last">
+	     	 	<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多-->
+          <select id="selYear" class="selYear_value" name="selyear_value" >
+           
+          </select>
+	     </div>
+	   </div>  
+     <script type="text/javascript">
+       $(".selYear_value").change(function(){
+        
+       });
+     </script>
+ <div style="display:none;">  
+  <select id="selMonth">
+       
+  </select> 
+  <select id="selDay">
+       
+  </select>
+</div>
+	  <script type="text/javascript" src="__PUBLIC__/Home/js/year_month_day.js"></script>     
+	<script type="text/javascript">
+var date = new Date();
+var dqnf=date .getFullYear(); //获取完整的年份(4位)
+var dqyf=date .getMonth(); //获取当前月份(0-11,0代表1月)
+var dqrf=date .getDate(); //获取当前日(1-31)
+
+var selYear = window.document.getElementById("selYear"); 
+var selMonth = window.document.getElementById("selMonth"); 
+var selDay = window.document.getElementById("selDay"); 
+// 新建一个DateSelector类的实例，将三个select对象传进去 
+new DateSelector(selYear, selMonth, selDay, dqnf, dqyf, dqrf); 
+
+
+
+// 也可以试试下边的代码 
+// var dt = new Date(2004, 1, 29); 
+// new DateSelector(selYear, selMonth ,selDay, dt); 
+
+
+
+     //账单左右箭头轮播 
+     var dbox=$(".my_zd666");
+     var zdys=$(".my_zd6_a").length;
+     dbox.css("width",zdys*150);
+     function ydgs(ydms){
+
+         var newLeft = parseInt(dbox.css('marginLeft')) + ydms; 
+
+            //点击后的图片偏移量
+          dbox.animate({'marginLeft':newLeft + 'px'},500);
+     }
+     //右边点击
+     $(".my_zd_jt").eq(1).click(function(){
+         if(dbox.is(':animated')){
+                return;
+          }
+        var yqbj=-zdys*150-parseInt(dbox.css("marginLeft"));
+
+        if(yqbj<-600){
+          ydgs(-150);
+        }
+        
+     })
+
+     //左边点击
+     $(".my_zd_jt").eq(0).click(function(){
+         if(dbox.is(':animated')){
+                return;
+          }
+        var yqbj=-zdys*150-parseInt(dbox.css("marginLeft"));
+      
+        if(yqbj>-zdys*150){
+          ydgs(+150);
+        }
+
+     })
+  </script>      
+	      
+	    <div class="my_ckmx0" style="margin-top:20px;">
+          	<div class="my_ckmx2">
+          	  <div>
+          	  	<span >账单总额: </span>
+          	  	  <span class="total_prices">¥128.00</span>
+          	  </div>	
+          	  <div style="padding-left:225px;">
+          	  	<span>出账日期: </span>
+          	  	<span class="start_date"></span>
+          	  </div>	
+          	  <div style="padding-left:40px;">
+          	  	<span>最后还款日: </span>
+          	  	<span class="last_date"></span>
+          	  </div>
+              <div class="my_ckmx21"><span>马上支付</span></div>
+          	</div>
+          <ul class="my_ckmx" >
+            <li class="my_ckmx5" >
+
+            	  <div class="dyls" >订单号</div>
+            	  <div class="dels" >记租日期</div>
+            	  <div class="dsls" >每日租金</div>
+            	  <div class="dsls" >租用天数</div>
+            	  <div class="dsls" >小结</div>
+
+          	</li>
+            	<li class="my_ckmx99"></li>
+              <li class="my_ckmx7">
+                <div colspan="5">
+                  <div>共   计：¥445.00</div>  
+                </div>
+              </li>
+          </ul>
+       </div>   
+          <script type="text/javascript">
+            date = new Date();
+            $(document).ready(function(){
+              // ajxa查询日期 2018-1
+              var date_year = $(".selYear_value").val(); // 年
+              var date_month = $(".my_zd6_dj").attr("attr-data-id"); //月
+              // var date_day = date.getDate(); //日
+              // 网站实时展示
+              $.post("{:U('AjaxDateLook')}",{ "bill_lookta_status":1 , "date_year":date_year , "date_month":date_month },function( data ){
+                console.log(data);
+                if( data.status == 2000 ){
+                    $(".my_ckmx21").css("display","block");
+                    $(".total_prices").text("¥100.00");
+                    $(".start_date").text(date_year+"-"+date_month+"-1");
+                    $(".last_date").text(date_year+"-"+date_month+"-5");
+                    $.each(data.message,function( index , val ){
+                       $(".my_ckmx99").append("<div class='dyls'>"+val['order_number']+"</div><div class='dels'>"+getLocalTime(val['zujin_charging_time'])+"</div><div class='dsls'>¥"+val['zujin_prices']+"</div><div class='dsls'>"+val['zulin_day_number']+val['zulin_name']+"</div><div class='dsls'>¥"+val['zujin_prices']+"</div>");
+                    });
+                }else if( data.status == -2001 ){
+                     $(".my_ckmx21").css("display","none");
+                     $(".total_prices").text("¥00.00");
+                     $(".start_date").text(date_year+"-"+date_month+"-1");
+                     $(".last_date").text(date_year+"-"+date_month+"-5");
+                     $(".my_ckmx99").append("<div class='dyls' style='width:100%;text-align:center;color:red'>"+data.message+"</div>");
+                }
+              },"json");
+            });
+            $(".my_zd6_a_a").each(function(index){
+              // 根据年月定位
+              var today = $(".my_zd6_a_a").eq(index).attr("attr-data-id");
+              if( date.getMonth()+1 == today ){
+                var cdz=$(".my_zd6 li").length;
+                for(var i=0;i<cdz;i++){
+                  if(index==i){
+                    $(".my_zd6_a_a").eq(index).addClass("my_zd6_dj");
+                  }
+                  else{
+                     $(".my_zd6_a_a").eq(i).removeClass("my_zd6_dj");
+                  }
+                }
+              }
+              if( index == 0 ){
+                $(".my_zd6_a_a").eq(index).addClass("my_zd6_dj");
+              }
+              $(this).click(function(){
+                $(this).addClass("my_zd6_dj");
+                 var cdz=$(".my_zd6 li").length;
+                for(var i=0;i<cdz;i++){
+                  if(index==i){
+                    $(".my_zd6_a_a").eq(index).addClass("my_zd6_dj");
+                  }
+                  else{
+                     $(".my_zd6_a_a").eq(i).removeClass("my_zd6_dj");
+                  }
+                }
+                // ajxa查询日期 2018-1
+                var date_year = $(".selYear_value").val(); // 年
+                var date_month = $(this).attr("attr-data-id"); //月
+                // 每点击一次 就晴空一次 append
+                $(".my_ckmx99").empty();
+                $.post("{:U('AjaxDateLook')}",{ "bill_lookta_status":2 , "date_year":date_year , "date_month":date_month },function( data ){
+                  // console.log(data);
+                  if( data.status == 2000 ){
+                    $(".my_ckmx21").css("display","block");
+                    $(".total_prices").text("¥100.00");
+                    $(".start_date").text(date_year+"-"+date_month+"-1");
+                    $(".last_date").text(date_year+"-"+date_month+"-5");
+                    $.each(data.message,function( index , val ){
+                       $(".my_ckmx99").append("<div class='dyls'>"+val['order_number']+"</div><div class='dels'>"+getLocalTime(val['zujin_charging_time'])+"</div><div class='dsls'>¥"+val['zujin_prices']+"</div><div class='dsls'>"+val['zulin_day_number']+val['zulin_name']+"</div><div class='dsls'>¥"+val['zujin_prices']+"</div>");
+                    });
+                  }else if( data.status == 2001 ){
+                    $(".my_ckmx21").css("display","block");
+                    $(".total_prices").text("¥100.00");
+                    $(".start_date").text(date_year+"-"+date_month+"-1");
+                    $(".last_date").text(date_year+"-"+date_month+"-5");
+                    $.each(data.message,function( index , val ){
+                       $(".my_ckmx99").append("<div class='dyls'>"+val['order_number']+"</div><div class='dels'>"+getLocalTime(val['zujin_charging_time'])+"</div><div class='dsls'>¥"+val['zujin_prices']+"</div><div class='dsls'>"+val['zulin_day_number']+val['zulin_name']+"</div><div class='dsls'>¥"+val['zujin_prices']+"</div>");
+                    });
+                  }else if( data.status == -2001 ){
+                     $(".my_ckmx21").css("display","none");
+                     $(".total_prices").text("¥00.00");
+                     $(".start_date").text(date_year+"-"+date_month+"-1");
+                     $(".last_date").text(date_year+"-"+date_month+"-5");
+                     $(".my_ckmx99").append("<div class='dyls' style='width:100%;text-align:center;color:red'>"+data.message+"</div>");
+                  }else if( data.status == -2000 ){
+                     $(".my_ckmx21").css("display","none");
+                     $(".total_prices").text("¥00.00");
+                     $(".start_date").text(date_year+"-"+date_month+"-1");
+                     $(".last_date").text(date_year+"-"+date_month+"-5");
+                     $(".my_ckmx99").append("<div class='dyls' style='width:100%;text-align:center;color:red'>"+data.message+"</div>");
+                  }
+                },"json");
+              });
+            });
+            // 时间格式化
+            function getLocalTime(nS){
+              var da = nS;
+              times = new Date(da*1000);
+              var year = times.getFullYear();
+              var month = times.getMonth()+1;
+              var date = times.getDate();
+              return [year,month,date].join('-');
+            }
+          </script>
+     </div>
+   </div>
+ </div>
+ 
+<div class="zhezhao" style="display:none;">
+	<div class="zz_nr" style="height:420px;display:none;">
+	  <div class="zz_nr1">
+		请选择支付方式		
+	  </div>
+	  <div class="zz_nr2" style="margin-top:40px;">
+		<div class="zz_nr_zffs" >支付宝</div>
+	  </div>
+	  <div class="zz_nr2">
+		 <div class="zz_nr_zffs" >微支付</div>
+	  </div>
+	  <div class="zz_nr2">
+		 <div class="zz_nr_zffs" >银联</div>
+	  </div>
+	  <div class="zz_nr3" style="margin-top:25px;">
+			<a href="#" class="tyjs0">确认</a>
+			<a href="#" class="tyjs">取消</a>	
+	  </div>
+	</div>
+</div>
+ 
+ <script type="text/javascript" src="__PUBLIC__/Home/js/my_top.js"></script>
+<script type="text/javascript">	
+ my_top(1,"50px","我的账单"); 
+ $(".wodegb").html("我的账单");  
+   //左边浮动滑块距离头部
+$(".hdmk").css("top",'50px'); 
+  
+  var percent=0;  
+   // var loading=setInterval(function(){  
+        if(percent>100){  
+            percent=0;  
+            $('.circle').removeClass('clip-auto');  
+            $('.right').addClass('wth0');  
+        }else if(percent>50){  
+            $('.circle').addClass('clip-auto');  
+            $('.right').removeClass('wth0');  
+        }  
+        $('.left').css("-webkit-transform","rotate("+(18/5)*80+"deg)");  
+        $('.num>span').text(80);  
+        percent++;  
+  // },200);    
+   
+/*    $(".my_zd6_a_a").each(function(index){
+    	$(this).click(function(){
+    		$(this).addClass("my_zd6_dj");
+         var cdz=$(".my_zd6 li").length;
+        for(var i=0;i<cdz;i++){
+          if(index==i){
+            $(".my_zd6_a_a").eq(index).addClass("my_zd6_dj");
+          }
+          else{
+             $(".my_zd6_a_a").eq(i).removeClass("my_zd6_dj");
+          }
+        }
+
+    	});
+    });*/
+
+    
+    //马上支付
+    $(".my_ckmx21").click(function(){
+    	$(".zhezhao").css("display","block");
+    	$(".zz_nr").css("display","block");
+    });
+    $(".tyjs0").click(function(){
+    	$(".zhezhao").css("display","none");
+    	$(".zz_nr").css("display","none");
+    })
+    $(".tyjs").click(function(){
+    	$(".zhezhao").css("display","none");
+    	$(".zz_nr").css("display","none");
+    })
+    
+    
+    
+ $(".header_bottom1_middle li").eq(6).addClass("header_dj");
+ $(".header_bottom1_middle li").eq(6).siblings().removeClass("header_dj");
+
+
+
+
+
+
+
+
+</script>
+{:W('Common/footer')}
+</body>
+</html>
